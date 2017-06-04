@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Json on KrolTech</title>
+    <link>http://kroltech.com/tags/json/</link>
+    <description>Recent content in Json on KrolTech</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <managingEditor>jkat98@gmail.com (Jason Krol)</managingEditor>
+    <webMaster>jkat98@gmail.com (Jason Krol)</webMaster>
+    <lastBuildDate>Fri, 11 Jan 2013 18:57:51 +0000</lastBuildDate>
+    
+	<atom:link href="http://kroltech.com/tags/json/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Crazy nested for loops (i.e. a Beautiful Mind)</title>
+      <link>http://kroltech.com/2013/01/11/crazy-nested-for-loops-i-e-a-beautiful-mind/</link>
+      <pubDate>Fri, 11 Jan 2013 18:57:51 +0000</pubDate>
+      <author>jkat98@gmail.com (Jason Krol)</author>
+      <guid>http://kroltech.com/2013/01/11/crazy-nested-for-loops-i-e-a-beautiful-mind/</guid>
+      <description>I was working on a project today, that dealt with a large amount of JSON data. The project needed to allow the user to filter the data by a bunch of different filters and options within those filters.
+Initially I started using Underscore.js thinking this would help, but in the interest of time (had to get it done today!!!!) I decided to just do it quick and dirty. Well, I succeeded in the dirty department:</description>
+    </item>
+    
+  </channel>
+</rss>

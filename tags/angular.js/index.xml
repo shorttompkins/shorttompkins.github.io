@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Angular.Js on KrolTech</title>
+    <link>http://kroltech.com/tags/angular.js/</link>
+    <description>Recent content in Angular.Js on KrolTech</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <managingEditor>jkat98@gmail.com (Jason Krol)</managingEditor>
+    <webMaster>jkat98@gmail.com (Jason Krol)</webMaster>
+    <lastBuildDate>Fri, 09 Nov 2012 22:35:45 +0000</lastBuildDate>
+    
+	<atom:link href="http://kroltech.com/tags/angular.js/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Crossfit, Obama!!, Zen Coding</title>
+      <link>http://kroltech.com/2012/11/09/crossfit-obama-zen-coding/</link>
+      <pubDate>Fri, 09 Nov 2012 22:35:45 +0000</pubDate>
+      <author>jkat98@gmail.com (Jason Krol)</author>
+      <guid>http://kroltech.com/2012/11/09/crossfit-obama-zen-coding/</guid>
+      <description>Busted my ass in a major workout last night at Crossfit. The regular class is NO JOKE!
+Oh yeah, and Obama won (again)!!!
+Decided to try another stab at Angular.js this week. Going to try to lab something up at work using it, something real-world like article comments or something.
+Continued working on the new Nextgen.com framework. Got the shell set up pretty nicely and did a lot of organization of all Javascript and CSS and how it will be integrated globally and sitewide.</description>
+    </item>
+    
+    <item>
+      <title>Angular.js, new “Secret” website, Pluralsight</title>
+      <link>http://kroltech.com/2012/08/24/angular-js-new-secret-website-pluralsight/</link>
+      <pubDate>Fri, 24 Aug 2012 22:17:30 +0000</pubDate>
+      <author>jkat98@gmail.com (Jason Krol)</author>
+      <guid>http://kroltech.com/2012/08/24/angular-js-new-secret-website-pluralsight/</guid>
+      <description>Learned about $http with Angular when calling external resources (like JSON) &amp;#8211; need to test on TI.com implementation.
+Continued developing business plan for “Secret” website (created survey questions, etc.). Researched payment processing for site and discovered Amazon Payments offers better rates than Paypal once you get into the higher sales volume (greater than 10k).
+Completed Pluralsight course on N-Tier Development in C#.</description>
+    </item>
+    
+    <item>
+      <title>Launched TumblingInferno.com!</title>
+      <link>http://kroltech.com/2012/08/20/launched-tumblinginferno-com/</link>
+      <pubDate>Mon, 20 Aug 2012 22:16:05 +0000</pubDate>
+      <author>jkat98@gmail.com (Jason Krol)</author>
+      <guid>http://kroltech.com/2012/08/20/launched-tumblinginferno-com/</guid>
+      <description>Created and launched TumblingInferno.com. Was an awesome rapid prototype going from start to launch in 2 days. Implemented a lot of LINQ which was great experience as well as reacquainting myself with Entity Framework. Super excited that I was finally able to finish and launch something!
+Attempted to play with Angular.js, and was somewhat successful. Although didnt really work for the project the way I was hoping &amp;#8211; and help online is scarce currently.</description>
+    </item>
+    
+    <item>
+      <title>Angular.js, OOP js, Responsive Design, Twitter Bootstrap</title>
+      <link>http://kroltech.com/2012/08/03/angular-js-oop-js-responsive-design-twitter-bootstrap/</link>
+      <pubDate>Fri, 03 Aug 2012 22:13:38 +0000</pubDate>
+      <author>jkat98@gmail.com (Jason Krol)</author>
+      <guid>http://kroltech.com/2012/08/03/angular-js-oop-js-responsive-design-twitter-bootstrap/</guid>
+      <description>Fresh on the heels of my failure with Knockout, I continued my OOP and data-bound JavaScript development. I also discovered Angular.js this week (by Google). This looks like it&amp;#8217;s a much cleaner and easier (read: less clunky) way of doing what Knockout.js does. It also looks like this might be pretty easy for me to implement into my existing project. Also, from a staying power perspective, it&amp;#8217;s probably safe to assume since Google is officially backing (and created) that it will be around for a while.</description>
+    </item>
+    
+  </channel>
+</rss>

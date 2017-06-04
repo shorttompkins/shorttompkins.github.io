@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Animation on KrolTech</title>
+    <link>http://kroltech.com/tags/animation/</link>
+    <description>Recent content in Animation on KrolTech</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <managingEditor>jkat98@gmail.com (Jason Krol)</managingEditor>
+    <webMaster>jkat98@gmail.com (Jason Krol)</webMaster>
+    <lastBuildDate>Mon, 15 Apr 2013 17:55:31 +0000</lastBuildDate>
+    
+	<atom:link href="http://kroltech.com/tags/animation/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Fade in element on event using CSS3  &amp; opacity</title>
+      <link>http://kroltech.com/2013/04/15/quick-tip-fade-in-element-on-event-using-css3-opacity/</link>
+      <pubDate>Mon, 15 Apr 2013 17:55:31 +0000</pubDate>
+      <author>jkat98@gmail.com (Jason Krol)</author>
+      <guid>http://kroltech.com/2013/04/15/quick-tip-fade-in-element-on-event-using-css3-opacity/</guid>
+      <description>I&amp;#8217;m working on a project, that requires a number of different animations based on user events. I recently switched all of the animations to CSS3 transforms and transitions versus jQuery animations. The improvement has been staggering, to say the least.
+However, I came across a weird issue today. When attempting to fade an element in after a click event, the element just kept popping into place. It wouldn&amp;#8217;t fade. After some investigation I realized that my jQuery was setting the opacity to 1.</description>
+    </item>
+    
+    <item>
+      <title>Protein!, jQuery animation and easing, programming Android, Holiday party!!</title>
+      <link>http://kroltech.com/2012/12/08/protein-jquery-animation-and-easing-programming-android-holiday-party/</link>
+      <pubDate>Sat, 08 Dec 2012 14:53:22 +0000</pubDate>
+      <author>jkat98@gmail.com (Jason Krol)</author>
+      <guid>http://kroltech.com/2012/12/08/protein-jquery-animation-and-easing-programming-android-holiday-party/</guid>
+      <description>My continued use of My Fitness Pal (nutrition tracking app) has veered dangerously close to obsession! Literally, it&amp;#8217;s become something of a game. I’m constantly looking at the details on every food and considering how it will effect my “stats” (seriously, as if I’m an MMO character or something)! Ultimately, that&amp;#8217;s a good thing I guess. This past weekend alone I&amp;#8217;ve been doing REALLY really well with my eating. I have a great schedule of meals lined up for the week too, with high protein days stacked for Tuesday and Thursday (Crossfit days).</description>
+    </item>
+    
+    <item>
+      <title>Blog launch, Twitter site integration</title>
+      <link>http://kroltech.com/2012/07/06/july-2-6/</link>
+      <pubDate>Fri, 06 Jul 2012 21:53:24 +0000</pubDate>
+      <author>jkat98@gmail.com (Jason Krol)</author>
+      <guid>http://kroltech.com/2012/07/06/july-2-6/</guid>
+      <description>Welcome to my new blog! This blog is just going to be a weekly/daily journal of sorts, logging all of my discoveries and observations on the Internet and related to development in general. Of course, expect some anecdotes on gaming and life as well!
+ Integrated a Twitter feed into the UGM website. Used a tiny bit of jQuery animate to slide the feed bar out from the left side of the screen.</description>
+    </item>
+    
+  </channel>
+</rss>

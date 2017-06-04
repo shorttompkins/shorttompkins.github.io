@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Api on KrolTech</title>
+    <link>http://kroltech.com/tags/api/</link>
+    <description>Recent content in Api on KrolTech</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <managingEditor>jkat98@gmail.com (Jason Krol)</managingEditor>
+    <webMaster>jkat98@gmail.com (Jason Krol)</webMaster>
+    <lastBuildDate>Sat, 03 Jan 2015 00:31:12 +0000</lastBuildDate>
+    
+	<atom:link href="http://kroltech.com/tags/api/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Request API node.js helper module</title>
+      <link>http://kroltech.com/2015/01/03/request-api-node-js-helper-module/</link>
+      <pubDate>Sat, 03 Jan 2015 00:31:12 +0000</pubDate>
+      <author>jkat98@gmail.com (Jason Krol)</author>
+      <guid>http://kroltech.com/2015/01/03/request-api-node-js-helper-module/</guid>
+      <description>&lt;p&gt;A convenient helper module for node.js and request when you regularly work with an API in your projects.&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

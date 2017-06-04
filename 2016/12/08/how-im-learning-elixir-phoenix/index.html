@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+  <title>How I’m Learning: Elixir &amp; Phoenix</title>
+  <meta property="og:title" content="How I’m Learning: Elixir &amp; Phoenix" />
+  <meta name="twitter:title" content="How I’m Learning: Elixir &amp; Phoenix" />
+  <meta name="description" content="Recently I&#8217;ve been spending a lot of my free time absorbing as much as I can about an exciting Functional Programming language called Elixir.  For those of you that don&#8217;t know, Elixir is somewhat of a spiritual successor to Ruby, and therefore Phoenix (the web framework for Elixir) could be considered it&#8217;s Rails.  Let&#8217;s take a look at my learning path and what you can do if you&#8217;re interested in becoming a proficient Elixir &amp; Phoenix developer!">
+  <meta property="og:description" content="Recently I&#8217;ve been spending a lot of my free time absorbing as much as I can about an exciting Functional Programming language called Elixir.  For those of you that don&#8217;t know, Elixir is somewhat of a spiritual successor to Ruby, and therefore Phoenix (the web framework for Elixir) could be considered it&#8217;s Rails.  Let&#8217;s take a look at my learning path and what you can do if you&#8217;re interested in becoming a proficient Elixir &amp; Phoenix developer!">
+  <meta name="twitter:description" content="Recently I&#8217;ve been spending a lot of my free time absorbing as much as I can about an exciting Functional Programming language called Elixir.  For those of you that don&#8217;t know, Elixir is …">
+  <meta name="author" content="Jason Krol"/>
+  <link href='http://kroltech.com/img/favicon.ico' rel='icon' type='image/x-icon'/>
+  <meta property="og:image" content="http://kroltech.com/img/avatar-icon.png" />
+  <meta name="twitter:image" content="http://kroltech.com/img/avatar-icon.png" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:site" content="@shorttompkins" />
+  <meta name="twitter:creator" content="@shorttompkins" />
+  <meta property="og:url" content="http://kroltech.com/2016/12/08/how-im-learning-elixir-phoenix/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="KrolTech" />
+
+  <meta name="generator" content="Hugo 0.20.7" />
+  <link rel="canonical" href="http://kroltech.com/2016/12/08/how-im-learning-elixir-phoenix/" />
+  <link rel="alternate" href="http://kroltech.com/index.xml" type="application/rss+xml" title="KrolTech">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/katex.min.css" integrity="sha384-wITovz90syo1dJWVh32uuETPVEtGigN07tkttEqPv+uR2SE/mbQcG7ATL28aI9H0" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <link rel="stylesheet" href="http://kroltech.com/css/main.css" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" />
+  <link rel="stylesheet" href="http://kroltech.com/css/pygment_highlights.css" />
+  <link rel="stylesheet" href="http://kroltech.com/css/highlight.min.css" />
+
+<script>
+window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+ga('create', 'UA-29480326-4', 'auto');
+ga('send', 'pageview');
+</script>
+<script async src='//www.google-analytics.com/analytics.js'></script>
+
+</head>
+
+  <body>
+    <nav class="navbar navbar-default navbar-fixed-top navbar-custom">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="http://kroltech.com/">KrolTech</a>
+    </div>
+
+    <div class="collapse navbar-collapse" id="main-navbar">
+      <ul class="nav navbar-nav navbar-right">
+        
+          
+            <li>
+              <a title="Blog" href="/">Blog</a>
+            </li>
+          
+        
+          
+            <li>
+              <a title="About" href="/page/about/">About</a>
+            </li>
+          
+        
+
+        
+
+        
+      </ul>
+    </div>
+
+    <div class="avatar-container">
+      <div class="avatar-img-border">
+        
+          <a title="KrolTech" href="http://kroltech.com/">
+            <img class="avatar-img" src="http://kroltech.com/img/avatar-icon.png" alt="KrolTech" />
+          </a>
+        
+      </div>
+    </div>
+
+  </div>
+</nav>
+
+
+
+
+    
+  
+  
+  
+
+
+
+
+  
+
+  <header class="header-section ">
+    
+    <div class="intro-header no-img">
+      
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+            <div class="post-heading">
+              <h1>How I’m Learning: Elixir &amp; Phoenix</h1>
+                
+                
+                  <span class="post-meta">
+  Posted on December 8, 2016
+  
+</span>
+
+
+                
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+
+    
+<div class="container">
+  <div class="row">
+    <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+      <article role="main" class="blog-post">
+        <p>Recently I&#8217;ve been spending a lot of my free time absorbing as much as I can about an exciting Functional Programming language called Elixir.  For those of you that don&#8217;t know, Elixir is somewhat of a spiritual successor to Ruby, and therefore Phoenix (the web framework for Elixir) could be considered it&#8217;s Rails.  Let&#8217;s take a look at my learning path and what you can do if you&#8217;re interested in becoming a proficient Elixir &amp; Phoenix developer!</p>
+
+<h2 id="what-is-elixir-phoenix">What is Elixir / Phoenix?</h2>
+
+<p>First things first, its important to understand what exactly Elixir is and what you can expect when you start exploring.  Elixir is a backend Functional Programming language that has its own very unique syntax and style of coding.  This is not your regular ol&#8217; Object Oriented Programming language &#8211; far from it.  In fact Elixir does not have objects at all. Relying heavily on Functional Programming, Elixir might feel somewhat off at first.  An example would be that Elixir does not contain normal &#8220;loops&#8221; that you&#8217;ve come to rely on &#8211; but instead wants you to use recursion for things like that.  From the JavaScript world, Underscore.js (or lodash.js) is a pretty good example of the kind of modules and development style at your disposal with Elixir.</p>
+
+<h2 id="step-1-8211-read-up">Step 1 &#8211; Read up!</h2>
+
+<p>Before you can get your hands dirty you need to at least understand the language, its syntax and nuance, the many libraries and tools available, etc.</p>
+
+<p><strong><span id="productTitle" class="a-size-extra-large">👍  <a href="https://www.amazon.com/Programming-Elixir-1-3-Functional-Concurrent/dp/168050200X/ref=sr_1_1?ie=UTF8&qid=1481208035&sr=8-1&keywords=programming+elixir+1.3" target="_blank">Programming Elixir 1.3: Functional |&gt; Concurrent |&gt; Pragmatic |&gt; Fun</a><br /> </span></strong><span id="productTitle" class="a-size-extra-large">By Dave Thomas</span></p>
+
+<p class="a-spacing-none">
+  This is a fantastic book, and of the 4 that I list, by far the single most important and the one that gets my recommendation.  The author&#8217;s approach is great, the practice exercises provided work really well to give you a better understanding and comfort level with the language (to the point that you&#8217;ve learned so far throughout the book) and are just the right level of challenging to not be frustrating.
+</p>
+
+<p class="a-spacing-none">
+  <strong><a href="https://www.amazon.com/Elixir-Action-scaron-Juri-cacute/dp/161729201X/ref=sr_1_1?ie=UTF8&qid=1481208165&sr=8-1&keywords=elixir+in+action" target="_blank">Elixir in Action</a></strong><br /> By Saša Jurić
+</p>
+
+<p class="a-spacing-none">
+  This is the 2nd book I read on Elixir.  It is also a really good book and goes into great detail about the language and its syntax.  I got a little more than halfway through before I switched to <em>Programming Elixir 1.3</em> (above) and found that more things &#8220;clicked&#8221; and I worked through at a first pace with the latter book.  That being said this is still a very good book on Elixir.
+</p>
+
+<p id="title" class="a-spacing-none">
+  <strong><span id="productTitle" class="a-size-extra-large"><a href="https://www.amazon.com/Introducing-Elixir-Getting-Functional-Programming/dp/1449369995/ref=sr_1_1?ie=UTF8&qid=1481208294&sr=8-1&keywords=introducing+elixir" target="_blank">Introducing Elixir: Getting Started in Functional Programming</a><br /> </span></strong><span id="productTitle" class="a-size-extra-large">By Simon St. Laurent</span>
+</p>
+
+<p class="a-spacing-none">
+  This is actually a really small book so its a great way to quickly get up to speed on the language and syntax.  I can&#8217;t say its the most exhaustive book, but for what it does it does pretty well.  That is to say, it gets you up to speed pretty quickly.  Still, this is 3rd on my list of recommendations.
+</p>
+
+<h2 id="step-2-8211-practice-practice-practice">Step 2 &#8211; Practice, practice, practice!</h2>
+
+<p>Now that you&#8217;ve got a good solid grasp of the language syntax and fundamentals, its time to go through the paces and really start to challenge yourself.  Trust me, with any new language this is going to be the most painful part. You&#8217;re going to get stumped, you&#8217;re going to feel stupid, and it&#8217;s going to generally suck at first.  Thats very common and understandable &#8211; you just need to stick with it and you <strong>will</strong> get better every day!</p>
+
+<p>Do the practice exercises that are included with whichever book you decide to read.  These are provided for a reason &#8211; and generally the author provides them in such a way that they gently introduce you to the concepts that were just covered so you&#8217;re not bogged down with trying to figure out too much at any give time.</p>
+
+<h3 id="practice-sites">Practice sites:</h3>
+
+<ul>
+<li><a href="http://exercism.io/languages/elixir/about" target="_blank">Exercism.io &#8211; Elixir</a></li>
+<li><a href="http://codewars.com/?language=elixir" target="_blank">Codewars</a></li>
+<li><a href="https://rosettacode.org/wiki/Category:Elixir" target="_blank">Rosetta Code</a></li>
+</ul>
+
+<h3 id="more-reading-8211-phoenix">More Reading &#8211; Phoenix:</h3>
+
+<p id="title" class="a-spacing-none">
+  <strong><span id="productTitle" class="a-size-extra-large"><a href="https://www.amazon.com/Programming-Phoenix-Productive-Reliable-Fast/dp/1680501453/ref=sr_1_1?ie=UTF8&qid=1481208641&sr=8-1&keywords=programming+phoenix" target="_blank">Programming Phoenix: Productive |> Reliable |> Fast</a><br /> </span></strong><span id="productTitle" class="a-size-extra-large">By </span><span id="productTitle" class="a-size-extra-large">Chris McCord</span>
+</p>
+
+<p class="a-spacing-none">
+  This is a fantastic book that very specifically covers Phoenix.  This book is a must read if you&#8217;re planning on doing web development using Elixir.  Of course read this book <strong>after</strong> you&#8217;ve read at least one of the books from the list above.
+</p>
+
+<h3 id="videos-online-training">Videos / Online Training:</h3>
+
+<p class="a-spacing-none">
+  If books are not your thing, there is a ton of material available online in the form of videos and screencasts specifically dedicated to learning Elixir and/or Phoenix:
+</p>
+
+<p><li class="a-spacing-none">
+  <a href="https://www.udemy.com/the-complete-elixir-and-phoenix-bootcamp-and-tutorial/" target="_blank">Udemy &#8211; The Complete Elixir and Phoenix Bootcamp</a> (make sure you wait for a sale!)
+</li>
+<li class="a-spacing-none">
+  <a href="https://www.dailydrip.com/topics/elixir" target="_blank">Daily Drip &#8211; Learn Elixir Quickly</a>
+</li>
+<li class="a-spacing-none">
+  <a href="https://LearnElixir.tv" target="_blank">LearnElixir.tv</a>
+</li>
+<li class="a-spacing-none">
+  <a href="http://elixirsips.com/" target="_blank">Elixir Sips</a>
+</li></p>
+
+<h2 id="step-3-8211-meet-other-elixir-devs">Step 3 &#8211; Meet other Elixir devs</h2>
+
+<p>Make sure you get out there and find a local <a href="https://www.meetup.com/" target="_blank">Meetup</a> for Elixir so you can start chatting up other developers that are experienced or just getting started like you!  If you can&#8217;t find a local meetup specifically for Elixir, see if there is one for Erlang and if theres not &#8211; time to start a new Meetup group! 🤓</p>
+
+<h2 id="step-4-8211-just-build-something">Step 4 &#8211; Just build something!</h2>
+
+<p>Equipped with this new found skill of Elixir its time to put yourself to task and actually just build something.  Anything!  Take a simple pet project (or 2, or 3) you&#8217;ve done in the past and rewrite it using Elixir (and Phoenix)!  Find an existing open source project built using Elixir and study its source &#8211; contribute even!</p>
+      </article>
+
+      <ul class="pager blog-pager">
+        
+          <li class="previous">
+            <a href="http://kroltech.com/2016/10/27/getting-started-with-reactflux-nodemongodb-open-source/" data-toggle="tooltip" data-placement="top" title="Getting started with React/Flux Node/MongoDB – Open Source">&larr; Previous Post</a>
+          </li>
+        
+        
+      </ul>
+
+      
+        
+          <div class="disqus-comments">
+            <div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_shortname = 'jasonkrol';
+    var disqus_identifier = 'http:\/\/kroltech.com\/2016\/12\/08\/how-im-learning-elixir-phoenix\/';
+    var disqus_title = 'How I’m Learning: Elixir \x26 Phoenix';
+    var disqus_url = 'http:\/\/kroltech.com\/2016\/12\/08\/how-im-learning-elixir-phoenix\/';
+
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+          </div>
+        
+      
+
+    </div>
+  </div>
+</div>
+
+    <footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <ul class="list-inline text-center footer-links">
+          
+              <li>
+                <a href="mailto:jkat98@gmail.com" title="Email me">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-envelope fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="https://www.plus.google.com/&#43;JasonKrol" title="Google&#43;">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-google-plus fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="https://github.com/shorttompkins" title="GitHub">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="https://twitter.com/shorttompkins" title="Twitter">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="https://reddit.com/u/shorttompkins" title="Reddit">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-reddit-alien fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="https://linkedin.com/in/jasonkrol" title="LinkedIn">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-linkedin fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="https://stackoverflow.com/users/1623304/jkat98" title="StackOverflow">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-stack-overflow fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="https://www.youtube.com/user/jkat98" title="Youtube">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-youtube fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+          
+          <li>
+            <a href="http://kroltech.com/index.xml" title="RSS">
+              <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fa fa-rss fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          
+        </ul>
+        <p class="credits copyright text-muted">
+          Jason Krol
+          &nbsp;&bull;&nbsp;
+          2016
+
+          
+            &nbsp;&bull;&nbsp;
+            <a href="http://kroltech.com/">KrolTech</a>
+          
+        </p>
+        
+        <p class="credits theme-by text-muted">
+          <a href="http://gohugo.io">Hugo v0.20.7</a> powered &nbsp;&bull;&nbsp; Theme by <a href="http://deanattali.com/beautiful-jekyll/">Beautiful Jekyll</a> adapted to <a href="https://github.com/halogenica/beautifulhugo">Beautiful Hugo</a>
+          
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/katex.min.js" integrity="sha384-/y1Nn9+QQAipbNQWU65krzJralCnuOasHncUFXGkdwntGeSvQicrYkiUBwsgUqc1" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/contrib/auto-render.min.js" integrity="sha384-dq1/gEHSxPZQ7DdrM82ID4YVol9BYyU7GbWlIwnwyPzotpoc57wDw/guX8EaYGPx" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<script src="http://kroltech.com/js/main.js"></script>
+<script src="http://kroltech.com/js/highlight.min.js"></script>
+<script> hljs.initHighlightingOnLoad(); </script>
+<script> renderMathInElement(document.body); </script>
+
+
+
+
+
+  </body>
+</html>
+

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Obama on KrolTech</title>
+    <link>http://kroltech.com/tags/obama/</link>
+    <description>Recent content in Obama on KrolTech</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <managingEditor>jkat98@gmail.com (Jason Krol)</managingEditor>
+    <webMaster>jkat98@gmail.com (Jason Krol)</webMaster>
+    <lastBuildDate>Fri, 09 Nov 2012 22:35:45 +0000</lastBuildDate>
+    
+	<atom:link href="http://kroltech.com/tags/obama/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Crossfit, Obama!!, Zen Coding</title>
+      <link>http://kroltech.com/2012/11/09/crossfit-obama-zen-coding/</link>
+      <pubDate>Fri, 09 Nov 2012 22:35:45 +0000</pubDate>
+      <author>jkat98@gmail.com (Jason Krol)</author>
+      <guid>http://kroltech.com/2012/11/09/crossfit-obama-zen-coding/</guid>
+      <description>Busted my ass in a major workout last night at Crossfit. The regular class is NO JOKE!
+Oh yeah, and Obama won (again)!!!
+Decided to try another stab at Angular.js this week. Going to try to lab something up at work using it, something real-world like article comments or something.
+Continued working on the new Nextgen.com framework. Got the shell set up pretty nicely and did a lot of organization of all Javascript and CSS and how it will be integrated globally and sitewide.</description>
+    </item>
+    
+  </channel>
+</rss>

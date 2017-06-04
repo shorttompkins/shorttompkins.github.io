@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Writing on KrolTech</title>
+    <link>http://kroltech.com/tags/writing/</link>
+    <description>Recent content in Writing on KrolTech</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <managingEditor>jkat98@gmail.com (Jason Krol)</managingEditor>
+    <webMaster>jkat98@gmail.com (Jason Krol)</webMaster>
+    <lastBuildDate>Thu, 09 Oct 2014 01:08:51 +0000</lastBuildDate>
+    
+	<atom:link href="http://kroltech.com/tags/writing/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>My new book: Web Development with MongoDB and Node.js</title>
+      <link>http://kroltech.com/2014/10/09/my-new-book-web-development-with-mongodb-and-node-js/</link>
+      <pubDate>Thu, 09 Oct 2014 01:08:51 +0000</pubDate>
+      <author>jkat98@gmail.com (Jason Krol)</author>
+      <guid>http://kroltech.com/2014/10/09/my-new-book-web-development-with-mongodb-and-node-js/</guid>
+      <description>&lt;p&gt;Introducing my new book; Web Development with MongoDB and Node.js! Its been a long 6 months of blood sweat and tears, but its finally released!&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

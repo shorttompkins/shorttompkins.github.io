@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Google Docs on KrolTech</title>
+    <link>http://kroltech.com/tags/google-docs/</link>
+    <description>Recent content in Google Docs on KrolTech</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <managingEditor>jkat98@gmail.com (Jason Krol)</managingEditor>
+    <webMaster>jkat98@gmail.com (Jason Krol)</webMaster>
+    <lastBuildDate>Thu, 29 Nov 2012 02:24:18 +0000</lastBuildDate>
+    
+	<atom:link href="http://kroltech.com/tags/google-docs/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Interested in starting a blog?  Start with a Google doc first!</title>
+      <link>http://kroltech.com/2012/11/29/interested-in-starting-a-blog-start-with-a-google-doc-first/</link>
+      <pubDate>Thu, 29 Nov 2012 02:24:18 +0000</pubDate>
+      <author>jkat98@gmail.com (Jason Krol)</author>
+      <guid>http://kroltech.com/2012/11/29/interested-in-starting-a-blog-start-with-a-google-doc-first/</guid>
+      <description>When I started my new job, a few months in I decided to start blogging. At first it really was just for my own personal use, a way for me to keep track of my accomplishments and new things I’d learned. I didn&amp;#8217;t want to get too bogged down and distracted with the trouble of actually creating a blog and designing it &amp;#8211; so instead I created a simple Google document and logged stuff daily and/or weekly.</description>
+    </item>
+    
+  </channel>
+</rss>

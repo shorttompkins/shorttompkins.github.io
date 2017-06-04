@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Chromebook on KrolTech</title>
+    <link>http://kroltech.com/tags/chromebook/</link>
+    <description>Recent content in Chromebook on KrolTech</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <managingEditor>jkat98@gmail.com (Jason Krol)</managingEditor>
+    <webMaster>jkat98@gmail.com (Jason Krol)</webMaster>
+    <lastBuildDate>Fri, 10 May 2013 21:17:49 +0000</lastBuildDate>
+    
+	<atom:link href="http://kroltech.com/tags/chromebook/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Linux on my Chromebook, Cloud based IDEs</title>
+      <link>http://kroltech.com/2013/05/10/linux-on-my-chromebook-cloud-based-ides/</link>
+      <pubDate>Fri, 10 May 2013 21:17:49 +0000</pubDate>
+      <author>jkat98@gmail.com (Jason Krol)</author>
+      <guid>http://kroltech.com/2013/05/10/linux-on-my-chromebook-cloud-based-ides/</guid>
+      <description>Shortly after getting my Chromebook, I quickly realized that it was a bit lacking. Sure, I wrote earlier that its a great little device and perfect for surfing &amp;#8211; but I also sort of wanted something a tiny bit more. So a little bit of searching lead me toan article explaining how you can very easily install Ubuntu Linux (well a port specifically for Chromebooks) on the device! The process itself was super painless and very easy.</description>
+    </item>
+    
+    <item>
+      <title>Thoughts on Asus Chromebook</title>
+      <link>http://kroltech.com/2013/04/29/thoughts-on-asus-chromebook/</link>
+      <pubDate>Mon, 29 Apr 2013 13:54:26 +0000</pubDate>
+      <author>jkat98@gmail.com (Jason Krol)</author>
+      <guid>http://kroltech.com/2013/04/29/thoughts-on-asus-chromebook/</guid>
+      <description>I&amp;#8217;ve had a bug in my ear lately that I wanted something&amp;#8230; different&amp;#8230; than the iPad for general home usage and Internet surfing etc. I sort of wanted a laptop, but just didn&amp;#8217;t want to pay the money for one. I was looking at some budget ultra-books but even those come in around $800+. There&amp;#8217;s the Surface tablets, but the Pros are also $1200+ and the RT just seems like an iPad basically.</description>
+    </item>
+    
+  </channel>
+</rss>

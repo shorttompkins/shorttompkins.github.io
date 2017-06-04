@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Directives on KrolTech</title>
+    <link>http://kroltech.com/tags/directives/</link>
+    <description>Recent content in Directives on KrolTech</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <managingEditor>jkat98@gmail.com (Jason Krol)</managingEditor>
+    <webMaster>jkat98@gmail.com (Jason Krol)</webMaster>
+    <lastBuildDate>Thu, 04 Jun 2015 13:19:58 +0000</lastBuildDate>
+    
+	<atom:link href="http://kroltech.com/tags/directives/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>AngularJS Directive: Two ways to skin a cat</title>
+      <link>http://kroltech.com/2015/06/04/angularjs-directive-two-ways-to-skin-a-cat/</link>
+      <pubDate>Thu, 04 Jun 2015 13:19:58 +0000</pubDate>
+      <author>jkat98@gmail.com (Jason Krol)</author>
+      <guid>http://kroltech.com/2015/06/04/angularjs-directive-two-ways-to-skin-a-cat/</guid>
+      <description>&lt;p&gt;Let&amp;#8217;s take a look at a recent directive I needed to create, and dissect the two completely different approaches I took to accomplish what I needed.&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

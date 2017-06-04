@@ -1,0 +1,2120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+  <title>Boilerplate web app using Backbone.js, ExpressJS, node.js, MongoDB</title>
+  <meta property="og:title" content="Boilerplate web app using Backbone.js, ExpressJS, node.js, MongoDB" />
+  <meta name="twitter:title" content="Boilerplate web app using Backbone.js, ExpressJS, node.js, MongoDB" />
+  <meta name="description" content="A boilerplate project for a complete web application written using Backbone.js &amp; Marionette, node.js &amp; ExpressJS, MongoDB &amp; Mongoose, Handlebars, Grunt.js, Bower, and Browserify!">
+  <meta property="og:description" content="A boilerplate project for a complete web application written using Backbone.js &amp; Marionette, node.js &amp; ExpressJS, MongoDB &amp; Mongoose, Handlebars, Grunt.js, Bower, and Browserify!">
+  <meta name="twitter:description" content="A boilerplate project for a complete web application written using Backbone.js &amp; Marionette, node.js &amp; ExpressJS, MongoDB &amp; Mongoose, Handlebars, Grunt.js, Bower, and Browserify!">
+  <meta name="author" content="Jason Krol"/>
+  <link href='http://kroltech.com/img/favicon.ico' rel='icon' type='image/x-icon'/>
+  <meta property="og:image" content="http://kroltech.com/img/avatar-icon.png" />
+  <meta name="twitter:image" content="http://kroltech.com/img/avatar-icon.png" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:site" content="@shorttompkins" />
+  <meta name="twitter:creator" content="@shorttompkins" />
+  <meta property="og:url" content="http://kroltech.com/2013/12/29/boilerplate-web-app-using-backbone-js-expressjs-node-js-mongodb/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="KrolTech" />
+
+  <meta name="generator" content="Hugo 0.20.7" />
+  <link rel="canonical" href="http://kroltech.com/2013/12/29/boilerplate-web-app-using-backbone-js-expressjs-node-js-mongodb/" />
+  <link rel="alternate" href="http://kroltech.com/index.xml" type="application/rss+xml" title="KrolTech">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/katex.min.css" integrity="sha384-wITovz90syo1dJWVh32uuETPVEtGigN07tkttEqPv+uR2SE/mbQcG7ATL28aI9H0" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <link rel="stylesheet" href="http://kroltech.com/css/main.css" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" />
+  <link rel="stylesheet" href="http://kroltech.com/css/pygment_highlights.css" />
+  <link rel="stylesheet" href="http://kroltech.com/css/highlight.min.css" />
+
+<script>
+window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+ga('create', 'UA-29480326-4', 'auto');
+ga('send', 'pageview');
+</script>
+<script async src='//www.google-analytics.com/analytics.js'></script>
+
+</head>
+
+  <body>
+    <nav class="navbar navbar-default navbar-fixed-top navbar-custom">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="http://kroltech.com/">KrolTech</a>
+    </div>
+
+    <div class="collapse navbar-collapse" id="main-navbar">
+      <ul class="nav navbar-nav navbar-right">
+        
+          
+            <li>
+              <a title="Blog" href="/">Blog</a>
+            </li>
+          
+        
+          
+            <li>
+              <a title="About" href="/page/about/">About</a>
+            </li>
+          
+        
+
+        
+
+        
+      </ul>
+    </div>
+
+    <div class="avatar-container">
+      <div class="avatar-img-border">
+        
+          <a title="KrolTech" href="http://kroltech.com/">
+            <img class="avatar-img" src="http://kroltech.com/img/avatar-icon.png" alt="KrolTech" />
+          </a>
+        
+      </div>
+    </div>
+
+  </div>
+</nav>
+
+
+
+
+    
+  
+  
+  
+
+
+
+
+  
+
+  <header class="header-section ">
+    
+    <div class="intro-header no-img">
+      
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+            <div class="post-heading">
+              <h1>Boilerplate web app using Backbone.js, ExpressJS, node.js, MongoDB</h1>
+                
+                
+                  <span class="post-meta">
+  Posted on December 29, 2013
+  
+</span>
+
+
+                
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+
+    
+<div class="container">
+  <div class="row">
+    <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+      <article role="main" class="blog-post">
+        <p>A boilerplate project for a complete web application written using Backbone.js &amp; Marionette, node.js &amp; ExpressJS, MongoDB &amp; Mongoose, Handlebars, Grunt.js, Bower, and Browserify!</p>
+
+<div style="display:inline;text-align:center;float:right;">
+  <p>
+    <a style="color:#ffffff;display:inline-block;padding:20px;margin-left:10px;background-color:#ffa100;" href="http://www.amazon.com/dp/B00HRME7NA" target="blank">View eBook on Amazon!</a>
+  </p>
+  
+  <div style="font-style:italic;font-weight:bold;margin-top:-10px;">
+    Only $1.99!
+  </div>
+</div>
+
+<p><em><strong>Important Note: This article gets a ton of traffic, and the information here is a lot to consume. Please note that the article is over a year old now but the information is still relevant. Some things have changed, most definitely version numbers etc. I will be posting a pretty massive update to this article and the code repo in the coming weeks/months.</strong></em></p>
+
+<p>I created a super basic single page application (SPA) that is a simple Contacts manager. While this app is pretty simple, there&#8217;s actually a lot that&#8217;s involved. My goal with this article is to cover the entire stack of the application including; back-end, data, front-end, tools and testing. The stack consists of the following core technologies:</p>
+
+<ul>
+<li>Back-end: node.js and ExpressJS
+
+<ul>
+<li>Testing: Mocha, Chai, Sinon, Proxyquire</li>
+</ul></li>
+<li>Data Layer: MongoDB and Mongoose</li>
+<li>Tools: Grunt, Bower and Browserify</li>
+<li>Front-end: Backbone.js and Marionette.js
+
+<ul>
+<li>Testing: Jasmine, Karma, and PhantomJS</li>
+</ul></li>
+</ul>
+
+<p>I&#8217;ll go into detail on each of the above components comprising the &#8220;full&#8221; stack. Again, because its such a simple app, not a whole lot of time will be spent covering the bells and whistles of the user interface or how the app works because that&#8217;s fairly obvious (nor did I spend a whole lot of time on the actual implementation, as I didn&#8217;t want it to distract from the core of the app). Instead, I&#8217;ll go into detail covering every aspect of how the app was built and the workflow process using the various tools.</p>
+
+<p>The end goal is to have a code base to act as a boilerplate starter for any new projects down the road. The code should be fully functional and complete, yet easily digestible. Ultimately, after you read this article and have a solid understand of everything under the hood, you should be able to simply clone the repo and start building your app!</p>
+
+<p>What you can expect from the remainder of this article:</p>
+
+<ul>
+<li>Part 0: Project setup and dependencies</li>
+<li>Part 1: Back-end &#8211; A simple node.js and ExpressJS server
+
+<ul>
+<li>node.js &#8211; initial setup</li>
+<li>ExpressJS &#8211; routes/controllers</li>
+<li>Handlebars &#8211; templates for rendering page views/layouts</li>
+<li>Data layer &#8211; Mongoose and MongoDB:
+
+<ul>
+<li>MongoDB &#8211; server itself and how it works in the Express layer</li>
+<li>Mongoose &#8211; Schema definitions for data models</li>
+<li>Seeder &#8211; How we seed data when the app is run for the first time</li>
+</ul></li>
+<li>Routes &amp; Controllers &#8211; API layer called from the frontend</li>
+<li>Testing with Mocha, Chai, Sinon, and Proxyquire</li>
+</ul></li>
+<li>Part 2: Development Tools (Grunt, Bower, Browserify, TDD)
+
+<ul>
+<li>Grunt &#8211; Does all the things!
+
+<ul>
+<li>Initial configuration (load grunt tasks)</li>
+<li>Clean</li>
+<li>Bower installs</li>
+<li>Browserify (vendor, shim dependencies, and app files)</li>
+<li>LESS transpiling</li>
+<li>Handlebars (precompiling / transform via Browserify)</li>
+<li>Concatenation / Minification &amp; Uglification / Copying</li>
+<li>Watchers (for both backend and frontend rebuilds)</li>
+<li>Karma commands/watchers</li>
+<li>jshint</li>
+<li>Concurrent tasks</li>
+<li>Commands breakdown
+
+<ul>
+<li>init:dev, build:dev, build:prod, tdd, test:client, etc.</li>
+</ul></li>
+</ul></li>
+<li>Bower &#8211; Manage front-end dependencies for the project
+bower.json explained</li>
+<li>Karma/Jasmine &#8211; basic explanation of tdd tasks vs test:client (single run)</li>
+</ul></li>
+<li>Part 3: Front-end &#8211; Contacts app with Backbone &amp; Marionette
+
+<ul>
+<li>Browserify &#8211; why we are using Browserify and its benefits</li>
+<li>Backbone / Underscore &amp; Marionette</li>
+<li>Contacts Application &#8211; introduction and basic explanation of the app
+
+<ul>
+<li>Core:
+
+<ul>
+<li>Marionette</li>
+<li>Connection to the data layer to cache data</li>
+<li>Router and Controller setup</li>
+<li>Start!</li>
+</ul></li>
+<li>Views:
+
+<ul>
+<li>Marionette.ItemView (versus Backbone.View)</li>
+<li>Handlebar precompiled templates</li>
+</ul></li>
+<li>Models / Collections</li>
+<li>Controller calls to the API</li>
+</ul></li>
+<li>TDD with Karma and Jasmine</li>
+</ul></li>
+<li>Part 4: Deploy with Heroku!</li>
+</ul>
+
+<h2 id="part-0-project-setup-and-dependencies">Part 0: Project setup and dependencies</h2>
+
+<p>Before we can get started, lets make sure you have the project and can run it. First, you will want a copy of the project itself. The easiest way to download a copy is by cloning the repo locally using Git:</p>
+
+<p>[sourcecode light=&#8221;true&#8221;]$ git clone git@github.com:jkat98/benm.git[/sourcecode]</p>
+
+<p>If you don&#8217;t have Git installed or are unfamiliar with the concept, I strongly urge you to read some getting started articles (<a href="http://kroltech.com/2013/10/getting-started-using-git-with-windows/">I wrote a pretty quick guide that should help!</a>).</p>
+
+<p>Once you have the project cloned to a local directory on your machine, you&#8217;ll want to make sure you have a few of the most basic requirements.</p>
+
+<h4 id="install-node-js-and-npm">Install node.js and npm</h4>
+
+<p>If you don&#8217;t have node.js (and npm) installed already, do so by going to <a href="http://nodejs.org" target="_blank"><a href="http://nodejs.org">http://nodejs.org</a></a> (npm is included by default with a standard node.js installation). Be sure to download the latest stable version (v0.10.24 as of the time of this writing).</p>
+
+<p>Once you&#8217;ve installed node.js the easiest way to confirm that its working is by going to a terminal or command prompt and simply typing:</p>
+
+<p>[sourcecode light=&#8221;true&#8221;]$ node &#8211;version[/sourcecode]</p>
+
+<p>Assuming its working, you should simply get an output of “0.10.24” or whatever version you actually have installed.</p>
+
+<h4 id="install-the-mongodb-server">Install the MongoDB server</h4>
+
+<p>Next you&#8217;ll want to be sure you have the MongoDB server installed on your machine. This is a pretty simple install, similar to node.js. You can find the appropriate download and installation files by visiting the downloads section of the MongoDB website: <a href="http://www.mongodb.org/downloads" target="_blank"><a href="http://www.mongodb.org/downloads">http://www.mongodb.org/downloads</a></a>. Please do read the install/getting started docs as there are a few additional steps beyond installation. (i.e. creating/setting your data dir, etc)</p>
+
+<p>Note: Installing MongoDB isn&#8217;t required, but most of the project won&#8217;t work unless you make some manual edits to remove the MongoDB/Mongoose stuff.</p>
+
+<h4 id="install-the-grunt-cli">Install the Grunt CLI</h4>
+
+<p>One last tool that the project absolutely requires is the Grunt command line tool, which can be very easily installed via npm:</p>
+
+<p>[sourcecode light=&#8221;true&#8221;]$ npm install -g grunt-cli[/sourcecode]</p>
+
+<p>Note: doing a -g install with npm will install that package globally, meaning it is now installed on your machine and available everywhere. Without -g, the packages are only installed locally to the specific project or repo you are working with (and are stored in a node_modules directory within the project).</p>
+
+<p>Mac users: a global npm install may require sudo for it to install properly.</p>
+
+<h4 id="run-the-app">Run the app!</h4>
+
+<p>So, assuming that all of the above was successful, you&#8217;re now ready to boot up the web app and take it for a spin! First you need to install all of the project&#8217;s dependencies (explained in more detail in the next section) and use Grunt.js to initialize the project and launch the server:</p>
+
+<p>[sourcecode light=&#8221;true&#8221;]</p>
+
+<p>$ npm install</p>
+
+<p>$ grunt init:dev</p>
+
+<p>$ grunt server</p>
+
+<p>[/sourcecode]</p>
+
+<p>Again, assuming everything is working correctly, Grunt should report that the server is up. You should have seen a lot of log output including the MongoDB server connecting, and some seed data inserted. Point your browser to <a href="http://localhost:3300">http://localhost:3300</a> and the app should be up and running! Feel free to play around, click a Contact to view details, add a new Contact, etc.</p>
+
+<p>Don&#8217;t worry about all the craziness that just happened &#8211; we&#8217;ll cover all of it!</p>
+
+<h2 id="part-1-backend-8211-a-simple-node-js-and-expressjs-server">Part 1: Backend &#8211; A simple node.js and ExpressJS server</h2>
+
+<p>Our server, which will be running in node.js, like any web server really has 2 main purposes. The first is that it should handle requests from a browser and serve up whatever files are requested. These files typically fall into 2 main categories: static files (JavaScript, CSS, HTML, images, etc.) and dynamic files (server generated HTML from templates). Because our app is mainly a thick front-end client the server side templates aren&#8217;t really necessary (as we could have just served a static html file). Support for Handlebars template rendering has been included in this project, however, so that this is a complete code base. Should you decide you want to create and host a more traditional website (i.e. no Backbone single page front-end) you can do so easily using Handlebars templates on the back-end alone.</p>
+
+<p>The second thing our server should do is communicate with some form of data layer to persist data between visitor sessions. (i.e. you interact with the app, close your browser, come back and your work was saved and is presented back to you.) This is where MongoDB comes in &#8211; a noSQL database server that basically uses JSON to store all data.</p>
+
+<h3 id="package-json-8211-everything-the-project-needs">Package.json &#8211; everything the project needs:</h3>
+
+<p>Before we can get started writing pretty much any server code, we need to make sure everything our server is going to need actually exists in our development environment. The easiest way to do this is to put together a basic package.json file that contains a list of all of the dependencies the server will require in order to function. As you determine what your server will need, and install them with npm, your package.json file will grow to account for these new dependencies.</p>
+
+<p>Lets take a look at the file and explain some of what&#8217;s going on here:</p>
+
+<p>[sourcecode language=&#8221;javascript&#8221;]</p>
+
+<p>{</p>
+
+<p>&ldquo;name&rdquo;: &ldquo;myapp&rdquo;,</p>
+
+<p>&ldquo;description&rdquo;: &ldquo;Boilerplate web app using node, express, mongodb, backbone, marionette. Tooling includes Grunt, Bower, Browserify, etc.&rdquo;,</p>
+
+<p>&ldquo;version&rdquo;: &ldquo;0.0.1&rdquo;,</p>
+
+<p>&ldquo;author&rdquo;: &ldquo;Jason Krol&rdquo;,</p>
+
+<p>&ldquo;repository&rdquo;: {</p>
+
+<p>&ldquo;type&rdquo;: &ldquo;git&rdquo;,</p>
+
+<p>&ldquo;url&rdquo;: &ldquo;<a href="https://github.com/jkat98/benm.git&quot;">https://github.com/jkat98/benm.git&quot;</a></p>
+
+<p>},</p>
+
+<p>[/sourcecode]</p>
+
+<ol>
+<li>The top most portion contains just standard descriptive stuff for the project. Pretty self explanatory.</li>
+</ol>
+
+<p>[sourcecode language=&#8221;javascript&#8221; firstline=&#8221;10&#8243;]</p>
+
+<p>&ldquo;engines&rdquo;: {</p>
+
+<p>&ldquo;node&rdquo;: &ldquo;0.10.x&rdquo;</p>
+
+<p>},</p>
+
+<p>[/sourcecode]</p>
+
+<ol>
+<li>The engines item just lists the necessary runtime needed in order to run this project, obviously this is node.js and its version.</li>
+</ol>
+
+<p>[sourcecode language=&#8221;javascript&#8221; firstline=&#8221;13&#8243;]</p>
+
+<p>&ldquo;scripts&rdquo;: {</p>
+
+<p>&ldquo;start&rdquo;: &ldquo;node server.js&rdquo;</p>
+
+<p>},</p>
+
+<p>[/sourcecode]</p>
+
+<ol>
+<li>Scripts just notes what the &#8220;run&#8221; command would be to start the project/server/app/whatever.</li>
+</ol>
+
+<p>[sourcecode language=&#8221;javascript&#8221; firstline=&#8221;16&#8243;]</p>
+
+<p>&ldquo;dependencies&rdquo;: {</p>
+
+<p>&ldquo;express&rdquo;: &ldquo;latest&rdquo;,</p>
+
+<p>&ldquo;mongoose&rdquo;: &ldquo;~3.8.3&rdquo;,</p>
+
+<p>&ldquo;handlebars-runtime&rdquo;: &ldquo;~1.0.12&rdquo;,</p>
+
+<p>&ldquo;express3-handlebars&rdquo;: &ldquo;~0.5.0&rdquo;,</p>
+
+<p>&ldquo;MD5&rdquo;: &ldquo;~1.2.0&rdquo;</p>
+
+<p>},</p>
+
+<p>[/sourcecode]</p>
+
+<ol>
+<li>Dependencies is a list of the absolute minimum required dependencies the project has in order for it to run properly. Without these, the server just won’t run.</li>
+</ol>
+
+<p>[sourcecode language=&#8221;javascript&#8221; firstline=&#8221;20&#8243;]</p>
+
+<p>&ldquo;devDependencies&rdquo;: {</p>
+
+<p>&ldquo;bower&rdquo;: &ldquo;~1.2.8&rdquo;,</p>
+
+<p>&ldquo;grunt&rdquo;: &ldquo;~0.4.1&rdquo;,</p>
+
+<p>&ldquo;grunt-contrib-concat&rdquo;: &ldquo;~0.3.0&rdquo;,</p>
+
+<p>&ldquo;grunt-contrib-jshint&rdquo;: &ldquo;~0.7.2&rdquo;,</p>
+
+<p>&ldquo;grunt-contrib-uglify&rdquo;: &ldquo;~0.2.7&rdquo;,</p>
+
+<p>&ldquo;grunt-bower-task&rdquo;: &ldquo;~0.3.4&rdquo;,</p>
+
+<p>&ldquo;grunt-nodemon&rdquo;: &ldquo;~0.1.2&rdquo;,</p>
+
+<p>&ldquo;karma-script-launcher&rdquo;: &ldquo;~0.1.0&rdquo;,</p>
+
+<p>&ldquo;karma-chrome-launcher&rdquo;: &ldquo;~0.1.1&rdquo;,</p>
+
+<p>&ldquo;karma-html2js-preprocessor&rdquo;: &ldquo;~0.1.0&rdquo;,</p>
+
+<p>&ldquo;karma-firefox-launcher&rdquo;: &ldquo;~0.1.2&rdquo;,</p>
+
+<p>&ldquo;karma-jasmine&rdquo;: &ldquo;~0.1.4&rdquo;,</p>
+
+<p>&ldquo;karma-requirejs&rdquo;: &ldquo;~0.2.0&rdquo;,</p>
+
+<p>&ldquo;karma-coffee-preprocessor&rdquo;: &ldquo;~0.1.1&rdquo;,</p>
+
+<p>&ldquo;karma-phantomjs-launcher&rdquo;: &ldquo;~0.1.1&rdquo;,</p>
+
+<p>&ldquo;karma&rdquo;: &ldquo;~0.10.8&rdquo;,</p>
+
+<p>&ldquo;grunt-contrib-copy&rdquo;: &ldquo;~0.4.1&rdquo;,</p>
+
+<p>&ldquo;grunt-contrib-clean&rdquo;: &ldquo;~0.5.0&rdquo;,</p>
+
+<p>&ldquo;browserify&rdquo;: &ldquo;2.36.1&rdquo;,</p>
+
+<p>&ldquo;grunt-browserify&rdquo;: &ldquo;~1.3.0&rdquo;,</p>
+
+<p>&ldquo;load-grunt-tasks&rdquo;: &ldquo;~0.2.0&rdquo;,</p>
+
+<p>&ldquo;time-grunt&rdquo;: &ldquo;~0.2.3&rdquo;,</p>
+
+<p>&ldquo;grunt-contrib-watch&rdquo;: &ldquo;~0.5.3&rdquo;,</p>
+
+<p>&ldquo;grunt-concurrent&rdquo;: &ldquo;~0.4.2&rdquo;,</p>
+
+<p>&ldquo;grunt-karma&rdquo;: &ldquo;~0.6.2&rdquo;,</p>
+
+<p>&ldquo;grunt-contrib-less&rdquo;: &ldquo;~0.8.3&rdquo;,</p>
+
+<p>&ldquo;grunt-contrib-handlebars&rdquo;: &ldquo;~0.6.0&rdquo;,</p>
+
+<p>&ldquo;grunt-contrib-cssmin&rdquo;: &ldquo;~0.7.0&rdquo;,</p>
+
+<p>&ldquo;hbsfy&rdquo;: &ldquo;~1.0.0&rdquo;,</p>
+
+<p>&ldquo;grunt-shell-spawn&rdquo;: &ldquo;~0.3.0&rdquo;,</p>
+
+<p>&ldquo;chai&rdquo;: &ldquo;~1.9.0&rdquo;,</p>
+
+<p>&ldquo;sinon&rdquo;: &ldquo;~1.8.1&rdquo;,</p>
+
+<p>&ldquo;sinon-chai&rdquo;: &ldquo;~2.5.0&rdquo;,</p>
+
+<p>&ldquo;grunt-simple-mocha&rdquo;: &ldquo;~0.4.0&rdquo;,</p>
+
+<p>&ldquo;proxyquire&rdquo;: &ldquo;~0.5.2&rdquo;</p>
+
+<p>}</p>
+
+<p>}</p>
+
+<p>[/sourcecode]</p>
+
+<ol>
+<li>DevDependencies is a list of all of the dependencies the project has for the purposes of development. This list is huge because most of it involves plugins for Grunt (that will be explained later). Also included is Bower, Browserify, Karma, etc. Again, a list of everything we need in order to develop against the project but not necessarily required for the project to just run.</li>
+</ol>
+
+<p>So, with that package.json file in place the first step is to do a simple npm install to get all dependencies installed and ready to rock with our server:</p>
+
+<p>[sourcecode light=&#8221;true&#8221;]$ npm install[/sourcecode]</p>
+
+<p>This might take a few minutes as its downloading a fair amount of modules. Note, you probably did this step already if you completed the steps in Part 0 getting the project up and running.</p>
+
+<div style="border:solid 1px #c0c0c0;background-color:#ffffff;padding:10px;margin-bottom:15px;padding-bottom:0;">
+  <p>
+    If you are starting a new project, the easiest way to get started with your package.json file is to execute an npm init, which will take you through a few quick questions and then generate a new package.json file for you:
+  </p>
+  
+  <p>
+    [sourcecode light=&#8221;true&#8221;]$ npm init[/sourcecode]
+  </p>
+  
+  <p>
+    You could just hit return/enter on every prompt and be satisfied with a mainly empty but complete package.json file.
+  </p>
+</div>
+
+<h3 id="the-node-js-server-with-expressjs-and-mongoose">The node.js server with ExpressJS and Mongoose:</h3>
+
+<p>Let&#8217;s take a look at some pretty basic node.js code that will act as the main server. We&#8217;ll let ExpressJS do what it does best and handle a lot of the low-level stuff we just don&#8217;t want to worry about. We can then focus on configuration and creating the API routes that our front-end app will talk to.</p>
+
+<p>Most of the directories within the root pertain to our node.js server. These include app, controllers, views, and views/layouts. The client directory is where all of our front-end code will reside and the public folder will be where its served from. Basically anything inside the public or views directories is visible from a browser, everything else is not.</p>
+
+<p>[sourcecode light=&#8221;true&#8221;]</p>
+
+<p>&#8212;- app</p>
+
+<p>&#8212;- controllers</p>
+
+<p>&#8212;- views</p>
+
+<p>&#8212;&#8212;&#8211; layouts</p>
+
+<p>&#8212;- public</p>
+
+<p>&#8212;&#8212;&#8211; js</p>
+
+<p>&#8212;&#8212;&#8211; css</p>
+
+<p>&#8212;- client</p>
+
+<p>&#8212;&#8212;&#8211; requires</p>
+
+<p>&#8212;&#8212;&#8211; spec</p>
+
+<p>&#8212;&#8212;&#8211; src</p>
+
+<p>&#8212;&#8212;&#8211; styles</p>
+
+<p>&#8212;&#8212;&#8211; templates</p>
+
+<p>&#8212;- spec</p>
+
+<p>&#8212;&#8212;&#8211; app</p>
+
+<p>&#8212;&#8212;&#8211; controllers</p>
+
+<p>[/sourcecode]</p>
+
+<p>The core server file that will house the bulk of the node.js code (at least the boot-up code) will reside in a file called server.js. Lets take a look at that:</p>
+
+<p>[sourcecode language=&#8221;javascript&#8221;]</p>
+
+<p>var express = require(&#8216;express&#8217;),</p>
+
+<p>http = require(&#8216;http&#8217;),</p>
+
+<p>path = require(&#8216;path&#8217;),</p>
+
+<p>routes = require(&#8216;./app/routes&#8217;),</p>
+
+<p>exphbs = require(&#8216;express3-handlebars&#8217;),</p>
+
+<p>mongoose = require(&#8216;mongoose&#8217;),</p>
+
+<p>seeder = require(&#8216;./app/seeder&#8217;),</p>
+
+<p>app = express();</p>
+
+<p>[/sourcecode]</p>
+
+<p>Here we are declaring a bunch of modules that are pulled in via node’s require function. Any items in a require() call that do not have ./ or ../ are modules that are being loaded in from the npm packages that were installed or from node.js itself (for example: http is a part of node.js core, express was installed via npm). The requires() that include a ./ or ../ are our own modules, which we will be defining in a bit.</p>
+
+<p>Now that we have a bunch of modules ready to be used, lets look at some basic ExpressJS configuration code that boots up the server:</p>
+
+<p>[sourcecode language=&#8221;javascript&#8221; firstline=&#8221;10&#8243;]</p>
+
+<p>app.set(&#8216;port&#8217;, process.env.PORT || 3300);</p>
+
+<p>// &#8230;</p>
+
+<p>app.use(express.logger(&#8216;dev&#8217;));</p>
+
+<p>app.use(express.json());</p>
+
+<p>app.use(express.urlencoded());</p>
+
+<p>app.use(express.methodOverride());</p>
+
+<p>app.use(express.cookieParser(&#8216;some-secret-value-here&#8217;));</p>
+
+<p>app.use(app.router);</p>
+
+<p>app.use(&#8216;/&#8217;, express.static(path.join(__dirname, &#8216;public&#8217;)));</p>
+
+<p>// development only</p>
+
+<p>if (&#8216;development&#8217; == app.get(&#8216;env&#8217;)) {</p>
+
+<p>app.use(express.errorHandler());</p>
+
+<p>}</p>
+
+<p>[/sourcecode]</p>
+
+<p>This code is pretty standard ExpressJS stuff. Each of the app.use calls is loading some form of ExpressJS middleware. These are basically plugins that handle a lot of stuff we just don&#8217;t want to have to worry about! The last app.use() (before the // development only comment) is setting the public folder to be a static folder, which means Express will serve files in that folder as is (and won&#8217;t do anything to them other than serve them).</p>
+
+<h3 id="handlebars-templates-for-serving-dynamic-html-pages">Handlebars templates for serving dynamic HTML pages</h3>
+
+<p>[sourcecode language=&#8221;javascript&#8221; firstline=&#8221;11&#8243;]</p>
+
+<p>app.set(&#8216;views&#8217;, __dirname + &#8216;/views&#8217;);</p>
+
+<p>app.engine(&#8216;handlebars&#8217;, exphbs({</p>
+
+<p>defaultLayout: &#8216;main&#8217;,</p>
+
+<p>layoutsDir: app.get(&#8216;views&#8217;) + &#8216;/layouts&#8217;</p>
+
+<p>}));</p>
+
+<p>app.set(&#8216;view engine&#8217;, &#8216;handlebars&#8217;);</p>
+
+<p>[/sourcecode]</p>
+
+<p>We are initializing our view engine with Handlebars and setting it to point to our views directory. Its common you might see Jade being used instead as its a popular template engine, and I do like Jade (especially its concise HTML syntax which looks like Zen coding). However, I wanted to use Handlebars instead so that the template language was the same on the back-end and front-end. The server side Handlebars templates are stored in the views directory and subsequently the layouts stored in a layouts directory. The syntax to use Handlebars on the back-end is pretty much identical to that of the front-end!</p>
+
+<h3 id="the-data-layer-with-mongoose-and-mongodb">The Data layer with Mongoose and MongoDB:</h3>
+
+<p>So far so good. The last thing left to do is include a connection to our database server. The database server we are using for this project is MongoDB &#8211; a noSQL JSON based data store. In my opinion, using MongoDB with a full stack JavaScript project like this is a no-brainer so it was the obvious choice for me to use. Your mileage may vary.</p>
+
+<div style="border:solid 1px #c0c0c0;background-color:#ffffff;padding:10px;margin-bottom:15px;padding-bottom:0;">
+  <h4>
+    Getting started with MongoDB:
+  </h4>
+  
+  <p>
+    If you are unfamiliar with MongoDB, here&#8217;s a super quick crash course. Assuming you have MongoDB installed on your machine, you can start the server by simply typing the command mongod at any terminal or command prompt:
+  </p>
+  
+  <p>
+    [sourcecode light=&#8221;true&#8221;]$ mongod[/sourcecode]
+  </p>
+  
+  <p>
+    In another terminal or command prompt, use mongo to enter the MongoDB shell:
+  </p>
+  
+  <p>
+    [sourcecode light=&#8221;true&#8221;]$ mongo[/sourcecode]
+  </p>
+  
+  <p>
+    This will change your prompt as you are now using the MongoDB shell. A few quick commands:
+  </p>
+  
+  <ul>
+    <li>
+      show dbs &#8211; displays a list of available databases on the system.
+    </li>
+    <li>
+      use databasename &#8211; switch to existing databasename (or create it if it doesn&#8217;t already exist)
+    </li>
+    <li>
+      db.things.find() &#8211; list all records in the &#8220;things&#8221; collection of the currently active database (set with &#8216;use&#8217; earlier)
+    </li>
+    <li>
+      db.things.insert({ a: 1, b: 2, c: 3}) &#8211; insert a new record into the &#8216;things&#8217; collection with the object provided.
+    </li>
+    <li>
+      db.things.find({a : 1}) &#8211; return a list of all records that has the property a with a value of &#8216;1&#8217;
+    </li>
+  </ul>
+</div>
+
+<p>[sourcecode language=&#8221;javascript&#8221; firstline=&#8221;31&#8243;]</p>
+
+<p>//connect to the db server:</p>
+
+<p>mongoose.connect(&#8216;mongodb://localhost/MyApp&#8217;);</p>
+
+<p>mongoose.connection.on(&#8216;open&#8217;, function() {</p>
+
+<p>console.log(&ldquo;Connected to Mongoose&#8230;&rdquo;);</p>
+
+<p>// check if the db is empty, if so seed it with some contacts:</p>
+
+<p>seeder.check();</p>
+
+<p>});</p>
+
+<p>[/sourcecode]</p>
+
+<p>The node.js driver we are using to connect to our MongoDB server is Mongoose. There are a number of node.js drivers available that work with MongoDB, but I like Mongoose because of the schemas that you can use with your models. (Coming from a &#8220;Code First&#8221; .net development background personally, this was the most direct comparison when I was learning node.) In our server.js file we just include a small chunk of code that connects to the MongoDB server using the Mongoose driver. Note that the connection url to the MongoDB server is &#8220;mongodb://localhost/&#8221; followed by the name of the database to connect to. The beauty of MongoDB is that if a database doesn&#8217;t exist when its attempted to be connected to, one is created automatically!</p>
+
+<p>Once the connection is established, we run a simple seeder check function that basically checks to see if this is the first time we are running the app &#8211; if so it throws a few records into the Contacts collection (a.k.a &#8220;table&#8221;) so the app isn&#8217;t completely empty the first time its run. This isn&#8217;t necessary, but just makes for a nice initial impression on first use.</p>
+
+<h3 id="seeder-module">Seeder module:</h3>
+
+<p>The seeder object is actually a great introduction to modules in node.js. If you go back to the very top of server.js you’ll recall we included a bunch of require() statements. This is where we take modules in node.js, either those that come with node, those we’ve installed via npm, or our very own, and include them as regular JavaScript variables that we can work with later in our code. Lets look at the seeder module and see what its doing:</p>
+
+<p>[sourcecode language=&#8221;javascript&#8221;]</p>
+
+<p>var mongoose = require(&#8216;mongoose&#8217;),</p>
+
+<p>models = require(&#8216;./models&#8217;),</p>
+
+<p>md5 = require(&#8216;MD5&#8217;);</p>
+
+<p>module.exports = {</p>
+
+<p>check: function() {</p>
+
+<p>// &#8230;</p>
+
+<p>[/sourcecode]</p>
+
+<p>Here we include a few requires() again, fewer this time since this is a specific module and only needs to do what it does and depends on only a few things; namely Mongoose, our data models, and MD5. (MD5 is only used to generate hash values that Gravatar uses for their images.) The more important part is the module.exports line &#8211; which exports a JavaScript object that basically has 1 property function called ‘check’. Check() will check to see if there are any records in the Contacts collection, if not it will just insert a bunch of sample records to start with.</p>
+
+<h3 id="api-routes-and-controllers">API Routes and Controllers:</h3>
+
+<p>[sourcecode language=&#8221;javascript&#8221; firstline=&#8221;40&#8243;]</p>
+
+<p>//routes list:</p>
+
+<p>routes.initialize(app);</p>
+
+<p>//finally boot up the server:</p>
+
+<p>http.createServer(app).listen(app.get(&#8216;port&#8217;), function() {</p>
+
+<p>console.log(&#8216;Server up: <a href="http://localhost:&amp;#8217">http://localhost:&amp;#8217</a>; + app.get(&#8216;port&#8217;));</p>
+
+<p>});</p>
+
+<p>[/sourcecode]</p>
+
+<p>Finally, now that our server code is all set up and we have our connection to our database server, the last thing to do is get our routes ready and then start the server!</p>
+
+<p>[sourcecode language=&#8221;javascript&#8221;]</p>
+
+<p>var home = require(&#8216;../controllers/home&#8217;),</p>
+
+<p>contacts = require(&#8216;../controllers/contacts&#8217;);</p>
+
+<p>module.exports.initialize = function(app) {</p>
+
+<p>app.get(&#8216;/&#8217;, home.index);</p>
+
+<p>app.get(&#8216;/api/contacts&#8217;, contacts.index);</p>
+
+<p>app.get(&#8216;/api/contacts/:id&#8217;, contacts.getById);</p>
+
+<p>app.post(&#8216;/api/contacts&#8217;, contacts.add);</p>
+
+<p>app.put(&#8216;/api/contacts&#8217;, contacts.update);</p>
+
+<p>};</p>
+
+<p>[/sourcecode]</p>
+
+<p>&nbsp;</p>
+
+<p>[sourcecode language=&#8221;javascript&#8221;]</p>
+
+<p>module.exports = {</p>
+
+<p>index: function(req, res) {</p>
+
+<p>res.render(&#8216;index&#8217;);</p>
+
+<p>}</p>
+
+<p>};</p>
+
+<p>[/sourcecode]</p>
+
+<p>We’re using a 1:1 relationship with a router and controller in this project, so if you take a look at the routes.js file in the app/ dir, you’ll see that its pretty basic. It’s literally just defining all of the endpoints for our API layer that the server will respond to when calls are made from the front-end layer. The actual implementation for each router is defined in the controllers module which can be found in controllers/*.js. Again, noting the requires() at the top of the routes.js file, we include our own modules by referencing ../controllers/file (no .js). One thing to note is that our home controller only has an index which returns a rendered Handlebars template (as noted by the res.render(‘index’)). The contacts controller returns pure JSON results &#8211; different results depending on the URL being requested.</p>
+
+<p>The most important controller is the contacts controller (controllers/contacts.js). This is the one that the front-end actually talks to to get the initial collection of contacts, retrieve an individual contact&#8217;s full details, as well as add new contacts and update existing contacts. Each of the functions in contacts.js is mainly doing Mongoose inserts/updates/gets against the MongoDB server.</p>
+
+<h3 id="data-models">Data Models:</h3>
+
+<p>The last piece of our server code is our data models. Our data models are objects where the data schema has been defined. If you look at the app/models.js file you will see a few requires() at the top (specifically Mongoose, Schema, and ObjectId &#8211; all related to Mongoose). We define a Contact model which is just a new data schema and the properties defined (and of what type). Finally we export an object that contains a property specifically for the Content model. We do it this way so we can define our entire project&#8217;s data schemas and return them all via the primary “models” module. Let&#8217;s say in addition to Contacts, we also wanted to store a collection of our favorite books. In the models.js file we would declare another var of Book that = new Schema({}) and inside the object define the properties for each Book (i.e. Title, Author, Description, ISBN, etc). Then in the module.exports after the Contact: line we simply put a , and then Book: mongoose.model(‘Book’, Book);. Then everywhere that we&#8217;ve already included var models = require(‘./models’) will instantly also have our Book model as well. You don&#8217;t have to include all of your models in 1 file/module this way &#8211; its just the way I did it for this project (and probably would work well for most projects unless you had a very large amount of models).</p>
+
+<p>[sourcecode language=&#8221;javascript&#8221;]</p>
+
+<p>var mongoose = require(&#8216;mongoose&#8217;),</p>
+
+<p>Schema = mongoose.Schema,</p>
+
+<p>ObjectId = Schema.ObjectId;</p>
+
+<p>var Contact = new Schema({</p>
+
+<p>email: { type: String },</p>
+
+<p>name: {</p>
+
+<p>first: { type: String },</p>
+
+<p>last: { type: String }</p>
+
+<p>},</p>
+
+<p>phone: { type: String },</p>
+
+<p>gravatar: { type: String }</p>
+
+<p>});</p>
+
+<p>module.exports = {</p>
+
+<p>Contact: mongoose.model(&#8216;Contact&#8217;, Contact)</p>
+
+<p>};</p>
+
+<p>[/sourcecode]</p>
+
+<p>Our entire server consists of just 6 small .js files, most of which have very few lines of code. All of that serves up a fully functional web server with a database connection and data CRUD logic!</p>
+
+<h3 id="testing-node-with-mocha-chai-sinon-and-proxyquire">Testing node with Mocha, Chai, Sinon, and Proxyquire</h3>
+
+<p>We are using a few different tools on the server side to handle testing of our node code. Primarily we are using Mocha, combined with a Grunt mocha runner to execute our tests. The tests themselves are written using Chai as the assertion language, Sinon for spies and stubs, and Proxyquire to do a little magic when it comes to the idea of &#8220;fakes&#8221; in the node world.</p>
+
+<p>To run the tests for the code, execute the following command:</p>
+
+<p>[sourcecode]</p>
+
+<p>$ grunt test:server</p>
+
+<p>[/sourcecode]</p>
+
+<p>This will execute the mocha runner, and all of the tests we have in the spec folder will be run. You should see the output for each test right in your terminal, hopefully with green checkmarks all the way down the list.</p>
+
+<p>The tests are organized in a similar fashion to the app itself, with an app and controllers folder.</p>
+
+<p>To learn more about testing with node.js, checkout <a href="http://kroltech.com/2014/02/node-js-testing-with-mocha-chai-sinon-proxyquire/">my other post that goes into more detail</a>.</p>
+
+<h2 id="part-2-development-tools-bower-grunt-browserify">Part 2: Development Tools (Bower, Grunt, Browserify)</h2>
+
+<p>Now that the server has been covered, and before we can get to the front-end app, I want to go over the suite of tools that were used during the development of this app.</p>
+
+<h3 id="bower-8211-front-end-dependency-management">Bower &#8211; Front-end dependency management</h3>
+
+<p>Bower is a great little tool! Its basically what npm is to node. Using Bower you can quickly and easily install any front-end dependencies required by your project. Typically, in the past, whenever we wanted to use something like jQuery, underscore, Backbone.js, etc. we always went to the libraries website or GitHub repo (many times one in the same), found the download link, saved a copy of the .js file somewhere in our project, and then added a reference to that file in our main layout. With Bower that process is a whole lot easier.</p>
+
+<p>Like most things done with node, Bower depends on its own bower.json file. This is going to be very similar to the existing package.json (explained earlier) file.</p>
+
+<p>[sourcecode language=&#8221;javascript&#8221;]</p>
+
+<p>{</p>
+
+<p>&ldquo;name&rdquo;: &ldquo;myapp&rdquo;,</p>
+
+<p>&ldquo;version&rdquo;: &ldquo;0.0.1&rdquo;,</p>
+
+<p>&ldquo;private&rdquo;: true,</p>
+
+<p>&ldquo;dependencies&rdquo;: {</p>
+
+<p>&ldquo;backbone.marionette&rdquo;: &ldquo;~1.4.1&rdquo;,</p>
+
+<p>&ldquo;jquery&rdquo;: &ldquo;~1.10.2&rdquo;,</p>
+
+<p>&ldquo;underscore&rdquo;: &ldquo;~1.5.2&rdquo;,</p>
+
+<p>&ldquo;backbone&rdquo;: &ldquo;~1.1.0&rdquo;</p>
+
+<p>},</p>
+
+<p>&ldquo;devDependencies&rdquo;: {</p>
+
+<p>&ldquo;jasmine&rdquo;: &ldquo;~1.3.1&rdquo;</p>
+
+<p>},</p>
+
+<p>&ldquo;exportsOverride&rdquo;: {</p>
+
+<p>&ldquo;jquery&rdquo;: {</p>
+
+<p>&ldquo;js&rdquo;: &ldquo;jquery.js&rdquo;</p>
+
+<p>},</p>
+
+<p>&ldquo;underscore&rdquo;: {</p>
+
+<p>&ldquo;js&rdquo;: &ldquo;underscore.js&rdquo;</p>
+
+<p>},</p>
+
+<p>&ldquo;backbone&rdquo;: {</p>
+
+<p>&ldquo;js&rdquo;: &ldquo;backbone.js&rdquo;</p>
+
+<p>},</p>
+
+<p>&ldquo;backbone.marionette&rdquo;: {</p>
+
+<p>&ldquo;js&rdquo;: &ldquo;lib/backbone.marionette.js&rdquo;</p>
+
+<p>},</p>
+
+<p>&ldquo;jasmine&rdquo;: {}</p>
+
+<p>}</p>
+
+<p>}</p>
+
+<p>[/sourcecode]</p>
+
+<p>Both the dependencies and devDependencies sections are defined. With those defined, you could simply execute &#8216;bower install&#8217;, and like &#8216;npm install&#8217; it would download the files listed that were predefined in the bower.json file (without having to manually install each).</p>
+
+<p>The exportsOverride section simply defines how the files are going to be organized when they are installed from the &#8216;bower_components&#8217; to the &#8216;client/requires&#8217; directory. Note that Jasmine has nothing defined which means it will not be copied over during the client requires phase. This is because the clients don&#8217;t need to load the Jasmine library when the app is run on the front-end, Jasmine is simply for testing during local development.</p>
+
+<div style="border:solid 1px #c0c0c0;background-color:#ffffff;padding:10px;margin-bottom:15px;padding-bottom:0;">
+  <p>
+    If you were starting a fresh project from scratch and wanted to include jQuery into your project simply install it via Bower:
+  </p>
+  
+  <p>
+    [sourcecode light=&#8221;true&#8221;]$ bower install jquery[/sourcecode]
+  </p>
+  
+  <p>
+    While you&#8217;re at it &#8211; lets assume you want Backbone.js and underscore.js as well:
+  </p>
+  
+  <p>
+    [sourcecode light=&#8221;true&#8221;]<br /> $ bower install backbone<br /> $ bower install underscore<br /> [/sourcecode]
+  </p>
+  
+  <p>
+    Then, all you need to do is add a reference in your main layout file to bower_components/jquery/jquery.js!
+  </p>
+</div>
+
+<p>Of course, wouldn&#8217;t it be nice if it were even easier than that&#8230;</p>
+
+<h3 id="grunt-js-8211-task-runner-to-do-all-the-things">Grunt.js &#8211; Task runner to do all the things</h3>
+
+<p>Grunt.js is pretty much the shit. The sheer volume of plugins available for it is overwhelming. To that end, however, actually understanding and getting started with Grunt can be really confusing if its not clearly defined why you actually need to use it.</p>
+
+<p>Lets take a step back and look at what a typical development workflow could be without any automated task runners (like Grunt) to take care of the bulk of it:</p>
+
+<blockquote>
+<p>You have all of your frontend files organized in a way that you&#8217;re happy with. You may have many many files for many different reasons &#8211; Backbone models, views, collections, routers, controllers, etc. On top of that, you’ve decided that you want to use LESS to write your CSS &#8211; cause you’re fancy and everyone else is using it. Being a good web developer, you ultimately want your project .js files to all be concatenated into a single file, ideally compressed (and uglified so people can&#8217;t make any sense out of your source code and steal your work). Obviously your LESS files shouldn’t be served up to the browser as is &#8211; they need to be converted to normal .css files as well. On top of all of that, you practice TDD so you want your tests for your frontend code to run regularly as you make changes to either the application code or the tests themselves. Furthermore, you need to actually start up your node.js server so you can view the app in a local browser &#8211; and any time you make changes to the node code, you need to restart the server. Last but not least &#8211; all of those tasks are for a single test run of your app. You would have to repeat most of that every time you make any changes.</p>
+</blockquote>
+
+<p>O_o Thats a lot of stuff to worry about! That&#8217;s where Grunt comes in to save the day. Using Grunt you can create an automated &#8220;script&#8221; that is run every time you edit certain files or make any changes. With this automated process, running something like &#8220;grunt server&#8221; can do the following:</p>
+
+<ul>
+<li>Bower install any of your frontend dependencies</li>
+<li>Concatenate all .js files into a single file (including those Bower dependencies)</li>
+<li>Compress (minify) that single .js file and also uglify it</li>
+<li>Transpile LESS files into a single .css file</li>
+<li>Copy those 2 files to a public folder that your app index.html file actually references</li>
+<li>Launch Karma and execute your suite of tests</li>
+<li>Start up your node server</li>
+<li>Do ALL of the above every time any of the appropriate files are modified
+
+<ul>
+<li>Make a change to any .js file &#8211; Concatenate, Compress, and Copy are rerun. Tests are also rerun.</li>
+<li>Make a change to any .LESS file &#8211; Transpile and Copy are rerun.</li>
+<li>Make a change to any of your server specific node.js files &#8211; restart the node server</li>
+</ul></li>
+<li>On top of that, you can run some other handy items like jsHint so all of your JavaScript is instantly checked for syntax errors.</li>
+</ul>
+
+<p>So now a typical development work flow would look a little more like:</p>
+
+<ul>
+<li>Launch “grunt server”.</li>
+<li>Do work.</li>
+<li>Refresh browser.*</li>
+</ul>
+
+<p>*Note: you could event get fancier and use a Live reload plugin and remove that last part!</p>
+
+<p>Pretty awesome huh?! All the countless b.s. you worry about is thrown right out the window and forgotten about, all so making a website can get out of the way of making a website!</p>
+
+<p>Let&#8217;s take a look at the Gruntfile.js we created for this project. Warning &#8211; its pretty big so we’ll tackle it in chunks.</p>
+
+<p>[sourcecode language=&#8221;javascript&#8221;]</p>
+
+<p>module.exports = function(grunt) {</p>
+
+<p>require(&#8216;time-grunt&#8217;)(grunt);</p>
+
+<p>require(&#8216;load-grunt-tasks&#8217;)(grunt);</p>
+
+<p>grunt.initConfig({</p>
+
+<p>pkg: grunt.file.readJSON(&#8216;package.json&#8217;),</p>
+
+<p>[/sourcecode]</p>
+
+<p>This is just the most basic part of the Gruntfile. It basically just uses node&#8217;s module.exports to return a Grunt function, which you then launch using initConfig() passing in configuration object. The first 2 items are additional requires for 2 Grunt plugins that are very handy. The more important one is the load-grunt-tasks. Typically with a Gruntfile you need to manually specify all of the tasks that you are going to be using a plugin for. This handy little plugin automates that by reading your package.json file and looking for any plugins in the dependencies and devDependencies list that start with “grunt-” and loads them automatically! That gets a big part of the config work out of the way.</p>
+
+<p>Next up we run Grunt’s initConfig function and configure our entire script. The very first line we read in the main package.json file for user a little later &#8211; most specifically we&#8217;ll be taking the name of our project from the package file and using that to name some of the files that we create during our build process.</p>
+
+<h5 id="bower-install">Bower install</h5>
+
+<p>Read the bower.json file and install any front-end dependencies.</p>
+
+<p>[sourcecode language=&#8221;javascript&#8221; firstline=&#8221;9&#8243;]</p>
+
+<p>bower: {</p>
+
+<p>install: {</p>
+
+<p>options: {</p>
+
+<p>targetDir: &#8216;client/requires&#8217;,</p>
+
+<p>layout: &#8216;byComponent&#8217;</p>
+
+<p>}</p>
+
+<p>}</p>
+
+<p>},</p>
+
+<p>[/sourcecode]</p>
+
+<h5 id="clean">Clean</h5>
+
+<p>Any temporary build folders we maintain should be cleaned before each build (so theres no leftover files lying around). The &#8216;build&#8217; command cleans the entire ‘build’ directory. The dev command cleans a specific list of files (i.e. doesn&#8217;t delete the vendor.js file since that typically never changes). Finally, the &#8216;prod&#8217; command will clean out a directory called &#8216;dist&#8217; which is what we would use to distribute our app when its ready for release. (This directory would typically only contain 2 key files, myapp.js and myapp.css &#8211; plus any necessary images.)</p>
+
+<p>[sourcecode language=&#8221;javascript&#8221; firstline=&#8221;18&#8243;]</p>
+
+<p>clean: {</p>
+
+<p>build: [&#8216;build&#8217;],</p>
+
+<p>dev: {</p>
+
+<p>src: [&#8216;build/app.js&#8217;, &#8216;build/&lt;%= pkg.name %&gt;.css&#8217;, &#8216;build/&lt;%= pkg.name %&gt;.js&#8217;]</p>
+
+<p>},</p>
+
+<p>prod: [&#8216;dist&#8217;]</p>
+
+<p>},</p>
+
+<p>[/sourcecode]</p>
+
+<h5 id="browserify">Browserify</h5>
+
+<p>This is a biggie &#8211; and not to be taken lightly. Browserify is a pretty amazing tool, which basically allows you to use modules in your front-end code in the exact same way that you do in node.js on the back-end. What this means is that you can use the exact same coding habits and styles in the full stack. Browserify allows you to build your front-end code in a modular style, and only pull in dependencies in areas of your app as you need them. On top of that, the Browserify Grunt plugin will merge all of the app and vendor files together into a single respective file for each. (So if you had 5 vendors and 20 app files, you would wind up with only a single vendor.js file and a single app.js file.)</p>
+
+<p>The browserify config block is broken into 3 main sections; vendor, app, and test. The vendor file will take all of the frontend dependencies defined from Bower and Browserify them and then merge them into a single vendor.js file. App will do the same for your core app files. Notice that with the app section, we only define main.js (and not an array of all of our .js files). This is because the way Browserify works, it will basically crawl your entire app and everywhere it finds require() functions will load in those dependencies as needed. node.js works pretty much the same way.</p>
+
+<p>Additionally you can shim vendors, defining the dependencies that they themselves have. So, for example, with Marionette you can define that it depends on jQuery, Backbone and underscore. This way, in your frontend app .js files, you need only require(‘backbone.marionette’) and it will automatically include jQuery, underscore, and Backbone without you having to manually require those as well!</p>
+
+<p>Finally, Browserify will also find all requires() that specifically point to front-end Handlebars templates and automatically precompile them into JavaScript functions. This will speed up the front-end rendering process significantly for users since the view templates aren&#8217;t being rendered during runtime (which is how Handlebars typically works).</p>
+
+<p>[sourcecode language=&#8221;javascript&#8221; firstline=&#8221;26&#8243;]</p>
+
+<p>browserify: {</p>
+
+<p>vendor: {</p>
+
+<p>src: [&#8216;client/requires/**/*.js&#8217;],</p>
+
+<p>dest: &#8216;build/vendor.js&#8217;,</p>
+
+<p>options: {</p>
+
+<p>shim: {</p>
+
+<p>jquery: {</p>
+
+<p>path: &#8216;client/requires/jquery/js/jquery.js&#8217;,</p>
+
+<p>exports: &#8216;$&#8217;</p>
+
+<p>},</p>
+
+<p>underscore: {</p>
+
+<p>path: &#8216;client/requires/underscore/js/underscore.js&#8217;,</p>
+
+<p>exports: &#8216;_&#8217;</p>
+
+<p>},</p>
+
+<p>backbone: {</p>
+
+<p>path: &#8216;client/requires/backbone/js/backbone.js&#8217;,</p>
+
+<p>exports: &#8216;Backbone&#8217;,</p>
+
+<p>depends: {</p>
+
+<p>underscore: &#8216;underscore&#8217;</p>
+
+<p>}</p>
+
+<p>},</p>
+
+<p>&#8216;backbone.marionette&#8217;: {</p>
+
+<p>path: &#8216;client/requires/backbone.marionette/js/backbone.marionette.js&#8217;,</p>
+
+<p>exports: &#8216;Marionette&#8217;,</p>
+
+<p>depends: {</p>
+
+<p>jquery: &#8216;$&#8217;,</p>
+
+<p>backbone: &#8216;Backbone&#8217;,</p>
+
+<p>underscore: &#8216;_&#8217;</p>
+
+<p>}</p>
+
+<p>}</p>
+
+<p>}</p>
+
+<p>}</p>
+
+<p>},</p>
+
+<p>app: {</p>
+
+<p>files: {</p>
+
+<p>&#8216;build/app.js&#8217;: [&#8216;client/src/main.js&#8217;]</p>
+
+<p>},</p>
+
+<p>options: {</p>
+
+<p>transform: [&#8216;hbsfy&#8217;],</p>
+
+<p>external: [&#8216;jquery&#8217;, &#8216;underscore&#8217;, &#8216;backbone&#8217;, &#8216;backbone.marionette&#8217;]</p>
+
+<p>}</p>
+
+<p>},</p>
+
+<p>test: {</p>
+
+<p>files: {</p>
+
+<p>&#8216;build/tests.js&#8217;: [</p>
+
+<p>&#8216;client/spec/**/*.test.js&#8217;</p>
+
+<p>]</p>
+
+<p>},</p>
+
+<p>options: {</p>
+
+<p>transform: [&#8216;hbsfy&#8217;],</p>
+
+<p>external: [&#8216;jquery&#8217;, &#8216;underscore&#8217;, &#8216;backbone&#8217;, &#8216;backbone.marionette&#8217;]</p>
+
+<p>}</p>
+
+<p>}</p>
+
+<p>},</p>
+
+<p>[/sourcecode]</p>
+
+<h5 id="less">LESS</h5>
+
+<p>Transpile any .less files to .css and put the .css file in the build directory named &#8216;myapp&#8217;.css. Not only should this file consist of all .less files, but also any other .css files that exist and are required by our vendor dependencies (jQueryUI, reset.css, etc).</p>
+
+<p>[sourcecode language=&#8221;javascript&#8221; firstline=&#8221;81&#8243;]</p>
+
+<p>less: {</p>
+
+<p>transpile: {</p>
+
+<p>files: {</p>
+
+<p>&#8216;build/&lt;%= pkg.name %&gt;.css&#8217;: [</p>
+
+<p>&#8216;client/styles/reset.css&#8217;,</p>
+
+<p>&#8216;client/requires/*/css/*&#8217;,</p>
+
+<p>&#8216;client/styles/less/main.less&#8217;</p>
+
+<p>]</p>
+
+<p>}</p>
+
+<p>}</p>
+
+<p>},</p>
+
+<p>[/sourcecode]</p>
+
+<h5 id="concat">Concat</h5>
+
+<p>Concatenate all of the .js files into a single file. Take the vendor.js file and app.js file (both created by Browserify) and merge them into a single file named &#8216;myapp&#8217;.js. Put this final single file in the build directory.</p>
+
+<p>[sourcecode language=&#8221;javascript&#8221; firstline=&#8221;93&#8243;]</p>
+
+<p>concat: {</p>
+
+<p>&#8216;build/&lt;%= pkg.name %&gt;.js&#8217;: [&#8216;build/vendor.js&#8217;, &#8216;build/app.js&#8217;]</p>
+
+<p>},</p>
+
+<p>[/sourcecode]</p>
+
+<h5 id="copy">Copy</h5>
+
+<p>When we are running our Grunt server in dev mode, copy the files from the build directory to the destination that they must reside so that our front-end app can see them and our server can serve them. A different directory for .js files, .css files, and image files. (Take a look at the main.handlebars layout file in server/views/layout/ and you will see where the final .js and .css files are included into the layout.)</p>
+
+<p>[sourcecode language=&#8221;javascript&#8221; firstline=&#8221;97&#8243;]</p>
+
+<p>copy: {</p>
+
+<p>dev: {</p>
+
+<p>files: [{</p>
+
+<p>src: &#8216;build/&lt;%= pkg.name %&gt;.js&#8217;,</p>
+
+<p>dest: &#8216;server/public/js/&lt;%= pkg.name %&gt;.js&#8217;</p>
+
+<p>}, {</p>
+
+<p>src: &#8216;build/&lt;%= pkg.name %&gt;.css&#8217;,</p>
+
+<p>dest: &#8216;server/public/css/&lt;%= pkg.name %&gt;.css&#8217;</p>
+
+<p>}, {</p>
+
+<p>src: &#8216;client/img/*&#8217;,</p>
+
+<p>dest: &#8216;server/public/img/&#8217;</p>
+
+<p>}]</p>
+
+<p>},</p>
+
+<p>prod: {</p>
+
+<p>files: [{</p>
+
+<p>src: [&#8216;client/img/*&#8217;],</p>
+
+<p>dest: &#8216;dist/img/&#8217;</p>
+
+<p>}]</p>
+
+<p>}</p>
+
+<p>},</p>
+
+<p>[/sourcecode]</p>
+
+<h5 id="cssmin">cssmin</h5>
+
+<p>Remove all white space from our .css file and make it as compressed as possible. By default this is only set for production runs of our app (since during development, it might be nice to still be able to read the final .css file if you inspect it by viewing the source in a browser).</p>
+
+<p>[sourcecode language=&#8221;javascript&#8221; firstline=&#8221;119&#8243;]</p>
+
+<p>cssmin: {</p>
+
+<p>minify: {</p>
+
+<p>src: [&#8216;build/&lt;%= pkg.name %&gt;.css&#8217;],</p>
+
+<p>dest: &#8216;dist/css/&lt;%= pkg.name %&gt;.css&#8217;</p>
+
+<p>}</p>
+
+<p>},</p>
+
+<p>[/sourcecode]</p>
+
+<h5 id="uglify">uglify</h5>
+
+<p>Do the same for our main .js file, remove any white space and trim variable names and comments. Make the file as small as possible while still functional. Again, this only occurs during a production run (as during development, while debugging in the browser etc., we still want to be able to read the .js file).</p>
+
+<p>[sourcecode language=&#8221;javascript&#8221; firstline=&#8221;127&#8243;]</p>
+
+<p>uglify: {</p>
+
+<p>compile: {</p>
+
+<p>options: {</p>
+
+<p>compress: true,</p>
+
+<p>verbose: true</p>
+
+<p>},</p>
+
+<p>files: [{</p>
+
+<p>src: &#8216;build/&lt;%= pkg.name %&gt;.js&#8217;,</p>
+
+<p>dest: &#8216;dist/js/&lt;%= pkg.name %&gt;.js&#8217;</p>
+
+<p>}]</p>
+
+<p>}</p>
+
+<p>},</p>
+
+<p>[/sourcecode]</p>
+
+<h5 id="watch">watch</h5>
+
+<p>Watch all files for any time they get modified. When they do change, execute pre-existing Grunt tasks already defined (most explained above). Watched client/src/*.js files will rerun the Browserify tasks, watched .less files will rerun the transpile step, then all of the necessary copies and repeat every time a file is modified.</p>
+
+<p>[sourcecode language=&#8221;javascript&#8221; firstline=&#8221;141&#8243;]</p>
+
+<p>watch: {</p>
+
+<p>scripts: {</p>
+
+<p>files: [&#8216;client/templates/*.hbs&#8217;, &#8216;client/src/**/*.js&#8217;],</p>
+
+<p>tasks: [&#8216;clean:dev&#8217;, &#8216;browserify:app&#8217;, &#8216;concat&#8217;, &#8216;copy:dev&#8217;]</p>
+
+<p>},</p>
+
+<p>less: {</p>
+
+<p>files: [&#8216;client/styles/**/*.less&#8217;],</p>
+
+<p>tasks: [&#8216;less:transpile&#8217;, &#8216;copy:dev&#8217;]</p>
+
+<p>},</p>
+
+<p>test: {</p>
+
+<p>files: [&#8216;build/app.js&#8217;, &#8216;client/spec/**/*.test.js&#8217;],</p>
+
+<p>tasks: [&#8216;browserify:test&#8217;]</p>
+
+<p>},</p>
+
+<p>karma: {</p>
+
+<p>files: [&#8216;build/tests.js&#8217;],</p>
+
+<p>tasks: [&#8216;jshint:test&#8217;, &#8216;karma:watcher:run&#8217;]</p>
+
+<p>}</p>
+
+<p>},</p>
+
+<p>[/sourcecode]</p>
+
+<h5 id="nodemon">nodemon</h5>
+
+<p>The same as watch, except for the server related .js files. Whenever a node.js file is changed on the server, restart the server so the latest version is running.</p>
+
+<p>[sourcecode language=&#8221;javascript&#8221; firstline=&#8221;161&#8243;]</p>
+
+<p>nodemon: {</p>
+
+<p>dev: {</p>
+
+<p>options: {</p>
+
+<p>file: &#8216;server/server.js&#8217;,</p>
+
+<p>nodeArgs: [&#8216;&#8211;debug&#8217;],</p>
+
+<p>watchedFolders: [&#8216;server/controllers&#8217;, &#8216;server/app&#8217;],</p>
+
+<p>env: {</p>
+
+<p>PORT: &#8216;3300&#8217;</p>
+
+<p>}</p>
+
+<p>}</p>
+
+<p>}</p>
+
+<p>},</p>
+
+<p>[/sourcecode]</p>
+
+<h5 id="shell">shell</h5>
+
+<p>This is just a simple command line execution. Specifically, launch the &#8216;mongod&#8217; server command whenever the main server starts (since they must both be running for the app to work properly).</p>
+
+<p>[sourcecode language=&#8221;javascript&#8221; firstline=&#8221;175&#8243;]</p>
+
+<p>shell: {</p>
+
+<p>mongo: {</p>
+
+<p>command: &#8216;mongod&#8217;,</p>
+
+<p>options: {</p>
+
+<p>async: true</p>
+
+<p>}</p>
+
+<p>}</p>
+
+<p>},</p>
+
+<p>[/sourcecode]</p>
+
+<h5 id="concurrent">concurrent</h5>
+
+<p>Concurrent means that you can execute a number of &#8220;blocking&#8221; tasks asynchronously at the same time. For dev the tasks that are run are the nodemon watcher for the server, mongod server for the database, and watcher for the front-end scripts, less, and tests. Without concurrent, typically only one of these would be able to run before it sits and waits and causes Grunt to hang and be blocked before it could execute all of the other necessary tasks that must all run parallel to each other simultaneously.</p>
+
+<p>[sourcecode language=&#8221;javascript&#8221; firstline=&#8221;184&#8243;]</p>
+
+<p>concurrent: {</p>
+
+<p>dev: {</p>
+
+<p>tasks: [&#8216;nodemon:dev&#8217;, &#8216;shell:mongo&#8217;, &#8216;watch:scripts&#8217;, &#8216;watch:less&#8217;, &#8216;watch:test&#8217;],</p>
+
+<p>options: {</p>
+
+<p>logConcurrentOutput: true</p>
+
+<p>}</p>
+
+<p>},</p>
+
+<p>test: {</p>
+
+<p>tasks: [&#8216;watch:karma&#8217;],</p>
+
+<p>options: {</p>
+
+<p>logConcurrentOutput: true</p>
+
+<p>}</p>
+
+<p>}</p>
+
+<p>},</p>
+
+<p>[/sourcecode]</p>
+
+<h5 id="karma">karma</h5>
+
+<p>Tasks specific to running the Karma test runner and watcher. We&#8217;ll touch more on this in a little bit.</p>
+
+<p>[sourcecode language=&#8221;javascript&#8221; firstline=&#8221;200&#8243;]</p>
+
+<p>karma: {</p>
+
+<p>options: {</p>
+
+<p>configFile: &#8216;karma.conf.js&#8217;</p>
+
+<p>},</p>
+
+<p>watcher: {</p>
+
+<p>background: true,</p>
+
+<p>singleRun: false</p>
+
+<p>},</p>
+
+<p>test: {</p>
+
+<p>singleRun: true</p>
+
+<p>}</p>
+
+<p>},</p>
+
+<p>[/sourcecode]</p>
+
+<h5 id="jshint">jsHint</h5>
+
+<p>Run jsHint syntax checking on all necessary .js files.</p>
+
+<p>[sourcecode language=&#8221;javascript&#8221; firstline=&#8221;213&#8243;]</p>
+
+<p>jshint: {</p>
+
+<p>all: [&#8216;Gruntfile.js&#8217;, &#8216;client/src/<em>*/*.js&#8217;, &#8216;client/spec/</em>*/*.js&#8217;],</p>
+
+<p>dev: [&#8216;client/src/**/*.js&#8217;],</p>
+
+<p>test: [&#8216;client/spec/**/*.js&#8217;]</p>
+
+<p>}</p>
+
+<p>[/sourcecode]</p>
+
+<p>And that concludes the initConfig block for our Gruntfile.js! Thats a lot, and typically it could get a whole lot longer as you automate all the things and make your life easier. The amount of time you spend configuring your Gruntfile in the beginning will save you 10 fold during the lifetime of your project development. Not to mention freeing up head space to not have to worry about all that stuff.</p>
+
+<p>Now that all of that is out of the way, we need to setup some simple command line commands that you can execute when starting Grunt to actually do all of this stuff!</p>
+
+<p>[sourcecode language=&#8221;javascript&#8221; firstline=&#8221;220&#8243; highlight=&#8221;225&#8243;]</p>
+
+<p>grunt.registerTask(&#8216;init:dev&#8217;, [&#8216;clean&#8217;, &#8216;bower&#8217;, &#8216;browserify:vendor&#8217;]);</p>
+
+<p>grunt.registerTask(&#8216;build:dev&#8217;, [&#8216;clean:dev&#8217;, &#8216;browserify:app&#8217;, &#8216;browserify:test&#8217;, &#8216;jshint:dev&#8217;, &#8216;less:transpile&#8217;, &#8216;concat&#8217;, &#8216;copy:dev&#8217;]);</p>
+
+<p>grunt.registerTask(&#8216;build:prod&#8217;, [&#8216;clean:prod&#8217;, &#8216;browserify:vendor&#8217;, &#8216;browserify:app&#8217;, &#8216;jshint:all&#8217;, &#8216;less:transpile&#8217;, &#8216;concat&#8217;, &#8216;cssmin&#8217;, &#8216;uglify&#8217;, &#8216;copy:prod&#8217;]);</p>
+
+<p>grunt.registerTask(&#8216;server&#8217;, [&#8216;build:dev&#8217;, &#8216;concurrent:dev&#8217;]);</p>
+
+<p>grunt.registerTask(&#8216;test:client&#8217;, [&#8216;karma:test&#8217;]);</p>
+
+<p>grunt.registerTask(&#8216;tdd&#8217;, [&#8216;karma:watcher:start&#8217;, &#8216;concurrent:test&#8217;]);</p>
+
+<p>[/sourcecode]</p>
+
+<p>Each tasks &#8216;register&#8217; is pretty self explanatory, but basically you register a task by first giving it a name, which you execute by:</p>
+
+<p>[sourcecode light=&#8221;true&#8221;]$ grunt mytask[/sourcecode]</p>
+
+<p>Where &#8216;mytask&#8217; can be anything you want. Following the name of your task in the registerTask() is an array of tasks you want executed, all defined in the &#8216;initConfig&#8217; earlier.</p>
+
+<p><strong>init:dev</strong> &#8211; the task that is executed the first time you want to start working with the project. This will do a Bower install, copy those files to the client_requires folder, and run Browserify for the vendor file. The reason this only needs to execute once at the beginning of development is that your Bower dependencies typically won&#8217;t change all that much, so there&#8217;s no reason to do a Bower install every single time you make changes to your app files.</p>
+
+<p><strong>build:dev</strong> &#8211; this does most of the work. This is executed every time you run grunt server. This handles the tasks that are repeated every time you make a change and need to rebuild all of your files.</p>
+
+<p><strong>grunt server</strong> &#8211; the brains of the operation. This is the command you will execute the most often. It does a build:dev, and then concurrent:dev which launches all of the watchers and servers.</p>
+
+<p>Finally <strong>test:client</strong> and <strong>tdd</strong> both launch Karma and run the tests, the only difference is that &#8216;test:client&#8217; runs once, and &#8216;tdd&#8217; will run Karma in auto watch mode &#8211; rerunning the tests any time the app.js or tests.js files are modified.</p>
+
+<h3 id="tdd-with-jasmine-karma-and-phantomjs">TDD with Jasmine, Karma, and PhantomJS</h3>
+
+<p>I&#8217;ve touched a bit here and there on Karma and TDD in this article so far, but haven&#8217;t really explained any of it. That&#8217;s because I&#8217;ve already written <a href="http://kroltech.com/2013/11/javascript-tdd-with-jasmine-and-karma/" target="_blank">a pretty thorough article covering that in greater detail which you can read here</a>! Suffice it to say that TDD (Test Driven Development) is fairly important. The basic idea behind it is that you have a suite of tests written that check against your actual code. Should you make tweaks or changes to your core code which inadvertently breaks something, your tests will alert you immediately! If you&#8217;re not doing TDD regularly, I strongly suggest you consider looking into it and at least giving my other article a read through.</p>
+
+<h2 id="part-3-front-end-app-with-backbone-js-marionette-js">Part 3: Front-end app with Backbone.js &amp; Marionette.js</h2>
+
+<p>Now its time to go into detail covering the build of the actual front-end app. The app itself is a very rudimentary and basic app that manages a list of Contacts. The app presents a collection of contacts as small &#8220;cards&#8221; with a name, email, and Gravatar image. Click a card to get a full details view for the contact. You can also add New contacts and update or delete existing contacts. Its no “To Do” app, but it gets the job done!</p>
+
+<div style="border:solid 1px #c0c0c0;background-color:#ffffff;padding:10px;margin-bottom:15px;padding-bottom:0;">
+  <strong>A note about Browserify</strong><br /> As covered earlier in the Gruntfile.js configuration section, we are relying heavily on Browserify for the front-end portion of the app. This is simply because I really like the way Browserify works and I love that it makes coding on the front-end feel exactly like coding on the back-end. Previously I wrote <a href="http://kroltech.com/2013/03/building-a-web-app-using-backbone-js-and-require-js-part-1/" target="_blank">an article discussing using Backbone.js with require.js</a> &#8211; but for the purposes of this project I decided to change it up and try something different. Turns out I personally like working with Browserify a lot more than my initial experience with require.js. That being said, if you&#8217;ve never worked with node.js before or any other kind of modular front-end development framework, it can all seem pretty confusing. I suggest you give my earlier article a read as the topics and concepts covered translate pretty much the same between require.js and Browserify.
+</div>
+
+<h3 id="main-js-and-app-js-8211-boot-up-and-brains">Main.js and App.js &#8211; boot up and brains</h3>
+
+<p>[sourcecode language=&#8221;javascript&#8221;]</p>
+
+<p>var App = require(&#8216;./app&#8217;);</p>
+
+<p>var myapp = new App();</p>
+
+<p>myapp.start();</p>
+
+<p>[/sourcecode]</p>
+
+<p>Main.js is exactly what it sounds like &#8211; the main JavaScript file. This file is small, but it boots everything up! The very first thing it does is, using Browserify, require our main app object (located in app.js). With that object we can create a new instance and officially start the app.</p>
+
+<p>app.js is also exactly what it sounds like &#8211; its basically our entire app, well sort of. Its really the brains that coordinates all of the moving parts of the app from this central location. Lets break down app.js and see what its really doing.</p>
+
+<p>[sourcecode language=&#8221;javascript&#8221;]</p>
+
+<p>var Marionette = require(&#8216;backbone.marionette&#8217;),</p>
+
+<p>Controller = require(&#8216;./controller&#8217;),</p>
+
+<p>Router = require(&#8216;./router&#8217;),</p>
+
+<p>ContactModel = require(&#8216;./models/contact&#8217;),</p>
+
+<p>ContactsCollection = require(&#8216;./collections/contacts&#8217;);</p>
+
+<p>[/sourcecode]</p>
+
+<p>Looks pretty familiar right? Here we are declaring the dependencies for our main app.js file and stating that we are going to be working with Marionette, our Controller, Router, Contact model, and Contacts collection. Each of these modules (except Marionette) are our own files which will be explained in a bit. Note that Marionette depends on jQuery, underscore and Backbone but we didn&#8217;t need to require any of those because they are done so via the dependencies shim defined in the Browserify config in our Gruntfile.js.</p>
+
+<p>Next an empty function is created and exported via the module system. Even though its empty, that function object is then immediately prototyped with a function called “start” that does all the work.</p>
+
+<p>[sourcecode language=&#8221;javascript&#8221; firstline=&#8221;7&#8243;]</p>
+
+<p>module.exports = App = function App() {};</p>
+
+<p>App.prototype.start = function(){</p>
+
+<p>App.core = new Marionette.Application();</p>
+
+<p>[/sourcecode]</p>
+
+<p>Inside App.start() four important things occur:</p>
+
+<ul>
+<li>Create a new Marionette.Application()</li>
+<li>bind an event to initialize:before</li>
+<li>bind an event to app:start</li>
+<li>Start the Marionette app!</li>
+</ul>
+
+<p>The 2 events that are bound to are not actually triggered until the Marionette app starts (which is why App.core.start() is called last). Lets look at each of those events now:</p>
+
+<h4 id="initialize-before">initialize:before</h4>
+
+<p>[sourcecode language=&#8221;javascript&#8221; firstline=&#8221;12&#8243;]</p>
+
+<p>App.core.on(&ldquo;initialize:before&rdquo;, function (options) {</p>
+
+<p>App.core.vent.trigger(&#8216;app:log&#8217;, &#8216;App: Initializing&#8217;);</p>
+
+<p>App.views = {};</p>
+
+<p>App.data = {};</p>
+
+<p>// load up some initial data:</p>
+
+<p>var contacts = new ContactsCollection();</p>
+
+<p>contacts.fetch({</p>
+
+<p>success: function() {</p>
+
+<p>App.data.contacts = contacts;</p>
+
+<p>App.core.vent.trigger(&#8216;app:start&#8217;);</p>
+
+<p>}</p>
+
+<p>});</p>
+
+<p>});</p>
+
+<p>[/sourcecode]</p>
+
+<p>This event will occur first, immediately before the app is actually started. You can refer to the Marionette documentation on what events are available and the order in which they execute. Here initialize:before happens before app:start &#8211; so we define what we want to happen before our app starts. Specifically we create a few cache objects on the App itself (views and data), and fetch our contacts data from the server. Once the fetch is complete, we actually trigger app:start.</p>
+
+<h4 id="app-start">app:start</h4>
+
+<p>[sourcecode language=&#8221;javascript&#8221; firstline=&#8221;28&#8243;]</p>
+
+<p>App.core.vent.bind(&#8216;app:start&#8217;, function(options){</p>
+
+<p>App.core.vent.trigger(&#8216;app:log&#8217;, &#8216;App: Starting&#8217;);</p>
+
+<p>if (Backbone.history) {</p>
+
+<p>App.controller = new Controller();</p>
+
+<p>App.router = new Router({ controller: App.controller });</p>
+
+<p>App.core.vent.trigger(&#8216;app:log&#8217;, &#8216;App: Backbone.history starting&#8217;);</p>
+
+<p>Backbone.history.start();</p>
+
+<p>}</p>
+
+<p>//new up and views and render for base app here&#8230;</p>
+
+<p>App.core.vent.trigger(&#8216;app:log&#8217;, &#8216;App: Done starting and running!&#8217;);</p>
+
+<p>});</p>
+
+<p>// &#8230;</p>
+
+<p>App.core.start();</p>
+
+<p>[/sourcecode]</p>
+
+<p>Inside app:start, basically we create a new instance of the app&#8217;s controller and a new instance of our router, and the router takes the controller as a part of its constructor. Both of these are Marionette objects (explained in a bit). In this project, our front-end router and controller work almost exactly the same way as their counterparts on the back-end with the node.js router and controller. The only difference is that the node.js router manages actual URLs visitors can hit on the server &#8211; and the Marionette router manages the routes in the URL that can be hit while the front-end app is running. Think of Backbone or Marionette routes as being something like a DOM event but the DOM element is the window.location bar. If the URL in the Browser&#8217;s address bar changes, trigger a route event in the app. (Not actually try to load a new page like a normal URL.)</p>
+
+<h3 id="marionette-router-and-controller">Marionette Router and Controller</h3>
+
+<p>As you saw in app.js, we defined new instances of a Router and Controller in the app:start event. I also mentioned that they work almost exactly the same way as the node.js counterparts.</p>
+
+<h4 id="router-js">router.js</h4>
+
+<p>[sourcecode language=&#8221;javascript&#8221;]</p>
+
+<p>var Marionette = require(&#8216;backbone.marionette&#8217;);</p>
+
+<p>module.exports = Router = Marionette.AppRouter.extend({</p>
+
+<p>appRoutes: {</p>
+
+<p>&#8216;#&#8217; : &#8216;home&#8217;,</p>
+
+<p>&#8216;details/:id&#8217; : &#8216;details&#8217;,</p>
+
+<p>&#8216;add&#8217; : &#8216;add&#8217;</p>
+
+<p>}</p>
+
+<p>});</p>
+
+<p>[/sourcecode]</p>
+
+<p>The router.js file is pretty simple &#8211; create a Marionette AppRouter object and assign a collection of appRoutes. These appRoutes will match 1:1 with functions of the same name in our Controller object. Here we have the root url for the app &#8216;#&#8217;, which points to the &#8216;home&#8217; function in the Controller. Then there&#8217;s &#8216;details/:id&#8217; which is the URL for a contact’s details view and that points to the &#8216;details&#8217; function in the Controller. Finally we have &#8216;add&#8217; which points to the &#8216;add&#8217; function in the Controller.</p>
+
+<h4 id="controller-js">controller.js</h4>
+
+<p>[sourcecode language=&#8221;javascript&#8221;]</p>
+
+<p>home: function() {</p>
+
+<p>var view = window.App.views.contactsView;</p>
+
+<p>this.renderView(view);</p>
+
+<p>window.App.router.navigate(&#8216;#&#8217;);</p>
+
+<p>},</p>
+
+<p>[/sourcecode]</p>
+
+<p>The controller acts as the actual logic pertaining to our Router. As we mentioned earlier, the router and controller have a 1:1 relationship which means that every route defined in our router pertains to a function defined in our controller. Each function in the controller takes care of rendering the screen for each route. Using the &#8216;home&#8217; function as an example, we create a new view, include a model if we are viewing a detail view, and then render it calling the controller’s renderView function. The renderView function will first destroy an existing view if it has already been rendered. This is to take care of event handling and make sure we don&#8217;t have zombie views and/or event handlers sticking around.</p>
+
+<h3 id="models-and-collections">Models and Collections</h3>
+
+<p>[sourcecode language=&#8221;javascript&#8221;]</p>
+
+<p>var Backbone = require(&#8216;backbone&#8217;);</p>
+
+<p>module.exports = ContactModel = Backbone.Model.extend({</p>
+
+<p>idAttribute: &#8216;_id&#8217;</p>
+
+<p>});</p>
+
+<p>[/sourcecode]</p>
+
+<p>&nbsp;</p>
+
+<p>[sourcecode language=&#8221;javascript&#8221;]</p>
+
+<p>var Backbone = require(&#8216;backbone&#8217;),</p>
+
+<p>ContactModel = require(&#8216;../models/contact&#8217;);</p>
+
+<p>module.exports = ContactsCollection = Backbone.Collection.extend({</p>
+
+<p>model: ContactModel,</p>
+
+<p>url: &#8216;/api/contacts&#8217;</p>
+
+<p>});</p>
+
+<p>[/sourcecode]</p>
+
+<p>This simple app has a single, basic model &#8211; the Contact. In addition there is a single collection of Contacts. Both are defined in their respective directories in the &#8216;src&#8217; directory. You can see that the url for the collection has been set to that of our API. In addition, because we are using MongoDB we manually point the id attribute of our model to the _id field, which MongoDB uses by default as a unique identifier.</p>
+
+<h3 id="views">Views</h3>
+
+<p>There are 3 primary views for this application, a small contact &#8220;card&#8221; that appears as a collection on the homepage, the full details of a contact, and an add new contact form.</p>
+
+<h4 id="views-contacts-js">views/contacts.js</h4>
+
+<p>The contacts view file actually contains 2 views, a Marionette ItemView which is the individual &#8220;card&#8221; for a contact, and then a Marionette CollectionView which is just a collection of the &#8220;card&#8221; views for the collection of contacts. The contacts CollectionView has a listener on its collection for any change events, and if that happens the collection view is re-rendered. This is so that any new contacts added to the main collection will be rendered after they are added.</p>
+
+<p>[sourcecode language=&#8221;javascript&#8221;]</p>
+
+<p>var Marionette = require(&#8216;backbone.marionette&#8217;);</p>
+
+<p>var itemView = Marionette.ItemView.extend({</p>
+
+<p>template: require(&#8216;../../templates/contact_small.hbs&#8217;),</p>
+
+<p>initialize: function() {</p>
+
+<p>this.listenTo(this.model, &#8216;change&#8217;, this.render);</p>
+
+<p>},</p>
+
+<p>events: {</p>
+
+<p>&#8216;click&#8217;: &#8216;showDetails&#8217;</p>
+
+<p>},</p>
+
+<p>showDetails: function() {</p>
+
+<p>window.App.core.vent.trigger(&#8216;app:log&#8217;, &#8216;Contacts View: showDetails hit.&#8217;);</p>
+
+<p>window.App.controller.details(this.model.id);</p>
+
+<p>}</p>
+
+<p>});</p>
+
+<p>module.exports = CollectionView = Marionette.CollectionView.extend({</p>
+
+<p>initialize: function() {</p>
+
+<p>this.listenTo(this.collection, &#8216;change&#8217;, this.render);</p>
+
+<p>},</p>
+
+<p>itemView: itemView</p>
+
+<p>});</p>
+
+<p>[/sourcecode]</p>
+
+<p>The ItemView itself simply has an event that will trigger the &#8216;details&#8217; function in the controller. The ItemView also has a listener to its model so that if the details for a contact are changed, the view is re-rendered as well. Notice that the ItemView has a template defined as a Handlebars template and that its being referenced via a require(). Browserify will effectively replace that line with a precompiled javascript function of the template during build time. This will make view rendering much faster versus relying on the browser to do the compilation every time a view is rendered.</p>
+
+<h4 id="views-contact-details-js">views/contact_details.js</h4>
+
+<p>The details view for a contact is pretty simple &#8211; just an event handler for going “&lt;&lt; Back” and a Handlebars template.</p>
+
+<h4 id="views-add-js">views/add.js</h4>
+
+<p>Finally we have the view that renders a form that is used to insert a new contact. The big piece of functionality here is the save function:</p>
+
+<p>[sourcecode language=&#8221;javascript&#8221; firstline=&#8221;9&#8243;]</p>
+
+<p>events: {</p>
+
+<p>&#8216;click a.save-button&#8217;: &#8216;save&#8217;</p>
+
+<p>},</p>
+
+<p>save: function(e) {</p>
+
+<p>e.preventDefault();</p>
+
+<p>var newContact = {</p>
+
+<p>name: {</p>
+
+<p>first: this.$el.find(&#8216;#name_first&#8217;).val(),</p>
+
+<p>last: this.$el.find(&#8216;#name_last&#8217;).val()</p>
+
+<p>},</p>
+
+<p>email: this.$el.find(&#8216;#email&#8217;).val(),</p>
+
+<p>phone: this.$el.find(&#8216;#phone&#8217;).val()</p>
+
+<p>};</p>
+
+<p>window.App.data.contacts.create(newContact);</p>
+
+<p>window.App.core.vent.trigger(&#8216;app:log&#8217;, &#8216;Add View: Saved new contact!&#8217;);</p>
+
+<p>window.App.controller.home();</p>
+
+<p>}</p>
+
+<p>[/sourcecode]</p>
+
+<p>Here we are defining a new contact that is just a generic JavaScript object that matches what our data objects look like on the MongoDB side. Then we simply pass that into Backbone’s collection.create() function &#8211; which will, using the default implementation of Backbone, make a POST call to the API url (defined in the collection earlier) passing the JSON object for the variable that was defined. Back on the server side, the node.js router has a listener for a POST to &#8216;api/contacts&#8217; which calls the &#8216;add&#8217; function in the (node.js) controller. The server&#8217;s contacts controller &#8216;add&#8217; function will create a new contact model using Mongoose and save it to the MongoDB server:</p>
+
+<p>[sourcecode language=&#8221;javascript&#8221; firstline=&#8221;17&#8243; title=&#8221;server/controllers/contacts.js&#8221;]</p>
+
+<p>add: function(req, res) {</p>
+
+<p>var newContact = new models.Contact(req.body);</p>
+
+<p>newContact.gravatar = md5(newContact.email);</p>
+
+<p>newContact.save(function(err, contact) {</p>
+
+<p>if (err)</p>
+
+<p>res.json({});</p>
+
+<p>console.log(&#8216;successfully inserted contact: &#8216; + contact._id);</p>
+
+<p>res.json(contact);</p>
+
+<p>});</p>
+
+<p>},</p>
+
+<p>[/sourcecode]</p>
+
+<div style="border:solid 1px #c0c0c0;background-color:#ffffff;padding:10px;margin-bottom:15px;padding-bottom:0;">
+  <strong>Important Note about Validation:</strong><br /> Its important to note that none of the front-end or back-end code does any kind of validation. This is obviously bad, but I omitted any simply to make the code more concise and easier to digest. This would be implementation that you will want to take care in your actual app. (And is always a good idea to validate on both the back-end and front-end to be safe!)
+</div>
+
+<h3 id="view-templates-with-handlebars">View Templates with Handlebars</h3>
+
+<p>As I mentioned earlier when I covered the back-end, the template engine we decided to use for both back-end and front-end is Handlebars. I did this to both keep things consistent and because I&#8217;m a fan of Handlebars. You can find the view templates in the &#8216;client/templates&#8217; directory. Each is basically an HTML document with a .hbs file extension.</p>
+
+<h2 id="part-4-deploy-with-heroku">Part 4: Deploy with Heroku!</h2>
+
+<p>From here, we have a completely functional app, albeit a bit basic. The best way to test it, and the most logical next step, is to deploy it so its actually on the Internet! A fantastic service that is both free and super easy to use is <a href="http://heroku.com" target="_blank">Heroku</a>! Heroku is basically a cloud based scalable hosting solution with a ton of amazing features and support for add-ons. Its an obvious choice for hosting an app like this. Lets take a look at the steps involved in launching the app.</p>
+
+<h4 id="register-a-free-account-at-heroku-com">Register a free account at Heroku.com</h4>
+
+<p>If you don&#8217;t have an account with Heroku, go there now and <a href="https://api.heroku.com/signup/devcenter" target="_blank">register</a> a free account. It takes 2 seconds&#8230;</p>
+
+<h4 id="download-the-heroku-toolbelt">Download the Heroku Toolbelt</h4>
+
+<p>Once you have an account, make sure to <a href="https://toolbelt.heroku.com/" target="_blank">download and install the Heroku Toolbelt</a>, a command line tool that makes creating apps and pushing code to Heroku a breeze!</p>
+
+<h4 id="create-a-heroku-app-install-add-ons-and-push-your-code-live">Create a Heroku app, Install Add-ons, and push your code live</h4>
+
+<p>Now that you have a Heroku account and the Toolbelt installed, you&#8217;re ready to create an app under your account, prepare the app, and push your code live. Along the way you&#8217;ll install a few Add-ons as well.</p>
+
+<p>Note: All of the following commands should be executed from the root of the project directory.</p>
+
+<p>[sourcecode light=&#8221;true&#8221;]$ heroku login[/sourcecode]</p>
+
+<p>After logging in, you may be prompted to add SSH keys. Follow the directions as you go.</p>
+
+<p>Next create a file named &#8216;Procfile&#8217; and put the following single line of code in it:</p>
+
+<p>[sourcecode]web: node server.js[/sourcecode]</p>
+
+<p>Create an app under your Heroku account:</p>
+
+<p>[sourcecode light=&#8221;true&#8221;]$ heroku create[/sourcecode]</p>
+
+<p>Next we need to install the first add-on for the app, MongoHQ. MongoHQ is another cloud based hosting service specifically for MongoDB that works extremely well with Heroku. Like Heroku, MongoHQ has a sandbox level service that is absolutely free!</p>
+
+<p>[sourcecode light=&#8221;true&#8221;]$ heroku addons:add mongohq[/sourcecode]</p>
+
+<p><strong>Note:</strong> In order to actually use add-ons, you will need to be sure your account has complete billing information. This is only because most services are scalable and have limited terms. Should you exceed those terms then billing would kick in.</p>
+
+<p>Next go to the Heroku website and access your dashboard/Apps. Click on the app that was just created, and then click on the MongoHQ Add-on. Go into the Collections and add a collection for your app (i.e. &#8220;contacts&#8221;). Then go into Admin and select the Users tab. Create a new user to access the database (give it any username/password you want). Switch back to the Overview tab and copy the Mongo URI.</p>
+
+<p>Edit server.js and the line that connects to the mongodb server will need to be changed to the Mongo URI that was just copied. Change the <user> and <password> to the MongoHQ user that you just created.</p>
+
+<p>Now we can push our code up to Heroku:</p>
+
+<div style="border:solid 1px #c0c0c0;background-color:#ffffff;padding:10px;margin-bottom:15px;padding-bottom:0;">
+  <strong>Note:</strong> Before you push your code to Heroku, because it uses Git to do so, you want to make sure that any changes you&#8217;ve made up to this point have been staged and committed (i.e. that change you just made to server.js for your MongoHQ connection URI). The easiest way to do that is with the following commands:</p> 
+  
+  <p>
+    [sourcecode light=&#8221;true&#8221;]<br /> $ git add .<br /> $ git commit -m "Updates for Heroku"<br /> [/sourcecode]
+  </p>
+</div>
+
+<p>[sourcecode light=&#8221;true&#8221;]$ git push heroku master[/sourcecode]</p>
+
+<p>Now that the app is setup, add-ons installed, and code pushed up we need Heroku to actually launch our server. To do this Heroku uses something called a dyno which will read the Procfile and execute its command:</p>
+
+<p>[sourcecode light=&#8221;true&#8221;]$ heroku ps:scale web=1[/sourcecode]</p>
+
+<p>Finally, launch your new Heorku app in a browser:</p>
+
+<p>[sourcecode light=&#8221;true&#8221;]$ heroku open[/sourcecode]</p>
+
+<h2 id="conclusion">Conclusion</h2>
+
+<p>For what appears to be a seemingly small app, there was a lot to cover. This boilerplate project should act as a great foundation for any future projects you want to quickly get up and running. Without having to worry about all the nuts and bolts that go into a standard web project, your time is freed up to worry about actually making the app!</p>
+
+<p>If you have any questions at all about this project, please feel free to post a comment or hit me up on Twitter. Also, any suggestions or recommendations would be greatly appreciated! Thanks for reading, hope you find the code useful &#8211; now go build something!</p>
+
+<div style="border:solid 1px #c0c0c0;background-color:#ffffff;padding:10px;margin-bottom:15px;padding-bottom:0;">
+  <h3>
+    Like this post? Want to show your support?
+  </h3>
+  
+  <p>
+    Wow! You made it this far! Long post huh? Well it took a while to create! I hope you liked it though. If so, I would really appreciate you showing your support:
+  </p>
+  
+  <p>
+    <strong>Buy the book on Amazon.com!</strong> For only $1.99 you can buy the eBook (mobi) version for your Kindle!
+  </p>
+  
+  <p>
+    <strong>Leave a review on Amazon.com!</strong> If you don&#8217;t want to spend any money (because well you just read the whole thing for free) why not leave a review anyway?! It would help me out greatly and anyone else interested in reading it that might find it on Amazon.
+  </p>
+  
+  <div style="text-align:center;">
+    <a href="http://www.amazon.com/dp/B00HRME7NA" target="blank">View eBook on Amazon</a>
+  </div>
+  
+
+<p><p>
+    Thanks!!
+  </p>
+</div></p>
+      </article>
+
+      <ul class="pager blog-pager">
+        
+          <li class="previous">
+            <a href="http://kroltech.com/2013/12/18/quick-tip-mimic-mac-copypaste-in-windows/" data-toggle="tooltip" data-placement="top" title="Mimic Mac Copy/Paste in Windows">&larr; Previous Post</a>
+          </li>
+        
+        
+          <li class="next">
+            <a href="http://kroltech.com/2013/12/29/2013-year-in-review/" data-toggle="tooltip" data-placement="top" title="2013 Year in Review">Next Post &rarr;</a>
+          </li>
+        
+      </ul>
+
+      
+        
+          <div class="disqus-comments">
+            <div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_shortname = 'jasonkrol';
+    var disqus_identifier = 'http:\/\/kroltech.com\/2013\/12\/29\/boilerplate-web-app-using-backbone-js-expressjs-node-js-mongodb\/';
+    var disqus_title = 'Boilerplate web app using Backbone.js, ExpressJS, node.js, MongoDB';
+    var disqus_url = 'http:\/\/kroltech.com\/2013\/12\/29\/boilerplate-web-app-using-backbone-js-expressjs-node-js-mongodb\/';
+
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+          </div>
+        
+      
+
+    </div>
+  </div>
+</div>
+
+    <footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <ul class="list-inline text-center footer-links">
+          
+              <li>
+                <a href="mailto:jkat98@gmail.com" title="Email me">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-envelope fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="https://www.plus.google.com/&#43;JasonKrol" title="Google&#43;">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-google-plus fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="https://github.com/shorttompkins" title="GitHub">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="https://twitter.com/shorttompkins" title="Twitter">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="https://reddit.com/u/shorttompkins" title="Reddit">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-reddit-alien fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="https://linkedin.com/in/jasonkrol" title="LinkedIn">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-linkedin fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="https://stackoverflow.com/users/1623304/jkat98" title="StackOverflow">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-stack-overflow fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="https://www.youtube.com/user/jkat98" title="Youtube">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-youtube fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+          
+          <li>
+            <a href="http://kroltech.com/index.xml" title="RSS">
+              <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fa fa-rss fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          
+        </ul>
+        <p class="credits copyright text-muted">
+          Jason Krol
+          &nbsp;&bull;&nbsp;
+          2016
+
+          
+            &nbsp;&bull;&nbsp;
+            <a href="http://kroltech.com/">KrolTech</a>
+          
+        </p>
+        
+        <p class="credits theme-by text-muted">
+          <a href="http://gohugo.io">Hugo v0.20.7</a> powered &nbsp;&bull;&nbsp; Theme by <a href="http://deanattali.com/beautiful-jekyll/">Beautiful Jekyll</a> adapted to <a href="https://github.com/halogenica/beautifulhugo">Beautiful Hugo</a>
+          
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/katex.min.js" integrity="sha384-/y1Nn9+QQAipbNQWU65krzJralCnuOasHncUFXGkdwntGeSvQicrYkiUBwsgUqc1" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/contrib/auto-render.min.js" integrity="sha384-dq1/gEHSxPZQ7DdrM82ID4YVol9BYyU7GbWlIwnwyPzotpoc57wDw/guX8EaYGPx" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<script src="http://kroltech.com/js/main.js"></script>
+<script src="http://kroltech.com/js/highlight.min.js"></script>
+<script> hljs.initHighlightingOnLoad(); </script>
+<script> renderMathInElement(document.body); </script>
+
+
+
+
+
+  </body>
+</html>
+

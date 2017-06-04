@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Nexus 4 on KrolTech</title>
+    <link>http://kroltech.com/tags/nexus-4/</link>
+    <description>Recent content in Nexus 4 on KrolTech</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <managingEditor>jkat98@gmail.com (Jason Krol)</managingEditor>
+    <webMaster>jkat98@gmail.com (Jason Krol)</webMaster>
+    <lastBuildDate>Fri, 23 Nov 2012 22:38:37 +0000</lastBuildDate>
+    
+	<atom:link href="http://kroltech.com/tags/nexus-4/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>The ‘Pilgrimage’, Nexus 4 in hand!, Giving Thanks</title>
+      <link>http://kroltech.com/2012/11/23/the-pilgrimage-nexus-4-in-hand-giving-thanks/</link>
+      <pubDate>Fri, 23 Nov 2012 22:38:37 +0000</pubDate>
+      <author>jkat98@gmail.com (Jason Krol)</author>
+      <guid>http://kroltech.com/2012/11/23/the-pilgrimage-nexus-4-in-hand-giving-thanks/</guid>
+      <description>Got the Nexus 4 today and I&amp;#8217;m completely blown away!! Coming from the iPhone4 its literally night and day! I spent probably 4 hours with it tonight just playing around with settings, tinkering with the live wallpapers, and getting my apps installed and all setup. The thing is VERY smooth, and runs like a champ. I&amp;#8217;ve been using it so heavily that I can’t truly speak for the battery yet, as I’ve been killing it and watching it drain.</description>
+    </item>
+    
+    <item>
+      <title>Web Essentials 1.7, Backbone.js, Google Nexus 4, Video game museum gets sold on ebay</title>
+      <link>http://kroltech.com/2012/11/16/web-essentials-1-7-backbone-js-google-nexus-4-video-game-museum-gets-sold-on-ebay/</link>
+      <pubDate>Fri, 16 Nov 2012 22:37:03 +0000</pubDate>
+      <author>jkat98@gmail.com (Jason Krol)</author>
+      <guid>http://kroltech.com/2012/11/16/web-essentials-1-7-backbone-js-google-nexus-4-video-game-museum-gets-sold-on-ebay/</guid>
+      <description>Installed Web Essentials 1.7 for VS2012 at home and tried out Zen Coding. This is definitely something really awesome and something I wish was integrated a long time ago. As it stands, I don&amp;#8217;t know how much “raw html” I will be coding in the near future to warrant using it all that much &amp;#8211; but I guess any html coding is worth doing via Zen Coding!
+Finally spent some time and started doing the Pluralsight course on Backbone.</description>
+    </item>
+    
+  </channel>
+</rss>

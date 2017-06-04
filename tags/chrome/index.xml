@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Chrome on KrolTech</title>
+    <link>http://kroltech.com/tags/chrome/</link>
+    <description>Recent content in Chrome on KrolTech</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <managingEditor>jkat98@gmail.com (Jason Krol)</managingEditor>
+    <webMaster>jkat98@gmail.com (Jason Krol)</webMaster>
+    <lastBuildDate>Mon, 15 Jul 2013 13:38:35 +0000</lastBuildDate>
+    
+	<atom:link href="http://kroltech.com/tags/chrome/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Remove URL from auto complete in Chrome</title>
+      <link>http://kroltech.com/2013/07/15/quick-tip-remove-url-from-auto-complete-in-chrome/</link>
+      <pubDate>Mon, 15 Jul 2013 13:38:35 +0000</pubDate>
+      <author>jkat98@gmail.com (Jason Krol)</author>
+      <guid>http://kroltech.com/2013/07/15/quick-tip-remove-url-from-auto-complete-in-chrome/</guid>
+      <description>&lt;p&gt;Every get frustrated when Chrome autocompletes a URL you frequent but it always suggests the wrong URL?! Here is a quick super simple way to remove those old URLs (or incorrectly preferred URLs) from the address bar.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Chrome pinned tabs – why to actually use them</title>
+      <link>http://kroltech.com/2012/11/29/quick-tip-chrome-pinned-tabs-why-to-actually-use-them/</link>
+      <pubDate>Thu, 29 Nov 2012 02:30:47 +0000</pubDate>
+      <author>jkat98@gmail.com (Jason Krol)</author>
+      <guid>http://kroltech.com/2012/11/29/quick-tip-chrome-pinned-tabs-why-to-actually-use-them/</guid>
+      <description>Not many people realize the importance of Pinning tabs in Google Chrome. Sure, it makes the tab smaller and a little more out of the way, but is that it?
+Actually, the point of pinned tabs is to treat them like any other &amp;#8220;app&amp;#8221; you have open or running in your system. The important thing to note about pinned tabs is that they will open automatically with your browser the next time you launch it.</description>
+    </item>
+    
+  </channel>
+</rss>

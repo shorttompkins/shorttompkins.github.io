@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Gaming on KrolTech</title>
+    <link>http://kroltech.com/categories/gaming/</link>
+    <description>Recent content in Gaming on KrolTech</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <managingEditor>jkat98@gmail.com (Jason Krol)</managingEditor>
+    <webMaster>jkat98@gmail.com (Jason Krol)</webMaster>
+    <lastBuildDate>Wed, 07 Aug 2013 02:02:46 +0000</lastBuildDate>
+    
+	<atom:link href="http://kroltech.com/categories/gaming/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Kickstarter works – Shadowrun Returns!!</title>
+      <link>http://kroltech.com/2013/08/07/kickstarter-works-shadowrun-returns/</link>
+      <pubDate>Wed, 07 Aug 2013 02:02:46 +0000</pubDate>
+      <author>jkat98@gmail.com (Jason Krol)</author>
+      <guid>http://kroltech.com/2013/08/07/kickstarter-works-shadowrun-returns/</guid>
+      <description>&lt;p&gt;Call me impressed. Looks like Kickstarter actually works! I backed the game &lt;a href=&#34;http://harebrained-schemes.com/shadowrun/&#34; target=&#34;_blank&#34;&gt;Shadowrun Returns&lt;/a&gt; probably over a year ago, and if you hadn&amp;#8217;t heard it actually released! And on top of that, its a damn fine game! Its exactly what I expected, although I don&amp;#8217;t think some people fully knew what to expect so might have been disappointed with the game in the end (unfortunately, that&amp;#8217;s more of a misunderstanding on their part or off-base/unrealistic expectations).&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Next-Gen Launch Titles: PS4 / Xbox One</title>
+      <link>http://kroltech.com/2013/06/18/confirmed-next-gen-launch-titles-ps4-xbox-one/</link>
+      <pubDate>Tue, 18 Jun 2013 13:43:47 +0000</pubDate>
+      <author>jkat98@gmail.com (Jason Krol)</author>
+      <guid>http://kroltech.com/2013/06/18/confirmed-next-gen-launch-titles-ps4-xbox-one/</guid>
+      <description>&lt;p&gt;Lets take a look at the current list of confirmed launch day titles exclusive to each of the next-gen consoles. Then I will list the remainder of the launch titles that you can get on either console.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Thoughts on the Xbox One reveal</title>
+      <link>http://kroltech.com/2013/05/25/thoughts-on-the-xbox-one-reveal/</link>
+      <pubDate>Sat, 25 May 2013 02:47:39 +0000</pubDate>
+      <author>jkat98@gmail.com (Jason Krol)</author>
+      <guid>http://kroltech.com/2013/05/25/thoughts-on-the-xbox-one-reveal/</guid>
+      <description>I was very excited for the big reveal from Microsoft, and literally was counting down the days. When it finally arrived, I could hardly contain myself!
+My initial reaction was that I was somewhat underwhelmed, but generally excited and liked everything I saw during the presentation (even though I could very easily admit that they just didn&amp;#8217;t show enough). The TV integration stuff I thought was very neat, and more importantly the pure speed of how everything worked on the system really wowed me and put to rest the biggest complaint I have with the current generation: how slow/long everything seems to take &amp;#8220;using&amp;#8221; the system.</description>
+    </item>
+    
+    <item>
+      <title>.Net Framework 2012.2, SPA templates, MGR: Revengeance, PS4, Working from home</title>
+      <link>http://kroltech.com/2013/02/24/net-framework-2012-2-spa-templates-mgr-revengeance-ps4-working-from-home/</link>
+      <pubDate>Sun, 24 Feb 2013 02:38:42 +0000</pubDate>
+      <author>jkat98@gmail.com (Jason Krol)</author>
+      <guid>http://kroltech.com/2013/02/24/net-framework-2012-2-spa-templates-mgr-revengeance-ps4-working-from-home/</guid>
+      <description>The .Net framework 2012.2 update has been released. Most of this update has to do with a few minor tweaks and enhancements (color coding popular client-side templates, LESS support, etc) as well as some new templates. A great post on John Papa’s blog outlines the templates.
+Played Metal Gear Rising: Revengeance and have to say I&amp;#8217;m a little disappointed. Its definitely not Bayonetta, and I doubt Platinum will ever achieve the stunning awesomeness that was that game, but heres holding out hope (not much since last I heard Bayonetta 2 was WiiU exclusive).</description>
+    </item>
+    
+    <item>
+      <title>First Backbone.js app, layoffs, Bleeding edge .net, SFIV</title>
+      <link>http://kroltech.com/2013/02/16/first-backbone-js-app-layoffs-bleeding-edge-net-sfiv/</link>
+      <pubDate>Sat, 16 Feb 2013 01:48:28 +0000</pubDate>
+      <author>jkat98@gmail.com (Jason Krol)</author>
+      <guid>http://kroltech.com/2013/02/16/first-backbone-js-app-layoffs-bleeding-edge-net-sfiv/</guid>
+      <description>I&amp;#8217;ve been working on a Backbone.js application for a few days now, and I really feel like I’m finally getting the hang of it. I&amp;#8217;ve run into a few snags here and there but for the most part I&amp;#8217;ve been pushing ahead and my application is coming together nicely. I hope to do a post with the entire source code and a heavy breakdown of each area of the code and functionality.</description>
+    </item>
+    
+    <item>
+      <title>Wodify, Zen Coding, Backbone.js book, SimCity beta!</title>
+      <link>http://kroltech.com/2013/01/26/wodify-zen-coding-backbone-js-book-simcity-beta/</link>
+      <pubDate>Sat, 26 Jan 2013 02:49:39 +0000</pubDate>
+      <author>jkat98@gmail.com (Jason Krol)</author>
+      <guid>http://kroltech.com/2013/01/26/wodify-zen-coding-backbone-js-book-simcity-beta/</guid>
+      <description>Created a super basic/handy lift calculator &amp;#8211; I’ll use this initially during my first bunch of sessions until I get comfortable doing the math on the fly. Its just painful trying to do percentage calculations while lifting, and then breaking down those results into how many different weights you need to add to each side of the bar! This tool will compute all of that in one shot!
+My Crossfit box started using Wodify.</description>
+    </item>
+    
+    <item>
+      <title>JavaScript MV* Frameworks!!?, Far Cry 3 coop, Kinect development starting!</title>
+      <link>http://kroltech.com/2012/12/18/javascript-mv-frameworks-fry-cry-3-coop-kinect-development-starting/</link>
+      <pubDate>Tue, 18 Dec 2012 02:48:17 +0000</pubDate>
+      <author>jkat98@gmail.com (Jason Krol)</author>
+      <guid>http://kroltech.com/2012/12/18/javascript-mv-frameworks-fry-cry-3-coop-kinect-development-starting/</guid>
+      <description>Played through all of the co-op missions in Far Cry 3 with @AnswerSeven and that was a lot of fun. It was an honor being a part of his completing 1000&amp;frasl;1000 in that game! Well done!!
+Looks like we might have a real project at work to use the Kinect with: our users group meeting we host every year, with over 5000 in attendance. I came up with an idea that I think might be pretty interesting, all really for the purposes of allowing me an opportunity to work with the Kinect.</description>
+    </item>
+    
+    <item>
+      <title>Most anticipated games of 2013</title>
+      <link>http://kroltech.com/2012/12/10/most-anticipated-games-of-2013/</link>
+      <pubDate>Mon, 10 Dec 2012 00:43:42 +0000</pubDate>
+      <author>jkat98@gmail.com (Jason Krol)</author>
+      <guid>http://kroltech.com/2012/12/10/most-anticipated-games-of-2013/</guid>
+      <description>My list of most anticipated games coming out in 2013 are as follows (most likely in release order):
+Anarchy Reigns
+DMC &amp;#8211; Devil May Cry, the demo was awesome and haters can all suck it!
+Dead Space 3 &amp;#8211; meh, its Dead Space&amp;#8230; 3&amp;#8230;
+Aliens: Colonial Marines &amp;#8211; YES!!! I ordered the super deluxe Spec Ed with Power Loader figure!
+Metal Gear Rising Revengeance &amp;#8211; YES!!!! The demo for this game was incredible and its from the creators of Bayonetta so need I say more!</description>
+    </item>
+    
+    <item>
+      <title>Web Essentials 1.7, Backbone.js, Google Nexus 4, Video game museum gets sold on ebay</title>
+      <link>http://kroltech.com/2012/11/16/web-essentials-1-7-backbone-js-google-nexus-4-video-game-museum-gets-sold-on-ebay/</link>
+      <pubDate>Fri, 16 Nov 2012 22:37:03 +0000</pubDate>
+      <author>jkat98@gmail.com (Jason Krol)</author>
+      <guid>http://kroltech.com/2012/11/16/web-essentials-1-7-backbone-js-google-nexus-4-video-game-museum-gets-sold-on-ebay/</guid>
+      <description>Installed Web Essentials 1.7 for VS2012 at home and tried out Zen Coding. This is definitely something really awesome and something I wish was integrated a long time ago. As it stands, I don&amp;#8217;t know how much “raw html” I will be coding in the near future to warrant using it all that much &amp;#8211; but I guess any html coding is worth doing via Zen Coding!
+Finally spent some time and started doing the Pluralsight course on Backbone.</description>
+    </item>
+    
+    <item>
+      <title>Hurricane Sandy, Windows 8, NFS: Most Wanted</title>
+      <link>http://kroltech.com/2012/11/02/hurricane-sandy-windows-8-nfs-most-wanted/</link>
+      <pubDate>Fri, 02 Nov 2012 22:34:40 +0000</pubDate>
+      <author>jkat98@gmail.com (Jason Krol)</author>
+      <guid>http://kroltech.com/2012/11/02/hurricane-sandy-windows-8-nfs-most-wanted/</guid>
+      <description>Hurricane Sandy!!!
+Installed Windows 8 over the weekend. At first, it was a little jarring. The changes are sweeping. Im not sure how I feel still about basically the start menu being expanded to an entire screen &amp;#8211; which is basically what happened. The live tiles concept is neat. I&amp;#8217;m not really a fan of forcing “metro” style apps to run full screen &amp;#8211; as I have a fairly large screen and typically development environments are the only programs I ever run maximized.</description>
+    </item>
+    
+    <item>
+      <title>Naming a startup, Dishonored and X-Com, PTM</title>
+      <link>http://kroltech.com/2012/10/12/40/</link>
+      <pubDate>Fri, 12 Oct 2012 22:28:37 +0000</pubDate>
+      <author>jkat98@gmail.com (Jason Krol)</author>
+      <guid>http://kroltech.com/2012/10/12/40/</guid>
+      <description>Spent the weekend spec’ing the “Secret” website, outlining each page, functionality and features. Spent a little time working on the actual domain name, but need to work really hard on figuring that key component out. Found a great article on mashable that will help. Hoping to start coding before the end of the month, so I can focus a big part of November on getting the groundwork done.
+Dishonored and X-Com: Enemy Unknown both came out this week.</description>
+    </item>
+    
+    <item>
+      <title>Borderlands 2!!!</title>
+      <link>http://kroltech.com/2012/09/21/borderlands-2/</link>
+      <pubDate>Fri, 21 Sep 2012 22:24:19 +0000</pubDate>
+      <author>jkat98@gmail.com (Jason Krol)</author>
+      <guid>http://kroltech.com/2012/09/21/borderlands-2/</guid>
+      <description>Big item this week was Borderlands 2!!! Took the day off and raged all day with some friends. Was a great time and had a blast! Game is awesome and if you loved 1 you will love 2 (not much surprising there).
+Got sick later in the week and have just been feeling miserable. Going a little crazy at work as nothing seems to be working correctly.</description>
+    </item>
+    
+    <item>
+      <title>XNA 4.0, Kinect, UI Labs</title>
+      <link>http://kroltech.com/2012/07/13/xna-4-0-kinect-ui-labs/</link>
+      <pubDate>Fri, 13 Jul 2012 21:59:26 +0000</pubDate>
+      <author>jkat98@gmail.com (Jason Krol)</author>
+      <guid>http://kroltech.com/2012/07/13/xna-4-0-kinect-ui-labs/</guid>
+      <description>This week and the past have been spent a lot with XNA 4.0 (Xbox Live Indie game development). I did a little bit of work on a project and started looking for good sprite assets for a test game. My idea is to create a DayZ type game but overhead 2D using Zombies Ate My Neighbors! style graphics (in fact the actual sprite sheets from that game itself). Found some great resources for the sprites.</description>
+    </item>
+    
+    <item>
+      <title>Microsoft Xbox 360 Kinect review</title>
+      <link>http://kroltech.com/2011/01/22/microsoft-xbox-360-kinect-review/</link>
+      <pubDate>Sat, 22 Jan 2011 16:46:58 +0000</pubDate>
+      <author>jkat98@gmail.com (Jason Krol)</author>
+      <guid>http://kroltech.com/2011/01/22/microsoft-xbox-360-kinect-review/</guid>
+      <description>First let me get this out of the way to perhaps add some credibility to this review: I am a hardcore gamer and have nearly 30 titles in my Xbox 360 library. I also have a PS3 (although my primary gaming console is the 360). Ive been gaming since I can remember (got a NES for Christmas, had an Atari 2600 etc). With that being said, let me also mention that I have a 4 year old son who is absolutely addicted to Angry Birds on my iPhone, although he&amp;#8217;s not really a fan of using a controller &amp;#8211; just yet.</description>
+    </item>
+    
+  </channel>
+</rss>

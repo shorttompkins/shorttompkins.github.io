@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Knockback.Js on KrolTech</title>
+    <link>http://kroltech.com/tags/knockback.js/</link>
+    <description>Recent content in Knockback.Js on KrolTech</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <managingEditor>jkat98@gmail.com (Jason Krol)</managingEditor>
+    <webMaster>jkat98@gmail.com (Jason Krol)</webMaster>
+    <lastBuildDate>Fri, 01 Mar 2013 21:52:25 +0000</lastBuildDate>
+    
+	<atom:link href="http://kroltech.com/tags/knockback.js/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Require.js, Knockback.js, A developer’s reaction (animated gif gallery)</title>
+      <link>http://kroltech.com/2013/03/01/require-js-knockback-js-a-developers-reaction-animated-gif-gallery/</link>
+      <pubDate>Fri, 01 Mar 2013 21:52:25 +0000</pubDate>
+      <author>jkat98@gmail.com (Jason Krol)</author>
+      <guid>http://kroltech.com/2013/03/01/require-js-knockback-js-a-developers-reaction-animated-gif-gallery/</guid>
+      <description>While playing with the SPA project template (post forthcoming) I finally took some time to play around with Require.js. While its fairly easy to get started, it blew my mind how it almost instantly changed my mindset and habits with regard to organization of my code. At its most basic level, it allows you to break all of your code down into nice bite-sized chunks in individual files &amp;#8211; but its so much more.</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Xna on KrolTech</title>
+    <link>http://kroltech.com/tags/xna/</link>
+    <description>Recent content in Xna on KrolTech</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <managingEditor>jkat98@gmail.com (Jason Krol)</managingEditor>
+    <webMaster>jkat98@gmail.com (Jason Krol)</webMaster>
+    <lastBuildDate>Fri, 20 Jul 2012 22:02:59 +0000</lastBuildDate>
+    
+	<atom:link href="http://kroltech.com/tags/xna/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Vacation!!!</title>
+      <link>http://kroltech.com/2012/07/20/vacation/</link>
+      <pubDate>Fri, 20 Jul 2012 22:02:59 +0000</pubDate>
+      <author>jkat98@gmail.com (Jason Krol)</author>
+      <guid>http://kroltech.com/2012/07/20/vacation/</guid>
+      <description>VACATION!! Didn&amp;#8217;t learn much, but did read up some more on XNA programming in general. Rode a wave runner (jet ski) for the first time and that was exhilarating! (Although it was extremely tiring, and very hard work!) Rode lots of rides, ate like shit, and had a great time!</description>
+    </item>
+    
+    <item>
+      <title>XNA 4.0, Kinect, UI Labs</title>
+      <link>http://kroltech.com/2012/07/13/xna-4-0-kinect-ui-labs/</link>
+      <pubDate>Fri, 13 Jul 2012 21:59:26 +0000</pubDate>
+      <author>jkat98@gmail.com (Jason Krol)</author>
+      <guid>http://kroltech.com/2012/07/13/xna-4-0-kinect-ui-labs/</guid>
+      <description>This week and the past have been spent a lot with XNA 4.0 (Xbox Live Indie game development). I did a little bit of work on a project and started looking for good sprite assets for a test game. My idea is to create a DayZ type game but overhead 2D using Zombies Ate My Neighbors! style graphics (in fact the actual sprite sheets from that game itself). Found some great resources for the sprites.</description>
+    </item>
+    
+  </channel>
+</rss>

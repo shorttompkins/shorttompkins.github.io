@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+  <title>ImGettin.it launch! DMC!!! JavaScript/Node.js/Backbone.js</title>
+  <meta property="og:title" content="ImGettin.it launch! DMC!!! JavaScript/Node.js/Backbone.js" />
+  <meta name="twitter:title" content="ImGettin.it launch! DMC!!! JavaScript/Node.js/Backbone.js" />
+  <meta name="description" content="Soft launched ImGettin.it over the weekend! By soft launch, I mean, bought and setup the domain, and got a test version of the site live. Login works, and the site “works” for the most part, but is very much not ready for prime time yet. I still need to get a lot of things working and most importantly I need a basic admin for the games database. The data that&#8217;s up right now is just test seed data &#8211; while pretty solid is far from complete or even valid.">
+  <meta property="og:description" content="Soft launched ImGettin.it over the weekend! By soft launch, I mean, bought and setup the domain, and got a test version of the site live. Login works, and the site “works” for the most part, but is very much not ready for prime time yet. I still need to get a lot of things working and most importantly I need a basic admin for the games database. The data that&#8217;s up right now is just test seed data &#8211; while pretty solid is far from complete or even valid.">
+  <meta name="twitter:description" content="Soft launched ImGettin.it over the weekend! By soft launch, I mean, bought and setup the domain, and got a test version of the site live. Login works, and the site “works” for the most part, but is …">
+  <meta name="author" content="Jason Krol"/>
+  <link href='http://kroltech.com/img/favicon.ico' rel='icon' type='image/x-icon'/>
+  <meta property="og:image" content="http://kroltech.com/img/avatar-icon.png" />
+  <meta name="twitter:image" content="http://kroltech.com/img/avatar-icon.png" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:site" content="@shorttompkins" />
+  <meta name="twitter:creator" content="@shorttompkins" />
+  <meta property="og:url" content="http://kroltech.com/2013/01/18/imgettin-it-launch-dmc-javascriptnode-jsbackbone-js/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="KrolTech" />
+
+  <meta name="generator" content="Hugo 0.20.7" />
+  <link rel="canonical" href="http://kroltech.com/2013/01/18/imgettin-it-launch-dmc-javascriptnode-jsbackbone-js/" />
+  <link rel="alternate" href="http://kroltech.com/index.xml" type="application/rss+xml" title="KrolTech">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/katex.min.css" integrity="sha384-wITovz90syo1dJWVh32uuETPVEtGigN07tkttEqPv+uR2SE/mbQcG7ATL28aI9H0" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <link rel="stylesheet" href="http://kroltech.com/css/main.css" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" />
+  <link rel="stylesheet" href="http://kroltech.com/css/pygment_highlights.css" />
+  <link rel="stylesheet" href="http://kroltech.com/css/highlight.min.css" />
+
+<script>
+window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+ga('create', 'UA-29480326-4', 'auto');
+ga('send', 'pageview');
+</script>
+<script async src='//www.google-analytics.com/analytics.js'></script>
+
+</head>
+
+  <body>
+    <nav class="navbar navbar-default navbar-fixed-top navbar-custom">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="http://kroltech.com/">KrolTech</a>
+    </div>
+
+    <div class="collapse navbar-collapse" id="main-navbar">
+      <ul class="nav navbar-nav navbar-right">
+        
+          
+            <li>
+              <a title="Blog" href="/">Blog</a>
+            </li>
+          
+        
+          
+            <li>
+              <a title="About" href="/page/about/">About</a>
+            </li>
+          
+        
+
+        
+
+        
+      </ul>
+    </div>
+
+    <div class="avatar-container">
+      <div class="avatar-img-border">
+        
+          <a title="KrolTech" href="http://kroltech.com/">
+            <img class="avatar-img" src="http://kroltech.com/img/avatar-icon.png" alt="KrolTech" />
+          </a>
+        
+      </div>
+    </div>
+
+  </div>
+</nav>
+
+
+
+
+    
+  
+  
+  
+
+
+
+
+  
+
+  <header class="header-section ">
+    
+    <div class="intro-header no-img">
+      
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+            <div class="post-heading">
+              <h1>ImGettin.it launch! DMC!!! JavaScript/Node.js/Backbone.js</h1>
+                
+                
+                  <span class="post-meta">
+  Posted on January 18, 2013
+  
+</span>
+
+
+                
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+
+    
+<div class="container">
+  <div class="row">
+    <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+      <article role="main" class="blog-post">
+        <p><a href="http://104.236.7.244/wp-content/uploads/2013/01/logo.jpg"><img class="size-full wp-image-269 alignright" title="ImGettin! IT" src="http://104.236.7.244/wp-content/uploads/2013/01/logo.jpg" alt="" width="210" height="73" /></a>Soft launched <strong><a href="http://imgettin.it/" target="_blank">ImGettin.it</a></strong> over the weekend!  By soft launch, I mean, bought and setup the domain, and got a test version of the site live. Login works, and the site “works” for the most part, but is very much not ready for prime time yet.  I still need to get a lot of things working and most importantly I need a basic admin for the games database.  The data that&#8217;s up right now is just test seed data &#8211; while pretty solid is far from complete or even valid.</p>
+
+<p>Here&#8217;s a <a href="http://www.youtube.com/watch?v=PqtYcHyyWJA&amp;noredirect=1">great video</a> on getting started with Backbone.js.</p>
+
+<p>Started watching the <a href="http://www.pluralsight.com/training/Courses/TableOfContents/node-intro">Intro to Node.js Pluralsight course</a>. I know I live in a bubble, but it amazes me the whole “other” world that&#8217;s out there of web developers (i.e. the non-Microsoft world).</p>
+
+<p>On a related note I picked up a few new books on Amazon and am very excited to start digging into those!</p>
+
+<p><strong><a href="http://www.amazon.com/gp/product/0596517742/ref=oh_details_o01_s01_i00" target="_blank">JavaScript: The Good Parts (Douglas Crockford)</a></strong></p>
+
+<p>I&#8217;ve only just started this one, but I’m about a third through (its very tiny).  This book is incredible, its short, to the point, does not hand-hold at all, but it is VERY full of excellent information. I learned so much already in probably only 45 minutes of reading!</p>
+
+<p><strong><a href="http://www.amazon.com/gp/product/1449323073/ref=oh_details_o01_s01_i01" target="_blank">Learning Node (Shelley Powers)</a></strong></p>
+
+<p>This I will start once I’m finished with the Good Parts book.  I’ve been very interested in learning more about Node.js recently, so this seems like a good logical place to start!  Its a fairly solid book and somewhat thick, so I’ll need to slowly digest this one.</p>
+
+<p><strong><a href="http://www.amazon.com/gp/product/1449337392/ref=oh_details_o01_s00_i00">Building Node Applications with MongoDB and Backbone (Mike Wilson)</a></strong></p>
+
+<p>Kill 2 birds with 1 stone, as I continue to try to get better/start using Backbone, I can get some good practice with both it and Node building the faux social application outlined in this book!  This book is super tiny as well!</p>
+
+<p>DMC Devil May Cry came out this week and its getting some <a href="http://www.ign.com/articles/2013/01/14/dmc-devil-may-cry-review-360">really good reviews</a>!  On average high 8s and 9s which is awesome!  I&#8217;ve been looking forward to this game for a long time and the recent demo left me wanting more!!</p>
+
+<p><em>UPDATE:</em> Played the game for a few hours and its definitely great!  The combat is awesome and very smooth and fluid, and the sheer amount of combinations that one can perform with the different weapons is staggering!  There are some elements of the game that are odd, like certain levels and some of the story in general, but that can be overlooked due to the pure fun of the actual gameplay!  Can&#8217;t wait to beat it and try on the harder unlocked difficulties!</p>
+
+<p>A coworker found a great jQuery plugin that can be used to replace a multi-select dropdown for use in admin screens and CMS tools: Chosen &#8211; <a href="http://harvesthq.github.com/chosen/">http://harvesthq.github.com/chosen/</a></p>
+
+      </article>
+
+      <ul class="pager blog-pager">
+        
+          <li class="previous">
+            <a href="http://kroltech.com/2013/01/14/cats-dont-like-water/" data-toggle="tooltip" data-placement="top" title="Cats don’t like water!">&larr; Previous Post</a>
+          </li>
+        
+        
+          <li class="next">
+            <a href="http://kroltech.com/2013/01/18/first-session-of-the-cfg-barbell-club/" data-toggle="tooltip" data-placement="top" title="First session of the CFG Barbell Club!">Next Post &rarr;</a>
+          </li>
+        
+      </ul>
+
+      
+        
+          <div class="disqus-comments">
+            <div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_shortname = 'jasonkrol';
+    var disqus_identifier = 'http:\/\/kroltech.com\/2013\/01\/18\/imgettin-it-launch-dmc-javascriptnode-jsbackbone-js\/';
+    var disqus_title = 'ImGettin.it launch! DMC!!! JavaScript\/Node.js\/Backbone.js';
+    var disqus_url = 'http:\/\/kroltech.com\/2013\/01\/18\/imgettin-it-launch-dmc-javascriptnode-jsbackbone-js\/';
+
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+          </div>
+        
+      
+
+    </div>
+  </div>
+</div>
+
+    <footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <ul class="list-inline text-center footer-links">
+          
+              <li>
+                <a href="mailto:jkat98@gmail.com" title="Email me">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-envelope fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="https://www.plus.google.com/&#43;JasonKrol" title="Google&#43;">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-google-plus fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="https://github.com/shorttompkins" title="GitHub">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="https://twitter.com/shorttompkins" title="Twitter">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="https://reddit.com/u/shorttompkins" title="Reddit">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-reddit-alien fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="https://linkedin.com/in/jasonkrol" title="LinkedIn">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-linkedin fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="https://stackoverflow.com/users/1623304/jkat98" title="StackOverflow">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-stack-overflow fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="https://www.youtube.com/user/jkat98" title="Youtube">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-youtube fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+          
+          <li>
+            <a href="http://kroltech.com/index.xml" title="RSS">
+              <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fa fa-rss fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          
+        </ul>
+        <p class="credits copyright text-muted">
+          Jason Krol
+          &nbsp;&bull;&nbsp;
+          2016
+
+          
+            &nbsp;&bull;&nbsp;
+            <a href="http://kroltech.com/">KrolTech</a>
+          
+        </p>
+        
+        <p class="credits theme-by text-muted">
+          <a href="http://gohugo.io">Hugo v0.20.7</a> powered &nbsp;&bull;&nbsp; Theme by <a href="http://deanattali.com/beautiful-jekyll/">Beautiful Jekyll</a> adapted to <a href="https://github.com/halogenica/beautifulhugo">Beautiful Hugo</a>
+          
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/katex.min.js" integrity="sha384-/y1Nn9+QQAipbNQWU65krzJralCnuOasHncUFXGkdwntGeSvQicrYkiUBwsgUqc1" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/contrib/auto-render.min.js" integrity="sha384-dq1/gEHSxPZQ7DdrM82ID4YVol9BYyU7GbWlIwnwyPzotpoc57wDw/guX8EaYGPx" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<script src="http://kroltech.com/js/main.js"></script>
+<script src="http://kroltech.com/js/highlight.min.js"></script>
+<script> hljs.initHighlightingOnLoad(); </script>
+<script> renderMathInElement(document.body); </script>
+
+
+
+
+
+  </body>
+</html>
+

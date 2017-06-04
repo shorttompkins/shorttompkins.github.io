@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Simcity on KrolTech</title>
+    <link>http://kroltech.com/tags/simcity/</link>
+    <description>Recent content in Simcity on KrolTech</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <managingEditor>jkat98@gmail.com (Jason Krol)</managingEditor>
+    <webMaster>jkat98@gmail.com (Jason Krol)</webMaster>
+    <lastBuildDate>Sat, 26 Jan 2013 02:49:39 +0000</lastBuildDate>
+    
+	<atom:link href="http://kroltech.com/tags/simcity/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Wodify, Zen Coding, Backbone.js book, SimCity beta!</title>
+      <link>http://kroltech.com/2013/01/26/wodify-zen-coding-backbone-js-book-simcity-beta/</link>
+      <pubDate>Sat, 26 Jan 2013 02:49:39 +0000</pubDate>
+      <author>jkat98@gmail.com (Jason Krol)</author>
+      <guid>http://kroltech.com/2013/01/26/wodify-zen-coding-backbone-js-book-simcity-beta/</guid>
+      <description>Created a super basic/handy lift calculator &amp;#8211; I’ll use this initially during my first bunch of sessions until I get comfortable doing the math on the fly. Its just painful trying to do percentage calculations while lifting, and then breaking down those results into how many different weights you need to add to each side of the bar! This tool will compute all of that in one shot!
+My Crossfit box started using Wodify.</description>
+    </item>
+    
+  </channel>
+</rss>

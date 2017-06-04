@@ -1,0 +1,593 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+  <title>Building a web app using Backbone.js and require.js – Part 1</title>
+  <meta property="og:title" content="Building a web app using Backbone.js and require.js – Part 1" />
+  <meta name="twitter:title" content="Building a web app using Backbone.js and require.js – Part 1" />
+  <meta name="description" content="A few requests for the full source code for this project have been made. Please feel free to download the full project files via this repo:
+https://github.com/jkat98/imgettinit_netmvc  At the end of last year I set some goals for myself, one of which was to start using and become proficient in Backbone.js. I&#8217;ll be honest in saying that I struggled for a bit to really wrap my head around everything that was going on.">
+  <meta property="og:description" content="A few requests for the full source code for this project have been made. Please feel free to download the full project files via this repo:
+https://github.com/jkat98/imgettinit_netmvc  At the end of last year I set some goals for myself, one of which was to start using and become proficient in Backbone.js. I&#8217;ll be honest in saying that I struggled for a bit to really wrap my head around everything that was going on.">
+  <meta name="twitter:description" content="A few requests for the full source code for this project have been made. Please feel free to download the full project files via this repo:
+https://github.com/jkat98/imgettinit_netmvc  At the end of …">
+  <meta name="author" content="Jason Krol"/>
+  <link href='http://kroltech.com/img/favicon.ico' rel='icon' type='image/x-icon'/>
+  <meta property="og:image" content="http://kroltech.com/img/avatar-icon.png" />
+  <meta name="twitter:image" content="http://kroltech.com/img/avatar-icon.png" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:site" content="@shorttompkins" />
+  <meta name="twitter:creator" content="@shorttompkins" />
+  <meta property="og:url" content="http://kroltech.com/2013/03/21/building-a-web-app-using-backbone-js-and-require-js-part-1/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="KrolTech" />
+
+  <meta name="generator" content="Hugo 0.20.7" />
+  <link rel="canonical" href="http://kroltech.com/2013/03/21/building-a-web-app-using-backbone-js-and-require-js-part-1/" />
+  <link rel="alternate" href="http://kroltech.com/index.xml" type="application/rss+xml" title="KrolTech">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/katex.min.css" integrity="sha384-wITovz90syo1dJWVh32uuETPVEtGigN07tkttEqPv+uR2SE/mbQcG7ATL28aI9H0" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <link rel="stylesheet" href="http://kroltech.com/css/main.css" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" />
+  <link rel="stylesheet" href="http://kroltech.com/css/pygment_highlights.css" />
+  <link rel="stylesheet" href="http://kroltech.com/css/highlight.min.css" />
+
+<script>
+window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+ga('create', 'UA-29480326-4', 'auto');
+ga('send', 'pageview');
+</script>
+<script async src='//www.google-analytics.com/analytics.js'></script>
+
+</head>
+
+  <body>
+    <nav class="navbar navbar-default navbar-fixed-top navbar-custom">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="http://kroltech.com/">KrolTech</a>
+    </div>
+
+    <div class="collapse navbar-collapse" id="main-navbar">
+      <ul class="nav navbar-nav navbar-right">
+        
+          
+            <li>
+              <a title="Blog" href="/">Blog</a>
+            </li>
+          
+        
+          
+            <li>
+              <a title="About" href="/page/about/">About</a>
+            </li>
+          
+        
+
+        
+
+        
+      </ul>
+    </div>
+
+    <div class="avatar-container">
+      <div class="avatar-img-border">
+        
+          <a title="KrolTech" href="http://kroltech.com/">
+            <img class="avatar-img" src="http://kroltech.com/img/avatar-icon.png" alt="KrolTech" />
+          </a>
+        
+      </div>
+    </div>
+
+  </div>
+</nav>
+
+
+
+
+    
+  
+  
+  
+
+
+
+
+  
+
+  <header class="header-section ">
+    
+    <div class="intro-header no-img">
+      
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+            <div class="post-heading">
+              <h1>Building a web app using Backbone.js and require.js – Part 1</h1>
+                
+                
+                  <span class="post-meta">
+  Posted on March 21, 2013
+  
+</span>
+
+
+                
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+
+    
+<div class="container">
+  <div class="row">
+    <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+      <article role="main" class="blog-post">
+        
+
+<div class="alert_box">
+  A few requests for the full source code for this project have been made. Please feel free to download the full project files via this repo:<br /> <a href="https://github.com/jkat98/imgettinit_netmvc">https://github.com/jkat98/imgettinit_netmvc</a>
+</div>
+
+<p>At the end of last year <a href="http://kroltech.com/2012/12/2013-goals-and-ambitions/" title="2013 Goals and Ambitions">I set some goals for myself</a>, one of which was to start using and become proficient in Backbone.js. I&#8217;ll be honest in saying that I struggled for a bit to really wrap my head around everything that was going on. There are a lot of <a href="http://addyosmani.github.com/backbone-fundamentals/" target="_blank">great resources</a> out there to learn Backbone.js, but the goal of this article isn&#8217;t to teach Backbone.js from the very beginning. It is geared towards newbies (like myself) but you should have at least a basic understanding before proceeding.</p>
+
+<p>One of the biggest issues I faced when originally trying to tackle Backbone was the lack of any real-world examples. Every tutorial article and website seems to feature, more or less, the same exact &#8220;<a href="http://todomvc.com/" target="_blank">To Do</a>&#8221; application. That&#8217;s great and all, but almost immediately you realize that there are some fairly huge, yet fundamental, pieces missing!</p>
+
+<p>The goal of this article is to take a somewhat basic, yet real-world, web application that I recently created and learn from it. Since I originally wrote it so that I could myself learn Backbone and require, I&#8217;m hoping I can shed some light on some pitfalls and hurdles I struggled with along the way, as well as provide an eye opening example on how a real website could be built.</p>
+
+<p>I&#8217;m going to take the <em>ImGettin.it</em> website <a href="http://kroltech.com/2013/01/imgettin-it-launch-dmc-javascriptnode-jsbackbone-js/" title="ImGettin.it launch! DMC!!! JavaScript/Node.js/Backbone.js">I announced a few months ago</a> and completely rewrite it from scratch using Backbone.js and require.js. The focus of this article is going to be mostly front-end. If you want to learn more about how the backend was created you should check out <a href="http://kroltech.com/2013/03/single-page-application-spa-project-template/" title="Single Page Application (SPA) Project Template">my SPA Project Template post</a>.</p>
+
+<h3 id="planning-a-head">Planning a head</h3>
+
+<p>Before we do anything, lets do a little planning a head so we know what we are getting into.</p>
+
+<ul>
+<li>The project we will be reviewing is going to be a library of video games that haven&#8217;t yet been released.</li>
+<li>It was built using the Single Page Application (SPA) style that is becoming so popular.</li>
+<li>Users can browse through the list of upcoming games via Pinterest style &#8220;<a href="http://masonry.desandro.com/" target="_blank">masonry</a>&#8221; columns.</li>
+<li>Clicking on any game will popup details for that game. Included in the details is:
+
+<ul>
+<li>game title/header banner image</li>
+<li>description</li>
+<li>release date</li>
+<li>consoles its being released on</li>
+<li>any retail preorder bonuses available</li>
+<li>your friends that are getting the game</li>
+<li>a list of other upcoming games</li>
+<li>finally the main button/dropdown that users will use to mark a game they intend to get.</li>
+</ul></li>
+<li>Technologies being used:
+
+<ul>
+<li>ASP.net C#, Entity Framework, WebAPI &#8211; backend</li>
+<li>Backbone.js, its dependency underscore.js, and require.js &#8211; frontend</li>
+<li>Plugins/Libraries:
+
+<ul>
+<li>moment.js &#8211; for handling dates/times formatting</li>
+<li>masonry.js &#8211; for displaying games in Pinterest style vertical columns</li>
+<li>simplemodal.js &#8211; for displaying games details via modal popup window</li>
+<li>imagesloaded.js &#8211; for detecting all images have been loaded before executing the masonry layout</li>
+</ul></li>
+</ul></li>
+</ul>
+
+<h3 id="getting-started-organizing-our-code-and-files">Getting Started: Organizing our code and files</h3>
+
+<p>Most of the focus of this article is going to be on our /scripts folder &#8211; so lets take a quick look at how the files in there are going to be organized:</p>
+
+<ul>
+<li><span style="line-height:15px;">main.js &#8211; This is our main javascript &#8220;boot&#8221; script.</span></li>
+<li>/app &#8211; contains all of our actual app scripts
+
+<ul>
+<li>app.js &#8211; basically the Backbone router for our app</li>
+<li>config.js &#8211; some basic configuration options</li>
+<li>globals.js &#8211; global variables and collections</li>
+<li>/models &#8211; all of our Backbone models</li>
+<li>/views &#8211; all of our Backbone views</li>
+</ul></li>
+<li>/lib &#8211; contains our 3rd party libraries and plugins</li>
+</ul>
+
+<h3 id="index-cshtml">Index.CShtml</h3>
+
+<p>Since this is going to be a Single Page Application (SPA) we are going to only have 1 html document, the index.cshtml document in our root.  It contains all of the standard boilerplate stuff you would expect (including header, design elements, navigation, etc as well as the all important core div that will contain our app with an id of &#8220;app&#8221;), however lets focus on the scripts tags at the bottom:</p>
+
+<p>[sourcecode lang=&#8221;html&#8221;]</p>
+
+<header>Logo, navigation, etc.</header>
+  
+
+<div id="app"></div>
+  
+
+<footer>Copyright info etc</footer>
+
+<p>@RenderPage(&ldquo;Views/game.cshtml&rdquo;)</p>
+
+<p>@RenderPage(&ldquo;Views/gameDetails.cshtml&rdquo;)</p>
+
+<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  
+
+<script type="text/javascript" src="~/Scripts/lib/moment.min.js"></script>
+  
+
+<script type="text/javascript" src="~/Scripts/lib/require.js" data-main="/Scripts/main"></script>
+  
+
+<p>[/sourcecode]</p>
+
+<p>First, we decided to load jQuery using Google&#8217;s CDN (and not load it async using require).</p>
+
+<p>Secondly, we loaded moment.js manually right in the page as well and that is so we can use moment in our templates (or other areas in the actual HTML and not Backbone or require).</p>
+
+<p>We will store all of our actual HTML templates as pages in our MVC project Views folder, and just include them in the index.cshtml page using Razor&#8217;s @RenderPage() calls.  This is just for convenience/organization and we could have just as easily put the Script blocks right in our index.cshtml file.</p>
+
+<p>Finally, the most important line is the require.js include.  Here we have the data-main attribute set to the main.js file in our scripts folder. (Note that by convention, never include the .js part as require will always add this automatically.)  This is important because it tells require the main bootloader script file to run that will kick start everything. Its also the only script file loaded by default out of all of our scripts. The rest will all load asynchronously as needed by require.</p>
+
+<h3 id="main-js-8211-our-bootloader">main.js &#8211; our Bootloader</h3>
+
+<p>Our main.js file (which is loaded by default because of the data-main attribute of our require.js script tag) is what we are referring to as our &#8220;bootloader&#8221;.  This script will configure require, declare paths and dependencies, and then startup the app:</p>
+
+<p>[sourcecode lang=&#8221;javascript&#8221;]</p>
+
+<p>(function () {</p>
+
+<p>var root = this;</p>
+
+<p>require.config({</p>
+
+<p>baseUrl: &ldquo;/scripts/app/&rdquo;,</p>
+
+<p>paths: {</p>
+
+<p>underscore: &#8216;../lib/underscore.min&#8217;,</p>
+
+<p>backbone: &#8216;../lib/backbone.min&#8217;,</p>
+
+<p>&#8216;jquery.masonry&#8217;: &#8216;../lib/masonry&#8217;,</p>
+
+<p>&#8216;jquery.imagesLoaded&#8217;: &#8216;../lib/imagesloaded&#8217;,</p>
+
+<p>&#8216;jquery.simplemodal&#8217;:&#8217;../lib/jquery.simplemodal.1.4.4.min&#8217;</p>
+
+<p>},</p>
+
+<p>shim: {</p>
+
+<p>underscore: { exports: &#8216;_&#8217; },</p>
+
+<p>backbone: { deps: [&#8216;underscore&#8217;, &#8216;jquery&#8217;], exports: &#8216;Backbone&#8217; },</p>
+
+<p>&#8216;jquery.masonry&#8217;: { deps: [&#8216;jquery&#8217;], exports: &#8216;masonry&#8217; },</p>
+
+<p>&#8216;jquery.imagesLoaded&#8217;: { deps: [&#8216;jquery&#8217;], exports: &#8216;imagesloaded&#8217; },</p>
+
+<p>&#8216;jquery.simplemodal&#8217;: { deps: [&#8216;jquery&#8217;], exports: &#8216;modal&#8217; }</p>
+
+<p>}</p>
+
+<p>});</p>
+
+<p>//these are defined externally so they can be used in our view templates:</p>
+
+<p>define(&#8216;jquery&#8217;, [], function () { return root.jQuery; });</p>
+
+<p>define(&#8216;moment&#8217;, [], function () { return root.moment; });</p>
+
+<p>require([&#8216;app&#8217;], function (app) {</p>
+
+<p>app.run();</p>
+
+<p>});</p>
+
+<p>})();</p>
+
+<p>[/sourcecode]</p>
+
+<p>In the above code, we start by configuring require.  First we set our baseUrl, which tells require every time we reference a dependency in any of our external script files, to assume that they start with the baseUrl (saves us typing redundant code basically).  Then we declare our paths <code>Line: 6</code>, these are for scripts that are in different urls other than our baseUrl (i.e. plugins and other libraries in our lib folder).  We also use paths to set easier naming conventions for scripts that have complex file names (i.e. jquery.simplemodal = jquery.simplemodal.1.4.4.min etc)</p>
+
+<p>After our paths, we setup a shim <code>Line: 13</code> &#8211; which basically allows us to pre-define dependencies.  So, for example, whenever we need Backbone, we don&#8217;t want to also have to say that we need underscore and jQuery too, we just want require to know that ahead of time.</p>
+
+<p>Finally, we use define to setup those scripts that have already been loaded (jQuery from Google&#8217;s CDN and moment &#8211; both loaded manually from our index.cshtml file) <code>Line: 23</code>.</p>
+
+<p>Once the configuration is complete, we&#8217;re ready to call require and reference our app (app.js) <code>Line: 27</code> and execute it. Lets take a look at app.js now.</p>
+
+<h3 id="app-js">App.js</h3>
+
+<p>Our app basically exists and runs in 1 script file, app.js. That is to say, this is where the main Backbone router exists and is initialized. From here, everything else then falls into place.</p>
+
+<p>[sourcecode lang=&#8221;javascript&#8221;]</p>
+
+<p>define([&#8216;backbone&#8217;, &#8216;models/m_game&#8217;, &#8216;views/v_games&#8217;, &#8216;views/v_game&#8217;, &#8216;jquery.masonry&#8217;, &#8216;jquery.imagesLoaded&#8217;],</p>
+
+<p>function (Backbone, Game, GamesView, GameView, masonry, imagesloaded) {</p>
+
+<p>var run = function () {</p>
+
+<p>bootBackboneRouter();</p>
+
+<p>};</p>
+
+<p>var bootBackboneRouter = function () {</p>
+
+<p>var AppRouter = Backbone.Router.extend({</p>
+
+<p>initialize: function () {</p>
+
+<p>this.games = new Game.Collection();</p>
+
+<p>},</p>
+
+<p>routes: {</p>
+
+<p>&rdquo;&rdquo;: &ldquo;main&rdquo;</p>
+
+<p>},</p>
+
+<p>main: function () {</p>
+
+<p>var that = this;</p>
+
+<p>var view = new GamesView({ collection: that.games });</p>
+
+<p>games.fetch({</p>
+
+<p>//sample search parameters:</p>
+
+<p>//data: {page: 2, searchstr: &#8216;some query&#8217;},</p>
+
+<p>success: function () {</p>
+
+<p>$(&#8216;#app&#8217;).html(view.render().el);</p>
+
+<p>$(&#8216;#app ul&#8217;).imagesLoaded(function () {</p>
+
+<p>$(&#8216;#app ul&#8217;).masonry({</p>
+
+<p>// options</p>
+
+<p>itemSelector: &#8216;li&#8217;,</p>
+
+<p>isFitWidth: true,</p>
+
+<p>isAnimated: true,</p>
+
+<p>columnWidth: 250</p>
+
+<p>});</p>
+
+<p>});</p>
+
+<p>}</p>
+
+<p>});</p>
+
+<p>}</p>
+
+<p>});</p>
+
+<p>//boot up the app:</p>
+
+<p>var appRouter = new AppRouter();</p>
+
+<p>Backbone.history.start();</p>
+
+<p>}</p>
+
+<p>return {</p>
+
+<p>run: run</p>
+
+<p>};</p>
+
+<p>});</p>
+
+<p>[/sourcecode]</p>
+
+<p>First thing to point out is the define call &#8211; which includes a laundry list of all of our dependencies for this particular chunk of code.  You can see that in addition to backbone being required (obviously) we also need a game model, games and game views, and both jQuery masonry and jQuery imagesLoaded plugins.</p>
+
+<div class="alert_box">
+  Note: I&#8217;ve give each of my script files a prefix that let me know what kind of file they are in my editor (Visual Studio). Specifically, my models all start with m_ and my views with v_. This really is just so that when I have game.js, games.js, game.js, and games.js all open I don&#8217;t lose my mind! Having m_game.js, m_games.js, v_game.js, and v_games.js makes it a little easier to jump around files and know exactly what I&#8217;m looking for/at.
+</div>
+
+<p>What this code is doing is declaring a new Backbone router. First we initialize it by creating a new empty Games Backbone collection and assigning it to the property &#8220;this.games&#8221; <code>Line: 10</code>. Then we setup our routes &#8211; just setting up a default root route and pointing it to the &#8220;main&#8221; function.</p>
+
+<p>Inside our &#8220;main&#8221; function, the first thing we do is setup a holder for our &#8220;this&#8221; object. We named it &#8220;that&#8221; simply by convention/habit, but it can be named whatever you want <code>Line: 17</code>. (It&#8217;s common to see &#8220;that&#8221; as a reference to &#8220;this&#8221; when inside a different scope.) Then we create a new GamesView Backbone view, and initialize its collection property with the empty games collection (created earlier in our initialization).</p>
+
+<p>Using the router object&#8217;s games collection object, we call fetch() on it. Backbone&#8217;s collection.fetch() method will execute an ajax REST call against the objects predefined &#8220;url&#8221; property. What that means is that the games collection, which originally started out empty, will have its fetch() perform a GET against the server, and the server will return a JSON list of &#8220;games&#8221; that will then become the populated data of our games collection.  Inside the fetch() call we have a success function declared. <code>Line: 22</code>  In here we basically tell the view (that we created right before our fetch()) &#8220;now that we have data, lets render out some html and populate the screen!&#8221; (basically).</p>
+
+<p>Inside the success function, we populate our main div#app&#8217;s (in our index.cshtml file) internal html with the html that is output by the GamesView render().el <code>Line: 23</code>.  From there, we simply call some regular jQuery (the imagesLoaded plugin just makes sure all of the game&#8217;s boxarts are finished downloading) and then setup masonry to actually format the output of the html into fancy Pinterest style vertical columns.  We could have just as easily ended our function after line 23.</p>
+
+<p>Finally, we simply new up our AppRouter() and then launch Backbone via its history.start() method.  To keep things simple and compartmentalized, this app object really only returns an ojbect with a single method &#8220;run&#8221;, and that method does the work outlined above.</p>
+
+<h3 id="summary">Summary</h3>
+
+<p>OK, wow!  That was a lot to cover.  Lets go over some of that stuff a little more high level before moving on.</p>
+
+<p>Basically, we have main.js which configures require.js and then calls require.js passing only a single dependency &#8220;app&#8221;.  Inside that require call we simply execute app.run().</p>
+
+<p>App.run() contains our core Backbone router.  The router only defines a single route right now, the root of our application.  Once this route is triggered (basically by default whenever you load the page), the route calls a functioned called &#8220;main&#8221;.  Main will create a GamesView Backbone view, and call the games collection fetch() method which retrieves JSON from our server via a REST GET call.  Once that data has been successfully retrieved, we will then execute our GamesView render() method and then populate our #app div html with the newly created html returned by the GamesView render().el.</p>
+
+<p>So at this point, if we boot up our SPA, we should see a Pinterest style list of games displayed on the screen.</p>
+
+<p>In the next part of this article, we will cover the actual GamesView view as well as its model and collection.  We&#8217;ve seen them in action in our app.run() but lets actually dissect them and see exactly how they were built and setup.</p>
+
+<p>[button link=&#8221;<a href="http://kroltech.com/?p=449&amp;#8243">http://kroltech.com/?p=449&amp;#8243</a>; block=&#8221;on&#8221; class=&#8221;&#8221; icon=&#8221;&#8221; style=&#8221;btn-warning&#8221; size=&#8221;btn-default&#8221; type=&#8221;btn-flat-square&#8221; target=&#8221;_self&#8221;] Proceed to Part 2 of Building a web app using Backbone.js and require.js [/button]</p>
+
+      </article>
+
+      <ul class="pager blog-pager">
+        
+          <li class="previous">
+            <a href="http://kroltech.com/2013/03/21/building-a-web-app-using-backbone-js-and-require-js-part-2/" data-toggle="tooltip" data-placement="top" title="Building a web app using Backbone.js and require.js – Part 2">&larr; Previous Post</a>
+          </li>
+        
+        
+          <li class="next">
+            <a href="http://kroltech.com/2013/03/29/mobile-app-development-google-dev-tools-code-school-tekpub/" data-toggle="tooltip" data-placement="top" title="Mobile app development, Google Dev tools Code School, TekPub">Next Post &rarr;</a>
+          </li>
+        
+      </ul>
+
+      
+        
+          <div class="disqus-comments">
+            <div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_shortname = 'jasonkrol';
+    var disqus_identifier = 'http:\/\/kroltech.com\/2013\/03\/21\/building-a-web-app-using-backbone-js-and-require-js-part-1\/';
+    var disqus_title = 'Building a web app using Backbone.js and require.js – Part 1';
+    var disqus_url = 'http:\/\/kroltech.com\/2013\/03\/21\/building-a-web-app-using-backbone-js-and-require-js-part-1\/';
+
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+          </div>
+        
+      
+
+    </div>
+  </div>
+</div>
+
+    <footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <ul class="list-inline text-center footer-links">
+          
+              <li>
+                <a href="mailto:jkat98@gmail.com" title="Email me">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-envelope fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="https://www.plus.google.com/&#43;JasonKrol" title="Google&#43;">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-google-plus fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="https://github.com/shorttompkins" title="GitHub">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="https://twitter.com/shorttompkins" title="Twitter">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="https://reddit.com/u/shorttompkins" title="Reddit">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-reddit-alien fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="https://linkedin.com/in/jasonkrol" title="LinkedIn">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-linkedin fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="https://stackoverflow.com/users/1623304/jkat98" title="StackOverflow">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-stack-overflow fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="https://www.youtube.com/user/jkat98" title="Youtube">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-youtube fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+          
+          <li>
+            <a href="http://kroltech.com/index.xml" title="RSS">
+              <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fa fa-rss fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          
+        </ul>
+        <p class="credits copyright text-muted">
+          Jason Krol
+          &nbsp;&bull;&nbsp;
+          2016
+
+          
+            &nbsp;&bull;&nbsp;
+            <a href="http://kroltech.com/">KrolTech</a>
+          
+        </p>
+        
+        <p class="credits theme-by text-muted">
+          <a href="http://gohugo.io">Hugo v0.20.7</a> powered &nbsp;&bull;&nbsp; Theme by <a href="http://deanattali.com/beautiful-jekyll/">Beautiful Jekyll</a> adapted to <a href="https://github.com/halogenica/beautifulhugo">Beautiful Hugo</a>
+          
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/katex.min.js" integrity="sha384-/y1Nn9+QQAipbNQWU65krzJralCnuOasHncUFXGkdwntGeSvQicrYkiUBwsgUqc1" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/contrib/auto-render.min.js" integrity="sha384-dq1/gEHSxPZQ7DdrM82ID4YVol9BYyU7GbWlIwnwyPzotpoc57wDw/guX8EaYGPx" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<script src="http://kroltech.com/js/main.js"></script>
+<script src="http://kroltech.com/js/highlight.min.js"></script>
+<script> hljs.initHighlightingOnLoad(); </script>
+<script> renderMathInElement(document.body); </script>
+
+
+
+
+
+  </body>
+</html>
+

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Jstorage on KrolTech</title>
+    <link>http://kroltech.com/tags/jstorage/</link>
+    <description>Recent content in Jstorage on KrolTech</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <managingEditor>jkat98@gmail.com (Jason Krol)</managingEditor>
+    <webMaster>jkat98@gmail.com (Jason Krol)</webMaster>
+    <lastBuildDate>Thu, 21 Mar 2013 15:18:58 +0000</lastBuildDate>
+    
+	<atom:link href="http://kroltech.com/tags/jstorage/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Media queries with js, jStorage, native feeling web apps, Google Keep, and more!</title>
+      <link>http://kroltech.com/2013/03/21/media-queries-with-js-jstorage-native-feeling-web-apps-google-keep-and-more/</link>
+      <pubDate>Thu, 21 Mar 2013 15:18:58 +0000</pubDate>
+      <author>jkat98@gmail.com (Jason Krol)</author>
+      <guid>http://kroltech.com/2013/03/21/media-queries-with-js-jstorage-native-feeling-web-apps-google-keep-and-more/</guid>
+      <description>Found a neat little JavaScript tool (that&amp;#8217;s right, Vanilla!) called Enquire.js for detecting Media Query triggers in CSS. This could be cool for triggering events (like animation) when you have certain components of your page depending on different media queries. Even though those triggers typically only occur on resize/resolution change &amp;#8211; it could also be used to detect orientation change (i.e. iPad rotate from portrait to landscape).
+While researching some stuff for an upcoming mobile web app I need to create I found this handy JavaScript tool for storing to Local Storage called jStorage.</description>
+    </item>
+    
+  </channel>
+</rss>

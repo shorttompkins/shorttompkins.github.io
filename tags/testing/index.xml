@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Testing on KrolTech</title>
+    <link>http://kroltech.com/tags/testing/</link>
+    <description>Recent content in Testing on KrolTech</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <managingEditor>jkat98@gmail.com (Jason Krol)</managingEditor>
+    <webMaster>jkat98@gmail.com (Jason Krol)</webMaster>
+    <lastBuildDate>Fri, 15 May 2015 12:40:00 +0000</lastBuildDate>
+    
+	<atom:link href="http://kroltech.com/tags/testing/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Testing Angular directives using events</title>
+      <link>http://kroltech.com/2015/05/15/testing-angular-directives-using-events/</link>
+      <pubDate>Fri, 15 May 2015 12:40:00 +0000</pubDate>
+      <author>jkat98@gmail.com (Jason Krol)</author>
+      <guid>http://kroltech.com/2015/05/15/testing-angular-directives-using-events/</guid>
+      <description>&lt;p&gt;Testing directives can be somewhat painful at times. I specifically struggled with testing a keyDown event and passing specific keycodes.&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

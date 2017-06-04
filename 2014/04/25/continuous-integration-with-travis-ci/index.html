@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+  <title>Continuous Integration with Travis-CI</title>
+  <meta property="og:title" content="Continuous Integration with Travis-CI" />
+  <meta name="twitter:title" content="Continuous Integration with Travis-CI" />
+  <meta name="description" content="Lets take a look at using Travis-CI for continuous integration specifically to track the build status for our node projects on GitHub.">
+  <meta property="og:description" content="Lets take a look at using Travis-CI for continuous integration specifically to track the build status for our node projects on GitHub.">
+  <meta name="twitter:description" content="Lets take a look at using Travis-CI for continuous integration specifically to track the build status for our node projects on GitHub.">
+  <meta name="author" content="Jason Krol"/>
+  <link href='http://kroltech.com/img/favicon.ico' rel='icon' type='image/x-icon'/>
+  <meta property="og:image" content="http://kroltech.com/img/avatar-icon.png" />
+  <meta name="twitter:image" content="http://kroltech.com/img/avatar-icon.png" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:site" content="@shorttompkins" />
+  <meta name="twitter:creator" content="@shorttompkins" />
+  <meta property="og:url" content="http://kroltech.com/2014/04/25/continuous-integration-with-travis-ci/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="KrolTech" />
+
+  <meta name="generator" content="Hugo 0.20.7" />
+  <link rel="canonical" href="http://kroltech.com/2014/04/25/continuous-integration-with-travis-ci/" />
+  <link rel="alternate" href="http://kroltech.com/index.xml" type="application/rss+xml" title="KrolTech">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/katex.min.css" integrity="sha384-wITovz90syo1dJWVh32uuETPVEtGigN07tkttEqPv+uR2SE/mbQcG7ATL28aI9H0" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <link rel="stylesheet" href="http://kroltech.com/css/main.css" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" />
+  <link rel="stylesheet" href="http://kroltech.com/css/pygment_highlights.css" />
+  <link rel="stylesheet" href="http://kroltech.com/css/highlight.min.css" />
+
+<script>
+window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+ga('create', 'UA-29480326-4', 'auto');
+ga('send', 'pageview');
+</script>
+<script async src='//www.google-analytics.com/analytics.js'></script>
+
+</head>
+
+  <body>
+    <nav class="navbar navbar-default navbar-fixed-top navbar-custom">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="http://kroltech.com/">KrolTech</a>
+    </div>
+
+    <div class="collapse navbar-collapse" id="main-navbar">
+      <ul class="nav navbar-nav navbar-right">
+        
+          
+            <li>
+              <a title="Blog" href="/">Blog</a>
+            </li>
+          
+        
+          
+            <li>
+              <a title="About" href="/page/about/">About</a>
+            </li>
+          
+        
+
+        
+
+        
+      </ul>
+    </div>
+
+    <div class="avatar-container">
+      <div class="avatar-img-border">
+        
+          <a title="KrolTech" href="http://kroltech.com/">
+            <img class="avatar-img" src="http://kroltech.com/img/avatar-icon.png" alt="KrolTech" />
+          </a>
+        
+      </div>
+    </div>
+
+  </div>
+</nav>
+
+
+
+
+    
+  
+  
+  
+
+
+
+
+  
+
+  <header class="header-section ">
+    
+    <div class="intro-header no-img">
+      
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+            <div class="post-heading">
+              <h1>Continuous Integration with Travis-CI</h1>
+                
+                
+                  <span class="post-meta">
+  Posted on April 25, 2014
+  
+</span>
+
+
+                
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+
+    
+<div class="container">
+  <div class="row">
+    <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+      <article role="main" class="blog-post">
+        <p>Lets take a look at using Travis-CI for continuous integration specifically to track the build status for our node projects on GitHub.</p>
+
+<p>If you aren&#8217;t familiar with the concept of Continuous Integration it’s basically the idea of having a server that is always running the latest version of your code ensuring that its always working. Whenever you push any changes to your master branch (i.e. production code) the server will make sure your code is actually production ready &#8211; i.e. run your build process and tests and ensure they pass etc). Using a system like this will ensure that your actual deployments to production can happen with confidence and without any fear &#8211; allowing you to release more regularly!</p>
+
+<p>Here is a link to the latest build of the BENM repo I maintain:</p>
+
+<p><a href="https://travis-ci.org/jkat98/benm" target="_blank"><a href="https://travis-ci.org/jkat98/benm">https://travis-ci.org/jkat98/benm</a></a></p>
+
+<p><a href="http://travis-ci.org">Travis</a> is a terrific free service to act as a CI for your GitHub projects. It’s super easy to get setup and running and you even get those fancy green/red build status badges you can post on your README.md file in your repo!</p>
+
+<p>The first thing you need to do is goto travis-ci.org and register with your GitHub account. You&#8217;ll obviously need to activate Travis through GitHub to give it permission to read your repos. Once connected, Travis will display a list of all of your repos and you can toggle those that you want it to regularly to build.</p>
+
+<p>Once you toggle the off switch to on for your particular project, you need to then add a .travis.yml file to configure the project and any build steps necessary. For our particular needs, we will be adding Travis support for the BENM repo which is basically a node.js project that uses Grunt for various build steps. Heres the .travis.yml file:</p>
+
+<p>[sourcecode]</p>
+
+<p>language: node_js</p>
+
+<p>node_js:</p>
+
+<p>&#8211; &ldquo;0.10&rdquo;</p>
+
+<p>services:</p>
+
+<p>&#8211; mongodb</p>
+
+<p>before_install: npm install -g grunt-cli phantomjs</p>
+
+<p>install: npm install</p>
+
+<p>before_script: grunt init:dev build:dev</p>
+
+<p>[/sourcecode]</p>
+
+<p>A few key points to notice in the code above is that we are including a before_install command to make sure we actually have grunt-cli available to us as well as PhantomJS since we use that for our client tests. Then we make sure all of our node modules are installed with a simple npm install (although I believe for node projects Travis does this automatically anyway). Also note that we list mongodb as a service that is required (although this too is probably not necessary since our build and tests don&#8217;t actually rely on mongodb). The before_script flag is where we indicate our actual build command (note its important for us to include init:dev since the repo is pulled down fresh every time a build is triggered.).</p>
+
+<p>Another important configuration step we need is to ensure that the package.json file for the project has the correct start and test commands configured:</p>
+
+<p>[sourcecode]</p>
+
+<p>&ldquo;scripts&rdquo;: {</p>
+
+<p>&ldquo;start&rdquo;: &ldquo;node server/server.js&rdquo;,</p>
+
+<p>&ldquo;test&rdquo;: &ldquo;grunt test&rdquo;</p>
+
+<p>},</p>
+
+<p>[/sourcecode]</p>
+
+<p>What you don&#8217;t see from the original .travis.yml file is that Travis will use &#8220;npm test&#8221; by default on a node project.</p>
+
+<p>Finally the last step required to actually trigger the build in Travis is to push a commit to master. What better way than to commit the changes we just made!</p>
+
+<p>[sourcecode]</p>
+
+<p>$ git commit -a -m “Configure Travis-CI”</p>
+
+<p>$ git push origin master</p>
+
+<p>[/sourcecode]</p>
+
+<p>Switch over to Travis and you should see (maybe after some delay) the build start. You can monitor the log and watch it do a full npm install, output your grunt init:dev and build:dev commands, and finally the output for the tests. In the end, assuming everything builds and tests pass you should get a green dot for your build and the badge in the upper right corner should be green and &#8220;passing&#8221;!</p>
+
+<p>Last step is to edit your README.md file and include the badge image. Just click the badge icon on Travis and it will popup a dialog that has a number of different options for the image file. The easiest is to grab the Markdown version and paste that in your README.md file for GitHub.</p>
+      </article>
+
+      <ul class="pager blog-pager">
+        
+          <li class="previous">
+            <a href="http://kroltech.com/2014/04/15/selling-an-ebook-through-amazon-com/" data-toggle="tooltip" data-placement="top" title="Selling an eBook through Amazon.com">&larr; Previous Post</a>
+          </li>
+        
+        
+          <li class="next">
+            <a href="http://kroltech.com/2014/05/15/quick-tip-customize-your-asana-theme-background-image/" data-toggle="tooltip" data-placement="top" title="Quick Tip: Customize your Asana Theme Background image">Next Post &rarr;</a>
+          </li>
+        
+      </ul>
+
+      
+        
+          <div class="disqus-comments">
+            <div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_shortname = 'jasonkrol';
+    var disqus_identifier = 'http:\/\/kroltech.com\/2014\/04\/25\/continuous-integration-with-travis-ci\/';
+    var disqus_title = 'Continuous Integration with Travis-CI';
+    var disqus_url = 'http:\/\/kroltech.com\/2014\/04\/25\/continuous-integration-with-travis-ci\/';
+
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+          </div>
+        
+      
+
+    </div>
+  </div>
+</div>
+
+    <footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <ul class="list-inline text-center footer-links">
+          
+              <li>
+                <a href="mailto:jkat98@gmail.com" title="Email me">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-envelope fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="https://www.plus.google.com/&#43;JasonKrol" title="Google&#43;">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-google-plus fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="https://github.com/shorttompkins" title="GitHub">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="https://twitter.com/shorttompkins" title="Twitter">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="https://reddit.com/u/shorttompkins" title="Reddit">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-reddit-alien fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="https://linkedin.com/in/jasonkrol" title="LinkedIn">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-linkedin fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="https://stackoverflow.com/users/1623304/jkat98" title="StackOverflow">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-stack-overflow fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="https://www.youtube.com/user/jkat98" title="Youtube">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-youtube fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+          
+          <li>
+            <a href="http://kroltech.com/index.xml" title="RSS">
+              <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fa fa-rss fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          
+        </ul>
+        <p class="credits copyright text-muted">
+          Jason Krol
+          &nbsp;&bull;&nbsp;
+          2016
+
+          
+            &nbsp;&bull;&nbsp;
+            <a href="http://kroltech.com/">KrolTech</a>
+          
+        </p>
+        
+        <p class="credits theme-by text-muted">
+          <a href="http://gohugo.io">Hugo v0.20.7</a> powered &nbsp;&bull;&nbsp; Theme by <a href="http://deanattali.com/beautiful-jekyll/">Beautiful Jekyll</a> adapted to <a href="https://github.com/halogenica/beautifulhugo">Beautiful Hugo</a>
+          
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/katex.min.js" integrity="sha384-/y1Nn9+QQAipbNQWU65krzJralCnuOasHncUFXGkdwntGeSvQicrYkiUBwsgUqc1" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/contrib/auto-render.min.js" integrity="sha384-dq1/gEHSxPZQ7DdrM82ID4YVol9BYyU7GbWlIwnwyPzotpoc57wDw/guX8EaYGPx" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<script src="http://kroltech.com/js/main.js"></script>
+<script src="http://kroltech.com/js/highlight.min.js"></script>
+<script> hljs.initHighlightingOnLoad(); </script>
+<script> renderMathInElement(document.body); </script>
+
+
+
+
+
+  </body>
+</html>
+

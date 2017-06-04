@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Regex on KrolTech</title>
+    <link>http://kroltech.com/tags/regex/</link>
+    <description>Recent content in Regex on KrolTech</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <managingEditor>jkat98@gmail.com (Jason Krol)</managingEditor>
+    <webMaster>jkat98@gmail.com (Jason Krol)</webMaster>
+    <lastBuildDate>Mon, 13 May 2013 15:48:13 +0000</lastBuildDate>
+    
+	<atom:link href="http://kroltech.com/tags/regex/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>RegEx to convert urls in text to links (JavaScript)</title>
+      <link>http://kroltech.com/2013/05/13/quick-tip-regex-to-convert-urls-in-text-to-links-javascript/</link>
+      <pubDate>Mon, 13 May 2013 15:48:13 +0000</pubDate>
+      <author>jkat98@gmail.com (Jason Krol)</author>
+      <guid>http://kroltech.com/2013/05/13/quick-tip-regex-to-convert-urls-in-text-to-links-javascript/</guid>
+      <description>Here&amp;#8217;s a quick tip. If you have text that contains urls (i.e. tweets) and want the urls in the text to appear as actual links via HTML, use the following RegEx:
+[sourcecode lang=&amp;#8221;javascript&amp;#8221;]
+var message = &amp;ldquo;Here is some tweet text. Check out: http://www.google.com&amp;quot;;
+var exp = /(b(https?|ftp|file)://[-A-Z0-9+&amp;amp;@#/%?=~_|!:,.;]*[-A-Z0-9+&amp;amp;@#/%=~_|])/ig;
+message = message.replace(exp, &amp;ldquo;$1&amp;rdquo;);
+[/sourcecode]
+Source: http://stackoverflow.com/questions/37684/how-to-replace-plain-urls-with-links</description>
+    </item>
+    
+  </channel>
+</rss>

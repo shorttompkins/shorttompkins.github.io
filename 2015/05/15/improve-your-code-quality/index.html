@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+  <title>Improve your code quality</title>
+  <meta property="og:title" content="Improve your code quality" />
+  <meta name="twitter:title" content="Improve your code quality" />
+  <meta name="description" content="One of the most important things when writing code is the quality with which you write it. Quality can be subjective so its important to adhere to a few basic standards and tools.
+
+">
+  <meta property="og:description" content="One of the most important things when writing code is the quality with which you write it. Quality can be subjective so its important to adhere to a few basic standards and tools.
+
+">
+  <meta name="twitter:description" content="One of the most important things when writing code is the quality with which you write it. Quality can be subjective so its important to adhere to a few basic standards and tools.
+
+">
+  <meta name="author" content="Jason Krol"/>
+  <link href='http://kroltech.com/img/favicon.ico' rel='icon' type='image/x-icon'/>
+  <meta property="og:image" content="http://kroltech.com/img/avatar-icon.png" />
+  <meta name="twitter:image" content="http://kroltech.com/img/avatar-icon.png" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:site" content="@shorttompkins" />
+  <meta name="twitter:creator" content="@shorttompkins" />
+  <meta property="og:url" content="http://kroltech.com/2015/05/15/improve-your-code-quality/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="KrolTech" />
+
+  <meta name="generator" content="Hugo 0.20.7" />
+  <link rel="canonical" href="http://kroltech.com/2015/05/15/improve-your-code-quality/" />
+  <link rel="alternate" href="http://kroltech.com/index.xml" type="application/rss+xml" title="KrolTech">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/katex.min.css" integrity="sha384-wITovz90syo1dJWVh32uuETPVEtGigN07tkttEqPv+uR2SE/mbQcG7ATL28aI9H0" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <link rel="stylesheet" href="http://kroltech.com/css/main.css" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" />
+  <link rel="stylesheet" href="http://kroltech.com/css/pygment_highlights.css" />
+  <link rel="stylesheet" href="http://kroltech.com/css/highlight.min.css" />
+
+<script>
+window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+ga('create', 'UA-29480326-4', 'auto');
+ga('send', 'pageview');
+</script>
+<script async src='//www.google-analytics.com/analytics.js'></script>
+
+</head>
+
+  <body>
+    <nav class="navbar navbar-default navbar-fixed-top navbar-custom">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="http://kroltech.com/">KrolTech</a>
+    </div>
+
+    <div class="collapse navbar-collapse" id="main-navbar">
+      <ul class="nav navbar-nav navbar-right">
+        
+          
+            <li>
+              <a title="Blog" href="/">Blog</a>
+            </li>
+          
+        
+          
+            <li>
+              <a title="About" href="/page/about/">About</a>
+            </li>
+          
+        
+
+        
+
+        
+      </ul>
+    </div>
+
+    <div class="avatar-container">
+      <div class="avatar-img-border">
+        
+          <a title="KrolTech" href="http://kroltech.com/">
+            <img class="avatar-img" src="http://kroltech.com/img/avatar-icon.png" alt="KrolTech" />
+          </a>
+        
+      </div>
+    </div>
+
+  </div>
+</nav>
+
+
+
+
+    
+  
+  
+  
+
+
+
+
+  
+
+  <header class="header-section ">
+    
+    <div class="intro-header no-img">
+      
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+            <div class="post-heading">
+              <h1>Improve your code quality</h1>
+                
+                
+                  <span class="post-meta">
+  Posted on May 15, 2015
+  
+</span>
+
+
+                
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+
+    
+<div class="container">
+  <div class="row">
+    <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+      <article role="main" class="blog-post">
+        <p>One of the most important things when writing code is the quality with which you write it. Quality can be subjective so its important to adhere to a few basic standards and tools.</p>
+
+<p></p>
+
+<p>If you are writing code on a project by yourself or, more importantly, within a team its very important that code quality is a real concern. If everyone on the team is writing code differently, the shared code base in the end will suffer because it will look like it was pushed through a blender! Its important to establish standards and use as many automated tools as possible to enforce these standards. Code writing standards provide a number of benefits including:</p>
+
+<ul>
+<li>Consistent code base for an entire project/application</li>
+<li>Fewer errors and/or bugs as a result of sloppy coding practices</li>
+<li>Makes you a better programmer!</li>
+<li>Makes reviewing code easier</li>
+<li>Makes debugging code less frustrating</li>
+<li>Easier time on-boarding new developers</li>
+<li>And so on and so on&#8230;</li>
+</ul>
+
+<h2 id="establish-or-adopt-standards-guidelines">Establish or Adopt Standards Guidelines</h2>
+
+<p>The first and easiest thing to do when establishing a standards guideline is to focus on the little things. Heres a small list of topics that should be covered in an internal coding standards document:</p>
+
+<ul>
+<li>Indentation spacing (2x, 4x, tabs/spaces)</li>
+<li>Spacing around conditional blocks: <code>if () {</code> or <code>if(){</code> etc.</li>
+<li>Variable naming convention: <code>myLittleVariable</code> or <code>my_little_variable</code> etc.</li>
+<li>Framework/language specific issues/conventions</li>
+</ul>
+
+<p>If you don&#8217;t want to spend the time to think about this and come up with a list, Google your language of choice and you will easily find a preexisting standards guideline document that exists. You may or may not completely agree with it, but thats up to you!</p>
+
+<h2 id="automate-code-linting">Automate Code Linting</h2>
+
+<p>In addition to opinionated standards mentioned above, there are standard rules with regard to syntax that just aren&#8217;t debatable. The beauty of these is that your code tends to fail if you break these rules, but with languages like JavaScript thats not always the case. The best solution here is to automate running a tool like <em>jshint</em> that will read your code and check it for consistency with regards to the rules adopted for the syntax of JavaScript. Jshint requires the existence of a <code>.jshintrc</code> file to be created where all of the rules are defined. This file is very configurable so its always best to start with the default file and tweak as you see fit.</p>
+
+<p>Automated code checking can be performed via two main methods:</p>
+
+<h3 id="lint-on-save">Lint on Save</h3>
+
+<p>Depending on your editor of choice, typically support will exist via a 3rd party plugin to automatically lint your code every time you save. With SublimeText 3 I use the BuildOnSave plugin. The great thing about this is that every single time you save a file, you receive instant notification if any new lint errors were introduced or your syntax is incorrect. Some editors, like those WebStorm or Visual Studio, even offer inline syntax errors.</p>
+
+<h3 id="lint-after-build">Lint after Build</h3>
+
+<p>The other option with linting is to configure it as a step run during the build process of your application. This is typically handled as a task in Grunt or Gulp. Personally, I like to include jshint as one of the very last build steps because if a lint error is thrown, the build process will stop and my app will not have built properly. I don&#8217;t want minor lint errors stopping me from being able to continue to code, test, and debug.</p>
+
+<h2 id="code-review">Code Review</h2>
+
+<p>All of these rules and safeguards in place don&#8217;t mean a hill of beans if you can just push your code into production anyway and completely ignore any warnings, errors, or flags thrown by the linting reports. The automated tools will never catch logic problems either which typically only a human can see. Thats why its important that you always have a 2nd pair of eyes on your code before you ever make it live.</p>
+
+<p>Code reviews can be as simple as asking a coworker to give your code a quick glance to make sure it looks sane or you can enforce strict rules which prevent you from even being allowed to ever push your own code to production. GitHub is a great tool for code review because of the very nature of Pull Requests. When you create a Pull Request, you should always have another person review the code and leave you inline comments on anything they see that looks out of the ordinary. That person should also do the merge instead of you so that they are officially signing off on your code.</p>
+
+<p>You should also develop a thick skin because receiving comments on your code from a code review can sometimes be a hard pill to swallow. In the end, you will always be a better developer having had your code reviewed and the code going into production will (presumably) be safer and able to be merged with more confidence!</p>
+
+<h2 id="documentation">Documentation</h2>
+
+<p>The last piece isn&#8217;t necessarily a requirement, but its certainly a nice to have. Whenever you&#8217;re writing code it should always be self documenting. Use variable names that make sense, avoid abbreviations, and use inline comments to sprinkle explanations. Most importantly, provide a block of comments above each major function or method that briefly explains the purpose of the method as well as a definition of each of the parameters.</p>
+
+<p>Using an automated build tool like <code>groc</code> or <code>ng-docs</code> during your build process will generate documentation for your project &#8211; complete with pretty HTML pages and easy navigation! Theres no reason to not document your code (even if you&#8217;re writing code by yourself) and its even better when you pair your work with an automated tool that generates nice clean documentation for you!</p>
+      </article>
+
+      <ul class="pager blog-pager">
+        
+          <li class="previous">
+            <a href="http://kroltech.com/2015/05/15/testing-angular-directives-using-events/" data-toggle="tooltip" data-placement="top" title="Testing Angular directives using events">&larr; Previous Post</a>
+          </li>
+        
+        
+          <li class="next">
+            <a href="http://kroltech.com/2015/06/04/angularjs-directive-two-ways-to-skin-a-cat/" data-toggle="tooltip" data-placement="top" title="AngularJS Directive: Two ways to skin a cat">Next Post &rarr;</a>
+          </li>
+        
+      </ul>
+
+      
+        
+          <div class="disqus-comments">
+            <div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_shortname = 'jasonkrol';
+    var disqus_identifier = 'http:\/\/kroltech.com\/2015\/05\/15\/improve-your-code-quality\/';
+    var disqus_title = 'Improve your code quality';
+    var disqus_url = 'http:\/\/kroltech.com\/2015\/05\/15\/improve-your-code-quality\/';
+
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+          </div>
+        
+      
+
+    </div>
+  </div>
+</div>
+
+    <footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <ul class="list-inline text-center footer-links">
+          
+              <li>
+                <a href="mailto:jkat98@gmail.com" title="Email me">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-envelope fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="https://www.plus.google.com/&#43;JasonKrol" title="Google&#43;">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-google-plus fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="https://github.com/shorttompkins" title="GitHub">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="https://twitter.com/shorttompkins" title="Twitter">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="https://reddit.com/u/shorttompkins" title="Reddit">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-reddit-alien fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="https://linkedin.com/in/jasonkrol" title="LinkedIn">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-linkedin fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="https://stackoverflow.com/users/1623304/jkat98" title="StackOverflow">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-stack-overflow fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="https://www.youtube.com/user/jkat98" title="Youtube">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-youtube fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+          
+          <li>
+            <a href="http://kroltech.com/index.xml" title="RSS">
+              <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fa fa-rss fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          
+        </ul>
+        <p class="credits copyright text-muted">
+          Jason Krol
+          &nbsp;&bull;&nbsp;
+          2016
+
+          
+            &nbsp;&bull;&nbsp;
+            <a href="http://kroltech.com/">KrolTech</a>
+          
+        </p>
+        
+        <p class="credits theme-by text-muted">
+          <a href="http://gohugo.io">Hugo v0.20.7</a> powered &nbsp;&bull;&nbsp; Theme by <a href="http://deanattali.com/beautiful-jekyll/">Beautiful Jekyll</a> adapted to <a href="https://github.com/halogenica/beautifulhugo">Beautiful Hugo</a>
+          
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/katex.min.js" integrity="sha384-/y1Nn9+QQAipbNQWU65krzJralCnuOasHncUFXGkdwntGeSvQicrYkiUBwsgUqc1" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/contrib/auto-render.min.js" integrity="sha384-dq1/gEHSxPZQ7DdrM82ID4YVol9BYyU7GbWlIwnwyPzotpoc57wDw/guX8EaYGPx" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<script src="http://kroltech.com/js/main.js"></script>
+<script src="http://kroltech.com/js/highlight.min.js"></script>
+<script> hljs.initHighlightingOnLoad(); </script>
+<script> renderMathInElement(document.body); </script>
+
+
+
+
+
+  </body>
+</html>
+

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>React.Js on KrolTech</title>
+    <link>http://kroltech.com/tags/react.js/</link>
+    <description>Recent content in React.Js on KrolTech</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <managingEditor>jkat98@gmail.com (Jason Krol)</managingEditor>
+    <webMaster>jkat98@gmail.com (Jason Krol)</webMaster>
+    <lastBuildDate>Thu, 19 Nov 2015 14:43:19 +0000</lastBuildDate>
+    
+	<atom:link href="http://kroltech.com/tags/react.js/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Free React.js/Flux course on Udemy.com!</title>
+      <link>http://kroltech.com/2015/11/19/free-react-jsflux-course-on-udemy-com/</link>
+      <pubDate>Thu, 19 Nov 2015 14:43:19 +0000</pubDate>
+      <author>jkat98@gmail.com (Jason Krol)</author>
+      <guid>http://kroltech.com/2015/11/19/free-react-jsflux-course-on-udemy-com/</guid>
+      <description>&lt;p&gt;The fine folks at Udemy.com have provided me with a coupon code for a free React.js/Flux course!&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Getting Started with React and Flux</title>
+      <link>http://kroltech.com/2015/10/15/getting-started-with-react-and-flux/</link>
+      <pubDate>Thu, 15 Oct 2015 02:54:23 +0000</pubDate>
+      <author>jkat98@gmail.com (Jason Krol)</author>
+      <guid>http://kroltech.com/2015/10/15/getting-started-with-react-and-flux/</guid>
+      <description>&lt;p&gt;Big surprise, I&amp;#8217;m jumping on the React/Flux bandwagon!&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

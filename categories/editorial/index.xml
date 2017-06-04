@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Editorial on KrolTech</title>
+    <link>http://kroltech.com/categories/editorial/</link>
+    <description>Recent content in Editorial on KrolTech</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <managingEditor>jkat98@gmail.com (Jason Krol)</managingEditor>
+    <webMaster>jkat98@gmail.com (Jason Krol)</webMaster>
+    <lastBuildDate>Mon, 13 Apr 2015 13:46:58 +0000</lastBuildDate>
+    
+	<atom:link href="http://kroltech.com/categories/editorial/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Announcing PayWhatevs.com!</title>
+      <link>http://kroltech.com/2015/04/13/announcing-paywhatevs-com/</link>
+      <pubDate>Mon, 13 Apr 2015 13:46:58 +0000</pubDate>
+      <author>jkat98@gmail.com (Jason Krol)</author>
+      <guid>http://kroltech.com/2015/04/13/announcing-paywhatevs-com/</guid>
+      <description>&lt;p&gt;I&amp;#8217;ve been working on a new project for almost a year now and I&amp;#8217;m finally excited to announce its launch!&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>My new job at DramaFever.com!</title>
+      <link>http://kroltech.com/2015/04/10/my-new-job-at-dramafever-com/</link>
+      <pubDate>Fri, 10 Apr 2015 13:29:07 +0000</pubDate>
+      <author>jkat98@gmail.com (Jason Krol)</author>
+      <guid>http://kroltech.com/2015/04/10/my-new-job-at-dramafever-com/</guid>
+      <description>&lt;p&gt;Its been a while since my last post, but a lot has been going on. I started a new job with DramaFever.com!&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Simple MongoDB node.js client module</title>
+      <link>http://kroltech.com/2015/01/02/simple-mongodb-node-js-client-module/</link>
+      <pubDate>Fri, 02 Jan 2015 22:51:14 +0000</pubDate>
+      <author>jkat98@gmail.com (Jason Krol)</author>
+      <guid>http://kroltech.com/2015/01/02/simple-mongodb-node-js-client-module/</guid>
+      <description>&lt;p&gt;Here&amp;#8217;s a simple MongoDB client module I use when prototyping projects in node.js.&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Selling an eBook through Amazon.com</title>
+      <link>http://kroltech.com/2014/04/15/selling-an-ebook-through-amazon-com/</link>
+      <pubDate>Tue, 15 Apr 2014 17:48:00 +0000</pubDate>
+      <author>jkat98@gmail.com (Jason Krol)</author>
+      <guid>http://kroltech.com/2014/04/15/selling-an-ebook-through-amazon-com/</guid>
+      <description>&lt;p&gt;My experience experimenting with Amazon&amp;#8217;s Kindle Direct Publishing by selling a blog post as an eBook.&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

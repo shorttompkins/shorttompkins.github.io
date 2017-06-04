@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+  <title>Notes: Agile Development Training</title>
+  <meta property="og:title" content="Notes: Agile Development Training" />
+  <meta name="twitter:title" content="Notes: Agile Development Training" />
+  <meta name="description" content="Here are notes I took during a recent Agile training program at work.  Not sure if any of this will be of any value or use to anyone, but here are they none-the-less.">
+  <meta property="og:description" content="Here are notes I took during a recent Agile training program at work.  Not sure if any of this will be of any value or use to anyone, but here are they none-the-less.">
+  <meta name="twitter:description" content="Here are notes I took during a recent Agile training program at work.  Not sure if any of this will be of any value or use to anyone, but here are they none-the-less.">
+  <meta name="author" content="Jason Krol"/>
+  <link href='http://kroltech.com/img/favicon.ico' rel='icon' type='image/x-icon'/>
+  <meta property="og:image" content="http://kroltech.com/img/avatar-icon.png" />
+  <meta name="twitter:image" content="http://kroltech.com/img/avatar-icon.png" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:site" content="@shorttompkins" />
+  <meta name="twitter:creator" content="@shorttompkins" />
+  <meta property="og:url" content="http://kroltech.com/2013/11/10/notes-agile-development-training/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="KrolTech" />
+
+  <meta name="generator" content="Hugo 0.20.7" />
+  <link rel="canonical" href="http://kroltech.com/2013/11/10/notes-agile-development-training/" />
+  <link rel="alternate" href="http://kroltech.com/index.xml" type="application/rss+xml" title="KrolTech">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/katex.min.css" integrity="sha384-wITovz90syo1dJWVh32uuETPVEtGigN07tkttEqPv+uR2SE/mbQcG7ATL28aI9H0" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <link rel="stylesheet" href="http://kroltech.com/css/main.css" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" />
+  <link rel="stylesheet" href="http://kroltech.com/css/pygment_highlights.css" />
+  <link rel="stylesheet" href="http://kroltech.com/css/highlight.min.css" />
+
+<script>
+window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+ga('create', 'UA-29480326-4', 'auto');
+ga('send', 'pageview');
+</script>
+<script async src='//www.google-analytics.com/analytics.js'></script>
+
+</head>
+
+  <body>
+    <nav class="navbar navbar-default navbar-fixed-top navbar-custom">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="http://kroltech.com/">KrolTech</a>
+    </div>
+
+    <div class="collapse navbar-collapse" id="main-navbar">
+      <ul class="nav navbar-nav navbar-right">
+        
+          
+            <li>
+              <a title="Blog" href="/">Blog</a>
+            </li>
+          
+        
+          
+            <li>
+              <a title="About" href="/page/about/">About</a>
+            </li>
+          
+        
+
+        
+
+        
+      </ul>
+    </div>
+
+    <div class="avatar-container">
+      <div class="avatar-img-border">
+        
+          <a title="KrolTech" href="http://kroltech.com/">
+            <img class="avatar-img" src="http://kroltech.com/img/avatar-icon.png" alt="KrolTech" />
+          </a>
+        
+      </div>
+    </div>
+
+  </div>
+</nav>
+
+
+
+
+    
+  
+  
+  
+
+
+
+
+  
+
+  <header class="header-section ">
+    
+    <div class="intro-header no-img">
+      
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+            <div class="post-heading">
+              <h1>Notes: Agile Development Training</h1>
+                
+                
+                  <span class="post-meta">
+  Posted on November 10, 2013
+  
+</span>
+
+
+                
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+
+    
+<div class="container">
+  <div class="row">
+    <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+      <article role="main" class="blog-post">
+        <p>Here are notes I took during a recent Agile training program at work.  Not sure if any of this will be of any value or use to anyone, but here are they none-the-less.</p>
+
+<h3 id="problem-and-our-goal">Problem and Our Goal</h3>
+
+<p>Plans go wrong because tasks finish late more often than early, because they are not independent of each other (if one task takes longer, it effects all other dependent tasks)</p>
+
+<p>Padding a project estimate with local buffer (typically at the end as just in case time) &#8211; but procrastinate by wasting local buffer in the beginning of project start. (because of over confidence) Realty of work takes longer and entire project is late.</p>
+
+<p>Lateness is passed down (task can be late because any previously dependent tasks are late). Only way it can be done early is if ALL tasks previously completed early.</p>
+
+<p><strong>Planning Onion:</strong></p>
+
+<p>Daily plan</p>
+
+<p>*Iteration (sprint planning &#8211; look ahead a few weeks)</p>
+
+<p>*Release (3-6 month look ahead consists of multiple iterations/sprints)</p>
+
+<p>Product (road mapping &#8211; product evolution over time, backlog contains user stories)</p>
+
+<p>&#8212;-</p>
+
+<p>Portfolio (what is expected of the company &#8211; whats missing overall)</p>
+
+<p>Strategy (company strategy)</p>
+
+<p>A good plan leads to reliable decision making!</p>
+
+<p>Planning should enable us to make the right decision!</p>
+
+<p>&#8220;Its better to be roughly right than precisely wrong!&#8221;</p>
+
+<p>KNOW: Accurate vs Precise!</p>
+
+<p>(Birthday in September is Accurate. Sept 27 is Precise!)</p>
+
+<p><em>Precise is not always accurate.</em></p>
+
+<p>Always be accurate, try to be precise.</p>
+
+<p>&#8220;Do the planning, throw away the plan&#8221; (benefit is in the activity of planning, not the actual plan &#8211; i.e. plan is too concrete, needs to be flexible and able to change/evolve)</p>
+
+<p><strong>Agile</strong> planning:</p>
+
+<ol>
+<li><p>More focused on planning than plan</p></li>
+
+<li><p>encourages change with plans</p></li>
+
+<li><p>spread planning through the project</p></li>
+</ol>
+
+<h3 id="iteration-planning">Iteration Planning</h3>
+
+<p>Creates a list of tasks based on user stories from Product Backlog. Product owner prioritizes user stories, team determines sequence of tasks to complete.</p>
+
+<p>Looking ahead another iteration is ok to determine synergy for completing random tasks from future iterations. Dependencies, etc.</p>
+
+<p>Working slightly out of order can improve throughput!</p>
+
+<p>Product Owner -&gt; ScrumMaster/Coach -&gt; Team:</p>
+
+<p>Product backlog</p>
+
+<p>Team capabilities</p>
+
+<p>Velocity</p>
+
+<p>==&gt; Iteration goal (point of this sprint) &amp; iteration backlog (actual list of tasks to be completed this iteration including estimates per task)</p>
+
+<p><strong>Planning meeting:</strong></p>
+
+<ol>
+<li><p>Determine teams capacity</p></li>
+
+<li><p>Refine the iteration goal</p></li>
+
+<li><p>Define commitment</p></li>
+
+<li><p>Acquire confidence</p></li>
+</ol>
+
+<p><strong>Velocity: (all at once approach)</strong></p>
+
+<p>The amount of work a team has or will complete in an iteration.</p>
+
+<p>(sum of estimated hours per task &#8211; predicted Velocity)</p>
+
+<p>(after a sprint, add the hours for historical Velocity)</p>
+
+<p>Historical velocity is used to determine capacity for future sprints (Yesterdays Weather)</p>
+
+<p>Or historical average velocity per sprint.</p>
+
+<p>Defining the commitment is building a collection of tasks who&#8217;s estimate total the determined velocity.</p>
+
+<p><strong>Commitment-Driven Planning (alternative to Velocity)</strong></p>
+
+<p>Taking each backlog item, estimate it, commit to it, and move on until the commitment has been filled.</p>
+
+<p>How full should an iteration be?</p>
+
+<p>(account for Corporate overhead &#8211; <strong>plannable time</strong>, and unplanned time &#8211; fires, random tasks, etc.)</p>
+
+<p>Build up commitment 1 user story at a time until reached a full iteration.</p>
+
+<p>With each user story you must ask &#8211; &#8220;Can we commit?&#8221;</p>
+
+<p><strong>Which is better?</strong></p>
+
+<p>Velocity is useful only over the long term!</p>
+
+<p>Velocity is not idea to plan single sprints.</p>
+
+<h3 id="story-points-ideal-days">Story Points &amp; Ideal Days</h3>
+
+<p>Estimating by analogy (compare task to something you know you&#8217;ve already completed)</p>
+
+<p><span style="text-decoration:underline;"><em>Estimate size; derive duration</em></span></p>
+
+<p><strong>Ideal time:</strong></p>
+
+<p>How long something will take if:</p>
+
+<ol>
+<li><p>its all you work on</p></li>
+
+<li><p>no one interrupts you</p></li>
+
+<li><p>everything you need is available</p></li>
+</ol>
+
+<p>versus elapsed time (all of the time accounting ideal time and corporate overhead, sleep, non-work time, etc)</p>
+
+<p>**Advantages:</p>
+
+<p>Easier to start with</p>
+
+<p>Easier to explain to others</p>
+
+<p>More palatable to management (time is a normal concept)</p>
+
+<p>Forces confrontation of time wasters</p>
+
+<p><strong>Story points:</strong></p>
+
+<p>(an alternative to ideal time) to measure product backlog items.</p>
+
+<p>Estimates effort over time (how much effort or bigness is the size estimate for this user story).</p>
+
+<p>Relative size is what matters (easy tasks are worth fewer points than complex tasks which are worth more).</p>
+
+<p>Story point values are estimated relative to other related and similar tasks.</p>
+
+<p>Use ranges on estimating story point values for vague items.</p>
+
+<p>Re-baseline &#8211; adjust the scale of the metrics determined for the story points (typically after 5-12 items have been estimated).</p>
+
+<p>**Advantages:</p>
+
+<p>Prevent incorrect conversion to calendar days</p>
+
+<p>Promotes cross functional behavior</p>
+
+<p>Points dont decay</p>
+
+<p>Points are a pure measure of size</p>
+
+<p>Time estimates are not additive (your time is not the same as my time)</p>
+
+<p>(but point values are the same for everyone involved)</p>
+
+<p>Points prevent unit confusion</p>
+
+<p><strong>velocity is always the sum of units on the product backlog (NOT the iteration backlog)!</strong></p>
+
+<p>Story points ARE an estimate of time (amount of work)</p>
+
+<h3 id="estimating-product-backlog">Estimating Product Backlog:</h3>
+
+<p>Triangulate by comparing new story to two existing stories.</p>
+
+<p>Disaggregate &#8211; break a user story into smaller stories</p>
+
+<p>*Dont take this too far!</p>
+
+<p>(Golfer can easily estimate score for 18 holes of golf, but if they guessed per hole the total would be completely wrong)</p>
+
+<p>The Right Units &#8212; its not necessary to use every number with Story points. The difference between 1 and 2 is 50% but the difference between 17 and 18 is 5% etc. =&gt; 1,2,3,5,13, 20, 40, 100 etc.</p>
+
+<p><strong>Planning Poker:</strong></p>
+
+<p>Each estimator gets a set of cards with the point values</p>
+
+<p>Product owner reads a user story and its discussed briefly</p>
+
+<p>Each estimator plays the card (hidden from play)</p>
+
+<p>Everyone reveals at the same time &#8211; if they all match thats the number.</p>
+
+<p>Differences are discussed and reveal rounds repeated</p>
+
+<p>*Should involve the entire team &#8211; Product Owner, ScrumMaster/Coach, Team.</p>
+
+<p>**During planning poker, the team is determining the values directly for estimates.</p>
+
+<p>Anchoring &#8211; the tendency for estimates to cluster around an irrelevant value.</p>
+
+<p>(i.e. when a $500 item is on sale for 80% off &#8211; you are tricked into thinking its a great deal! &#8211; the $500 is the Anchor)</p>
+
+<p>Planning Poker avoids anchoring by having everyone reveal cards at the same time (versus in order).</p>
+
+<h3 id="release-planning">Release Planning:</h3>
+
+<p>Confidence interval = the low-high range of the average sorted velocities (after you remove outliers and 8 worst and 8 best).</p>
+
+<p><strong>Forecasting Velocity</strong> (when no historical data is available):</p>
+
+<ol>
+<li><p>Plan an iteration using Commitment-Driven Planning</p></li>
+
+<li><p>Sum the Story points from the Product backlog after the iteration has been determined</p></li>
+
+<li><p>+/- 15% to determine Velocity Range</p></li>
+</ol>
+
+<p><strong>Fixed Date Plans:</strong></p>
+
+<ol>
+<li><p>Determine how many iterations there will be by due date</p></li>
+
+<li><p>Estimate teams predicted velocity range</p></li>
+
+<li><p>Use the velocity range * iterations to partition backlog into: will have, might have, won&#8217;t have</p></li>
+</ol>
+
+<p>&#8220;By the end of June, team can deliver 150-180 story points&#8221;</p>
+
+<p>Balancing Risk:</p>
+
+<p>Delivery risk (low vs high) / Expectation Risk (low vs high)</p>
+
+<p><strong>Fixed Scope Plans:</strong></p>
+
+<ol>
+<li><p>Sum the product backlog</p></li>
+
+<li><p>Estimate velocity</p></li>
+
+<li><p>Determine length of project (project size / velocity = # of iterations)</p></li>
+</ol>
+
+<p>&#8220;Based on the size of the backlog, the project will take 6-8 iterations to complete.&#8221;</p>
+
+<p><strong>Fixed Price</strong> = (both fixed date and scope)</p>
+
+<p>Determine project as both fixed date and fixed scope &#8211; overlap the ranges for both scenarios and determine if the hard target falls within that range to determine risk.</p>
+
+<ol>
+<li>Estimate velocity</li>
+<li>Fix the scope
+
+<ol>
+<li>divide fixed scope by velocity range</li>
+</ol></li>
+<li>Fix the schedule
+
+<ol>
+<li>determine number of iterations</span></li>
+</ol></li>
+</ol>
+      </article>
+
+      <ul class="pager blog-pager">
+        
+          <li class="previous">
+            <a href="http://kroltech.com/2013/10/17/sublime-text-my-new-favorite-editor/" data-toggle="tooltip" data-placement="top" title="Sublime Text – My New Favorite Editor!">&larr; Previous Post</a>
+          </li>
+        
+        
+          <li class="next">
+            <a href="http://kroltech.com/2013/11/14/my-custom-bash-shell-prompt/" data-toggle="tooltip" data-placement="top" title="My custom Bash shell prompt">Next Post &rarr;</a>
+          </li>
+        
+      </ul>
+
+      
+        
+          <div class="disqus-comments">
+            <div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_shortname = 'jasonkrol';
+    var disqus_identifier = 'http:\/\/kroltech.com\/2013\/11\/10\/notes-agile-development-training\/';
+    var disqus_title = 'Notes: Agile Development Training';
+    var disqus_url = 'http:\/\/kroltech.com\/2013\/11\/10\/notes-agile-development-training\/';
+
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+          </div>
+        
+      
+
+    </div>
+  </div>
+</div>
+
+    <footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <ul class="list-inline text-center footer-links">
+          
+              <li>
+                <a href="mailto:jkat98@gmail.com" title="Email me">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-envelope fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="https://www.plus.google.com/&#43;JasonKrol" title="Google&#43;">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-google-plus fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="https://github.com/shorttompkins" title="GitHub">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="https://twitter.com/shorttompkins" title="Twitter">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="https://reddit.com/u/shorttompkins" title="Reddit">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-reddit-alien fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="https://linkedin.com/in/jasonkrol" title="LinkedIn">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-linkedin fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="https://stackoverflow.com/users/1623304/jkat98" title="StackOverflow">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-stack-overflow fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="https://www.youtube.com/user/jkat98" title="Youtube">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-youtube fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+          
+          <li>
+            <a href="http://kroltech.com/index.xml" title="RSS">
+              <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fa fa-rss fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          
+        </ul>
+        <p class="credits copyright text-muted">
+          Jason Krol
+          &nbsp;&bull;&nbsp;
+          2016
+
+          
+            &nbsp;&bull;&nbsp;
+            <a href="http://kroltech.com/">KrolTech</a>
+          
+        </p>
+        
+        <p class="credits theme-by text-muted">
+          <a href="http://gohugo.io">Hugo v0.20.7</a> powered &nbsp;&bull;&nbsp; Theme by <a href="http://deanattali.com/beautiful-jekyll/">Beautiful Jekyll</a> adapted to <a href="https://github.com/halogenica/beautifulhugo">Beautiful Hugo</a>
+          
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/katex.min.js" integrity="sha384-/y1Nn9+QQAipbNQWU65krzJralCnuOasHncUFXGkdwntGeSvQicrYkiUBwsgUqc1" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/contrib/auto-render.min.js" integrity="sha384-dq1/gEHSxPZQ7DdrM82ID4YVol9BYyU7GbWlIwnwyPzotpoc57wDw/guX8EaYGPx" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<script src="http://kroltech.com/js/main.js"></script>
+<script src="http://kroltech.com/js/highlight.min.js"></script>
+<script> hljs.initHighlightingOnLoad(); </script>
+<script> renderMathInElement(document.body); </script>
+
+
+
+
+
+  </body>
+</html>
+

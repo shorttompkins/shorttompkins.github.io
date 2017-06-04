@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Circumflex on KrolTech</title>
+    <link>http://kroltech.com/tags/circumflex/</link>
+    <description>Recent content in Circumflex on KrolTech</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <managingEditor>jkat98@gmail.com (Jason Krol)</managingEditor>
+    <webMaster>jkat98@gmail.com (Jason Krol)</webMaster>
+    <lastBuildDate>Sun, 13 Jan 2013 02:57:05 +0000</lastBuildDate>
+    
+	<atom:link href="http://kroltech.com/tags/circumflex/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Up / Down HTML arrow characters (for sorting, etc)</title>
+      <link>http://kroltech.com/2013/01/13/quick-tip-up-down-html-arrow-characters-for-sorting-etc/</link>
+      <pubDate>Sun, 13 Jan 2013 02:57:05 +0000</pubDate>
+      <author>jkat98@gmail.com (Jason Krol)</author>
+      <guid>http://kroltech.com/2013/01/13/quick-tip-up-down-html-arrow-characters-for-sorting-etc/</guid>
+      <description>I was searching for the opposite of the caret, or circumflex, character (^) and couldn&amp;#8217;t really find one. Typically, in a pinch when I&amp;#8217;m mocking, I would just use the caret ^ and a lowercase v &amp;#8211; but they don&amp;#8217;t look the same.
+There doesn&amp;#8217;t seem to be a good opposite for the caret character &amp;#8211; but I found 2 extremely useful HTML character codes to use instead:
+∧ (&amp;and;) and ∨ (&amp;or;)</description>
+    </item>
+    
+  </channel>
+</rss>

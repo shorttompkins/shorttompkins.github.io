@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+  <title>JavaScript MV* Frameworks!!?, Far Cry 3 coop, Kinect development starting!</title>
+  <meta property="og:title" content="JavaScript MV* Frameworks!!?, Far Cry 3 coop, Kinect development starting!" />
+  <meta name="twitter:title" content="JavaScript MV* Frameworks!!?, Far Cry 3 coop, Kinect development …" />
+  <meta name="description" content="Played through all of the co-op missions in Far Cry 3 with @AnswerSeven and that was a lot of fun. It was an honor being a part of his completing 1000&frasl;1000 in that game! Well done!!
+Looks like we might have a real project at work to use the Kinect with: our users group meeting we host every year, with over 5000 in attendance. I came up with an idea that I think might be pretty interesting, all really for the purposes of allowing me an opportunity to work with the Kinect.">
+  <meta property="og:description" content="Played through all of the co-op missions in Far Cry 3 with @AnswerSeven and that was a lot of fun. It was an honor being a part of his completing 1000&frasl;1000 in that game! Well done!!
+Looks like we might have a real project at work to use the Kinect with: our users group meeting we host every year, with over 5000 in attendance. I came up with an idea that I think might be pretty interesting, all really for the purposes of allowing me an opportunity to work with the Kinect.">
+  <meta name="twitter:description" content="Played through all of the co-op missions in Far Cry 3 with @AnswerSeven and that was a lot of fun. It was an honor being a part of his completing 1000&frasl;1000 in that game! Well done!!
+Looks like …">
+  <meta name="author" content="Jason Krol"/>
+  <link href='http://kroltech.com/img/favicon.ico' rel='icon' type='image/x-icon'/>
+  <meta property="og:image" content="http://kroltech.com/img/avatar-icon.png" />
+  <meta name="twitter:image" content="http://kroltech.com/img/avatar-icon.png" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:site" content="@shorttompkins" />
+  <meta name="twitter:creator" content="@shorttompkins" />
+  <meta property="og:url" content="http://kroltech.com/2012/12/18/javascript-mv-frameworks-fry-cry-3-coop-kinect-development-starting/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="KrolTech" />
+
+  <meta name="generator" content="Hugo 0.20.7" />
+  <link rel="canonical" href="http://kroltech.com/2012/12/18/javascript-mv-frameworks-fry-cry-3-coop-kinect-development-starting/" />
+  <link rel="alternate" href="http://kroltech.com/index.xml" type="application/rss+xml" title="KrolTech">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/katex.min.css" integrity="sha384-wITovz90syo1dJWVh32uuETPVEtGigN07tkttEqPv+uR2SE/mbQcG7ATL28aI9H0" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <link rel="stylesheet" href="http://kroltech.com/css/main.css" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" />
+  <link rel="stylesheet" href="http://kroltech.com/css/pygment_highlights.css" />
+  <link rel="stylesheet" href="http://kroltech.com/css/highlight.min.css" />
+
+<script>
+window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+ga('create', 'UA-29480326-4', 'auto');
+ga('send', 'pageview');
+</script>
+<script async src='//www.google-analytics.com/analytics.js'></script>
+
+</head>
+
+  <body>
+    <nav class="navbar navbar-default navbar-fixed-top navbar-custom">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="http://kroltech.com/">KrolTech</a>
+    </div>
+
+    <div class="collapse navbar-collapse" id="main-navbar">
+      <ul class="nav navbar-nav navbar-right">
+        
+          
+            <li>
+              <a title="Blog" href="/">Blog</a>
+            </li>
+          
+        
+          
+            <li>
+              <a title="About" href="/page/about/">About</a>
+            </li>
+          
+        
+
+        
+
+        
+      </ul>
+    </div>
+
+    <div class="avatar-container">
+      <div class="avatar-img-border">
+        
+          <a title="KrolTech" href="http://kroltech.com/">
+            <img class="avatar-img" src="http://kroltech.com/img/avatar-icon.png" alt="KrolTech" />
+          </a>
+        
+      </div>
+    </div>
+
+  </div>
+</nav>
+
+
+
+
+    
+  
+  
+  
+
+
+
+
+  
+
+  <header class="header-section ">
+    
+    <div class="intro-header no-img">
+      
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+            <div class="post-heading">
+              <h1>JavaScript MV* Frameworks!!?, Far Cry 3 coop, Kinect development starting!</h1>
+                
+                
+                  <span class="post-meta">
+  Posted on December 18, 2012
+  
+</span>
+
+
+                
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+
+    
+<div class="container">
+  <div class="row">
+    <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+      <article role="main" class="blog-post">
+        <p>Played through all of the co-op missions in Far Cry 3 with <a href="http://twitter.com/AnswerSeven" target="_blank">@AnswerSeven</a> and that was a lot of fun.  It was an honor being a part of his completing <sup>1000</sup>&frasl;<sub>1000</sub> in that game!  Well done!!</p>
+
+<p>Looks like we might have a real project at work to use the Kinect with: our users group meeting we host every year, with over 5000 in attendance.  I came up with an idea that I think might be pretty interesting, all really for the purposes of allowing me an opportunity to work with the Kinect.  Plus I think, if pulled off right, could be a pretty big hit at the show!  I ordered <a href="http://www.amazon.com/Beginning-Kinect-Programming-Microsoft-SDK/dp/1430241047/ref=lh_ni_t" target="_blank">Beginning Kinect Programming with the Microsoft Kinect SDK</a> from  Amazon which should hopefully get me started.</p>
+
+<p>Losing my mind a bit trying to figure out <a href="http://emberjs.com/">Ember.js</a>, and constantly getting pulled in different directions (with regard to MV* in JS).  Every <a href="http://coding.smashingmagazine.com/2012/07/27/journey-through-the-javascript-mvc-jungle/">article mentions another framework</a>, and every article’s comments section gets into a debate on why another framework is better/worse!  <a href="http://todomvc.com/">TodoMVC.com</a> came in handy, but really doesn&#8217;t actually clear anything up!  Before today, I was all about Backbone.js.  Today I discovered Ember.js and was really all about it.  Tonight, I’m thinking I might be back to Backbone.js and try for that first (just seems to have better support/documentation/community/learning curve). For now, at least.  Maybe I can take another look at Ember.js again in the (near) future.</p>
+
+<p>Interesting anecdote.  Randomly searched Monster.com today for the following terms / job matches:</p>
+
+<ul>
+<li>backbone.js = 145</li>
+<li>ember.js = 27</li>
+<li>angular.js = 13</li>
+<li>knockout.js = 32</li>
+
+<li><p>mvvm = 52</p></li>
+
+<li><p>node.js = 141</p></li>
+
+<li><p>asp.net = 1000+ (mvc3 = 355)</p></li>
+
+<li><p>python = 1000+</p></li>
+
+<li><p>mssql = 1000+</p></li>
+
+<li><p>mongodb = 261</p></li>
+
+<li><p>nosql = 763</p></li>
+</ul>
+
+<p>Not that there’s anything scientific about these search results (at all) &#8211; just interesting to note 😉</p>
+
+<p><strong>Random Video:</strong> The Science of Productivity</p>
+
+      </article>
+
+      <ul class="pager blog-pager">
+        
+          <li class="previous">
+            <a href="http://kroltech.com/2012/12/15/far-cry-3-nzbmatrix-jqeasing-functions-as-parameters/" data-toggle="tooltip" data-placement="top" title="Far Cry 3, NZBMatrix, jqEasing, Functions as parameters?!">&larr; Previous Post</a>
+          </li>
+        
+        
+          <li class="next">
+            <a href="http://kroltech.com/2012/12/21/ember-js-vs-backbone-js-responsive-grid-systems-kinect-for-windows-barbell-club/" data-toggle="tooltip" data-placement="top" title="Ember.js vs Backbone.js, Responsive Grid Systems, Kinect for Windows, Barbell Club!!">Next Post &rarr;</a>
+          </li>
+        
+      </ul>
+
+      
+        
+          <div class="disqus-comments">
+            <div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_shortname = 'jasonkrol';
+    var disqus_identifier = 'http:\/\/kroltech.com\/2012\/12\/18\/javascript-mv-frameworks-fry-cry-3-coop-kinect-development-starting\/';
+    var disqus_title = 'JavaScript MV* Frameworks!!?, Far Cry 3 coop, Kinect development starting!';
+    var disqus_url = 'http:\/\/kroltech.com\/2012\/12\/18\/javascript-mv-frameworks-fry-cry-3-coop-kinect-development-starting\/';
+
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+          </div>
+        
+      
+
+    </div>
+  </div>
+</div>
+
+    <footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <ul class="list-inline text-center footer-links">
+          
+              <li>
+                <a href="mailto:jkat98@gmail.com" title="Email me">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-envelope fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="https://www.plus.google.com/&#43;JasonKrol" title="Google&#43;">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-google-plus fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="https://github.com/shorttompkins" title="GitHub">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="https://twitter.com/shorttompkins" title="Twitter">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="https://reddit.com/u/shorttompkins" title="Reddit">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-reddit-alien fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="https://linkedin.com/in/jasonkrol" title="LinkedIn">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-linkedin fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="https://stackoverflow.com/users/1623304/jkat98" title="StackOverflow">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-stack-overflow fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="https://www.youtube.com/user/jkat98" title="Youtube">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-youtube fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+          
+          <li>
+            <a href="http://kroltech.com/index.xml" title="RSS">
+              <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fa fa-rss fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          
+        </ul>
+        <p class="credits copyright text-muted">
+          Jason Krol
+          &nbsp;&bull;&nbsp;
+          2016
+
+          
+            &nbsp;&bull;&nbsp;
+            <a href="http://kroltech.com/">KrolTech</a>
+          
+        </p>
+        
+        <p class="credits theme-by text-muted">
+          <a href="http://gohugo.io">Hugo v0.20.7</a> powered &nbsp;&bull;&nbsp; Theme by <a href="http://deanattali.com/beautiful-jekyll/">Beautiful Jekyll</a> adapted to <a href="https://github.com/halogenica/beautifulhugo">Beautiful Hugo</a>
+          
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/katex.min.js" integrity="sha384-/y1Nn9+QQAipbNQWU65krzJralCnuOasHncUFXGkdwntGeSvQicrYkiUBwsgUqc1" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/contrib/auto-render.min.js" integrity="sha384-dq1/gEHSxPZQ7DdrM82ID4YVol9BYyU7GbWlIwnwyPzotpoc57wDw/guX8EaYGPx" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<script src="http://kroltech.com/js/main.js"></script>
+<script src="http://kroltech.com/js/highlight.min.js"></script>
+<script> hljs.initHighlightingOnLoad(); </script>
+<script> renderMathInElement(document.body); </script>
+
+
+
+
+
+  </body>
+</html>
+

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Jsrender on KrolTech</title>
+    <link>http://kroltech.com/tags/jsrender/</link>
+    <description>Recent content in Jsrender on KrolTech</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <managingEditor>jkat98@gmail.com (Jason Krol)</managingEditor>
+    <webMaster>jkat98@gmail.com (Jason Krol)</webMaster>
+    <lastBuildDate>Fri, 31 Aug 2012 22:19:10 +0000</lastBuildDate>
+    
+	<atom:link href="http://kroltech.com/tags/jsrender/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Visual Event, REMs vs EMs, Clover, jsRender</title>
+      <link>http://kroltech.com/2012/08/31/visual-event-rems-vs-ems-clover-jsrender/</link>
+      <pubDate>Fri, 31 Aug 2012 22:19:10 +0000</pubDate>
+      <author>jkat98@gmail.com (Jason Krol)</author>
+      <guid>http://kroltech.com/2012/08/31/visual-event-rems-vs-ems-clover-jsrender/</guid>
+      <description>An oldie but a goodie made a comeback and was proved useful &amp;#8211; Visual Event, a bookmarklet that lets you view javascript events on a page with a nice visual overlay.
+Great article on using REMs instead of EMs when font sizing. Specifcally, the article goes into detail on ditching pixel specification altogether (except for sprites and very specific instances) and using %, em, and rem universally.
+Clover 2 is a nice small app that wraps Explorer and adds Chrome-like tabs to the interface.</description>
+    </item>
+    
+    <item>
+      <title>Launched TumblingInferno.com!</title>
+      <link>http://kroltech.com/2012/08/20/launched-tumblinginferno-com/</link>
+      <pubDate>Mon, 20 Aug 2012 22:16:05 +0000</pubDate>
+      <author>jkat98@gmail.com (Jason Krol)</author>
+      <guid>http://kroltech.com/2012/08/20/launched-tumblinginferno-com/</guid>
+      <description>Created and launched TumblingInferno.com. Was an awesome rapid prototype going from start to launch in 2 days. Implemented a lot of LINQ which was great experience as well as reacquainting myself with Entity Framework. Super excited that I was finally able to finish and launch something!
+Attempted to play with Angular.js, and was somewhat successful. Although didnt really work for the project the way I was hoping &amp;#8211; and help online is scarce currently.</description>
+    </item>
+    
+    <item>
+      <title>Slow week…</title>
+      <link>http://kroltech.com/2012/08/10/slow-week/</link>
+      <pubDate>Fri, 10 Aug 2012 22:15:26 +0000</pubDate>
+      <author>jkat98@gmail.com (Jason Krol)</author>
+      <guid>http://kroltech.com/2012/08/10/slow-week/</guid>
+      <description>Did a lot of cleanup and additional (new) functionality for Fill the Part.
+Created a really need widget that loads activity stream every 25secs, loading newest at top with a sliding stack animation, while the bottom one slides up (squished).
+Continued to play with jsRender.</description>
+    </item>
+    
+    <item>
+      <title>Knockout.js, jsRender, LESS, SquishIt</title>
+      <link>http://kroltech.com/2012/07/27/knockout-js-jsrender-less-squishit/</link>
+      <pubDate>Fri, 27 Jul 2012 22:11:55 +0000</pubDate>
+      <author>jkat98@gmail.com (Jason Krol)</author>
+      <guid>http://kroltech.com/2012/07/27/knockout-js-jsrender-less-squishit/</guid>
+      <description>This week was all about Knockout.js and my seemingly total lack of understanding of javascript and jquery! After struggling with Knockout (rather, struggling to implement it into an existing project that might be a little too complex for my first attempt with KO) I decided to back burner it for a while. However I did learn a lot more about dealing with data, json, and oop in general with javascript and jquery.</description>
+    </item>
+    
+  </channel>
+</rss>

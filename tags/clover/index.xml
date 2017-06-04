@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Clover on KrolTech</title>
+    <link>http://kroltech.com/tags/clover/</link>
+    <description>Recent content in Clover on KrolTech</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <managingEditor>jkat98@gmail.com (Jason Krol)</managingEditor>
+    <webMaster>jkat98@gmail.com (Jason Krol)</webMaster>
+    <lastBuildDate>Fri, 31 Aug 2012 22:19:10 +0000</lastBuildDate>
+    
+	<atom:link href="http://kroltech.com/tags/clover/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Visual Event, REMs vs EMs, Clover, jsRender</title>
+      <link>http://kroltech.com/2012/08/31/visual-event-rems-vs-ems-clover-jsrender/</link>
+      <pubDate>Fri, 31 Aug 2012 22:19:10 +0000</pubDate>
+      <author>jkat98@gmail.com (Jason Krol)</author>
+      <guid>http://kroltech.com/2012/08/31/visual-event-rems-vs-ems-clover-jsrender/</guid>
+      <description>An oldie but a goodie made a comeback and was proved useful &amp;#8211; Visual Event, a bookmarklet that lets you view javascript events on a page with a nice visual overlay.
+Great article on using REMs instead of EMs when font sizing. Specifcally, the article goes into detail on ditching pixel specification altogether (except for sprites and very specific instances) and using %, em, and rem universally.
+Clover 2 is a nice small app that wraps Explorer and adds Chrome-like tabs to the interface.</description>
+    </item>
+    
+  </channel>
+</rss>

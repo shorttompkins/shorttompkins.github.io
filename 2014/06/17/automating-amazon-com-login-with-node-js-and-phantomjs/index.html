@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+  <title>Automating Amazon.com login with Node.js and PhantomJS</title>
+  <meta property="og:title" content="Automating Amazon.com login with Node.js and PhantomJS" />
+  <meta name="twitter:title" content="Automating Amazon.com login with Node.js and PhantomJS" />
+  <meta name="description" content="My quest to make a better Kindle Direct Publishing report using their &#8220;nonpublic&#8221; API data.
+
+">
+  <meta property="og:description" content="My quest to make a better Kindle Direct Publishing report using their &#8220;nonpublic&#8221; API data.
+
+">
+  <meta name="twitter:description" content="My quest to make a better Kindle Direct Publishing report using their &#8220;nonpublic&#8221; API data.
+
+">
+  <meta name="author" content="Jason Krol"/>
+  <link href='http://kroltech.com/img/favicon.ico' rel='icon' type='image/x-icon'/>
+  <meta property="og:image" content="http://kroltech.com/img/avatar-icon.png" />
+  <meta name="twitter:image" content="http://kroltech.com/img/avatar-icon.png" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:site" content="@shorttompkins" />
+  <meta name="twitter:creator" content="@shorttompkins" />
+  <meta property="og:url" content="http://kroltech.com/2014/06/17/automating-amazon-com-login-with-node-js-and-phantomjs/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="KrolTech" />
+
+  <meta name="generator" content="Hugo 0.20.7" />
+  <link rel="canonical" href="http://kroltech.com/2014/06/17/automating-amazon-com-login-with-node-js-and-phantomjs/" />
+  <link rel="alternate" href="http://kroltech.com/index.xml" type="application/rss+xml" title="KrolTech">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/katex.min.css" integrity="sha384-wITovz90syo1dJWVh32uuETPVEtGigN07tkttEqPv+uR2SE/mbQcG7ATL28aI9H0" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <link rel="stylesheet" href="http://kroltech.com/css/main.css" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" />
+  <link rel="stylesheet" href="http://kroltech.com/css/pygment_highlights.css" />
+  <link rel="stylesheet" href="http://kroltech.com/css/highlight.min.css" />
+
+<script>
+window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+ga('create', 'UA-29480326-4', 'auto');
+ga('send', 'pageview');
+</script>
+<script async src='//www.google-analytics.com/analytics.js'></script>
+
+</head>
+
+  <body>
+    <nav class="navbar navbar-default navbar-fixed-top navbar-custom">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="http://kroltech.com/">KrolTech</a>
+    </div>
+
+    <div class="collapse navbar-collapse" id="main-navbar">
+      <ul class="nav navbar-nav navbar-right">
+        
+          
+            <li>
+              <a title="Blog" href="/">Blog</a>
+            </li>
+          
+        
+          
+            <li>
+              <a title="About" href="/page/about/">About</a>
+            </li>
+          
+        
+
+        
+
+        
+      </ul>
+    </div>
+
+    <div class="avatar-container">
+      <div class="avatar-img-border">
+        
+          <a title="KrolTech" href="http://kroltech.com/">
+            <img class="avatar-img" src="http://kroltech.com/img/avatar-icon.png" alt="KrolTech" />
+          </a>
+        
+      </div>
+    </div>
+
+  </div>
+</nav>
+
+
+
+
+    
+  
+  
+  
+
+
+
+
+  
+
+  <header class="header-section ">
+    
+    <div class="intro-header no-img">
+      
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+            <div class="post-heading">
+              <h1>Automating Amazon.com login with Node.js and PhantomJS</h1>
+                
+                
+                  <span class="post-meta">
+  Posted on June 17, 2014
+  
+</span>
+
+
+                
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+
+    
+<div class="container">
+  <div class="row">
+    <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+      <article role="main" class="blog-post">
+        <p>My quest to make a better Kindle Direct Publishing report using their &#8220;nonpublic&#8221; API data.</p>
+
+<p></p>
+
+<p>As I&#8217;ve lamented previously, Amazon&#8217;s Kindle Direct Publishing reporting tools (if thats what you want to call them) leave much to be desired. Right off the bat the data is capped to 90 days, which kind of just sucks. Most of the reports export to Excel and don&#8217;t give you meaningful sums and the one graph they do provide is just unit sales over a short time period and total sales for the same time period (which is nice by itself, but thats the only functionality really present).</p>
+
+<p>I dug in a little and found the JSON they are retrieving every time you tweak the filter settings in the report drop downs. Low and behold the link to the API has easy to change querystring parameters. The best part is that you can go back to the beginning of time so I&#8217;m no longer bound by their weird 90 day restriction imposed on the frontend.</p>
+
+<p><a href="http://104.236.7.244/wp-content/uploads/2014/06/Screen-Shot-2014-06-17-at-11.40.31-AM1.png"><img class="aligncenter size-large wp-image-1281" alt="Screen Shot 2014-06-17 at 11.40.31 AM" src="http://104.236.7.244/wp-content/uploads/2014/06/Screen-Shot-2014-06-17-at-11.40.31-AM1-900x572.png" width="900" height="572" /></a></p>
+
+<p>I wanted to make a quick and dirty dashboard using this new data but I quickly ran into a problem. I couldn&#8217;t consume the API endpoint from the front-end because of cross-domain requests. So I figured I&#8217;d just consume the endpoint from Node.js using Request and pass the data back to the browser as JSON but from my own domain.</p>
+
+<p>The first big snag I hit was that Amazon requires you to be logged in when you make a request to that API endpoint (understandably). Since I&#8217;m not technically using an actual API, theres no easy way to get around this.</p>
+
+<h3 id="phantomjs-to-the-rescue">PhantomJS to the rescue</h3>
+
+<p>Up to this point, I&#8217;ve only used PhantomJS to run automated front-end tests. For that reason it works great, but maybe you didn&#8217;t know that its truly a headless browser that you can use to do anything you want. This includes visiting a webpage, and interacting with it.</p>
+
+<p>I setup a somewhat trivial Node.js script that Phantom will use to connect to Amazon.com via the API url, notice that its prompting for me to login, automate entering my email address and password and clicking the submit button. After that I wait a short amount of time and then try the API url again, this time assuming that I&#8217;m logged in. The pure JSON data that gets returned I simply log out to stdout.</p>
+
+<p>I can test it out by simply executing the Phantom CLI and pointing it to the script I wrote:</p>
+
+<p>$ phantomjs amazon.js</p>
+
+<p>Which logs right to the screen the JSON from the API. So far so good! Here is the code for the amazon.js Phantom script:</p>
+
+<p>[sourcecode lang=&#8221;javascript&#8221;]</p>
+
+<p>/* jshint node: true */</p>
+
+<p>&#8216;use strict&#8217;;</p>
+
+<p>var loadInProgress = false,</p>
+
+<p>interval = 0,</p>
+
+<p>page = require(&#8216;webpage&#8217;).create(),</p>
+
+<p>moment = require(&#8216;moment&#8217;),</p>
+
+<p>startDate = &#8216;2014-01-01&#8217;,</p>
+
+<p>endDate = moment().format(&#8216;YYYY-MM-DD&#8217;),</p>
+
+<p>url = &#8216;<a href="https://kdp.amazon.com/reports/data?customerID=YOUR_CUSTOMER_ID_HERE&amp;sessionID=sessionK&amp;type=OBR&amp;marketplaces=all&amp;asins=YOUR_ASIN_GOES_HERE&amp;startDate=&amp;#8217">https://kdp.amazon.com/reports/data?customerID=YOUR_CUSTOMER_ID_HERE&amp;sessionID=sessionK&amp;type=OBR&amp;marketplaces=all&amp;asins=YOUR_ASIN_GOES_HERE&amp;startDate=&amp;#8217</a>; + startDate + &#8216;&amp;endDate=&#8217; + endDate + &#8216;&amp;_=0000000000&#8217;;</p>
+
+<p>page.onLoadStarted = function() {</p>
+
+<p>loadInProgress = true;</p>
+
+<p>};</p>
+
+<p>page.onLoadFinished = function() {</p>
+
+<p>loadInProgress = false;</p>
+
+<p>};</p>
+
+<p>page.settings.userAgent = &ldquo;Mozilla/5.0 (Macintosh; Intel Mac OS X 10_8_2) AppleWebKit/537.11 (KHTML, like Gecko) Chrome/23.0.1271.6 Safari/537.11&rdquo;;</p>
+
+<p>page.open(url, function(status) {</p>
+
+<p>page.evaluate(function() {</p>
+
+<p>document.getElementById(&#8216;ap_email&#8217;).value = &#8216;YOUR_EMAIL@HERE.COM&#8217;;</p>
+
+<p>document.getElementById(&#8216;ap_password&#8217;).value = &#8216;YOURPASSWORD&#8217;;</p>
+
+<p>document.getElementById(&#8216;ap_signin_form&#8217;).submit();</p>
+
+<p>});</p>
+
+<p>interval = setInterval(function(){</p>
+
+<p>if(!loadInProgress) {</p>
+
+<p>page.open(url, function(status) {</p>
+
+<p>if(status === &#8216;success&#8217;) {</p>
+
+<p>var data = page.content.replace(&#8216;<html><head></head><body>&#8217;,&#8221;).replace(&#8216;</body></html>&#8217;,&#8221;);</p>
+
+<p>console.log(data);</p>
+
+<p>} else {</p>
+
+<p>console.log(&#8216;error&#8217;);</p>
+
+<p>}</p>
+
+<p>phantom.exit();</p>
+
+<p>});</p>
+
+<p>clearInterval(interval);</p>
+
+<p>}</p>
+
+<p>},50);</p>
+
+<p>});</p>
+
+<p>[/sourcecode]</p>
+
+<h3 id="execute-the-phantom-shell-command-from-node-js">Execute the Phantom shell command from Node.js</h3>
+
+<p>Now that I have a command that I can run from the command line, I need to be able to consume that output from a small node app. I wrote a small Express app that will serve up some HTML to display the dashboard itself, but also provide an endpoint that will return the JSON from Amazon&#8217;s endpoint.</p>
+
+<p>The endpoint will execute the Phantom command and capture the stdout to a variable. I&#8217;m using the node module child_process to execute the command. The data thats captured from the command is passed to a callback function and uses JSON.parse(data) to convert it to actual JSON before just serving that up using Express&#8217; res.json send command. Heres the code for the node module that executes the Phantom command and returns the captured data:</p>
+
+<p>[sourcecode lang=&#8221;javascript&#8221;]</p>
+
+<p>var sys = require(&#8216;sys&#8217;),</p>
+
+<p>exec = require(&#8216;child_process&#8217;).exec,</p>
+
+<p>child;</p>
+
+<p>module.exports = function(callback) {</p>
+
+<p>child = exec(&#8216;phantomjs amazon/amazon.js&#8217;, function(error, stdout, stderr){</p>
+
+<p>if (error !== null) {</p>
+
+<p>callback(false);</p>
+
+<p>} else {</p>
+
+<p>callback(stdout);</p>
+
+<p>}</p>
+
+<p>});</p>
+
+<p>};</p>
+
+<p>[/sourcecode]</p>
+
+<p>Using the JSON thats returned from my own endpoint, I can then use jQuery to do whatever I want with it: parse it, loop through it, generate some totals, generate some bar graphs, etc.</p>
+
+<p><a href="http://104.236.7.244/wp-content/uploads/2014/06/Screen-Shot-2014-06-17-at-11.39.13-AM.png"><img class="aligncenter size-large wp-image-1282" alt="Screen Shot 2014-06-17 at 11.39.13 AM" src="http://104.236.7.244/wp-content/uploads/2014/06/Screen-Shot-2014-06-17-at-11.39.13-AM-900x634.png" width="900" height="634" /></a></p>
+
+<h3 id="summary">Summary</h3>
+
+<p>I wrote a super small Express web app that serves up some HTML for a dashboard. An endpoint is provided thats called /data that the front-end code makes an AJAX request to to retrieve the KDP data. The endpoint itself actually executes a command on the shell to launch a PhantomJS script which will connect to Amazon.com, login, and retrieve and return the API data.</p>
+      </article>
+
+      <ul class="pager blog-pager">
+        
+          <li class="previous">
+            <a href="http://kroltech.com/2014/06/06/automate-your-digital-life-with-ifttt-com/" data-toggle="tooltip" data-placement="top" title="Automate your (digital) life with ifttt.com">&larr; Previous Post</a>
+          </li>
+        
+        
+          <li class="next">
+            <a href="http://kroltech.com/2014/09/14/quick-tip-increase-upload-size-in-aws-elastic-beanstalk-node-js-env/" data-toggle="tooltip" data-placement="top" title="Quick Tip: Increase upload size in AWS Elastic Beanstalk (node.js env)">Next Post &rarr;</a>
+          </li>
+        
+      </ul>
+
+      
+        
+          <div class="disqus-comments">
+            <div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_shortname = 'jasonkrol';
+    var disqus_identifier = 'http:\/\/kroltech.com\/2014\/06\/17\/automating-amazon-com-login-with-node-js-and-phantomjs\/';
+    var disqus_title = 'Automating Amazon.com login with Node.js and PhantomJS';
+    var disqus_url = 'http:\/\/kroltech.com\/2014\/06\/17\/automating-amazon-com-login-with-node-js-and-phantomjs\/';
+
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+          </div>
+        
+      
+
+    </div>
+  </div>
+</div>
+
+    <footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <ul class="list-inline text-center footer-links">
+          
+              <li>
+                <a href="mailto:jkat98@gmail.com" title="Email me">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-envelope fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="https://www.plus.google.com/&#43;JasonKrol" title="Google&#43;">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-google-plus fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="https://github.com/shorttompkins" title="GitHub">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="https://twitter.com/shorttompkins" title="Twitter">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="https://reddit.com/u/shorttompkins" title="Reddit">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-reddit-alien fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="https://linkedin.com/in/jasonkrol" title="LinkedIn">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-linkedin fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="https://stackoverflow.com/users/1623304/jkat98" title="StackOverflow">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-stack-overflow fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="https://www.youtube.com/user/jkat98" title="Youtube">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-youtube fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+          
+          <li>
+            <a href="http://kroltech.com/index.xml" title="RSS">
+              <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fa fa-rss fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          
+        </ul>
+        <p class="credits copyright text-muted">
+          Jason Krol
+          &nbsp;&bull;&nbsp;
+          2016
+
+          
+            &nbsp;&bull;&nbsp;
+            <a href="http://kroltech.com/">KrolTech</a>
+          
+        </p>
+        
+        <p class="credits theme-by text-muted">
+          <a href="http://gohugo.io">Hugo v0.20.7</a> powered &nbsp;&bull;&nbsp; Theme by <a href="http://deanattali.com/beautiful-jekyll/">Beautiful Jekyll</a> adapted to <a href="https://github.com/halogenica/beautifulhugo">Beautiful Hugo</a>
+          
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/katex.min.js" integrity="sha384-/y1Nn9+QQAipbNQWU65krzJralCnuOasHncUFXGkdwntGeSvQicrYkiUBwsgUqc1" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/contrib/auto-render.min.js" integrity="sha384-dq1/gEHSxPZQ7DdrM82ID4YVol9BYyU7GbWlIwnwyPzotpoc57wDw/guX8EaYGPx" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<script src="http://kroltech.com/js/main.js"></script>
+<script src="http://kroltech.com/js/highlight.min.js"></script>
+<script> hljs.initHighlightingOnLoad(); </script>
+<script> renderMathInElement(document.body); </script>
+
+
+
+
+
+  </body>
+</html>
+

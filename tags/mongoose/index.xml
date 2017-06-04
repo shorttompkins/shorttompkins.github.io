@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Mongoose on KrolTech</title>
+    <link>http://kroltech.com/tags/mongoose/</link>
+    <description>Recent content in Mongoose on KrolTech</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <managingEditor>jkat98@gmail.com (Jason Krol)</managingEditor>
+    <webMaster>jkat98@gmail.com (Jason Krol)</webMaster>
+    <lastBuildDate>Sun, 29 Dec 2013 03:53:56 +0000</lastBuildDate>
+    
+	<atom:link href="http://kroltech.com/tags/mongoose/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Boilerplate web app using Backbone.js, ExpressJS, node.js, MongoDB</title>
+      <link>http://kroltech.com/2013/12/29/boilerplate-web-app-using-backbone-js-expressjs-node-js-mongodb/</link>
+      <pubDate>Sun, 29 Dec 2013 03:53:56 +0000</pubDate>
+      <author>jkat98@gmail.com (Jason Krol)</author>
+      <guid>http://kroltech.com/2013/12/29/boilerplate-web-app-using-backbone-js-expressjs-node-js-mongodb/</guid>
+      <description>&lt;p&gt;A boilerplate project for a complete web application written using Backbone.js &amp;amp; Marionette, node.js &amp;amp; ExpressJS, MongoDB &amp;amp; Mongoose, Handlebars, Grunt.js, Bower, and Browserify!&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

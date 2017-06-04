@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Transitions on KrolTech</title>
+    <link>http://kroltech.com/tags/transitions/</link>
+    <description>Recent content in Transitions on KrolTech</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <managingEditor>jkat98@gmail.com (Jason Krol)</managingEditor>
+    <webMaster>jkat98@gmail.com (Jason Krol)</webMaster>
+    <lastBuildDate>Mon, 15 Apr 2013 17:55:31 +0000</lastBuildDate>
+    
+	<atom:link href="http://kroltech.com/tags/transitions/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Fade in element on event using CSS3  &amp; opacity</title>
+      <link>http://kroltech.com/2013/04/15/quick-tip-fade-in-element-on-event-using-css3-opacity/</link>
+      <pubDate>Mon, 15 Apr 2013 17:55:31 +0000</pubDate>
+      <author>jkat98@gmail.com (Jason Krol)</author>
+      <guid>http://kroltech.com/2013/04/15/quick-tip-fade-in-element-on-event-using-css3-opacity/</guid>
+      <description>I&amp;#8217;m working on a project, that requires a number of different animations based on user events. I recently switched all of the animations to CSS3 transforms and transitions versus jQuery animations. The improvement has been staggering, to say the least.
+However, I came across a weird issue today. When attempting to fade an element in after a click event, the element just kept popping into place. It wouldn&amp;#8217;t fade. After some investigation I realized that my jQuery was setting the opacity to 1.</description>
+    </item>
+    
+  </channel>
+</rss>

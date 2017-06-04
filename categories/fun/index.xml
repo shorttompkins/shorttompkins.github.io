@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Fun on KrolTech</title>
+    <link>http://kroltech.com/categories/fun/</link>
+    <description>Recent content in Fun on KrolTech</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <managingEditor>jkat98@gmail.com (Jason Krol)</managingEditor>
+    <webMaster>jkat98@gmail.com (Jason Krol)</webMaster>
+    <lastBuildDate>Sun, 29 Dec 2013 15:56:45 +0000</lastBuildDate>
+    
+	<atom:link href="http://kroltech.com/categories/fun/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>2013 Year in Review</title>
+      <link>http://kroltech.com/2013/12/29/2013-year-in-review/</link>
+      <pubDate>Sun, 29 Dec 2013 15:56:45 +0000</pubDate>
+      <author>jkat98@gmail.com (Jason Krol)</author>
+      <guid>http://kroltech.com/2013/12/29/2013-year-in-review/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Mobile app development, Google Dev tools Code School, TekPub</title>
+      <link>http://kroltech.com/2013/03/29/mobile-app-development-google-dev-tools-code-school-tekpub/</link>
+      <pubDate>Fri, 29 Mar 2013 19:03:10 +0000</pubDate>
+      <author>jkat98@gmail.com (Jason Krol)</author>
+      <guid>http://kroltech.com/2013/03/29/mobile-app-development-google-dev-tools-code-school-tekpub/</guid>
+      <description>I completed the Code School course on using Google Chrome Dev Tools. I highly recommend you complete this course &amp;#8211; its super quick (probably no longer than 1 hour) and very easy. Yet, I learned a lot. Specifically with the more advanced topics of the dev tools like Profiling, Memory Leaks, Framerates, etc.
+Started writing my hybrid mobile app for work &amp;#8211; learned quite a bit along the way. Working with jQuery Mobile, but its overhead and conventions/takeover is making it less than desirable &amp;#8211; perhaps I’ll rewrite the transition animations manually and implement 3rd party Touch/Tap library.</description>
+    </item>
+    
+    <item>
+      <title>JavaScript books, recent projects, Line rider!, Rock climbing</title>
+      <link>http://kroltech.com/2013/02/08/javascript-books-recent-projects-line-rider-rock-climbing/</link>
+      <pubDate>Fri, 08 Feb 2013 18:39:04 +0000</pubDate>
+      <author>jkat98@gmail.com (Jason Krol)</author>
+      <guid>http://kroltech.com/2013/02/08/javascript-books-recent-projects-line-rider-rock-climbing/</guid>
+      <description>I went on a bit of a shopping spree on Amazon. Besides a few Kindle books (sci-fi, etc) I grabbed a few new JavaScript books as well:
+JavaScript Patterns &amp;#8211; Stoyan Stefanov
+Secrets of the JavaScript Ninja &amp;#8211; John Resig, Bear Bibeault
+If you are looking to utterly destroy an entire afternoon (or more), definitely check out the HTML5 version of an oldie but goodie, Free Rider HD!! (also know as Canvas Rider)</description>
+    </item>
+    
+    <item>
+      <title>Back to work! 1 day Hackathon! Design for developers.</title>
+      <link>http://kroltech.com/2013/01/04/back-to-work-hackathon/</link>
+      <pubDate>Fri, 04 Jan 2013 21:33:10 +0000</pubDate>
+      <author>jkat98@gmail.com (Jason Krol)</author>
+      <guid>http://kroltech.com/2013/01/04/back-to-work-hackathon/</guid>
+      <description>Had a great Christmas/New Years break (well went back to work for 2 days in between there)!! Enjoyed the time off and just spending time with the little one and generally doing nothing productive!
+I did find time during the break to spend an entire day working with @Answer7 doing a little mini hackathon! This was something that we have been toying with for a while &amp;#8211; the basic premise is that you and a few friends lock yourself in a room for an entire day and try to create something from scratch!</description>
+    </item>
+    
+    <item>
+      <title>Most anticipated games of 2013</title>
+      <link>http://kroltech.com/2012/12/10/most-anticipated-games-of-2013/</link>
+      <pubDate>Mon, 10 Dec 2012 00:43:42 +0000</pubDate>
+      <author>jkat98@gmail.com (Jason Krol)</author>
+      <guid>http://kroltech.com/2012/12/10/most-anticipated-games-of-2013/</guid>
+      <description>My list of most anticipated games coming out in 2013 are as follows (most likely in release order):
+Anarchy Reigns
+DMC &amp;#8211; Devil May Cry, the demo was awesome and haters can all suck it!
+Dead Space 3 &amp;#8211; meh, its Dead Space&amp;#8230; 3&amp;#8230;
+Aliens: Colonial Marines &amp;#8211; YES!!! I ordered the super deluxe Spec Ed with Power Loader figure!
+Metal Gear Rising Revengeance &amp;#8211; YES!!!! The demo for this game was incredible and its from the creators of Bayonetta so need I say more!</description>
+    </item>
+    
+    <item>
+      <title>Evil Dead Charlie Brown Remake</title>
+      <link>http://kroltech.com/2012/12/09/evil-dead-charlie-brown-remake/</link>
+      <pubDate>Sun, 09 Dec 2012 14:05:19 +0000</pubDate>
+      <author>jkat98@gmail.com (Jason Krol)</author>
+      <guid>http://kroltech.com/2012/12/09/evil-dead-charlie-brown-remake/</guid>
+      <description>If this ever becomes available as a poster/print I&amp;#8217;m ordering ASAP!
+
+From http://impsandmonsters.blogspot.com/</description>
+    </item>
+    
+    <item>
+      <title>Most anticipated movies of 2013</title>
+      <link>http://kroltech.com/2012/12/09/most-anticipated-movies-of-2013/</link>
+      <pubDate>Sun, 09 Dec 2012 01:06:48 +0000</pubDate>
+      <author>jkat98@gmail.com (Jason Krol)</author>
+      <guid>http://kroltech.com/2012/12/09/most-anticipated-movies-of-2013/</guid>
+      <description>I wrote this post for Fill the Part, but thought I&amp;#8217;d post it here as well for posterity:
+(These are in release order.)
+Zero Dark Thirty
+I&amp;#8217;m a sucker for anything military related, with Black Hawk Down being one of my top 5 movies I can watch over and over. Plus, while I didn&amp;#8217;t absolutely love Hurt Locker, Point Break is another one of my all time favorites.
+A Good Day to Die Hard</description>
+    </item>
+    
+    <item>
+      <title>Vacation!!!</title>
+      <link>http://kroltech.com/2012/07/20/vacation/</link>
+      <pubDate>Fri, 20 Jul 2012 22:02:59 +0000</pubDate>
+      <author>jkat98@gmail.com (Jason Krol)</author>
+      <guid>http://kroltech.com/2012/07/20/vacation/</guid>
+      <description>VACATION!! Didn&amp;#8217;t learn much, but did read up some more on XNA programming in general. Rode a wave runner (jet ski) for the first time and that was exhilarating! (Although it was extremely tiring, and very hard work!) Rode lots of rides, ate like shit, and had a great time!</description>
+    </item>
+    
+    <item>
+      <title>Microsoft Xbox 360 Kinect review</title>
+      <link>http://kroltech.com/2011/01/22/microsoft-xbox-360-kinect-review/</link>
+      <pubDate>Sat, 22 Jan 2011 16:46:58 +0000</pubDate>
+      <author>jkat98@gmail.com (Jason Krol)</author>
+      <guid>http://kroltech.com/2011/01/22/microsoft-xbox-360-kinect-review/</guid>
+      <description>First let me get this out of the way to perhaps add some credibility to this review: I am a hardcore gamer and have nearly 30 titles in my Xbox 360 library. I also have a PS3 (although my primary gaming console is the 360). Ive been gaming since I can remember (got a NES for Christmas, had an Atari 2600 etc). With that being said, let me also mention that I have a 4 year old son who is absolutely addicted to Angry Birds on my iPhone, although he&amp;#8217;s not really a fan of using a controller &amp;#8211; just yet.</description>
+    </item>
+    
+  </channel>
+</rss>

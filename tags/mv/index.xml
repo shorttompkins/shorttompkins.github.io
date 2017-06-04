@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Mv on KrolTech</title>
+    <link>http://kroltech.com/tags/mv/</link>
+    <description>Recent content in Mv on KrolTech</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <managingEditor>jkat98@gmail.com (Jason Krol)</managingEditor>
+    <webMaster>jkat98@gmail.com (Jason Krol)</webMaster>
+    <lastBuildDate>Tue, 18 Dec 2012 02:48:17 +0000</lastBuildDate>
+    
+	<atom:link href="http://kroltech.com/tags/mv/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>JavaScript MV* Frameworks!!?, Far Cry 3 coop, Kinect development starting!</title>
+      <link>http://kroltech.com/2012/12/18/javascript-mv-frameworks-fry-cry-3-coop-kinect-development-starting/</link>
+      <pubDate>Tue, 18 Dec 2012 02:48:17 +0000</pubDate>
+      <author>jkat98@gmail.com (Jason Krol)</author>
+      <guid>http://kroltech.com/2012/12/18/javascript-mv-frameworks-fry-cry-3-coop-kinect-development-starting/</guid>
+      <description>Played through all of the co-op missions in Far Cry 3 with @AnswerSeven and that was a lot of fun. It was an honor being a part of his completing 1000&amp;frasl;1000 in that game! Well done!!
+Looks like we might have a real project at work to use the Kinect with: our users group meeting we host every year, with over 5000 in attendance. I came up with an idea that I think might be pretty interesting, all really for the purposes of allowing me an opportunity to work with the Kinect.</description>
+    </item>
+    
+  </channel>
+</rss>

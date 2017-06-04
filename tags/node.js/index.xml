@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Node.Js on KrolTech</title>
+    <link>http://kroltech.com/tags/node.js/</link>
+    <description>Recent content in Node.Js on KrolTech</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <managingEditor>jkat98@gmail.com (Jason Krol)</managingEditor>
+    <webMaster>jkat98@gmail.com (Jason Krol)</webMaster>
+    <lastBuildDate>Wed, 18 Nov 2015 15:08:56 +0000</lastBuildDate>
+    
+	<atom:link href="http://kroltech.com/tags/node.js/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>2nd Ed. of Web Development with MongoDB and NodeJS</title>
+      <link>http://kroltech.com/2015/11/18/2nd-ed-of-web-development-with-mongodb-and-nodejs/</link>
+      <pubDate>Wed, 18 Nov 2015 15:08:56 +0000</pubDate>
+      <author>jkat98@gmail.com (Jason Krol)</author>
+      <guid>http://kroltech.com/2015/11/18/2nd-ed-of-web-development-with-mongodb-and-nodejs/</guid>
+      <description>&lt;p&gt;Excited that the 2nd edition of my book has just been released!&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Request API node.js helper module</title>
+      <link>http://kroltech.com/2015/01/03/request-api-node-js-helper-module/</link>
+      <pubDate>Sat, 03 Jan 2015 00:31:12 +0000</pubDate>
+      <author>jkat98@gmail.com (Jason Krol)</author>
+      <guid>http://kroltech.com/2015/01/03/request-api-node-js-helper-module/</guid>
+      <description>&lt;p&gt;A convenient helper module for node.js and request when you regularly work with an API in your projects.&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Simple MongoDB node.js client module</title>
+      <link>http://kroltech.com/2015/01/02/simple-mongodb-node-js-client-module/</link>
+      <pubDate>Fri, 02 Jan 2015 22:51:14 +0000</pubDate>
+      <author>jkat98@gmail.com (Jason Krol)</author>
+      <guid>http://kroltech.com/2015/01/02/simple-mongodb-node-js-client-module/</guid>
+      <description>&lt;p&gt;Here&amp;#8217;s a simple MongoDB client module I use when prototyping projects in node.js.&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>My new book: Web Development with MongoDB and Node.js</title>
+      <link>http://kroltech.com/2014/10/09/my-new-book-web-development-with-mongodb-and-node-js/</link>
+      <pubDate>Thu, 09 Oct 2014 01:08:51 +0000</pubDate>
+      <author>jkat98@gmail.com (Jason Krol)</author>
+      <guid>http://kroltech.com/2014/10/09/my-new-book-web-development-with-mongodb-and-node-js/</guid>
+      <description>&lt;p&gt;Introducing my new book; Web Development with MongoDB and Node.js! Its been a long 6 months of blood sweat and tears, but its finally released!&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Quick Tip: Increase upload size in AWS Elastic Beanstalk (node.js env)</title>
+      <link>http://kroltech.com/2014/09/14/quick-tip-increase-upload-size-in-aws-elastic-beanstalk-node-js-env/</link>
+      <pubDate>Sun, 14 Sep 2014 23:37:15 +0000</pubDate>
+      <author>jkat98@gmail.com (Jason Krol)</author>
+      <guid>http://kroltech.com/2014/09/14/quick-tip-increase-upload-size-in-aws-elastic-beanstalk-node-js-env/</guid>
+      <description>&lt;p&gt;If you want to support larger file uploads and you&amp;#8217;re hosting a node.js app via AWS which uses nginx, heres a trick that will make it pretty easy to change the default cap.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Automating Amazon.com login with Node.js and PhantomJS</title>
+      <link>http://kroltech.com/2014/06/17/automating-amazon-com-login-with-node-js-and-phantomjs/</link>
+      <pubDate>Tue, 17 Jun 2014 20:02:19 +0000</pubDate>
+      <author>jkat98@gmail.com (Jason Krol)</author>
+      <guid>http://kroltech.com/2014/06/17/automating-amazon-com-login-with-node-js-and-phantomjs/</guid>
+      <description>&lt;p&gt;My quest to make a better Kindle Direct Publishing report using their &amp;#8220;nonpublic&amp;#8221; API data.&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Sanitizing XSS and HTML with Express middleware</title>
+      <link>http://kroltech.com/2014/05/30/sanitizing-xss-and-html-with-express-middleware/</link>
+      <pubDate>Fri, 30 May 2014 17:00:56 +0000</pubDate>
+      <author>jkat98@gmail.com (Jason Krol)</author>
+      <guid>http://kroltech.com/2014/05/30/sanitizing-xss-and-html-with-express-middleware/</guid>
+      <description>&lt;p&gt;Lets take a look at a few different options for handling sanitizing user input fields in both node.js as well as the browser.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Node.js testing with Mocha, Chai, Sinon &amp; Proxyquire</title>
+      <link>http://kroltech.com/2014/02/28/node-js-testing-with-mocha-chai-sinon-proxyquire/</link>
+      <pubDate>Fri, 28 Feb 2014 20:09:17 +0000</pubDate>
+      <author>jkat98@gmail.com (Jason Krol)</author>
+      <guid>http://kroltech.com/2014/02/28/node-js-testing-with-mocha-chai-sinon-proxyquire/</guid>
+      <description>&lt;p&gt;Lets take a look at testing node.js using a few popular tools and frameworks for running and writing tests.&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Boilerplate web app using Backbone.js, ExpressJS, node.js, MongoDB</title>
+      <link>http://kroltech.com/2013/12/29/boilerplate-web-app-using-backbone-js-expressjs-node-js-mongodb/</link>
+      <pubDate>Sun, 29 Dec 2013 03:53:56 +0000</pubDate>
+      <author>jkat98@gmail.com (Jason Krol)</author>
+      <guid>http://kroltech.com/2013/12/29/boilerplate-web-app-using-backbone-js-expressjs-node-js-mongodb/</guid>
+      <description>&lt;p&gt;A boilerplate project for a complete web application written using Backbone.js &amp;amp; Marionette, node.js &amp;amp; ExpressJS, MongoDB &amp;amp; Mongoose, Handlebars, Grunt.js, Bower, and Browserify!&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>MongoDB for Node.js Developers online training &amp; certification</title>
+      <link>http://kroltech.com/2013/12/07/mongodb-for-node-js-developers-online-training-certification/</link>
+      <pubDate>Sat, 07 Dec 2013 04:09:44 +0000</pubDate>
+      <author>jkat98@gmail.com (Jason Krol)</author>
+      <guid>http://kroltech.com/2013/12/07/mongodb-for-node-js-developers-online-training-certification/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Starting Web Development with node.js/ExpressJS</title>
+      <link>http://kroltech.com/2013/05/17/starting-web-development-with-node-jsexpressjs/</link>
+      <pubDate>Fri, 17 May 2013 15:26:42 +0000</pubDate>
+      <author>jkat98@gmail.com (Jason Krol)</author>
+      <guid>http://kroltech.com/2013/05/17/starting-web-development-with-node-jsexpressjs/</guid>
+      <description>For the past few months I&amp;#8217;ve been seeing more and more about node.js popping up all over the place. I installed it and dabbled a few months ago, but never really spent more than an hour and honestly didn&amp;#8217;t walk away very impressed (my own fault, really). This past week I decided to really give it another shot, really trying to dig into it and actually accomplish something. This also sparked by my discovery of Koding.</description>
+    </item>
+    
+    <item>
+      <title>ImGettin.it launch! DMC!!! JavaScript/Node.js/Backbone.js</title>
+      <link>http://kroltech.com/2013/01/18/imgettin-it-launch-dmc-javascriptnode-jsbackbone-js/</link>
+      <pubDate>Fri, 18 Jan 2013 03:18:17 +0000</pubDate>
+      <author>jkat98@gmail.com (Jason Krol)</author>
+      <guid>http://kroltech.com/2013/01/18/imgettin-it-launch-dmc-javascriptnode-jsbackbone-js/</guid>
+      <description>Soft launched ImGettin.it over the weekend! By soft launch, I mean, bought and setup the domain, and got a test version of the site live. Login works, and the site “works” for the most part, but is very much not ready for prime time yet. I still need to get a lot of things working and most importantly I need a basic admin for the games database. The data that&amp;#8217;s up right now is just test seed data &amp;#8211; while pretty solid is far from complete or even valid.</description>
+    </item>
+    
+  </channel>
+</rss>

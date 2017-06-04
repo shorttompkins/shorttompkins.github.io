@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Funny on KrolTech</title>
+    <link>http://kroltech.com/categories/funny/</link>
+    <description>Recent content in Funny on KrolTech</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <managingEditor>jkat98@gmail.com (Jason Krol)</managingEditor>
+    <webMaster>jkat98@gmail.com (Jason Krol)</webMaster>
+    <lastBuildDate>Fri, 01 Mar 2013 21:52:25 +0000</lastBuildDate>
+    
+	<atom:link href="http://kroltech.com/categories/funny/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Require.js, Knockback.js, A developer’s reaction (animated gif gallery)</title>
+      <link>http://kroltech.com/2013/03/01/require-js-knockback-js-a-developers-reaction-animated-gif-gallery/</link>
+      <pubDate>Fri, 01 Mar 2013 21:52:25 +0000</pubDate>
+      <author>jkat98@gmail.com (Jason Krol)</author>
+      <guid>http://kroltech.com/2013/03/01/require-js-knockback-js-a-developers-reaction-animated-gif-gallery/</guid>
+      <description>While playing with the SPA project template (post forthcoming) I finally took some time to play around with Require.js. While its fairly easy to get started, it blew my mind how it almost instantly changed my mindset and habits with regard to organization of my code. At its most basic level, it allows you to break all of your code down into nice bite-sized chunks in individual files &amp;#8211; but its so much more.</description>
+    </item>
+    
+    <item>
+      <title>Cats don’t like water!</title>
+      <link>http://kroltech.com/2013/01/14/cats-dont-like-water/</link>
+      <pubDate>Mon, 14 Jan 2013 20:24:17 +0000</pubDate>
+      <author>jkat98@gmail.com (Jason Krol)</author>
+      <guid>http://kroltech.com/2013/01/14/cats-dont-like-water/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Remember QWOP?</title>
+      <link>http://kroltech.com/2013/01/07/remember-qwop/</link>
+      <pubDate>Mon, 07 Jan 2013 00:30:09 +0000</pubDate>
+      <author>jkat98@gmail.com (Jason Krol)</author>
+      <guid>http://kroltech.com/2013/01/07/remember-qwop/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Cinnamon Challenge – LOL</title>
+      <link>http://kroltech.com/2012/12/05/cinnamon-challenge-lol/</link>
+      <pubDate>Wed, 05 Dec 2012 13:31:22 +0000</pubDate>
+      <author>jkat98@gmail.com (Jason Krol)</author>
+      <guid>http://kroltech.com/2012/12/05/cinnamon-challenge-lol/</guid>
+      <description>This one had me cracking up so much my sides hurt. I figured it deserved its own post:</description>
+    </item>
+    
+  </channel>
+</rss>

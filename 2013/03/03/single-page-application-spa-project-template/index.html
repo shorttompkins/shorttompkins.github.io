@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+  <title>Single Page Application (SPA) Project Template</title>
+  <meta property="og:title" content="Single Page Application (SPA) Project Template" />
+  <meta name="twitter:title" content="Single Page Application (SPA) Project Template" />
+  <meta name="description" content="I started going through the process of deconstructing John Papa’s amazing CodeCamper Single Page Application project and trying to break it down to a basic stripped down project template. I love a lot of what was accomplished in that project (great DI, awesome Repositories and patterns, etc.)! While breaking down the project, I&#8217;ve learned quite a bit. I&#8217;ve posted the full source of the template to my github, but its still a work in progress.">
+  <meta property="og:description" content="I started going through the process of deconstructing John Papa’s amazing CodeCamper Single Page Application project and trying to break it down to a basic stripped down project template. I love a lot of what was accomplished in that project (great DI, awesome Repositories and patterns, etc.)! While breaking down the project, I&#8217;ve learned quite a bit. I&#8217;ve posted the full source of the template to my github, but its still a work in progress.">
+  <meta name="twitter:description" content="I started going through the process of deconstructing John Papa’s amazing CodeCamper Single Page Application project and trying to break it down to a basic stripped down project template. I love a lot …">
+  <meta name="author" content="Jason Krol"/>
+  <link href='http://kroltech.com/img/favicon.ico' rel='icon' type='image/x-icon'/>
+  <meta property="og:image" content="http://kroltech.com/img/avatar-icon.png" />
+  <meta name="twitter:image" content="http://kroltech.com/img/avatar-icon.png" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:site" content="@shorttompkins" />
+  <meta name="twitter:creator" content="@shorttompkins" />
+  <meta property="og:url" content="http://kroltech.com/2013/03/03/single-page-application-spa-project-template/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="KrolTech" />
+
+  <meta name="generator" content="Hugo 0.20.7" />
+  <link rel="canonical" href="http://kroltech.com/2013/03/03/single-page-application-spa-project-template/" />
+  <link rel="alternate" href="http://kroltech.com/index.xml" type="application/rss+xml" title="KrolTech">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/katex.min.css" integrity="sha384-wITovz90syo1dJWVh32uuETPVEtGigN07tkttEqPv+uR2SE/mbQcG7ATL28aI9H0" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <link rel="stylesheet" href="http://kroltech.com/css/main.css" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" />
+  <link rel="stylesheet" href="http://kroltech.com/css/pygment_highlights.css" />
+  <link rel="stylesheet" href="http://kroltech.com/css/highlight.min.css" />
+
+<script>
+window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+ga('create', 'UA-29480326-4', 'auto');
+ga('send', 'pageview');
+</script>
+<script async src='//www.google-analytics.com/analytics.js'></script>
+
+</head>
+
+  <body>
+    <nav class="navbar navbar-default navbar-fixed-top navbar-custom">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="http://kroltech.com/">KrolTech</a>
+    </div>
+
+    <div class="collapse navbar-collapse" id="main-navbar">
+      <ul class="nav navbar-nav navbar-right">
+        
+          
+            <li>
+              <a title="Blog" href="/">Blog</a>
+            </li>
+          
+        
+          
+            <li>
+              <a title="About" href="/page/about/">About</a>
+            </li>
+          
+        
+
+        
+
+        
+      </ul>
+    </div>
+
+    <div class="avatar-container">
+      <div class="avatar-img-border">
+        
+          <a title="KrolTech" href="http://kroltech.com/">
+            <img class="avatar-img" src="http://kroltech.com/img/avatar-icon.png" alt="KrolTech" />
+          </a>
+        
+      </div>
+    </div>
+
+  </div>
+</nav>
+
+
+
+
+    
+  
+  
+  
+
+
+
+
+  
+
+  <header class="header-section ">
+    
+    <div class="intro-header no-img">
+      
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+            <div class="post-heading">
+              <h1>Single Page Application (SPA) Project Template</h1>
+                
+                
+                  <span class="post-meta">
+  Posted on March 3, 2013
+  
+</span>
+
+
+                
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+
+    
+<div class="container">
+  <div class="row">
+    <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+      <article role="main" class="blog-post">
+        
+
+<p>I started going through the process of deconstructing <a style="font-weight:bold;" href="http://www.johnpapa.net/building-single-page-apps-with-knockout-jquery-and-web-api-ndash-the-story-begins/" target="_blank">John Papa’s amazing CodeCamper Single Page Application project</a> and trying to break it down to a basic stripped down project template.  I love a lot of what was accomplished in that project (great DI, awesome Repositories and patterns, etc.)!  While breaking down the project, I&#8217;ve learned quite a bit.  I&#8217;ve posted the full source of the template to my github, but its still a work in progress.  Its in pretty good shape right now.  Be warned that it does use some slightly more advanced stuff in the backend layers (data, data.contracts, models, unit of work, repositories, dependency injection, etc.) However the template is setup in a way that it should be pretty easy to manipulate to your needs without fully understanding everything under the hood.</p>
+
+<blockquote>
+<p><a style="font-weight:bold;" href="http://github.com/jkat98/SPA_Template" target="_blank"><a href="http://github.com/jkat98/SPA_Template">http://github.com/jkat98/SPA_Template</a></a></p>
+</blockquote>
+
+<p>Here are the general steps involved in working with the template, modifying it to suite your needs, and getting up and running:</p>
+
+<p>(note the template is already up and running, but uses “samplemodel” as the only data object)</p>
+
+<h4 id="step-1-setup-your-data-models">Step 1: Setup your Data Models</h4>
+
+<p>In the App.Model project, you will store all of your basic POCOs (plain ol&#8217; class objects) for your data models. There’s really nothing fancy going on in here, just setup your classes.</p>
+
+<p>Note that the models defined here will be used throughout the entire solution, including the MVC web project.  Any specific ViewModels you want to use you should still store in the Models folder of the web project (and should be kept in the presentation layer, separate from the business logic).</p>
+
+<p>Be sure to also define a DbSet for each of your models in the main AppDbContext class in App.Data.</p>
+
+<p>Error Warning: In some cases, (many probably) you will have a navigation property in your model(s) that is used to define a 1-many relationship. These are typically great because you can loop through your model and find all related models simply by using this navigation property. However, when serializing your models to JSON later this typically will result in this awesome error:</p>
+
+<blockquote>
+<p>A circular reference was detected while serializing an object of type &#8230;</p>
+</blockquote>
+
+<p>If this is the case, be sure to include [JsonIgnore] above your virtual collections as well as include using Newtonsoft.Json in your model.cs file (Newtonsoft.Json can be included via NuGet).  I spent a good hour searching on how to fix this as well as a lot of trial and error and this simple solution seemed to do the trick!</p>
+
+<h4 id="step-2-setup-your-model-8217-s-configuration-including-relationships-foreign-keys-etc">Step 2: Setup your model&#8217;s configuration including relationships, foreign keys, etc</h4>
+
+<p>Any special configurations you need to make with regard to your models and how they behave (their relationships, foreign keys, etc) will need to be created in the App.Data/Configuration folder.  Be sure to add those to the App.Data -&gt; AppDbContext class in the OnModelCreating method. Adding each configuration method to the modelBuilder.Configurations list.</p>
+
+<h4 id="step-3-define-the-interfaces-for-any-of-your-model-8217-s-custom-repositories">Step 3: Define the Interfaces for any of your model&#8217;s custom Repositories</h4>
+
+<p>The App.Data project sets up a very nice base Repository that handles most CRUD operations including GetByID and GetAll. Anything else you specifically want to set up you will define in the IRepositories folder of the App.Data.Contracts project. You don&#8217;t have to create a custom repository for your models if you aren&#8217;t doing anything other than the basic CRUD that&#8217;s already taken care of.</p>
+
+<p>Make sure you include each of the new interfaces for your repositories in the App.Data.Contracts -&gt; IAppUow interface and in the actual App.Data -&gt; AppUow class.</p>
+
+<h4 id="step-4-create-the-actual-repositories-for-your-models">Step 4: Create the actual Repositories for your models</h4>
+
+<p>Matching the interfaces you created for your models repositories in step 3, actually define those methods now in App.Data -&gt; Repositories. Note that you don&#8217;t have to create a repository for each of your models..</p>
+
+<p>Be sure to include your new Repositories in the GetAppFactories method of App.Data -&gt; Helpers/RepositoryFactories.</p>
+
+<h4 id="step-5-start-working-on-the-actual-webapi">Step 5: Start working on the actual WebAPI</h4>
+
+<p>This will be the core of your development.  Using the WebAPIs defined in the Controllers folder of the App.Web project, define a controller for each of your data models (that will need to be accessible via the front end).  Each controller will contain the CRUD operations that the website will actually communicate with.  Each method in the controllers will use the AppUow object which will be injected automatically using Ninject (configured via the IocConfig in App_Start).</p>
+
+<p>Good or bad, the WebAPI is basically acting as our Service layer here.  Justifiably we could (should) pull that logic out into yet another project. However for the purposes of the SPA, this is probably not necessary.</p>
+
+<h4 id="step-6-a-few-things-about-the-front-end">Step 6: A few things about the front end</h4>
+
+<ul>
+<li>The web.config has webpages:Enabled set to true in the appSettings keys.  This is to allow us to have basic index.cshtml file in the root of the project (and have it not require a controller and all the bells and whistles).  The root index.cshtml file is the only “page” that our SPA will load.</li>
+<li>The Views folder also just contains basic HTML pages.  These are all loaded into the single page using basic razor RenderPage calls.  This is really just more for organization..</li>
+<li>The Scripts folder is broken into app and lib folders.  The App folder contains all of your custom code (views, models, templates, routers, controllers, whatever, whatever, etc).  The Lib folder contains our 3rd party libraries and other dependencies (Backbone.js, Underscore.js, Require.js, Moment.js, etc, etc, etc)</li>
+<li>The app is currently setup to use Require.js:
+
+<ul>
+<li>index.cshtml only loads jquery (from Google cdn) and require, with requires data-main attribute set to “main” (which will load main.js)</li>
+<li>main.js is the “bootstrapper” of our app, which sets up require and would typically load in our actual app (app/app.js?) and any dependencies.  In this case its just loading a test class (script).</li>
+<li>test.js is defined as a require.js module, and proves communication with our WebAPI using REST.  It also tests the dependency injection of require.js by referecing test_model as being required.</li>
+<li>test_model.js is just a generic model created using another module definition of require and only exists to test our require.js setup (see bullet above)</li>
+<li>At no point did I ever worry about making jquery a dependency or deal with any of that stuff.  I found it just easier to simply load jquery via Googles CDN and avoids a lot of minor headaches and config issues etc.</li>
+</ul></li>
+</ul>
+
+<p>I will continue to maintain the template, hopefully getting it more and more setup to use Backbone, and tweaking a few minor things with the multiple layers (maybe adding that Service layer I mentioned, etc.).</p>
+
+<p>Hope you find this post useful, and the template helps you out and saves you time working on your next project!</p>
+
+<p>Full credit given to <a href="http://www.johnpapa.net/building-single-page-apps-with-knockout-jquery-and-web-api-ndash-the-story-begins/" target="_blank">John Papa et al for the incredible work on the Code Camper project</a>!</p>
+
+      </article>
+
+      <ul class="pager blog-pager">
+        
+          <li class="previous">
+            <a href="http://kroltech.com/2013/03/01/require-js-knockback-js-a-developers-reaction-animated-gif-gallery/" data-toggle="tooltip" data-placement="top" title="Require.js, Knockback.js, A developer’s reaction (animated gif gallery)">&larr; Previous Post</a>
+          </li>
+        
+        
+          <li class="next">
+            <a href="http://kroltech.com/2013/03/08/raging-backbone-js-coding-and-blog-relaunch/" data-toggle="tooltip" data-placement="top" title="Raging Backbone.js coding and blog relaunch!">Next Post &rarr;</a>
+          </li>
+        
+      </ul>
+
+      
+        
+          <div class="disqus-comments">
+            <div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_shortname = 'jasonkrol';
+    var disqus_identifier = 'http:\/\/kroltech.com\/2013\/03\/03\/single-page-application-spa-project-template\/';
+    var disqus_title = 'Single Page Application (SPA) Project Template';
+    var disqus_url = 'http:\/\/kroltech.com\/2013\/03\/03\/single-page-application-spa-project-template\/';
+
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+          </div>
+        
+      
+
+    </div>
+  </div>
+</div>
+
+    <footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <ul class="list-inline text-center footer-links">
+          
+              <li>
+                <a href="mailto:jkat98@gmail.com" title="Email me">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-envelope fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="https://www.plus.google.com/&#43;JasonKrol" title="Google&#43;">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-google-plus fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="https://github.com/shorttompkins" title="GitHub">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="https://twitter.com/shorttompkins" title="Twitter">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="https://reddit.com/u/shorttompkins" title="Reddit">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-reddit-alien fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="https://linkedin.com/in/jasonkrol" title="LinkedIn">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-linkedin fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="https://stackoverflow.com/users/1623304/jkat98" title="StackOverflow">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-stack-overflow fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="https://www.youtube.com/user/jkat98" title="Youtube">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-youtube fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+          
+          <li>
+            <a href="http://kroltech.com/index.xml" title="RSS">
+              <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fa fa-rss fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          
+        </ul>
+        <p class="credits copyright text-muted">
+          Jason Krol
+          &nbsp;&bull;&nbsp;
+          2016
+
+          
+            &nbsp;&bull;&nbsp;
+            <a href="http://kroltech.com/">KrolTech</a>
+          
+        </p>
+        
+        <p class="credits theme-by text-muted">
+          <a href="http://gohugo.io">Hugo v0.20.7</a> powered &nbsp;&bull;&nbsp; Theme by <a href="http://deanattali.com/beautiful-jekyll/">Beautiful Jekyll</a> adapted to <a href="https://github.com/halogenica/beautifulhugo">Beautiful Hugo</a>
+          
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/katex.min.js" integrity="sha384-/y1Nn9+QQAipbNQWU65krzJralCnuOasHncUFXGkdwntGeSvQicrYkiUBwsgUqc1" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/contrib/auto-render.min.js" integrity="sha384-dq1/gEHSxPZQ7DdrM82ID4YVol9BYyU7GbWlIwnwyPzotpoc57wDw/guX8EaYGPx" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<script src="http://kroltech.com/js/main.js"></script>
+<script src="http://kroltech.com/js/highlight.min.js"></script>
+<script> hljs.initHighlightingOnLoad(); </script>
+<script> renderMathInElement(document.body); </script>
+
+
+
+
+
+  </body>
+</html>
+

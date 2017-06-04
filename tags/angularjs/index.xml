@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Angularjs on KrolTech</title>
+    <link>http://kroltech.com/tags/angularjs/</link>
+    <description>Recent content in Angularjs on KrolTech</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <managingEditor>jkat98@gmail.com (Jason Krol)</managingEditor>
+    <webMaster>jkat98@gmail.com (Jason Krol)</webMaster>
+    <lastBuildDate>Thu, 04 Jun 2015 13:19:58 +0000</lastBuildDate>
+    
+	<atom:link href="http://kroltech.com/tags/angularjs/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>AngularJS Directive: Two ways to skin a cat</title>
+      <link>http://kroltech.com/2015/06/04/angularjs-directive-two-ways-to-skin-a-cat/</link>
+      <pubDate>Thu, 04 Jun 2015 13:19:58 +0000</pubDate>
+      <author>jkat98@gmail.com (Jason Krol)</author>
+      <guid>http://kroltech.com/2015/06/04/angularjs-directive-two-ways-to-skin-a-cat/</guid>
+      <description>&lt;p&gt;Let&amp;#8217;s take a look at a recent directive I needed to create, and dissect the two completely different approaches I took to accomplish what I needed.&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Testing Angular directives using events</title>
+      <link>http://kroltech.com/2015/05/15/testing-angular-directives-using-events/</link>
+      <pubDate>Fri, 15 May 2015 12:40:00 +0000</pubDate>
+      <author>jkat98@gmail.com (Jason Krol)</author>
+      <guid>http://kroltech.com/2015/05/15/testing-angular-directives-using-events/</guid>
+      <description>&lt;p&gt;Testing directives can be somewhat painful at times. I specifically struggled with testing a keyDown event and passing specific keycodes.&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Mobile web “App” versus “app”, AngularJS, CSS Transforms, Electric Plum</title>
+      <link>http://kroltech.com/2013/04/19/mobile-web-app-versus-app-angularjs-css-transforms-electric-plum/</link>
+      <pubDate>Fri, 19 Apr 2013 13:45:16 +0000</pubDate>
+      <author>jkat98@gmail.com (Jason Krol)</author>
+      <guid>http://kroltech.com/2013/04/19/mobile-web-app-versus-app-angularjs-css-transforms-electric-plum/</guid>
+      <description>Great article on why there aren&amp;#8217;t more great “web apps” and the difference between an “App” and an “app”. Dan Whalin provides us an excellent introduction to AngularJS. The video is about 60 minutes, but covers a lot of ground and is a great introduction. After I&amp;#8217;ve been spending some time with Backbone, I&amp;#8217;ve been thinking more and more about maybe making the move onto Angular or Ember &amp;#8211; a lot of the Microsoft evangelists seem to be pushing Angular lately &amp;#8211; Pluralsight courses are coming very soon!</description>
+    </item>
+    
+  </channel>
+</rss>

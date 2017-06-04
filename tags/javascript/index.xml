@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Javascript on KrolTech</title>
+    <link>http://kroltech.com/tags/javascript/</link>
+    <description>Recent content in Javascript on KrolTech</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <managingEditor>jkat98@gmail.com (Jason Krol)</managingEditor>
+    <webMaster>jkat98@gmail.com (Jason Krol)</webMaster>
+    <lastBuildDate>Fri, 08 Feb 2013 18:59:22 +0000</lastBuildDate>
+    
+	<atom:link href="http://kroltech.com/tags/javascript/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Pre-cache your for loops</title>
+      <link>http://kroltech.com/2013/02/08/quick-tip-pre-cache-your-for-loops/</link>
+      <pubDate>Fri, 08 Feb 2013 18:59:22 +0000</pubDate>
+      <author>jkat98@gmail.com (Jason Krol)</author>
+      <guid>http://kroltech.com/2013/02/08/quick-tip-pre-cache-your-for-loops/</guid>
+      <description>While reading through the JavaScript Patterns book, I saw an item that totally stuck out as a crystal clear &amp;#8220;duuhhh!!&amp;#8221; moment. Why have I never seen/heard of that before and certainly why wasn&amp;#8217;t I doing it regularly (and why hadn&amp;#8217;t I thought of it to be honest).
+Instead of doing this:
+[sourcecode lang=&amp;#8221;javascript&amp;#8221;]
+for(var i=0; i &amp;lt; $(&amp;#8216;someselector li&amp;#8217;).length; i++){
+//loop through each LI in a UL, or any collection</description>
+    </item>
+    
+    <item>
+      <title>JavaScript books, recent projects, Line rider!, Rock climbing</title>
+      <link>http://kroltech.com/2013/02/08/javascript-books-recent-projects-line-rider-rock-climbing/</link>
+      <pubDate>Fri, 08 Feb 2013 18:39:04 +0000</pubDate>
+      <author>jkat98@gmail.com (Jason Krol)</author>
+      <guid>http://kroltech.com/2013/02/08/javascript-books-recent-projects-line-rider-rock-climbing/</guid>
+      <description>I went on a bit of a shopping spree on Amazon. Besides a few Kindle books (sci-fi, etc) I grabbed a few new JavaScript books as well:
+JavaScript Patterns &amp;#8211; Stoyan Stefanov
+Secrets of the JavaScript Ninja &amp;#8211; John Resig, Bear Bibeault
+If you are looking to utterly destroy an entire afternoon (or more), definitely check out the HTML5 version of an oldie but goodie, Free Rider HD!! (also know as Canvas Rider)</description>
+    </item>
+    
+    <item>
+      <title>Use “debugger;” in your JavaScript to trigger the browsers debug mode.</title>
+      <link>http://kroltech.com/2013/02/01/quick-tip-use-debugger-in-your-javascript-to-trigger-the-browsers-debug-mode/</link>
+      <pubDate>Fri, 01 Feb 2013 19:56:27 +0000</pubDate>
+      <author>jkat98@gmail.com (Jason Krol)</author>
+      <guid>http://kroltech.com/2013/02/01/quick-tip-use-debugger-in-your-javascript-to-trigger-the-browsers-debug-mode/</guid>
+      <description>While watching the excellent course on Single Page Apps with HTML5, Web API, Knockout and jQuery by John Papa over at PluralSight, he dropped a nice little nugget of information that I was totally unaware of.
+You can add debugger; as a line by itself in your JavaScript and when your code gets executed by the browser, the browsers built in debugger will stop on that line. Think of it as a way to throw breakpoints right into your code.</description>
+    </item>
+    
+    <item>
+      <title>Wrap your custom JavaScript code in Closure functions</title>
+      <link>http://kroltech.com/2012/12/12/quick-tip-wrap-your-custom-javascript-code-in-closure-functions/</link>
+      <pubDate>Wed, 12 Dec 2012 02:02:17 +0000</pubDate>
+      <author>jkat98@gmail.com (Jason Krol)</author>
+      <guid>http://kroltech.com/2012/12/12/quick-tip-wrap-your-custom-javascript-code-in-closure-functions/</guid>
+      <description>I finally figured out how to use closures properly in JavaScript. This came as a result of my needing to make sure globals I was defining in different script files weren&amp;#8217;t conflicting with same named globals in other files. My solution was rather simple, just wrap existing chunks of code in their own function wrapper:
+Original Code:
+Note that the variables globalVar and anotherGlobal are truly GLOBAL and any other javascript file(s) with the same variables declared will cause major issues for our code (or vise versa).</description>
+    </item>
+    
+    <item>
+      <title>JavaScript == is != to ===</title>
+      <link>http://kroltech.com/2012/09/07/quick-tip-javascript-is-to/</link>
+      <pubDate>Fri, 07 Sep 2012 23:44:26 +0000</pubDate>
+      <author>jkat98@gmail.com (Jason Krol)</author>
+      <guid>http://kroltech.com/2012/09/07/quick-tip-javascript-is-to/</guid>
+      <description>Watching JavaScript fundamentals (Pluralsight) as a refresh and had my world rocked – apparently we should be using === and !== all this time and not == and != that’s just nutty!!
+Basically “” == 0 (true), “” === 0 (false), 1 == “1” (true) 1 === “1” (false).</description>
+    </item>
+    
+    <item>
+      <title>MVC postback bug, Underscore.js, ===, Asana, Launched FillThePart.com!!, Visual Studio 2012</title>
+      <link>http://kroltech.com/2012/09/07/mvc-postback-bug-underscore-js-asana-launched-fillthepart-come-visual-studio-2012/</link>
+      <pubDate>Fri, 07 Sep 2012 22:20:50 +0000</pubDate>
+      <author>jkat98@gmail.com (Jason Krol)</author>
+      <guid>http://kroltech.com/2012/09/07/mvc-postback-bug-underscore-js-asana-launched-fillthepart-come-visual-studio-2012/</guid>
+      <description>After being stumped for a while with a particularly interesting issue in MVC &amp;#8211; I found the solution on Rick Strahl’s blog. Specifically I was trying to change the values of a view model from a controller action, after PostBack &amp;#8211; yet my changes seemed to be ignored or simply refuse to stick. Turns out the HtmlHelpers refer to the actual POST data on page load after postback (seemingly ignoring the “model” even though you explicitly refer to the model when using HtmlHelpers).</description>
+    </item>
+    
+    <item>
+      <title>Use ?? to set value if something is NOT null</title>
+      <link>http://kroltech.com/2012/08/24/quick-tip-use-to-set-value-if-something-is-not-null/</link>
+      <pubDate>Fri, 24 Aug 2012 02:47:09 +0000</pubDate>
+      <author>jkat98@gmail.com (Jason Krol)</author>
+      <guid>http://kroltech.com/2012/08/24/quick-tip-use-to-set-value-if-something-is-not-null/</guid>
+      <description>Learned to use the ?? operator when checking for null. Use when you want something to = something else only when something else is not null:
+var myvar = something_else ?? “default_value”;
+myvar will be set to something_else only if something_else is not null, otherwise it will be &amp;#8220;default_value&amp;#8221; instead.</description>
+    </item>
+    
+  </channel>
+</rss>

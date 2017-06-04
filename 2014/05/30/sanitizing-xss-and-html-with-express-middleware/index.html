@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+  <title>Sanitizing XSS and HTML with Express middleware</title>
+  <meta property="og:title" content="Sanitizing XSS and HTML with Express middleware" />
+  <meta name="twitter:title" content="Sanitizing XSS and HTML with Express middleware" />
+  <meta name="description" content="Lets take a look at a few different options for handling sanitizing user input fields in both node.js as well as the browser.">
+  <meta property="og:description" content="Lets take a look at a few different options for handling sanitizing user input fields in both node.js as well as the browser.">
+  <meta name="twitter:description" content="Lets take a look at a few different options for handling sanitizing user input fields in both node.js as well as the browser.">
+  <meta name="author" content="Jason Krol"/>
+  <link href='http://kroltech.com/img/favicon.ico' rel='icon' type='image/x-icon'/>
+  <meta property="og:image" content="http://kroltech.com/img/avatar-icon.png" />
+  <meta name="twitter:image" content="http://kroltech.com/img/avatar-icon.png" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:site" content="@shorttompkins" />
+  <meta name="twitter:creator" content="@shorttompkins" />
+  <meta property="og:url" content="http://kroltech.com/2014/05/30/sanitizing-xss-and-html-with-express-middleware/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="KrolTech" />
+
+  <meta name="generator" content="Hugo 0.20.7" />
+  <link rel="canonical" href="http://kroltech.com/2014/05/30/sanitizing-xss-and-html-with-express-middleware/" />
+  <link rel="alternate" href="http://kroltech.com/index.xml" type="application/rss+xml" title="KrolTech">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/katex.min.css" integrity="sha384-wITovz90syo1dJWVh32uuETPVEtGigN07tkttEqPv+uR2SE/mbQcG7ATL28aI9H0" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <link rel="stylesheet" href="http://kroltech.com/css/main.css" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" />
+  <link rel="stylesheet" href="http://kroltech.com/css/pygment_highlights.css" />
+  <link rel="stylesheet" href="http://kroltech.com/css/highlight.min.css" />
+
+<script>
+window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+ga('create', 'UA-29480326-4', 'auto');
+ga('send', 'pageview');
+</script>
+<script async src='//www.google-analytics.com/analytics.js'></script>
+
+</head>
+
+  <body>
+    <nav class="navbar navbar-default navbar-fixed-top navbar-custom">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="http://kroltech.com/">KrolTech</a>
+    </div>
+
+    <div class="collapse navbar-collapse" id="main-navbar">
+      <ul class="nav navbar-nav navbar-right">
+        
+          
+            <li>
+              <a title="Blog" href="/">Blog</a>
+            </li>
+          
+        
+          
+            <li>
+              <a title="About" href="/page/about/">About</a>
+            </li>
+          
+        
+
+        
+
+        
+      </ul>
+    </div>
+
+    <div class="avatar-container">
+      <div class="avatar-img-border">
+        
+          <a title="KrolTech" href="http://kroltech.com/">
+            <img class="avatar-img" src="http://kroltech.com/img/avatar-icon.png" alt="KrolTech" />
+          </a>
+        
+      </div>
+    </div>
+
+  </div>
+</nav>
+
+
+
+
+    
+  
+  
+  
+
+
+
+
+  
+
+  <header class="header-section ">
+    
+    <div class="intro-header no-img">
+      
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+            <div class="post-heading">
+              <h1>Sanitizing XSS and HTML with Express middleware</h1>
+                
+                
+                  <span class="post-meta">
+  Posted on May 30, 2014
+  
+</span>
+
+
+                
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+
+    
+<div class="container">
+  <div class="row">
+    <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+      <article role="main" class="blog-post">
+        <p>Lets take a look at a few different options for handling sanitizing user input fields in both node.js as well as the browser.</p>
+
+<p>The easiest solution was to start with the <a href="https://www.npmjs.org/package/sanitize-html" target="_blank">sanitize-html</a> npm module and use that, but I wanted it to be middleware using Express. Using middleware, I was able to sanitize every single value that was submitted to the server. In this particular use, node was acting as a middle layer between the browser and a REST API so this use case was perfect.</p>
+
+<p>Here is the code for the actual module:</p>
+
+<p>[sourcecode lang=&#8221;javascript&#8221;]</p>
+
+<p>/* jshint node:true, unused: vars, camelcase: false */</p>
+
+<p>&#8216;use strict&#8217;;</p>
+
+<p>var sanitizer = require(&#8216;sanitize-html&#8217;),</p>
+
+<p>_ = require(&#8216;underscore&#8217;);</p>
+
+<p>module.exports = function(config, errors) {</p>
+
+<p>return function(req, res, next) {</p>
+
+<p>if (req.body) {</p>
+
+<p>_.each(req.body, function(value, key) {</p>
+
+<p>if(!parseInt(value,10) &amp;&amp; value !== null) {</p>
+
+<p>if(typeof value === &#8216;string&#8217;) {</p>
+
+<p>value = value.replace(/&gt;/gi, &#8216;&gt;&#8217;);</p>
+
+<p>value = value.replace(/&lt;/gi, &#8216;&lt;&#8216;);</p>
+
+<p>value = value.replace(/(&copy;|&quot;|&amp;)/gi, &#8221;);</p>
+
+<p>}</p>
+
+<p>req.body[key] = sanitizer(value, {</p>
+
+<p>allowedTags: []</p>
+
+<p>});</p>
+
+<p>}</p>
+
+<p>});</p>
+
+<p>}</p>
+
+<p>return next();</p>
+
+<p>};</p>
+
+<p>};</p>
+
+<p>[/sourcecode]</p>
+
+<p>A few odd things I noticed when using the sanitize-html module:</p>
+
+<ul>
+<li>It seemed to change nulls in a way that I couldn&#8217;t quite figure out. I just know my API started crying once I implemented it with null values.</li>
+<li>Number values seemed to be converted to strings, which again my API was very unhappy about.</li>
+<li>Id manually convert HTML entities for into the actual characters before sanitizing so that they&#8217;d be caught by the sanitizer.</li>
+<li>In my particular use, I&#8217;m being extremely strict in that Im not allowing any HTML tags at all. The allowedTags array is empty, but we could have added a few there to allow certain things like bold or italics etc.</li>
+</ul>
+
+<p>Here&#8217;s the tests for the module so you can get a glimpse of what kind of XSS it will scrub out:</p>
+
+<p>[sourcecode lang=&#8221;javascript&#8221;]</p>
+
+<p>/* global describe, expect, it, sinon, beforeEach */</p>
+
+<p>/* jshint node: true, expr: true, camelcase: false, unused: vars */</p>
+
+<p>var middleware;</p>
+
+<p>describe(&#8216;Middleware.sanitizer&#8217;, function() {</p>
+
+<p>&#8216;use strict&#8217;;</p>
+
+<p>var req, next;</p>
+
+<p>beforeEach(function() {</p>
+
+<p>middleware = require(&#8216;../../middleware/sanitizer&#8217;);</p>
+
+<p>req = {</p>
+
+<p>body: {</p>
+
+<p>test1: &#8216;This is clean&#8217;,</p>
+
+<p>test2: &#8216;This <script>var isNot=true;</script> isnt!&#8217;,</p>
+
+<p>test3: &#8216;Im <b>technically</b> allowed.&#8217;,</p>
+
+<p>test4: null,</p>
+
+<p>test5: 1,</p>
+
+<p>test6: &#8216;This <shouldnt> work&#8217;</p>
+
+<p>}</p>
+
+<p>};</p>
+
+<p>next = sinon.spy();</p>
+
+<p>});</p>
+
+<p>it(&#8216;should be defined&#8217;, function() {</p>
+
+<p>expect(middleware).to.exist;</p>
+
+<p>});</p>
+
+<p>it(&#8216;should be a function&#8217;, function() {</p>
+
+<p>expect(middleware).to.be.a(&#8216;function&#8217;);</p>
+
+<p>});</p>
+
+<p>it(&#8216;should sanitize XSS from body&#8217;, function() {</p>
+
+<p>middleware()(req, {}, next);</p>
+
+<p>expect(req.body.test1).to.equal(&#8216;This is clean&#8217;);</p>
+
+<p>expect(req.body.test2).to.equal(&#8216;This isnt!&#8217;);</p>
+
+<p>expect(req.body.test3).to.equal(&#8216;Im technically allowed.&#8217;);</p>
+
+<p>expect(req.body.test4).to.equal(null);</p>
+
+<p>expect(req.body.test5).to.equal(1);</p>
+
+<p>expect(req.body.test6).to.equal(&#8216;This work&#8217;);</p>
+
+<p>});</p>
+
+<p>it(&#8216;should call next callback&#8217;, function() {</p>
+
+<p>middleware()(req, {}, next);</p>
+
+<p>expect(next).calledOnce;</p>
+
+<p>});</p>
+
+<p>});</p>
+
+<p>[/sourcecode]</p>
+
+<p>Finally, to implement it into our Express app we just added it to the configuration section:</p>
+
+<p>[sourcecode lang=&#8221;javascript&#8221;]</p>
+
+<p>// … existing code …</p>
+
+<p>app.use(middleware.sanitizer());</p>
+
+<p>app.use(app.router);</p>
+
+<p>app.use(middleware.errorHandler({</p>
+
+<p>dumpExceptions: true,</p>
+
+<p>showStack: true</p>
+
+<p>}));</p>
+
+<p>[/sourcecode]</p>
+
+<p>An interesting note is that we ensure that we are using more or less the same sanitizing logic on the front-end as well. If we weren&#8217;t, we could get stuck in a situation where the user would submit XSS into a required field, and pass the form field validation for it being required, but when it was submitted the field would be scrubbed and effectively submitted as a blank to the API. If your API handles that validation thats fine, or you have model validation other than the sanitizer thats also fine &#8211; but it saves the user a round trip of getting their input sanitized and then returned back with some kind of error message. By implementing a sanitizer on the front-end you can give the user instant feedback that HTML basically isn&#8217;t allowed. Heres a quick input field scrubber for the front-end:</p>
+
+<p>[sourcecode lang=&#8221;javascript&#8221;]</p>
+
+<p>var scrubInput = function(input) {</p>
+
+<p>var curValue = $(input).val();</p>
+
+<p>var newValue = curValue</p>
+
+<p>.replace(/&gt;/gi, &#8216;&gt;&#8217;)</p>
+
+<p>.replace(/&lt;/gi, &#8216;&lt;&#8216;)</p>
+
+<p>.replace(/&lt;(.|n)*?&gt;/gim, &#8221;)</p>
+
+<p>.replace(/(&gt;|&lt;|&copy;|&quot;|&amp;)/gi, &#8221;);</p>
+
+<p>if(curValue !== newValue) {</p>
+
+<p>$(input).val(newValue);</p>
+
+<p>}</p>
+
+<p>}</p>
+
+<p>[/sourcecode]</p>
+
+<p>Coupled with Backbone views, you can do something like:</p>
+
+<p>[sourcecode lang=&#8221;javascript&#8221;]</p>
+
+<p>events: {</p>
+
+<p>&#8216;keyup input,textarea&#8217; : &#8216;scrubInputs&#8217;,</p>
+
+<p>&#8216;change input,textarea&#8217; : &#8216;scrubInputs&#8217;,</p>
+
+<p>&#8216;blur input,textarea&#8217; : &#8216;scrubInputs&#8217;</p>
+
+<p>},</p>
+
+<p>scrubInputs: function(event) {</p>
+
+<p>app.utility.scrubInput(event.target);</p>
+
+<p>}</p>
+
+<p>[/sourcecode]</p>
+
+<p>This is what it looks like in action:</p>
+
+<p><img src="http://104.236.7.244/wp-content/uploads/2014/05/input_scrubbing.gif" alt="input_scrubbing" width="630" height="94" class="aligncenter size-full wp-image-1246" /></p>
+
+<p>And of course, tests for the scrubber:</p>
+
+<p>[sourcecode lang=&#8221;javascript&#8221;]</p>
+
+<p>describe(&#8216;scrubInput&#8217;, function() {</p>
+
+<p>it(&#8216;should be defined&#8217;, function() {</p>
+
+<p>expect(utility.scrubInput).toBeDefined();</p>
+
+<p>});</p>
+
+<p>it(&#8216;should scrub DOM element value for HTML entities&#8217;, function() {</p>
+
+<p>var input = document.createElement(&#8216;INPUT&#8217;);</p>
+
+<p>input.type = &#8216;text&#8217;;</p>
+
+<p>var values = [</p>
+
+<p>&#8216;This is OK&#8217;,</p>
+
+<p>&#8216;This is <not>OK</not>&#8217;,</p>
+
+<p>&#8216;This is <not>OK</not>&#8217;,</p>
+
+<p>&#8216;This is <not>OK&#8217;,</p>
+
+<p>&#8216;This is OK&copy;&#8217;,</p>
+
+<p>&#8216;This is <note>OK&quot;&#8217;</p>
+
+<p>];</p>
+
+<p>for(var i = 0; i &lt; values.length; i+=1) {</p>
+
+<p>input.value = values[i];</p>
+
+<p>utility.scrubInput(input);</p>
+
+<p>expect(input.value).toEqual(&#8216;This is OK&#8217;);</p>
+
+<p>}</p>
+
+<p>});</p>
+
+<p>});</p>
+
+<p>[/sourcecode]</p>
+
+<p>Using a method like the above, albeit a little bit scorched earth, should get you pretty far in preventing users from submitting anything that even remotely looks like HTML or XSS.</p>
+      </article>
+
+      <ul class="pager blog-pager">
+        
+          <li class="previous">
+            <a href="http://kroltech.com/2014/05/15/quick-tip-customize-your-asana-theme-background-image/" data-toggle="tooltip" data-placement="top" title="Quick Tip: Customize your Asana Theme Background image">&larr; Previous Post</a>
+          </li>
+        
+        
+          <li class="next">
+            <a href="http://kroltech.com/2014/06/06/automate-your-digital-life-with-ifttt-com/" data-toggle="tooltip" data-placement="top" title="Automate your (digital) life with ifttt.com">Next Post &rarr;</a>
+          </li>
+        
+      </ul>
+
+      
+        
+          <div class="disqus-comments">
+            <div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_shortname = 'jasonkrol';
+    var disqus_identifier = 'http:\/\/kroltech.com\/2014\/05\/30\/sanitizing-xss-and-html-with-express-middleware\/';
+    var disqus_title = 'Sanitizing XSS and HTML with Express middleware';
+    var disqus_url = 'http:\/\/kroltech.com\/2014\/05\/30\/sanitizing-xss-and-html-with-express-middleware\/';
+
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+          </div>
+        
+      
+
+    </div>
+  </div>
+</div>
+
+    <footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <ul class="list-inline text-center footer-links">
+          
+              <li>
+                <a href="mailto:jkat98@gmail.com" title="Email me">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-envelope fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="https://www.plus.google.com/&#43;JasonKrol" title="Google&#43;">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-google-plus fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="https://github.com/shorttompkins" title="GitHub">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="https://twitter.com/shorttompkins" title="Twitter">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="https://reddit.com/u/shorttompkins" title="Reddit">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-reddit-alien fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="https://linkedin.com/in/jasonkrol" title="LinkedIn">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-linkedin fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="https://stackoverflow.com/users/1623304/jkat98" title="StackOverflow">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-stack-overflow fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="https://www.youtube.com/user/jkat98" title="Youtube">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-youtube fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+          
+          <li>
+            <a href="http://kroltech.com/index.xml" title="RSS">
+              <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fa fa-rss fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          
+        </ul>
+        <p class="credits copyright text-muted">
+          Jason Krol
+          &nbsp;&bull;&nbsp;
+          2016
+
+          
+            &nbsp;&bull;&nbsp;
+            <a href="http://kroltech.com/">KrolTech</a>
+          
+        </p>
+        
+        <p class="credits theme-by text-muted">
+          <a href="http://gohugo.io">Hugo v0.20.7</a> powered &nbsp;&bull;&nbsp; Theme by <a href="http://deanattali.com/beautiful-jekyll/">Beautiful Jekyll</a> adapted to <a href="https://github.com/halogenica/beautifulhugo">Beautiful Hugo</a>
+          
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/katex.min.js" integrity="sha384-/y1Nn9+QQAipbNQWU65krzJralCnuOasHncUFXGkdwntGeSvQicrYkiUBwsgUqc1" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/contrib/auto-render.min.js" integrity="sha384-dq1/gEHSxPZQ7DdrM82ID4YVol9BYyU7GbWlIwnwyPzotpoc57wDw/guX8EaYGPx" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<script src="http://kroltech.com/js/main.js"></script>
+<script src="http://kroltech.com/js/highlight.min.js"></script>
+<script> hljs.initHighlightingOnLoad(); </script>
+<script> renderMathInElement(document.body); </script>
+
+
+
+
+
+  </body>
+</html>
+

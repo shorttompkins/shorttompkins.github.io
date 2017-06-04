@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Shiftpanes on KrolTech</title>
+    <link>http://kroltech.com/tags/shiftpanes/</link>
+    <description>Recent content in Shiftpanes on KrolTech</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <managingEditor>jkat98@gmail.com (Jason Krol)</managingEditor>
+    <webMaster>jkat98@gmail.com (Jason Krol)</webMaster>
+    <lastBuildDate>Wed, 12 Dec 2012 20:39:54 +0000</lastBuildDate>
+    
+	<atom:link href="http://kroltech.com/tags/shiftpanes/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>ShiftPanes.js – Shiftable content panes</title>
+      <link>http://kroltech.com/2012/12/12/js-library-shiftpanes-js/</link>
+      <pubDate>Wed, 12 Dec 2012 20:39:54 +0000</pubDate>
+      <author>jkat98@gmail.com (Jason Krol)</author>
+      <guid>http://kroltech.com/2012/12/12/js-library-shiftpanes-js/</guid>
+      <description>My second JavaScript library in as many days! This new one is called ShiftPanes (like my original names huh?!). Basically, it allows you to declare a container that will hold &amp;#8220;pageable&amp;#8221; blocks of content within it. It is, again, pretty basic and no frills.
+Just declare a container with any class you want, and inside declare multiple containers each with the same (different from the container) class that will act as “panes” (or pages).</description>
+    </item>
+    
+  </channel>
+</rss>

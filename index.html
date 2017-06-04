@@ -1,30 +1,543 @@
-<html doctype="html5">
-<head>
-	<title>ShortTompkins</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0" />
-	<link rel="stylesheet" type="text/css" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" />
-  <style type="text/css">
-    body { font-family: Arial; font-size: 400%; }
-    a { text-decoration: none; color: #000000; }
-  </style>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+  <title>KrolTech</title>
+  <meta property="og:title" content="KrolTech" />
+  <meta name="twitter:title" content="KrolTech" />
+  <meta name="author" content="Jason Krol"/>
+  <link href='http://kroltech.com/img/favicon.ico' rel='icon' type='image/x-icon'/>
+  <meta property="og:image" content="http://kroltech.com/img/avatar-icon.png" />
+  <meta name="twitter:image" content="http://kroltech.com/img/avatar-icon.png" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:site" content="@shorttompkins" />
+  <meta name="twitter:creator" content="@shorttompkins" />
+  <meta property="og:url" content="http://kroltech.com/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="KrolTech" />
+
+  <meta name="generator" content="Hugo 0.20.7" />
+  <link rel="canonical" href="http://kroltech.com/" />
+  <link rel="alternate" href="http://kroltech.com/index.xml" type="application/rss+xml" title="KrolTech">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/katex.min.css" integrity="sha384-wITovz90syo1dJWVh32uuETPVEtGigN07tkttEqPv+uR2SE/mbQcG7ATL28aI9H0" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <link rel="stylesheet" href="http://kroltech.com/css/main.css" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" />
+  <link rel="stylesheet" href="http://kroltech.com/css/pygment_highlights.css" />
+  <link rel="stylesheet" href="http://kroltech.com/css/highlight.min.css" />
+
+<script>
+window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+ga('create', 'UA-29480326-4', 'auto');
+ga('send', 'pageview');
+</script>
+<script async src='//www.google-analytics.com/analytics.js'></script>
+
 </head>
-<body style="font-family: Arial;">
 
-<div style="margin: 50px;">
-<!--   <img src="//www.gravatar.com/avatar/751e957d48e31841ff15d8fa0f1b0acf?s=200" style="float: right; border-radius: 100px; width: 200px;" /> -->
-	<a href="https://twitter.com/shorttompkins"><i class="fa fa-twitter-square"></i> @ShortTompkins</a><br/>
-	<a href="https://github.com/shorttompkins"><i class="fa fa-github-square"></i> ShortTompkins</a><br/>
-  <a href="http://kroltech.com"><i class="fa fa-rss-square"></i> KrolTech.com</a><br/>
-  <a href="https://www.linkedin.com/in/jasonkrol"><i class="fa fa-linkedin-square"></i> /in/JasonKrol</a><br/>
-	<a href="https://plus.google.com/+JasonKrol/"><i class="fa fa-google-plus-square"></i> +JasonKrol</a><br/>
-  <a href="http://www.youtube.com/c/JasonKrol"><i class="fa fa-youtube-square"></i> /c/JasonKrol</a><br/>
-  <a href="mailto:jkat98[at]gmail.com"><i class="fa fa-envelope-square"></i> jkat98[at]gmail.com</a><br/>
+  <body>
+    <nav class="navbar navbar-default navbar-fixed-top navbar-custom">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="http://kroltech.com/">KrolTech</a>
+    </div>
 
-  <br/>
+    <div class="collapse navbar-collapse" id="main-navbar">
+      <ul class="nav navbar-nav navbar-right">
+        
+          
+            <li>
+              <a title="Blog" href="/">Blog</a>
+            </li>
+          
+        
+          
+            <li>
+              <a title="About" href="/page/about/">About</a>
+            </li>
+          
+        
 
-  <a href="https://paywhatevs.com"><img src="img/pw_logo.png" style="border-radius: 75px; width: 150px;" /></a>
+        
 
-</div>
+        
+      </ul>
+    </div>
 
-</body>
+    <div class="avatar-container">
+      <div class="avatar-img-border">
+        
+          <a title="KrolTech" href="http://kroltech.com/">
+            <img class="avatar-img" src="http://kroltech.com/img/avatar-icon.png" alt="KrolTech" />
+          </a>
+        
+      </div>
+    </div>
+
+  </div>
+</nav>
+
+
+
+
+    
+  
+  
+  
+
+
+
+
+  
+
+  <header class="header-section ">
+    
+    <div class="intro-header no-img">
+      
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+            <div class="page-heading">
+              <h1>KrolTech</h1>
+                
+                  
+                    <hr class="small">
+                    <span class="page-subheading">Hello world!</span>
+                  
+                
+                
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+
+    
+  <div role="main" class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        
+
+        <div class="posts-list">
+          
+          
+            <article class="post-preview">
+              <a href="http://kroltech.com/2016/12/08/how-im-learning-elixir-phoenix/">
+                <h2 class="post-title">How I’m Learning: Elixir &amp; Phoenix</h2>
+                
+              </a>
+
+              <span class="post-meta">
+  Posted on December 8, 2016
+  
+</span>
+
+
+              <div class="post-entry">
+                
+                  <p>Recently I&#8217;ve been spending a lot of my free time absorbing as much as I can about an exciting Functional Programming language called Elixir.  For those of you that don&#8217;t know, Elixir is somewhat of a spiritual successor to Ruby, and therefore Phoenix (the web framework for Elixir) could be considered it&#8217;s Rails.  Let&#8217;s take a look at my learning path and what you can do if you&#8217;re interested in becoming a proficient Elixir &amp; Phoenix developer!</p>
+                  <a href="http://kroltech.com/2016/12/08/how-im-learning-elixir-phoenix/" class="post-read-more">[Read More]</a>
+                
+              </div>
+
+              
+            </article>
+          
+            <article class="post-preview">
+              <a href="http://kroltech.com/2016/10/27/getting-started-with-reactflux-nodemongodb-open-source/">
+                <h2 class="post-title">Getting started with React/Flux Node/MongoDB – Open Source</h2>
+                
+              </a>
+
+              <span class="post-meta">
+  Posted on October 27, 2016
+  
+</span>
+
+
+              <div class="post-entry">
+                
+                  <p>Almost a year ago I <a href="https://kroltech.com/2015/10/15/getting-started-with-react-and-flux/">started an ambitious project</a> to create a website from scratch using React and Flux (Redux) as well as Node.js and MongoDB.  I was also writing a companion book parallel to writing the actual code for the project and made some really good progress.  Since I basically stopped completely and just let the book sit and linger, I decided that I should at least open source the book so you can check it out and hopefully learn from it.</p>
+
+<p></p>
+                  <a href="http://kroltech.com/2016/10/27/getting-started-with-reactflux-nodemongodb-open-source/" class="post-read-more">[Read More]</a>
+                
+              </div>
+
+              
+            </article>
+          
+            <article class="post-preview">
+              <a href="http://kroltech.com/2015/12/23/kangaroo-pro-standing-desk-review/">
+                <h2 class="post-title">Kangaroo Pro Standing Desk Review</h2>
+                
+              </a>
+
+              <span class="post-meta">
+  Posted on December 23, 2015
+  
+</span>
+
+
+              <div class="post-entry">
+                
+                  <p>Being a full time remote worker for most of the past year, I realized that I had to get off my butt more so I took the plunge and started standing!</p>
+
+<p></p>
+                  <a href="http://kroltech.com/2015/12/23/kangaroo-pro-standing-desk-review/" class="post-read-more">[Read More]</a>
+                
+              </div>
+
+              
+            </article>
+          
+            <article class="post-preview">
+              <a href="http://kroltech.com/2015/11/19/free-react-jsflux-course-on-udemy-com/">
+                <h2 class="post-title">Free React.js/Flux course on Udemy.com!</h2>
+                
+              </a>
+
+              <span class="post-meta">
+  Posted on November 19, 2015
+  
+</span>
+
+
+              <div class="post-entry">
+                
+                  <p>The fine folks at Udemy.com have provided me with a coupon code for a free React.js/Flux course!</p>
+
+<p></p>
+                  <a href="http://kroltech.com/2015/11/19/free-react-jsflux-course-on-udemy-com/" class="post-read-more">[Read More]</a>
+                
+              </div>
+
+              
+                <span class="post-meta">
+                
+                  #<a href="/tags/react.js">react.js</a>&nbsp;
+                
+                </span>
+              
+            </article>
+          
+            <article class="post-preview">
+              <a href="http://kroltech.com/2015/11/18/2nd-ed-of-web-development-with-mongodb-and-nodejs/">
+                <h2 class="post-title">2nd Ed. of Web Development with MongoDB and NodeJS</h2>
+                
+              </a>
+
+              <span class="post-meta">
+  Posted on November 18, 2015
+  
+</span>
+
+
+              <div class="post-entry">
+                
+                  <p>Excited that the 2nd edition of my book has just been released!</p>
+
+<p></p>
+                  <a href="http://kroltech.com/2015/11/18/2nd-ed-of-web-development-with-mongodb-and-nodejs/" class="post-read-more">[Read More]</a>
+                
+              </div>
+
+              
+                <span class="post-meta">
+                
+                  #<a href="/tags/mongodb">mongodb</a>&nbsp;
+                
+                  #<a href="/tags/node.js">node.js</a>&nbsp;
+                
+                </span>
+              
+            </article>
+          
+            <article class="post-preview">
+              <a href="http://kroltech.com/2015/10/16/stateless-functional-components-new-in-react-0-14/">
+                <h2 class="post-title">Stateless Functional Components new in React 0.14</h2>
+                
+              </a>
+
+              <span class="post-meta">
+  Posted on October 16, 2015
+  
+</span>
+
+
+              <div class="post-entry">
+                
+                  <p>React version 0.14 was recently released and introduced some breaking changes as well as a few new features worth pointing out.</p>
+
+<p></p>
+                  <a href="http://kroltech.com/2015/10/16/stateless-functional-components-new-in-react-0-14/" class="post-read-more">[Read More]</a>
+                
+              </div>
+
+              
+                <span class="post-meta">
+                
+                  #<a href="/tags/react">react</a>&nbsp;
+                
+                </span>
+              
+            </article>
+          
+            <article class="post-preview">
+              <a href="http://kroltech.com/2015/10/15/getting-started-with-react-and-flux/">
+                <h2 class="post-title">Getting Started with React and Flux</h2>
+                
+              </a>
+
+              <span class="post-meta">
+  Posted on October 15, 2015
+  
+</span>
+
+
+              <div class="post-entry">
+                
+                  <p>Big surprise, I&#8217;m jumping on the React/Flux bandwagon!</p>
+
+<p></p>
+                  <a href="http://kroltech.com/2015/10/15/getting-started-with-react-and-flux/" class="post-read-more">[Read More]</a>
+                
+              </div>
+
+              
+                <span class="post-meta">
+                
+                  #<a href="/tags/flux">flux</a>&nbsp;
+                
+                  #<a href="/tags/react.js">react.js</a>&nbsp;
+                
+                </span>
+              
+            </article>
+          
+            <article class="post-preview">
+              <a href="http://kroltech.com/2015/10/15/launched-my-first-playstation-4-video-streaming-app/">
+                <h2 class="post-title">Launched my first Playstation 4 Video Streaming App!</h2>
+                
+              </a>
+
+              <span class="post-meta">
+  Posted on October 15, 2015
+  
+</span>
+
+
+              <div class="post-entry">
+                
+                  <p>Its been a while since I last posted, as Ive been hard at work putting the final touches on the Playstation 4 app that I created for DramaFever!</p>
+
+<p></p>
+                  <a href="http://kroltech.com/2015/10/15/launched-my-first-playstation-4-video-streaming-app/" class="post-read-more">[Read More]</a>
+                
+              </div>
+
+              
+            </article>
+          
+            <article class="post-preview">
+              <a href="http://kroltech.com/2015/06/04/angularjs-directive-two-ways-to-skin-a-cat/">
+                <h2 class="post-title">AngularJS Directive: Two ways to skin a cat</h2>
+                
+              </a>
+
+              <span class="post-meta">
+  Posted on June 4, 2015
+  
+</span>
+
+
+              <div class="post-entry">
+                
+                  <p>Let&#8217;s take a look at a recent directive I needed to create, and dissect the two completely different approaches I took to accomplish what I needed.</p>
+
+<p></p>
+                  <a href="http://kroltech.com/2015/06/04/angularjs-directive-two-ways-to-skin-a-cat/" class="post-read-more">[Read More]</a>
+                
+              </div>
+
+              
+                <span class="post-meta">
+                
+                  #<a href="/tags/angularjs">angularjs</a>&nbsp;
+                
+                  #<a href="/tags/directives">directives</a>&nbsp;
+                
+                </span>
+              
+            </article>
+          
+            <article class="post-preview">
+              <a href="http://kroltech.com/2015/05/15/improve-your-code-quality/">
+                <h2 class="post-title">Improve your code quality</h2>
+                
+              </a>
+
+              <span class="post-meta">
+  Posted on May 15, 2015
+  
+</span>
+
+
+              <div class="post-entry">
+                
+                  <p>One of the most important things when writing code is the quality with which you write it. Quality can be subjective so its important to adhere to a few basic standards and tools.</p>
+
+<p></p>
+                  <a href="http://kroltech.com/2015/05/15/improve-your-code-quality/" class="post-read-more">[Read More]</a>
+                
+              </div>
+
+              
+            </article>
+          
+        </div>
+
+        
+          <ul class="pager main-pager">
+            
+            
+              <li class="next">
+                <a href="/page/2">Older Posts &rarr;</a>
+              </li>
+            
+          </ul>
+        
+      </div>
+    </div>
+  </div>
+
+    <footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <ul class="list-inline text-center footer-links">
+          
+              <li>
+                <a href="mailto:jkat98@gmail.com" title="Email me">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-envelope fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="https://www.plus.google.com/&#43;JasonKrol" title="Google&#43;">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-google-plus fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="https://github.com/shorttompkins" title="GitHub">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="https://twitter.com/shorttompkins" title="Twitter">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="https://reddit.com/u/shorttompkins" title="Reddit">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-reddit-alien fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="https://linkedin.com/in/jasonkrol" title="LinkedIn">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-linkedin fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="https://stackoverflow.com/users/1623304/jkat98" title="StackOverflow">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-stack-overflow fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="https://www.youtube.com/user/jkat98" title="Youtube">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-youtube fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+          
+          <li>
+            <a href="http://kroltech.com/index.xml" title="RSS">
+              <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fa fa-rss fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          
+        </ul>
+        <p class="credits copyright text-muted">
+          Jason Krol
+          &nbsp;&bull;&nbsp;
+          2016
+
+          
+            &nbsp;&bull;&nbsp;
+            <a href="http://kroltech.com/">KrolTech</a>
+          
+        </p>
+        
+        <p class="credits theme-by text-muted">
+          <a href="http://gohugo.io">Hugo v0.20.7</a> powered &nbsp;&bull;&nbsp; Theme by <a href="http://deanattali.com/beautiful-jekyll/">Beautiful Jekyll</a> adapted to <a href="https://github.com/halogenica/beautifulhugo">Beautiful Hugo</a>
+          
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/katex.min.js" integrity="sha384-/y1Nn9+QQAipbNQWU65krzJralCnuOasHncUFXGkdwntGeSvQicrYkiUBwsgUqc1" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/contrib/auto-render.min.js" integrity="sha384-dq1/gEHSxPZQ7DdrM82ID4YVol9BYyU7GbWlIwnwyPzotpoc57wDw/guX8EaYGPx" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<script src="http://kroltech.com/js/main.js"></script>
+<script src="http://kroltech.com/js/highlight.min.js"></script>
+<script> hljs.initHighlightingOnLoad(); </script>
+<script> renderMathInElement(document.body); </script>
+
+
+
+
+
+  </body>
 </html>
+

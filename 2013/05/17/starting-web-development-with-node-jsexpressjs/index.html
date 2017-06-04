@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+  <title>Starting Web Development with node.js/ExpressJS</title>
+  <meta property="og:title" content="Starting Web Development with node.js/ExpressJS" />
+  <meta name="twitter:title" content="Starting Web Development with node.js/ExpressJS" />
+  <meta name="description" content="For the past few months I&#8217;ve been seeing more and more about node.js popping up all over the place. I installed it and dabbled a few months ago, but never really spent more than an hour and honestly didn&#8217;t walk away very impressed (my own fault, really). This past week I decided to really give it another shot, really trying to dig into it and actually accomplish something. This also sparked by my discovery of Koding.">
+  <meta property="og:description" content="For the past few months I&#8217;ve been seeing more and more about node.js popping up all over the place. I installed it and dabbled a few months ago, but never really spent more than an hour and honestly didn&#8217;t walk away very impressed (my own fault, really). This past week I decided to really give it another shot, really trying to dig into it and actually accomplish something. This also sparked by my discovery of Koding.">
+  <meta name="twitter:description" content="For the past few months I&#8217;ve been seeing more and more about node.js popping up all over the place. I installed it and dabbled a few months ago, but never really spent more than an hour and …">
+  <meta name="author" content="Jason Krol"/>
+  <link href='http://kroltech.com/img/favicon.ico' rel='icon' type='image/x-icon'/>
+  <meta property="og:image" content="http://kroltech.com/img/avatar-icon.png" />
+  <meta name="twitter:image" content="http://kroltech.com/img/avatar-icon.png" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:site" content="@shorttompkins" />
+  <meta name="twitter:creator" content="@shorttompkins" />
+  <meta property="og:url" content="http://kroltech.com/2013/05/17/starting-web-development-with-node-jsexpressjs/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="KrolTech" />
+
+  <meta name="generator" content="Hugo 0.20.7" />
+  <link rel="canonical" href="http://kroltech.com/2013/05/17/starting-web-development-with-node-jsexpressjs/" />
+  <link rel="alternate" href="http://kroltech.com/index.xml" type="application/rss+xml" title="KrolTech">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/katex.min.css" integrity="sha384-wITovz90syo1dJWVh32uuETPVEtGigN07tkttEqPv+uR2SE/mbQcG7ATL28aI9H0" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <link rel="stylesheet" href="http://kroltech.com/css/main.css" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" />
+  <link rel="stylesheet" href="http://kroltech.com/css/pygment_highlights.css" />
+  <link rel="stylesheet" href="http://kroltech.com/css/highlight.min.css" />
+
+<script>
+window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+ga('create', 'UA-29480326-4', 'auto');
+ga('send', 'pageview');
+</script>
+<script async src='//www.google-analytics.com/analytics.js'></script>
+
+</head>
+
+  <body>
+    <nav class="navbar navbar-default navbar-fixed-top navbar-custom">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="http://kroltech.com/">KrolTech</a>
+    </div>
+
+    <div class="collapse navbar-collapse" id="main-navbar">
+      <ul class="nav navbar-nav navbar-right">
+        
+          
+            <li>
+              <a title="Blog" href="/">Blog</a>
+            </li>
+          
+        
+          
+            <li>
+              <a title="About" href="/page/about/">About</a>
+            </li>
+          
+        
+
+        
+
+        
+      </ul>
+    </div>
+
+    <div class="avatar-container">
+      <div class="avatar-img-border">
+        
+          <a title="KrolTech" href="http://kroltech.com/">
+            <img class="avatar-img" src="http://kroltech.com/img/avatar-icon.png" alt="KrolTech" />
+          </a>
+        
+      </div>
+    </div>
+
+  </div>
+</nav>
+
+
+
+
+    
+  
+  
+  
+
+
+
+
+  
+
+  <header class="header-section ">
+    
+    <div class="intro-header no-img">
+      
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+            <div class="post-heading">
+              <h1>Starting Web Development with node.js/ExpressJS</h1>
+                
+                
+                  <span class="post-meta">
+  Posted on May 17, 2013
+  
+</span>
+
+
+                
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+
+    
+<div class="container">
+  <div class="row">
+    <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+      <article role="main" class="blog-post">
+        
+
+<p dir="ltr">
+  For the past few months I&#8217;ve been seeing more and more about node.js popping up all over the place.  I installed it and dabbled a few months ago, but never really spent more than an hour and honestly didn&#8217;t walk away very impressed (my own fault, really).  This past week I decided to really give it another shot, really trying to dig into it and actually accomplish something.  This also sparked by my discovery of Koding.com and <a href="http://c9.io" target="_blank">Cloud9</a> and their exceptional support for node.js development.
+</p>
+
+<p dir="ltr">
+  There are a lot of technical reasons why node.js is becoming so popular (versus any other back-end technology) that I won&#8217;t go into (because honestly I couldn&#8217;t really explain it) and while it may or may not be right for you &#8211; there’s no denying that it’s quickly gaining ground and probably not going away!
+</p>
+
+<p dir="ltr">
+  First, I started reading a book on building web apps with Backbone and node.js &#8211; but the coverage of node.js was very cursory and didn&#8217;t give me nearly enough information to be comfortable.  Then I watched a course on Pluralsight specifically about programming with node.js.  Again, this was good, but it was pretty raw and hardly mentioned web development.  Towards the end of the course, however, it mentioned <a href="http://pluralsight.com/training/Courses/TableOfContents/expressjs" target="_blank">another course that specifically covered ExpressJS</a> &#8211; a framework built on node.js specifically for web development.
+</p>
+
+<p dir="ltr">
+  After completing this course (roughly 3 hours) I felt enlightened!  I couldn&#8217;t help smiling the whole time I watched the course because everything was just making sense and it was all so clear and logical.  It helps that the author clearly has experience with .net development as he constantly makes references to similar concepts in .net.
+</p>
+
+<p dir="ltr">
+  The beauty was that using what I already know with .net MVC development, I immediately felt comfortable with the ideas behind ExpressJS.  On top of that, my love for JavaScript made coding in the environment even more enjoyable!  And again, I can’t stress how much I am loving the Cloud9 service/IDE!  (Although, I can definitely see the need to use something with a bit more muscle like WebStorm when doing serious node.js development so you can more easily debug during run-time ,etc.)
+</p>
+
+<h4 id="a-super-basic-expressjs-web-project-explained">A (super) basic ExpressJS web project explained:</h4>
+
+<p>[alert style=&#8221;alert-info&#8221;]If you like, you can look at this project to follow along with the ideas/concepts I discuss in the section below:</p>
+
+<p><strong><a href="https://c9.io/jkat98/ugm2013" target="_blank"><a href="https://c9.io/jkat98/ugm2013">https://c9.io/jkat98/ugm2013</a></a></strong></p>
+
+<p>Also note how awesome the Cloud9 IDE is while you check out the project ;)[/alert]</p>
+
+<p dir="ltr">
+  Personally I am a fan of the MVC pattern of web development.  I really do love what Microsoft has done with .net MVC (and to be fair, what everyone else has already been doing for a long time!).  You can very easily apply an MVC pattern to a web application using ExpressJS and node.js!
+</p>
+
+<p>The project is organized as follows:</p>
+
+<ul>
+<li><p dir="ltr">
+  <strong>app.js</strong> &#8211; the root of the application.<br /> The core ExpressJS application object is booted up, along with server dependencies and any middleware support/configuration.  Additionally, the main connection to my db is here, as well as all of the routes for the application (think of this like the global.asax file in a .net web app).  However, since I didn&#8217;t want my app.js file getting out of hand, I moved my routes to an external object.  node uses CommonJS which is like require.js &#8211; which allows you to “include” modules into each file (much like a “using” in .net development).  Therefore, since I decided to pull my routes to an external file, I needed to be sure to include it by referencing var routes = require(“./app/routes”).<br /> The server is started by simply calling (via a terminal command line) “node app.js”
+</p></li>
+
+<li><p dir="ltr">
+  <strong>/app/routes.js</strong> &#8211; contains all of the routes (paths) to the application as well as pointers to a controller for each.<br /> The routes file simply contains a list of gets and posts along with the actual route path and corresponding controller function.  So, for example, “/” (or the root of the site) points to my home (index.js) controller document, specifically the index function.  A post to the homepage (using the form thats right on the homepage) uses the home controller’s register function (which handles the submission and inserts a record into the db).
+</p></li>
+
+<li><p dir="ltr">
+  <strong>/controllers/</strong> &#8211; contains a file for each route, with however many functions to handle the different patterns. This matches pretty closely with how a .net MVC project is organized as well (except .net MVC controllers are actually named “UsersController.cs” where I just named mine “users.js” &#8211; this is purely personal preference whereas in .net MVC its a rule of convention.
+</p></li>
+
+<li><p dir="ltr">
+  <strong>/data/</strong> &#8211; used by mongoDB to store all of the data documents &#8211; mongoDB is a nosql so the data is stored in BSON (binary JSON) files unlike typical MS SQL databases. (You don’t ever touch this folder, is is purely for file storage used by mongo.)
+</p></li>
+
+<li><p dir="ltr">
+  <strong>/models/</strong> &#8211; simple data model definitions (using mongoose &#8211; which is a framework to make working with mongodb easier in node)  Again, very much like how view models work in .net MVC.
+</p></li>
+
+<li><p dir="ltr">
+  <strong>/node_modules/</strong> &#8211; this is the default folder that all of your packages are stored in.  This is like the References folder in a .net project. (Node’s NPM is just like .net’s NuGet)
+</p></li>
+
+<li><p dir="ltr">
+  <strong>/public/</strong> &#8211; this is similar to the Content folder in a .net MVC project.  This is where all of your client files will be stored including css files, images, javascripts for the client, etc.<br /> Using middleware with ExpressJS, you can easily integrate support for LESS/SASS in your CSS files!
+</p></li>
+
+<li><p dir="ltr">
+  <strong>/views/</strong> &#8211; this is exactly like the Views folder in a .net MVC project.<br /> ExpressJS, by default, uses the Jade view engine (which again, is comparable to .net MVC’s Razor).  Jade is very interesting &#8211; as its sort of like <a href="http://kroltech.com/tag/zen-coding/">Zen Coding</a>, but without the real-time conversion component that most editors support.  You actually just code your HTML docs using a Zen like style.  Its very weird at first, but once you get used to it it starts to make sense and actually makes flowing HTML docs much quicker!
+</p></li>
+</ul>
+
+<p dir="ltr">
+  If you are familiar with Backbone development, then developing with node and Express will come VERY naturally to you.  A lot of the concepts are the same/similar and obviously its all JavaScript based!
+</p>
+
+<p><b id="docs-internal-guid-10af987e-b2ed-c957-74fd-58a4ef75dab0">If you are at all interested in learning a new backend technology, and have a pretty good understanding of JavaScript I strongly urge you to check out a few tutorial videos or books on node.js development (specifically using ExpressJS) and get started today!</b></p>
+
+      </article>
+
+      <ul class="pager blog-pager">
+        
+          <li class="previous">
+            <a href="http://kroltech.com/2013/05/17/discovering-my-love-of-front-end-development-being-more-pragmatic/" data-toggle="tooltip" data-placement="top" title="Discovering my love of “front-end” development / Being more pragmatic">&larr; Previous Post</a>
+          </li>
+        
+        
+          <li class="next">
+            <a href="http://kroltech.com/2013/05/25/week-in-review-52413/" data-toggle="tooltip" data-placement="top" title="Week in Review – 5/24/13">Next Post &rarr;</a>
+          </li>
+        
+      </ul>
+
+      
+        
+          <div class="disqus-comments">
+            <div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_shortname = 'jasonkrol';
+    var disqus_identifier = 'http:\/\/kroltech.com\/2013\/05\/17\/starting-web-development-with-node-jsexpressjs\/';
+    var disqus_title = 'Starting Web Development with node.js\/ExpressJS';
+    var disqus_url = 'http:\/\/kroltech.com\/2013\/05\/17\/starting-web-development-with-node-jsexpressjs\/';
+
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+          </div>
+        
+      
+
+    </div>
+  </div>
+</div>
+
+    <footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <ul class="list-inline text-center footer-links">
+          
+              <li>
+                <a href="mailto:jkat98@gmail.com" title="Email me">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-envelope fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="https://www.plus.google.com/&#43;JasonKrol" title="Google&#43;">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-google-plus fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="https://github.com/shorttompkins" title="GitHub">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="https://twitter.com/shorttompkins" title="Twitter">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="https://reddit.com/u/shorttompkins" title="Reddit">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-reddit-alien fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="https://linkedin.com/in/jasonkrol" title="LinkedIn">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-linkedin fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="https://stackoverflow.com/users/1623304/jkat98" title="StackOverflow">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-stack-overflow fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="https://www.youtube.com/user/jkat98" title="Youtube">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-youtube fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+          
+          <li>
+            <a href="http://kroltech.com/index.xml" title="RSS">
+              <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fa fa-rss fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          
+        </ul>
+        <p class="credits copyright text-muted">
+          Jason Krol
+          &nbsp;&bull;&nbsp;
+          2016
+
+          
+            &nbsp;&bull;&nbsp;
+            <a href="http://kroltech.com/">KrolTech</a>
+          
+        </p>
+        
+        <p class="credits theme-by text-muted">
+          <a href="http://gohugo.io">Hugo v0.20.7</a> powered &nbsp;&bull;&nbsp; Theme by <a href="http://deanattali.com/beautiful-jekyll/">Beautiful Jekyll</a> adapted to <a href="https://github.com/halogenica/beautifulhugo">Beautiful Hugo</a>
+          
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/katex.min.js" integrity="sha384-/y1Nn9+QQAipbNQWU65krzJralCnuOasHncUFXGkdwntGeSvQicrYkiUBwsgUqc1" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/contrib/auto-render.min.js" integrity="sha384-dq1/gEHSxPZQ7DdrM82ID4YVol9BYyU7GbWlIwnwyPzotpoc57wDw/guX8EaYGPx" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<script src="http://kroltech.com/js/main.js"></script>
+<script src="http://kroltech.com/js/highlight.min.js"></script>
+<script> hljs.initHighlightingOnLoad(); </script>
+<script> renderMathInElement(document.body); </script>
+
+
+
+
+
+  </body>
+</html>
+

@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+  <title>JavaScript TDD with Jasmine and Karma</title>
+  <meta property="og:title" content="JavaScript TDD with Jasmine and Karma" />
+  <meta name="twitter:title" content="JavaScript TDD with Jasmine and Karma" />
+  <meta name="description" content="We do rapid releases at AWeber so we’re constantly pushing code changes to our users. To be sure that we aren’t in a constant state of “fix 1 bug, introduce 2 more” we embrace TDD across our entire stack. This includes making sure our front-end JavaScript code has thorough test coverage.">
+  <meta property="og:description" content="We do rapid releases at AWeber so we’re constantly pushing code changes to our users. To be sure that we aren’t in a constant state of “fix 1 bug, introduce 2 more” we embrace TDD across our entire stack. This includes making sure our front-end JavaScript code has thorough test coverage.">
+  <meta name="twitter:description" content="We do rapid releases at AWeber so we’re constantly pushing code changes to our users. To be sure that we aren’t in a constant state of “fix 1 bug, introduce 2 more” we embrace TDD across our entire …">
+  <meta name="author" content="Jason Krol"/>
+  <link href='http://kroltech.com/img/favicon.ico' rel='icon' type='image/x-icon'/>
+  <meta property="og:image" content="http://kroltech.com/img/avatar-icon.png" />
+  <meta name="twitter:image" content="http://kroltech.com/img/avatar-icon.png" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:site" content="@shorttompkins" />
+  <meta name="twitter:creator" content="@shorttompkins" />
+  <meta property="og:url" content="http://kroltech.com/2013/11/20/javascript-tdd-with-jasmine-and-karma/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="KrolTech" />
+
+  <meta name="generator" content="Hugo 0.20.7" />
+  <link rel="canonical" href="http://kroltech.com/2013/11/20/javascript-tdd-with-jasmine-and-karma/" />
+  <link rel="alternate" href="http://kroltech.com/index.xml" type="application/rss+xml" title="KrolTech">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/katex.min.css" integrity="sha384-wITovz90syo1dJWVh32uuETPVEtGigN07tkttEqPv+uR2SE/mbQcG7ATL28aI9H0" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <link rel="stylesheet" href="http://kroltech.com/css/main.css" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" />
+  <link rel="stylesheet" href="http://kroltech.com/css/pygment_highlights.css" />
+  <link rel="stylesheet" href="http://kroltech.com/css/highlight.min.css" />
+
+<script>
+window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+ga('create', 'UA-29480326-4', 'auto');
+ga('send', 'pageview');
+</script>
+<script async src='//www.google-analytics.com/analytics.js'></script>
+
+</head>
+
+  <body>
+    <nav class="navbar navbar-default navbar-fixed-top navbar-custom">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="http://kroltech.com/">KrolTech</a>
+    </div>
+
+    <div class="collapse navbar-collapse" id="main-navbar">
+      <ul class="nav navbar-nav navbar-right">
+        
+          
+            <li>
+              <a title="Blog" href="/">Blog</a>
+            </li>
+          
+        
+          
+            <li>
+              <a title="About" href="/page/about/">About</a>
+            </li>
+          
+        
+
+        
+
+        
+      </ul>
+    </div>
+
+    <div class="avatar-container">
+      <div class="avatar-img-border">
+        
+          <a title="KrolTech" href="http://kroltech.com/">
+            <img class="avatar-img" src="http://kroltech.com/img/avatar-icon.png" alt="KrolTech" />
+          </a>
+        
+      </div>
+    </div>
+
+  </div>
+</nav>
+
+
+
+
+    
+  
+  
+  
+
+
+
+
+  
+
+  <header class="header-section ">
+    
+    <div class="intro-header no-img">
+      
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+            <div class="post-heading">
+              <h1>JavaScript TDD with Jasmine and Karma</h1>
+                
+                
+                  <span class="post-meta">
+  Posted on November 20, 2013
+  
+</span>
+
+
+                
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+
+    
+<div class="container">
+  <div class="row">
+    <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+      <article role="main" class="blog-post">
+        <p>We do rapid releases at AWeber so we’re constantly pushing code changes to our users. To be sure that we aren’t in a constant state of “fix 1 bug, introduce 2 more” we embrace TDD across our entire stack. This includes making sure our front-end JavaScript code has thorough test coverage.</p>
+
+<p>A very nice combination that our team has embraced is Jasmine for writing our tests and the Karma (a.k.a. Testacular) test runner for actually running them.</p>
+
+<h3 id="prerequisites">Prerequisites:</h3>
+
+<p>As with most things lately, you’ll want to make sure you have node.js and npm installed.  If you don’t already have node.js installed, you can download it at <a href="http://nodejs.org" target="_blank"><a href="http://nodejs.org">http://nodejs.org</a></a>.</p>
+
+<p>From a command-line, you want to install Karma and PhantomJS using npm:</p>
+
+<p>[code lang=text]</p>
+
+<p>$ npm install -g karma-cli</p>
+
+<p>$ npm install -g phantomjs</p>
+
+<p>$ npm install karma-jasmine &#8211;save-dev</p>
+
+<p>$ npm install karma-phantomjs-launcher &#8211;save-dev</p>
+
+<p>[/code]</p>
+
+<h3 id="a-basic-project-to-run-some-tests">A basic project to run some tests:</h3>
+
+<p>Before we get started actually writing some tests, let&#8217;s first make sure we have a basic project that we can test against. Create the following folder structure:</p>
+
+<p>/js/object.js</p>
+
+<p>/js/tests</p>
+
+<p>/js/tests/object.test.js</p>
+
+<p>First we will create a basic JavaScript object that we can run some tests against: (js/object.js)</p>
+
+<p>[sourcecode lang=&#8221;javascript&#8221;]</p>
+
+<p>if (typeof NS == &#8216;undefined&#8217;) { NS = {}; }</p>
+
+<p>NS.myFunction = {</p>
+
+<p>//empty stuff array, filled during initialization</p>
+
+<p>stuff: [],</p>
+
+<p>init: function init() {</p>
+
+<p>this.stuff.push(&#8216;Testing&#8217;);</p>
+
+<p>},</p>
+
+<p>reset: function reset() {</p>
+
+<p>this.stuff = [];</p>
+
+<p>},</p>
+
+<p>//will add new functionality here later</p>
+
+<p>};</p>
+
+<p>NS.myFunction.init();</p>
+
+<p>[/sourcecode]</p>
+
+<p>Now lets create some basic code for our Jasmine tests: (js/tests/object.test.js)</p>
+
+<p>[sourcecode lang=&#8221;javascript&#8221;]</p>
+
+<p>describe(&ldquo;myFunction&rdquo;, function() {</p>
+
+<p>var myfunc = NS.myFunction;</p>
+
+<p>beforeEach(function(){</p>
+
+<p>spyOn(myfunc, &#8216;init&#8217;).andCallThrough();</p>
+
+<p>});</p>
+
+<p>afterEach(function() {</p>
+
+<p>myfunc.reset();</p>
+
+<p>});</p>
+
+<p>it(&ldquo;should be able to initialize&rdquo;, function() {</p>
+
+<p>expect(myfunc.init).toBeDefined();</p>
+
+<p>myfunc.init();</p>
+
+<p>expect(myfunc.init).toHaveBeenCalled();</p>
+
+<p>});</p>
+
+<p>it(&ldquo;should populate stuff during initialization&rdquo;, function(){</p>
+
+<p>myfunc.init();</p>
+
+<p>expect(myfunc.stuff.length).toEqual(1);</p>
+
+<p>expect(myfunc.stuff[0]).toEqual(&#8216;Testing&#8217;);</p>
+
+<p>});</p>
+
+<p>//will insert additional tests here later</p>
+
+<p>});</p>
+
+<p>[/sourcecode]</p>
+
+<h3 id="configure-karma-for-the-project">Configure Karma for the project:</h3>
+
+<p>Now that the project is setup, lets configure Karma to work with it. Karma requires a configuration file in order to run, but fortunately includes an automatic initialization process that will create one for you:</p>
+
+<p>$ karma init karma.conf.js</p>
+
+<p>This will present you with a number of questions. Provide the following answers:</p>
+
+<p>[sourcecode light=&#8221;true&#8221;]</p>
+
+<p>Which testing framework do you want to use ?</p>
+
+<p>Press tab to list possible options. Enter to move to the next question.</p>
+
+<blockquote>
+<p>jasmine</p>
+</blockquote>
+
+<p>Do you want to use Require.js ?</p>
+
+<p>This will add Require.js plugin.</p>
+
+<p>Press tab to list possible options. Enter to move to the next question.</p>
+
+<blockquote>
+<p>no</p>
+</blockquote>
+
+<p>Do you want to capture a browser automatically ?</p>
+
+<p>Press tab to list possible options. Enter empty string to move to the next question.</p>
+
+<blockquote>
+<p>Chrome</p>
+</blockquote>
+
+<p>What is the location of your source and test files ?</p>
+
+<p>You can use glob patterns, eg. &ldquo;js/*.js&rdquo; or &ldquo;test/**/*Spec.js&rdquo;.</p>
+
+<p>Enter empty string to move to the next question.</p>
+
+<blockquote>
+<p>js/*.js</p>
+
+<p>js/tests/*.js</p>
+</blockquote>
+
+<p>Should any of the files included by the previous patterns be excluded ?</p>
+
+<p>You can use glob patterns, eg. &ldquo;**/*.swp&rdquo;.</p>
+
+<p>Enter empty string to move to the next question.</p>
+
+<blockquote>
+</blockquote>
+
+<p>Do you want Karma to watch all the files and run the tests on change ?</p>
+
+<p>Press tab to list possible options.</p>
+
+<blockquote>
+<p>yes</p>
+</blockquote>
+
+<p>[/sourcecode]</p>
+
+<p>Once you have completed the questions, a karma.conf.js file will be created and should exist in the root of the project.</p>
+
+<h3 id="running-the-tests-and-doing-some-tdd">Running the tests and doing some TDD:</h3>
+
+<p>Assuming everything has gone according to plan so far, we should be able to run Karma and see the results of the first tests:</p>
+
+<p>$ karma start karma.conf.js</p>
+
+<p><a href="http://104.236.7.244/wp-content/uploads/2013/11/Screen-Shot-2013-11-19-at-3.21.36-PM1.png"><img class="aligncenter size-full wp-image-896" alt="Screen Shot 2013-11-19 at 3.21.36 PM" src="http://104.236.7.244/wp-content/uploads/2013/11/Screen-Shot-2013-11-19-at-3.21.36-PM1.png" width="787" height="113" /></a></p>
+
+<p>One thing to note is that we have setup our Karma configuration file to use Chrome as the browser. So when you start Karma, it will launch a new instance of Chrome that is attached to the runner. The runner will load all of the JavaScript files specified in the configuration file into the browser so that they can execute in a true DOM environment. Later we will reconfigure Karma to run using PhantomJS instead.</p>
+
+<p>Great, now we have a very basic test running against our JavaScript object. Lets add another test for some new functionality:</p>
+
+<p>Edit the js/tests/object.test.js file to include a new test for the new functionality.</p>
+
+<p>[sourcecode lang=&#8221;javascript&#8221;]</p>
+
+<p>//replace “//will insert additional tests here later” with the following:</p>
+
+<p>describe(&ldquo;appending strings&rdquo;, function() {</p>
+
+<p>it(&ldquo;should be able to append 2 strings&rdquo;, function() {</p>
+
+<p>expect(myfunc.append).toBeDefined();</p>
+
+<p>});</p>
+
+<p>it(&ldquo;should append 2 strings&rdquo;, function() {</p>
+
+<p>expect(myfunc.append(&#8216;hello &#8216;,&#8217;world&#8217;)).toEqual(&#8216;hello world&#8217;);</p>
+
+<p>});</p>
+
+<p>});</p>
+
+<p>[/sourcecode]</p>
+
+<p>Obviously this new test will fail because we haven&#8217;t actually written the functionality yet. If you kept the Karma runner open, you will see that once you saved the object.test.js file Karma will notice that and instantly rerun the tests. This is because in the configuration file we set autowatch to true &#8211; which means Karma will watch for changes to any of the files listed in the files section.</p>
+
+<p><a href="http://104.236.7.244/wp-content/uploads/2013/11/Screen-Shot-2013-11-19-at-3.24.16-PM1.png"><img class="aligncenter size-full wp-image-897" alt="Screen Shot 2013-11-19 at 3.24.16 PM" src="http://104.236.7.244/wp-content/uploads/2013/11/Screen-Shot-2013-11-19-at-3.24.16-PM1.png" width="790" height="221" /></a></p>
+
+<p>There we go, the tests failed as we expected. Now lets edit js/object.js and actually include the new functionality we are testing for:</p>
+
+<p>[sourcecode lang=&#8221;javascript&#8221;]</p>
+
+<p>//replace “//will add new functionality here later” with the following:</p>
+
+<p>append: function append(string1, string2) {</p>
+
+<p>return string1 + &#8216; &#8216; + string2;</p>
+
+<p>}</p>
+
+<p>[/sourcecode]</p>
+
+<p>Taking another look at the Karma output, it should have rerun again and we should now have all of the tests pass!</p>
+
+<p><a href="http://104.236.7.244/wp-content/uploads/2013/11/Screen-Shot-2013-11-19-at-3.26.08-PM1.png"><img class="aligncenter size-full wp-image-898" alt="Screen Shot 2013-11-19 at 3.26.08 PM" src="http://104.236.7.244/wp-content/uploads/2013/11/Screen-Shot-2013-11-19-at-3.26.08-PM1.png" width="789" height="60" /></a></p>
+
+<h3 id="using-phantomjs-instead-of-chrome">Using PhantomJS instead of Chrome:</h3>
+
+<p>Earlier when we ran Karma it launched a dedicated Chrome window. This is fine for local development, but in a server environment where you want to automate your build process and include the test run, you don&#8217;t want it launching a Chrome window every time (nor will it even be possible typically). Thats where PhantomJS comes in. PhantomJS is a headless browser which basically means it runs and interprets HTML and JavaScript without the overhead of an actual window.</p>
+
+<p>Edit the karma.conf.js file and update the line that lists Chrome as the browser and change the value to PhantomJS. The browsers setting is an array, so you could include multiple browsers if you are testing against heavy DOM manipulation and you want to be sure your tests pass across the board.</p>
+
+<p><em>Note: Chrome and PhantomJS support are included with Karma, additional browsers will require an extra Karma-Browser specific plugin.</em></p>
+
+<p>Start up karma again and this time you will notice that it runs as usual and executes the tests (and they pass) but it never launched that dedicated Chrome window.</p>
+
+<p><a href="http://104.236.7.244/wp-content/uploads/2013/11/Screen-Shot-2013-11-19-at-3.27.58-PM1.png"><img class="aligncenter size-full wp-image-899" alt="Screen Shot 2013-11-19 at 3.27.58 PM" src="http://104.236.7.244/wp-content/uploads/2013/11/Screen-Shot-2013-11-19-at-3.27.58-PM1.png" width="788" height="110" /></a></p>
+
+<p><em>Note: In addition to using PhantomJS when running your tests in a build process, you will also want to turn autowatch off so that Karma runs the tests and completes in only a single run. In the output above, I skipped editing the karma.conf.js file and just used command line options instead.</em></p>
+
+<h3 id="tdd-made-easy-makes-tdd-fun">TDD made easy makes TDD fun!</h3>
+
+<p>The ease with which you can write tests using Jasmine and run them using Karma makes doing TDD, dare I say it, fun! You can run Karma in autowatch mode, and let it sit in a window and watch away. Then you write tests, save and fail. Write code, save and pass. Rinse and repeat! In the end you’re writing better code!</p>
+
+<p>Happy testing!</p>
+
+<p>The complete code for this article can be downloaded from this repo:</p>
+
+<p><a href="https://github.com/jkat98/gettingstarted-karma" target="_blank"><a href="https://github.com/jkat98/gettingstarted-karma">https://github.com/jkat98/gettingstarted-karma</a></a></p>
+      </article>
+
+      <ul class="pager blog-pager">
+        
+          <li class="previous">
+            <a href="http://kroltech.com/2013/11/14/my-custom-bash-shell-prompt/" data-toggle="tooltip" data-placement="top" title="My custom Bash shell prompt">&larr; Previous Post</a>
+          </li>
+        
+        
+          <li class="next">
+            <a href="http://kroltech.com/2013/12/07/mongodb-for-node-js-developers-online-training-certification/" data-toggle="tooltip" data-placement="top" title="MongoDB for Node.js Developers online training &amp; certification">Next Post &rarr;</a>
+          </li>
+        
+      </ul>
+
+      
+        
+          <div class="disqus-comments">
+            <div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_shortname = 'jasonkrol';
+    var disqus_identifier = 'http:\/\/kroltech.com\/2013\/11\/20\/javascript-tdd-with-jasmine-and-karma\/';
+    var disqus_title = 'JavaScript TDD with Jasmine and Karma';
+    var disqus_url = 'http:\/\/kroltech.com\/2013\/11\/20\/javascript-tdd-with-jasmine-and-karma\/';
+
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+          </div>
+        
+      
+
+    </div>
+  </div>
+</div>
+
+    <footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <ul class="list-inline text-center footer-links">
+          
+              <li>
+                <a href="mailto:jkat98@gmail.com" title="Email me">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-envelope fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="https://www.plus.google.com/&#43;JasonKrol" title="Google&#43;">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-google-plus fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="https://github.com/shorttompkins" title="GitHub">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="https://twitter.com/shorttompkins" title="Twitter">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="https://reddit.com/u/shorttompkins" title="Reddit">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-reddit-alien fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="https://linkedin.com/in/jasonkrol" title="LinkedIn">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-linkedin fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="https://stackoverflow.com/users/1623304/jkat98" title="StackOverflow">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-stack-overflow fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="https://www.youtube.com/user/jkat98" title="Youtube">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-youtube fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+          
+          <li>
+            <a href="http://kroltech.com/index.xml" title="RSS">
+              <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fa fa-rss fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          
+        </ul>
+        <p class="credits copyright text-muted">
+          Jason Krol
+          &nbsp;&bull;&nbsp;
+          2016
+
+          
+            &nbsp;&bull;&nbsp;
+            <a href="http://kroltech.com/">KrolTech</a>
+          
+        </p>
+        
+        <p class="credits theme-by text-muted">
+          <a href="http://gohugo.io">Hugo v0.20.7</a> powered &nbsp;&bull;&nbsp; Theme by <a href="http://deanattali.com/beautiful-jekyll/">Beautiful Jekyll</a> adapted to <a href="https://github.com/halogenica/beautifulhugo">Beautiful Hugo</a>
+          
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/katex.min.js" integrity="sha384-/y1Nn9+QQAipbNQWU65krzJralCnuOasHncUFXGkdwntGeSvQicrYkiUBwsgUqc1" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/contrib/auto-render.min.js" integrity="sha384-dq1/gEHSxPZQ7DdrM82ID4YVol9BYyU7GbWlIwnwyPzotpoc57wDw/guX8EaYGPx" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<script src="http://kroltech.com/js/main.js"></script>
+<script src="http://kroltech.com/js/highlight.min.js"></script>
+<script> hljs.initHighlightingOnLoad(); </script>
+<script> renderMathInElement(document.body); </script>
+
+
+
+
+
+  </body>
+</html>
+

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Github on KrolTech</title>
+    <link>http://kroltech.com/tags/github/</link>
+    <description>Recent content in Github on KrolTech</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <managingEditor>jkat98@gmail.com (Jason Krol)</managingEditor>
+    <webMaster>jkat98@gmail.com (Jason Krol)</webMaster>
+    <lastBuildDate>Wed, 12 Dec 2012 02:59:16 +0000</lastBuildDate>
+    
+	<atom:link href="http://kroltech.com/tags/github/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>SlideIns.js – Animate content into a page</title>
+      <link>http://kroltech.com/2012/12/12/jslibrary-slideins-js/</link>
+      <pubDate>Wed, 12 Dec 2012 02:59:16 +0000</pubDate>
+      <author>jkat98@gmail.com (Jason Krol)</author>
+      <guid>http://kroltech.com/2012/12/12/jslibrary-slideins-js/</guid>
+      <description>This is my first ever public JavaScript “library” and also my first GitHub!
+SlideIns.js is just simple jQuery code that allows you to have content on a page “slide in” from left, right, or middle (middle just fades in basically). This concept was taken from Apple.com pages, where they recently started having little subtle animations featured on their pages &amp;#8211; for example as you scroll down an iPad or iPhone might slide in from the right of the screen.</description>
+    </item>
+    
+  </channel>
+</rss>

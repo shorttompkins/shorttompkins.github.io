@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Closures on KrolTech</title>
+    <link>http://kroltech.com/tags/closures/</link>
+    <description>Recent content in Closures on KrolTech</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <managingEditor>jkat98@gmail.com (Jason Krol)</managingEditor>
+    <webMaster>jkat98@gmail.com (Jason Krol)</webMaster>
+    <lastBuildDate>Wed, 12 Dec 2012 02:02:17 +0000</lastBuildDate>
+    
+	<atom:link href="http://kroltech.com/tags/closures/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Wrap your custom JavaScript code in Closure functions</title>
+      <link>http://kroltech.com/2012/12/12/quick-tip-wrap-your-custom-javascript-code-in-closure-functions/</link>
+      <pubDate>Wed, 12 Dec 2012 02:02:17 +0000</pubDate>
+      <author>jkat98@gmail.com (Jason Krol)</author>
+      <guid>http://kroltech.com/2012/12/12/quick-tip-wrap-your-custom-javascript-code-in-closure-functions/</guid>
+      <description>I finally figured out how to use closures properly in JavaScript. This came as a result of my needing to make sure globals I was defining in different script files weren&amp;#8217;t conflicting with same named globals in other files. My solution was rather simple, just wrap existing chunks of code in their own function wrapper:
+Original Code:
+Note that the variables globalVar and anotherGlobal are truly GLOBAL and any other javascript file(s) with the same variables declared will cause major issues for our code (or vise versa).</description>
+    </item>
+    
+  </channel>
+</rss>

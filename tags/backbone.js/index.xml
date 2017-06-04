@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Backbone.Js on KrolTech</title>
+    <link>http://kroltech.com/tags/backbone.js/</link>
+    <description>Recent content in Backbone.Js on KrolTech</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <managingEditor>jkat98@gmail.com (Jason Krol)</managingEditor>
+    <webMaster>jkat98@gmail.com (Jason Krol)</webMaster>
+    <lastBuildDate>Tue, 18 Mar 2014 13:01:47 +0000</lastBuildDate>
+    
+	<atom:link href="http://kroltech.com/tags/backbone.js/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Review: Backbone.js Patterns and Best Practices</title>
+      <link>http://kroltech.com/2014/03/18/review-backbone-js-patterns-and-best-practices/</link>
+      <pubDate>Tue, 18 Mar 2014 13:01:47 +0000</pubDate>
+      <author>jkat98@gmail.com (Jason Krol)</author>
+      <guid>http://kroltech.com/2014/03/18/review-backbone-js-patterns-and-best-practices/</guid>
+      <description>&lt;p&gt;I was fortunate enough to receive a review copy of Backbone.js Patterns and Best Practices directly from the author. It’s a decent book, and a great ‘next step’ for anyone thats a budding Backbone developer that has got the basics down and wants to take their skills to the next level.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Boilerplate web app using Backbone.js, ExpressJS, node.js, MongoDB</title>
+      <link>http://kroltech.com/2013/12/29/boilerplate-web-app-using-backbone-js-expressjs-node-js-mongodb/</link>
+      <pubDate>Sun, 29 Dec 2013 03:53:56 +0000</pubDate>
+      <author>jkat98@gmail.com (Jason Krol)</author>
+      <guid>http://kroltech.com/2013/12/29/boilerplate-web-app-using-backbone-js-expressjs-node-js-mongodb/</guid>
+      <description>&lt;p&gt;A boilerplate project for a complete web application written using Backbone.js &amp;amp; Marionette, node.js &amp;amp; ExpressJS, MongoDB &amp;amp; Mongoose, Handlebars, Grunt.js, Bower, and Browserify!&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Week in Review – 5/24/13</title>
+      <link>http://kroltech.com/2013/05/25/week-in-review-52413/</link>
+      <pubDate>Sat, 25 May 2013 02:03:39 +0000</pubDate>
+      <author>jkat98@gmail.com (Jason Krol)</author>
+      <guid>http://kroltech.com/2013/05/25/week-in-review-52413/</guid>
+      <description>While I continue to work on the mobile application I’m creating for work, I rewrote the entire framework so that its much better organized. I also decided to integrate Marionette.js which was absolutely worth while. It took a little bit to figure it out, but the savings in time after the fact are huge! Writing simple views and collections now is a no brainer (almost to the point that I feel bad because it feels like cheating!</description>
+    </item>
+    
+    <item>
+      <title>Building a web app using Backbone.js and require.js – Part 1</title>
+      <link>http://kroltech.com/2013/03/21/building-a-web-app-using-backbone-js-and-require-js-part-1/</link>
+      <pubDate>Thu, 21 Mar 2013 21:15:19 +0000</pubDate>
+      <author>jkat98@gmail.com (Jason Krol)</author>
+      <guid>http://kroltech.com/2013/03/21/building-a-web-app-using-backbone-js-and-require-js-part-1/</guid>
+      <description>A few requests for the full source code for this project have been made. Please feel free to download the full project files via this repo:
+https://github.com/jkat98/imgettinit_netmvc  At the end of last year I set some goals for myself, one of which was to start using and become proficient in Backbone.js. I&amp;#8217;ll be honest in saying that I struggled for a bit to really wrap my head around everything that was going on.</description>
+    </item>
+    
+    <item>
+      <title>Building a web app using Backbone.js and require.js – Part 2</title>
+      <link>http://kroltech.com/2013/03/21/building-a-web-app-using-backbone-js-and-require-js-part-2/</link>
+      <pubDate>Thu, 21 Mar 2013 21:14:41 +0000</pubDate>
+      <author>jkat98@gmail.com (Jason Krol)</author>
+      <guid>http://kroltech.com/2013/03/21/building-a-web-app-using-backbone-js-and-require-js-part-2/</guid>
+      <description>This post is the conclusion to the article Building a web app using Backbone.js and require.js &amp;#8211; Part 1. Please be sure to read that article first before proceeding.  In my previous post, we discussed the original idea for the project, outlined what its supposed to do, and started dissecting the project&amp;#8217;s main.js and app.js files. Both of those files frequently referred to the &amp;#8220;Games&amp;#8221; Backbone view and collection, but never really explained them.</description>
+    </item>
+    
+    <item>
+      <title>Raging Backbone.js coding and blog relaunch!</title>
+      <link>http://kroltech.com/2013/03/08/raging-backbone-js-coding-and-blog-relaunch/</link>
+      <pubDate>Fri, 08 Mar 2013 16:25:08 +0000</pubDate>
+      <author>jkat98@gmail.com (Jason Krol)</author>
+      <guid>http://kroltech.com/2013/03/08/raging-backbone-js-coding-and-blog-relaunch/</guid>
+      <description>I continue to plug away at my Backbone.js project (rewriting imgettin.it from scratch basically). I&amp;#8217;ve hit a shitload of road blocks, but most of them were related to my having to completely rethink how to handle a certain area or aspect to make it more efficient &amp;#8211; and then wrap my head around how to accomplish this new concept using Backbone.js. I would say its taken me probably a solid 4-6 nights of coding to get to the point that I don’t feel utterly lost and coding is coming more fluent now (versus stutters as with most new languages/concepts).</description>
+    </item>
+    
+    <item>
+      <title>First Backbone.js app, layoffs, Bleeding edge .net, SFIV</title>
+      <link>http://kroltech.com/2013/02/16/first-backbone-js-app-layoffs-bleeding-edge-net-sfiv/</link>
+      <pubDate>Sat, 16 Feb 2013 01:48:28 +0000</pubDate>
+      <author>jkat98@gmail.com (Jason Krol)</author>
+      <guid>http://kroltech.com/2013/02/16/first-backbone-js-app-layoffs-bleeding-edge-net-sfiv/</guid>
+      <description>I&amp;#8217;ve been working on a Backbone.js application for a few days now, and I really feel like I’m finally getting the hang of it. I&amp;#8217;ve run into a few snags here and there but for the most part I&amp;#8217;ve been pushing ahead and my application is coming together nicely. I hope to do a post with the entire source code and a heavy breakdown of each area of the code and functionality.</description>
+    </item>
+    
+    <item>
+      <title>JavaScript books, recent projects, Line rider!, Rock climbing</title>
+      <link>http://kroltech.com/2013/02/08/javascript-books-recent-projects-line-rider-rock-climbing/</link>
+      <pubDate>Fri, 08 Feb 2013 18:39:04 +0000</pubDate>
+      <author>jkat98@gmail.com (Jason Krol)</author>
+      <guid>http://kroltech.com/2013/02/08/javascript-books-recent-projects-line-rider-rock-climbing/</guid>
+      <description>I went on a bit of a shopping spree on Amazon. Besides a few Kindle books (sci-fi, etc) I grabbed a few new JavaScript books as well:
+JavaScript Patterns &amp;#8211; Stoyan Stefanov
+Secrets of the JavaScript Ninja &amp;#8211; John Resig, Bear Bibeault
+If you are looking to utterly destroy an entire afternoon (or more), definitely check out the HTML5 version of an oldie but goodie, Free Rider HD!! (also know as Canvas Rider)</description>
+    </item>
+    
+    <item>
+      <title>Wodify, Zen Coding, Backbone.js book, SimCity beta!</title>
+      <link>http://kroltech.com/2013/01/26/wodify-zen-coding-backbone-js-book-simcity-beta/</link>
+      <pubDate>Sat, 26 Jan 2013 02:49:39 +0000</pubDate>
+      <author>jkat98@gmail.com (Jason Krol)</author>
+      <guid>http://kroltech.com/2013/01/26/wodify-zen-coding-backbone-js-book-simcity-beta/</guid>
+      <description>Created a super basic/handy lift calculator &amp;#8211; I’ll use this initially during my first bunch of sessions until I get comfortable doing the math on the fly. Its just painful trying to do percentage calculations while lifting, and then breaking down those results into how many different weights you need to add to each side of the bar! This tool will compute all of that in one shot!
+My Crossfit box started using Wodify.</description>
+    </item>
+    
+    <item>
+      <title>ImGettin.it launch! DMC!!! JavaScript/Node.js/Backbone.js</title>
+      <link>http://kroltech.com/2013/01/18/imgettin-it-launch-dmc-javascriptnode-jsbackbone-js/</link>
+      <pubDate>Fri, 18 Jan 2013 03:18:17 +0000</pubDate>
+      <author>jkat98@gmail.com (Jason Krol)</author>
+      <guid>http://kroltech.com/2013/01/18/imgettin-it-launch-dmc-javascriptnode-jsbackbone-js/</guid>
+      <description>Soft launched ImGettin.it over the weekend! By soft launch, I mean, bought and setup the domain, and got a test version of the site live. Login works, and the site “works” for the most part, but is very much not ready for prime time yet. I still need to get a lot of things working and most importantly I need a basic admin for the games database. The data that&amp;#8217;s up right now is just test seed data &amp;#8211; while pretty solid is far from complete or even valid.</description>
+    </item>
+    
+    <item>
+      <title>Ember.js vs Backbone.js, Responsive Grid Systems, Kinect for Windows, Barbell Club!!</title>
+      <link>http://kroltech.com/2012/12/21/ember-js-vs-backbone-js-responsive-grid-systems-kinect-for-windows-barbell-club/</link>
+      <pubDate>Fri, 21 Dec 2012 15:43:56 +0000</pubDate>
+      <author>jkat98@gmail.com (Jason Krol)</author>
+      <guid>http://kroltech.com/2012/12/21/ember-js-vs-backbone-js-responsive-grid-systems-kinect-for-windows-barbell-club/</guid>
+      <description>So I spent most of 2 days working through trying to figure out Ember.js. (I know previously I said I was going to focus on Backbone, but I wanted to stick with Ember one more day and try to see it through.) Granted, I’m totally new to this whole MV* side of JavaScript. I had decided that Ember was just the way to go. Sadly, after 2 full days of playing around I&amp;#8217;ve given up (for now) and decided to start focusing on Backbone.</description>
+    </item>
+    
+    <item>
+      <title>JavaScript MV* Frameworks!!?, Far Cry 3 coop, Kinect development starting!</title>
+      <link>http://kroltech.com/2012/12/18/javascript-mv-frameworks-fry-cry-3-coop-kinect-development-starting/</link>
+      <pubDate>Tue, 18 Dec 2012 02:48:17 +0000</pubDate>
+      <author>jkat98@gmail.com (Jason Krol)</author>
+      <guid>http://kroltech.com/2012/12/18/javascript-mv-frameworks-fry-cry-3-coop-kinect-development-starting/</guid>
+      <description>Played through all of the co-op missions in Far Cry 3 with @AnswerSeven and that was a lot of fun. It was an honor being a part of his completing 1000&amp;frasl;1000 in that game! Well done!!
+Looks like we might have a real project at work to use the Kinect with: our users group meeting we host every year, with over 5000 in attendance. I came up with an idea that I think might be pretty interesting, all really for the purposes of allowing me an opportunity to work with the Kinect.</description>
+    </item>
+    
+    <item>
+      <title>Web Essentials 1.7, Backbone.js, Google Nexus 4, Video game museum gets sold on ebay</title>
+      <link>http://kroltech.com/2012/11/16/web-essentials-1-7-backbone-js-google-nexus-4-video-game-museum-gets-sold-on-ebay/</link>
+      <pubDate>Fri, 16 Nov 2012 22:37:03 +0000</pubDate>
+      <author>jkat98@gmail.com (Jason Krol)</author>
+      <guid>http://kroltech.com/2012/11/16/web-essentials-1-7-backbone-js-google-nexus-4-video-game-museum-gets-sold-on-ebay/</guid>
+      <description>Installed Web Essentials 1.7 for VS2012 at home and tried out Zen Coding. This is definitely something really awesome and something I wish was integrated a long time ago. As it stands, I don&amp;#8217;t know how much “raw html” I will be coding in the near future to warrant using it all that much &amp;#8211; but I guess any html coding is worth doing via Zen Coding!
+Finally spent some time and started doing the Pluralsight course on Backbone.</description>
+    </item>
+    
+  </channel>
+</rss>

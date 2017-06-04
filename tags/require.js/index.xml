@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Require.Js on KrolTech</title>
+    <link>http://kroltech.com/tags/require.js/</link>
+    <description>Recent content in Require.Js on KrolTech</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <managingEditor>jkat98@gmail.com (Jason Krol)</managingEditor>
+    <webMaster>jkat98@gmail.com (Jason Krol)</webMaster>
+    <lastBuildDate>Thu, 21 Mar 2013 21:15:19 +0000</lastBuildDate>
+    
+	<atom:link href="http://kroltech.com/tags/require.js/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Building a web app using Backbone.js and require.js – Part 1</title>
+      <link>http://kroltech.com/2013/03/21/building-a-web-app-using-backbone-js-and-require-js-part-1/</link>
+      <pubDate>Thu, 21 Mar 2013 21:15:19 +0000</pubDate>
+      <author>jkat98@gmail.com (Jason Krol)</author>
+      <guid>http://kroltech.com/2013/03/21/building-a-web-app-using-backbone-js-and-require-js-part-1/</guid>
+      <description>A few requests for the full source code for this project have been made. Please feel free to download the full project files via this repo:
+https://github.com/jkat98/imgettinit_netmvc  At the end of last year I set some goals for myself, one of which was to start using and become proficient in Backbone.js. I&amp;#8217;ll be honest in saying that I struggled for a bit to really wrap my head around everything that was going on.</description>
+    </item>
+    
+    <item>
+      <title>Building a web app using Backbone.js and require.js – Part 2</title>
+      <link>http://kroltech.com/2013/03/21/building-a-web-app-using-backbone-js-and-require-js-part-2/</link>
+      <pubDate>Thu, 21 Mar 2013 21:14:41 +0000</pubDate>
+      <author>jkat98@gmail.com (Jason Krol)</author>
+      <guid>http://kroltech.com/2013/03/21/building-a-web-app-using-backbone-js-and-require-js-part-2/</guid>
+      <description>This post is the conclusion to the article Building a web app using Backbone.js and require.js &amp;#8211; Part 1. Please be sure to read that article first before proceeding.  In my previous post, we discussed the original idea for the project, outlined what its supposed to do, and started dissecting the project&amp;#8217;s main.js and app.js files. Both of those files frequently referred to the &amp;#8220;Games&amp;#8221; Backbone view and collection, but never really explained them.</description>
+    </item>
+    
+    <item>
+      <title>Require.js, Knockback.js, A developer’s reaction (animated gif gallery)</title>
+      <link>http://kroltech.com/2013/03/01/require-js-knockback-js-a-developers-reaction-animated-gif-gallery/</link>
+      <pubDate>Fri, 01 Mar 2013 21:52:25 +0000</pubDate>
+      <author>jkat98@gmail.com (Jason Krol)</author>
+      <guid>http://kroltech.com/2013/03/01/require-js-knockback-js-a-developers-reaction-animated-gif-gallery/</guid>
+      <description>While playing with the SPA project template (post forthcoming) I finally took some time to play around with Require.js. While its fairly easy to get started, it blew my mind how it almost instantly changed my mindset and habits with regard to organization of my code. At its most basic level, it allows you to break all of your code down into nice bite-sized chunks in individual files &amp;#8211; but its so much more.</description>
+    </item>
+    
+  </channel>
+</rss>

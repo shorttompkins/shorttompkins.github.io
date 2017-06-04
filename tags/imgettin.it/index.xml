@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Imgettin.It on KrolTech</title>
+    <link>http://kroltech.com/tags/imgettin.it/</link>
+    <description>Recent content in Imgettin.It on KrolTech</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <managingEditor>jkat98@gmail.com (Jason Krol)</managingEditor>
+    <webMaster>jkat98@gmail.com (Jason Krol)</webMaster>
+    <lastBuildDate>Fri, 18 Jan 2013 03:18:17 +0000</lastBuildDate>
+    
+	<atom:link href="http://kroltech.com/tags/imgettin.it/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>ImGettin.it launch! DMC!!! JavaScript/Node.js/Backbone.js</title>
+      <link>http://kroltech.com/2013/01/18/imgettin-it-launch-dmc-javascriptnode-jsbackbone-js/</link>
+      <pubDate>Fri, 18 Jan 2013 03:18:17 +0000</pubDate>
+      <author>jkat98@gmail.com (Jason Krol)</author>
+      <guid>http://kroltech.com/2013/01/18/imgettin-it-launch-dmc-javascriptnode-jsbackbone-js/</guid>
+      <description>Soft launched ImGettin.it over the weekend! By soft launch, I mean, bought and setup the domain, and got a test version of the site live. Login works, and the site “works” for the most part, but is very much not ready for prime time yet. I still need to get a lot of things working and most importantly I need a basic admin for the games database. The data that&amp;#8217;s up right now is just test seed data &amp;#8211; while pretty solid is far from complete or even valid.</description>
+    </item>
+    
+    <item>
+      <title>Back to work! 1 day Hackathon! Design for developers.</title>
+      <link>http://kroltech.com/2013/01/04/back-to-work-hackathon/</link>
+      <pubDate>Fri, 04 Jan 2013 21:33:10 +0000</pubDate>
+      <author>jkat98@gmail.com (Jason Krol)</author>
+      <guid>http://kroltech.com/2013/01/04/back-to-work-hackathon/</guid>
+      <description>Had a great Christmas/New Years break (well went back to work for 2 days in between there)!! Enjoyed the time off and just spending time with the little one and generally doing nothing productive!
+I did find time during the break to spend an entire day working with @Answer7 doing a little mini hackathon! This was something that we have been toying with for a while &amp;#8211; the basic premise is that you and a few friends lock yourself in a room for an entire day and try to create something from scratch!</description>
+    </item>
+    
+  </channel>
+</rss>

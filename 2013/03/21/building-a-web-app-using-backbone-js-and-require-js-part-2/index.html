@@ -1,0 +1,945 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+  <title>Building a web app using Backbone.js and require.js – Part 2</title>
+  <meta property="og:title" content="Building a web app using Backbone.js and require.js – Part 2" />
+  <meta name="twitter:title" content="Building a web app using Backbone.js and require.js – Part 2" />
+  <meta name="description" content="This post is the conclusion to the article Building a web app using Backbone.js and require.js &#8211; Part 1. Please be sure to read that article first before proceeding.  In my previous post, we discussed the original idea for the project, outlined what its supposed to do, and started dissecting the project&#8217;s main.js and app.js files. Both of those files frequently referred to the &#8220;Games&#8221; Backbone view and collection, but never really explained them.">
+  <meta property="og:description" content="This post is the conclusion to the article Building a web app using Backbone.js and require.js &#8211; Part 1. Please be sure to read that article first before proceeding.  In my previous post, we discussed the original idea for the project, outlined what its supposed to do, and started dissecting the project&#8217;s main.js and app.js files. Both of those files frequently referred to the &#8220;Games&#8221; Backbone view and collection, but never really explained them.">
+  <meta name="twitter:description" content="This post is the conclusion to the article Building a web app using Backbone.js and require.js &#8211; Part 1. Please be sure to read that article first before proceeding.  In my previous post, we …">
+  <meta name="author" content="Jason Krol"/>
+  <link href='http://kroltech.com/img/favicon.ico' rel='icon' type='image/x-icon'/>
+  <meta property="og:image" content="http://kroltech.com/img/avatar-icon.png" />
+  <meta name="twitter:image" content="http://kroltech.com/img/avatar-icon.png" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:site" content="@shorttompkins" />
+  <meta name="twitter:creator" content="@shorttompkins" />
+  <meta property="og:url" content="http://kroltech.com/2013/03/21/building-a-web-app-using-backbone-js-and-require-js-part-2/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="KrolTech" />
+
+  <meta name="generator" content="Hugo 0.20.7" />
+  <link rel="canonical" href="http://kroltech.com/2013/03/21/building-a-web-app-using-backbone-js-and-require-js-part-2/" />
+  <link rel="alternate" href="http://kroltech.com/index.xml" type="application/rss+xml" title="KrolTech">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/katex.min.css" integrity="sha384-wITovz90syo1dJWVh32uuETPVEtGigN07tkttEqPv+uR2SE/mbQcG7ATL28aI9H0" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <link rel="stylesheet" href="http://kroltech.com/css/main.css" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" />
+  <link rel="stylesheet" href="http://kroltech.com/css/pygment_highlights.css" />
+  <link rel="stylesheet" href="http://kroltech.com/css/highlight.min.css" />
+
+<script>
+window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+ga('create', 'UA-29480326-4', 'auto');
+ga('send', 'pageview');
+</script>
+<script async src='//www.google-analytics.com/analytics.js'></script>
+
+</head>
+
+  <body>
+    <nav class="navbar navbar-default navbar-fixed-top navbar-custom">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="http://kroltech.com/">KrolTech</a>
+    </div>
+
+    <div class="collapse navbar-collapse" id="main-navbar">
+      <ul class="nav navbar-nav navbar-right">
+        
+          
+            <li>
+              <a title="Blog" href="/">Blog</a>
+            </li>
+          
+        
+          
+            <li>
+              <a title="About" href="/page/about/">About</a>
+            </li>
+          
+        
+
+        
+
+        
+      </ul>
+    </div>
+
+    <div class="avatar-container">
+      <div class="avatar-img-border">
+        
+          <a title="KrolTech" href="http://kroltech.com/">
+            <img class="avatar-img" src="http://kroltech.com/img/avatar-icon.png" alt="KrolTech" />
+          </a>
+        
+      </div>
+    </div>
+
+  </div>
+</nav>
+
+
+
+
+    
+  
+  
+  
+
+
+
+
+  
+
+  <header class="header-section ">
+    
+    <div class="intro-header no-img">
+      
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+            <div class="post-heading">
+              <h1>Building a web app using Backbone.js and require.js – Part 2</h1>
+                
+                
+                  <span class="post-meta">
+  Posted on March 21, 2013
+  
+</span>
+
+
+                
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+
+    
+<div class="container">
+  <div class="row">
+    <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+      <article role="main" class="blog-post">
+        
+
+<div class="alert_box">
+  This post is the conclusion to the article <a href="http://kroltech.com/?p=414"><strong>Building a web app using Backbone.js and require.js &#8211; Part 1</strong></a>.  Please be sure to read that article first before proceeding.
+</div>
+
+<p>In my <a href="http://kroltech.com/?p=414">previous post</a>, we discussed the original idea for the project, outlined what its supposed to do, and started dissecting the project&#8217;s main.js and app.js files. Both of those files frequently referred to the &#8220;Games&#8221; Backbone view and collection, but never really explained them. In this part of the article, we will take a close look at how those are created, how they relate to each other, and how we handled a lot of the in-between.</p>
+
+<h3 id="models-collections">Models &amp; Collections</h3>
+
+<p>The core of any data driven web application is going to be, obviously, the data!  In our app, our main data model is a game.  Of course, we have a collection of games as well.</p>
+
+<p>Lets take a look at our models/m_game.js file:</p>
+
+<div class="alert_box">
+  <strong>Reminder:</strong> I&#8217;ve give each of my script files a prefix that let me know what kind of file they are in my editor (Visual Studio). Specifically, my models all start with m_ and my views with v_. This really is just so that when I have game.js, games.js, game.js, and games.js all open I don&#8217;t lose my mind! Having m_game.js, m_games.js, v_game.js, and v_games.js makes it a little easier to jump around files and know exactly what I&#8217;m looking for/at.
+</div>
+
+<p>[sourcecode lang=&#8221;javascript&#8221;]</p>
+
+<p>define([&#8216;config&#8217;,&#8217;backbone&#8217;, &#8216;models/m_user&#8217;], function (config, Backbone, User) {</p>
+
+<p>var Game = Backbone.Model.extend({</p>
+
+<p>idAttribute: &#8216;gameId&#8217;,</p>
+
+<p>url: config.apiRoot + &#8216;games&#8217;,</p>
+
+<p>defaults: {</p>
+
+<p>friends: new User.Collection(),</p>
+
+<p>userConsoleId: 0,</p>
+
+<p>detailsLoaded: false</p>
+
+<p>}</p>
+
+<p>});</p>
+
+<p>var Games = Backbone.Collection.extend({</p>
+
+<p>model: Game,</p>
+
+<p>url: config.apiRoot + &#8216;games&#8217;</p>
+
+<p>});</p>
+
+<p>return {</p>
+
+<p>Model: Game,</p>
+
+<p>Collection: Games</p>
+
+<p>};</p>
+
+<p>});</p>
+
+<p>[/sourcecode]</p>
+
+<p>Again, you can see that we are using require.js&#8217;s define method.  Here we include our list of dependencies: config (our app&#8217;s general configuration settings), backbone, and a User model.  At this point, config is just an object that has a single property &#8220;apiRoot&#8221; which contains the path to our REST web api url &#8220;/api/&#8221;.</p>
+
+<p>Our &#8220;Game&#8221; Backbone model is pretty much a standard Backbone model.  The idAttribute is set manually to match what we will be receiving from the server.  The URL is configured to point to our REST api (this is used when we do fetch() later on).  And we setup a few defaults (just to be safe).</p>
+
+<p>After we define our model, we also declare a collection. <code>Line: 11</code>  Our Games collection just has its model set to our Game model, and again the URL configured for the REST WebAPI url.</p>
+
+<p>Finally we return an anonymous object that just contains the Model and Collection <code>Line 16</code>. This handy tip I saw on someone&#8217;s blog (forgive me as I cant recall) and I&#8217;ve found that it works much cleaner than separating the collections from the models in their own defines and script files.  I do this with basically all of my models and collections.</p>
+
+<h3 id="views">Views</h3>
+
+<p>If we refer back to our app.js file, we had this chunk of code:</p>
+
+<p>[sourcecode lang=&#8221;javascript&#8221;]</p>
+
+<p>var games = new Game.Collection();</p>
+
+<p>var view = new GamesView({ collection: games });</p>
+
+<p>games.fetch({</p>
+
+<p>success: function () {</p>
+
+<p>$(&#8216;#app&#8217;).html(view.render().el);</p>
+
+<p>[/sourcecode]</p>
+
+<p>As you can see, we are creating our games collection by creating a new Game.Collection() (Game being our model defined earlier above.). Then we create a new GamesView and initialize its collection with the games collection we just created.  Here is the GamesView:</p>
+
+<p>[sourcecode lang=&#8221;javascript&#8221;]</p>
+
+<p>define([&#8216;backbone&#8217;, &#8216;views/v_game&#8217;], function (Backbone, GameView) {</p>
+
+<p>var View = Backbone.View.extend({</p>
+
+<p>tagName: &#8216;ul&#8217;,</p>
+
+<p>id: &#8216;games&#8217;,</p>
+
+<p>render: function () {</p>
+
+<p>this.$el.html(&#8221;);</p>
+
+<p>var that = this;</p>
+
+<p>_.each(this.collection.models, function (item) {</p>
+
+<p>that.renderGame(item);</p>
+
+<p>}, this);</p>
+
+<p>return this;</p>
+
+<p>},</p>
+
+<p>renderGame: function (item) {</p>
+
+<p>var view = new GameView({ model: item });</p>
+
+<p>this.$el.append(view.render().el);</p>
+
+<p>}</p>
+
+<p>});</p>
+
+<p>return View;</p>
+
+<p>});</p>
+
+<p>[/sourcecode]</p>
+
+<p>Here we define our Games Backbone view, which (since its a collection) depends on the singular Game view (as referenced by views/v_game) for each item in its collection. This GamesView is pretty basic; its an unordered list, with an id of &#8220;games&#8221;, and has a standard render method. The render method uses underscore&#8217;s _.each to iterate through the collection of games, and render each individually. The &#8220;renderGame&#8221; method <code>Line: 16</code> creates a new singular GameView and populates its model with the current item from our collection iteration. It then simply calls that view&#8217;s render method, and appends the generated html to the GamesView&#8217;s html. Lets take a peek at the singular GameView below:</p>
+
+<p>[sourcecode lang=&#8221;javascript&#8221;]</p>
+
+<p>define([&#8216;config&#8217;, &#8216;backbone&#8217;, &#8216;jquery.simplemodal&#8217;, &#8216;views/v_gamedetails&#8217;], function (config, Backbone, modal, DetailsView) {</p>
+
+<p>var View = Backbone.View.extend({</p>
+
+<p>tagName: &#8216;li&#8217;,</p>
+
+<p>template: $(&#8216;#gameTemplate&#8217;).html(),</p>
+
+<p>events: {</p>
+
+<p>&#8216;click&#8217;:&#8217;showDetails&#8217;</p>
+
+<p>},</p>
+
+<p>render: function () {</p>
+
+<p>var tmpl = _.template(this.template);</p>
+
+<p>this.$el.html(tmpl(this.model.toJSON()));</p>
+
+<p>return this;</p>
+
+<p>},</p>
+
+<p>showDetails: function (e) {</p>
+
+<p>var detailsView = new DetailsView({ model: this.model });</p>
+
+<p>$(&#8216;#detailsView&#8217;).remove();</p>
+
+<p>$(&#8216;body&#8217;).append(detailsView.render().el);</p>
+
+<p>$.modal.close();</p>
+
+<p>$(&#8216;#detailsView&#8217;).modal({ opacity: 85, overlayClose: true, escClose: true, autoResize: true });</p>
+
+<p>}</p>
+
+<p>});</p>
+
+<p>return View;</p>
+
+<p>});</p>
+
+<p>[/sourcecode]</p>
+
+<p>Now, this GameView is a little more meaty! Since our GamesCollection is basically just a UL, we need a way to handle each of the LIs within it. That&#8217;s where our GameView comes into play. The GameView will render a single game. Its dependencies are again pretty basic (note it references a GamesDetails view, which we will see below). GameView uses an underscore template (if you recall earlier in Part 1 of this article, we used Razor&#8217;s @RenderPage() methods to insert our templates right into the index.cshtml page) to generate its HTML. It also has an event defined for &#8216;click&#8217; that will show the details for this game. The render() method for the GameView is super basic, just taking the value of the local template variable (again just the HTML of our template defined in our index.cshtml file), passing it to underscore&#8217;s _.template() and storing that in a local variable called tmpl (convention). Then it takes the current view&#8217;s model, converts it to JSON, and passes that to the _.template method defined in tmpl.</p>
+
+<div class="alert_box">
+  <strong>Important Note:</strong> you might have noticed that I always &#8220;return this&#8221; at the end of my render calls. This is so that we ensure we can continue to use chaining after our method calls in our views. So, for example, instead of: myView.render() forcibly returning the rendered HTML, we can instead do: myView.render().doSomethingElse().ThenDoThis().el (then return el, which is the HTML). This is just good habit.
+</div>
+
+<p>Our click event handler triggers the &#8220;showDetails&#8221; function (and since its a standard dom event, we can receive a normal event as its parameter &#8211; just like jQuery). Since we only referred to &#8216;click&#8217; as the trigger, and didn&#8217;t specify any additional selectors, the click event will occur on the tag itself, or the LI in this case. Since this view is rendered from a template, that might contain a lot of different HTML elements, we could have easily used something like &#8216;click a.boxCover&#8217; . Looking at the actual function for showDetails, we can see that we are creating yet another view, a DetailsView, and populating its model with a copy of the same model being used in the GameView (or, in other words, the game data model itself). Since our details are going to display via a modal, the first thing we do is remove any that might have existed previously. <code>Line: 15</code> Then we render the new DetailsView, appending that rendered HTML to our main body (hint: the DetailsView renders a div with an id of &#8220;detailsView&#8221; which is why the first thing we did was call a remove on #detailsView). After that we forcibly close any modals that might have been open already (failsafe really), and call our simplemodal plugin to display the newly generated #detailsView!</p>
+
+<p>[toggles]</p>
+
+<p>[toggle title=&#8221;View the full Game.cshtml HTML template&#8221; state=&#8221;&#8221;]</p>
+
+<p>[sourcecode lang=&#8221;html&#8221;]</p>
+
+<script id="gameTemplate" type="text/template">
+  
+<a class="game"><img src="/content/assets/covers/<%= gameId %>.jpg" class="gamebox large"></a>
+  
+<p class="title"><%= title %></p>
+  
+<p><%= moment(releaseDate).format("MMM Do, YYYY") %> (<%= moment(releaseDate).fromNow() %>)</p>
+  
+<p><% for(var c=0; c<consoles.length; c++){ %>
+          
+<span class="console-badge c<%= consoles[c].consoleId%>"><%= consoles[c].abbrev %></span>
+      
+<% } %>
+  
+</p>
+  
+</script>
+  
+
+<p>[/sourcecode]</p>
+
+<p>[/toggle]</p>
+
+<p>[/toggles]</p>
+
+<p>OK, lets recap where we&#8217;re at so far:</p>
+
+<ul>
+<li>We have a GamesView view, thats just a UL because its a collection of games</li>
+<li>The GamesView render() will loop through every item (game) in its collection, and render that specific item via a new GameView</li>
+<li>The GameView receives a model (game) and renders it as an LI.</li>
+<li>The LI has a click event that will create a new DetailsView, populating it with its same model (game), rendering and popping it up in a modal window.</li>
+</ul>
+
+<p>Lets now take a look at the Detailsview.</p>
+
+<h3 id="gamedetails-view">GameDetails View</h3>
+
+<p>The DetailsView is probably the most complex view in the project. This is because the DetailsView is made up of a few additional views, each containing their own set of events, and also dynamically loads additional details whenever it is displayed. The DetailsView will display the full details of the Game which it will retrieve via a fetch(). It will also display a list of all of your friends that are getting the game, each clickable to view their additional details.  The &#8220;Gettin&#8221; button will be rendered from a view, which allows you the option of selecting which console you intend to get this game on (Xbox 360, PS3, etc &#8211; whatever the game is available on). Here is the full DetailsView code:</p>
+
+<p>[sourcecode lang=&#8221;javascript&#8221;]</p>
+
+<p>define([&#8216;backbone&#8217;, &#8216;models/m_user&#8217;, &#8216;views/v_friends&#8217;, &#8216;views/v_gettinbutton&#8217;],</p>
+
+<p>function (Backbone, UserModel, FriendsView, GettinButtonView) {</p>
+
+<p>var View = Backbone.View.extend({</p>
+
+<p>tagName: &#8216;div&#8217;,</p>
+
+<p>id: &ldquo;detailsView&rdquo;,</p>
+
+<p>className: &#8216;hidden&#8217;,</p>
+
+<p>template: $(&#8216;#gameDetailsTemplate&#8217;).html(),</p>
+
+<p>render: function () {</p>
+
+<p>var that = this;</p>
+
+<p>var tmpl = _.template(this.template);</p>
+
+<p>this.$el.html(tmpl(this.model.toJSON()));</p>
+
+<p>if (this.model.get(&#8216;detailsLoaded&#8217;) === false) {</p>
+
+<p>this.loadDetails();</p>
+
+<p>} else {</p>
+
+<p>//use nested views to render each section individually:</p>
+
+<p>this.renderFriends(this.model.get(&#8216;friends&#8217;));</p>
+
+<p>this.renderGettinButton(this.model);</p>
+
+<p>$(&#8216;#gameDetailsLoader&#8217;).slideUp(&#8216;fast&#8217;);</p>
+
+<p>$(&#8216;#gameDetailsFull&#8217;).slideDown(&#8216;fast&#8217;);</p>
+
+<p>}</p>
+
+<p>return this;</p>
+
+<p>},</p>
+
+<p>renderFriends: function (fr) {</p>
+
+<p>var view = new FriendsView({ collection: fr });</p>
+
+<p>this.$el.find(&#8216;#divFriends&#8217;).html(view.render().el);</p>
+
+<p>},</p>
+
+<p>renderGettinButton: function(g){</p>
+
+<p>var view = new GettinButtonView({ model: this.model });</p>
+
+<p>this.$el.find(&#8216;#gettinButton&#8217;).html(view.render().el);</p>
+
+<p>},</p>
+
+<p>loadDetails: function () {</p>
+
+<p>var friends = new UserModel.Collection();</p>
+
+<p>//**technically this whole area should be fetching the game details model &#8211; not friends</p>
+
+<p>var that = this;</p>
+
+<p>friends.fetch({</p>
+
+<p>success: function () {</p>
+
+<p>that.model.set(&#8216;friends&#8217;, friends);</p>
+
+<p>that.model.set(&#8216;detailsLoaded&#8217;, true);</p>
+
+<p>that.render();</p>
+
+<p>}</p>
+
+<p>});</p>
+
+<p>return this;</p>
+
+<p>}</p>
+
+<p>});</p>
+
+<p>return View;</p>
+
+<p>});</p>
+
+<p>[/sourcecode]</p>
+
+<p>[toggles]</p>
+
+<p>[toggle title=&#8221;View the full GameDetails.cshtml HTML template&#8221; state=&#8221;&#8221;]</p>
+
+<p>[sourcecode lang=&#8221;html&#8221;]</p>
+
+<script id="gameDetailsTemplate" type="text/template">
+      
+<section id="gameTitle" style="background-image: url(/content/assets/backgrounds/<%= gameId %>.jpg);">
+          
+<h2>&nbsp;<%= title %></h2>
+      
+</section>
+      
+<div style="padding: 1%;">
+          
+<div style="float: right;">
+          
+<% for(var c=0; c<consoles.length; c++){ %>
+              
+<span class="console-badge c<%= consoles[c].consoleId%>"><%= consoles[c].abbrev %></span>
+          
+<% } %>
+          
+</div>
+          
+<b>Release Date:</b> <%= moment(releaseDate).format("MMM Do, YYYY") %> (<%= moment(releaseDate).fromNow()%>)
+      
+</div>
+
+<div id="gameDetailsLoader" style="text-align: center;">
+          
+<img src="http://assets3.notonthehighstreet.com/images/shared/icons/ajax-loader.gif?1362151400" />
+      
+</div>
+
+<div id="gameDetailsFull" class="hidden" style="padding: 1%;">
+          
+<div style="background-color: #f5f5f5; padding: 1%; border: solid 1px #c1c1c1;">
+              
+<%= description %>
+          
+</div>
+          
+<br />
+          
+<div style="float: right; width: 49%; padding: 0 1% 0 1%; font-size: .9em; position: relative;">
+              
+<h3>&nbsp;</h3>
+              
+<div id="gettinButton"></div>
+          
+</div>
+          
+<div style="float: left; width: 49%">
+              
+<h3>Preorder Bonuses:</h3>
+              
+<img src="/content/images/vendors/vendor_az.jpg" style="border: solid 1px #353535;" />
+              
+<img src="/content/images/vendors/vendor_bb.jpg" style="border: solid 1px #353535;" />
+              
+<img src="/content/images/vendors/vendor_tr.jpg" style="border: solid 1px #353535;" />
+              
+<img src="/content/images/vendors/vendor_wm.jpg" style="border: solid 1px #353535;" />
+              
+<br />
+          
+</div>
+
+<div class="clear"></div>
+
+<br />
+          
+<h3>Friends:</h3>
+          
+<div id="divFriends" style=" height: 60px; overflow-x: scroll;"></div>
+
+<br />
+          
+<h3>Upcoming Games:</h3>
+          
+<div id="divUpcoming" style=" height: 150px; overflow-x: scroll;"></div>
+      
+</div>
+      
+<div class="clear"></div>
+  
+</script>
+  
+
+<p>[/sourcecode]</p>
+
+<p>[/toggle]</p>
+
+<p>[/toggles]</p>
+
+<p>That looks like a lot! But when we break it down by section you&#8217;ll realize its not so bad at all.</p>
+
+<p>First, we setup the normal components of any Backbone view; the tagName, HTML id, className, and client template html (using jQuery to grab the html).  This particular view is really all about rendering a bunch of subviews.  The main render() method does a standard underscore template HTML generation.  Then it checks against an internal property of our game model &#8220;detailsLoaded&#8221;.<code>Line: 14</code> This property we are using to determine if the additional details for the view have already been retrieved from the server (to cache the data basically).  If detailsLoaded is false, we call an internal method &#8220;loadDetails&#8221; that creates some additional models, and then calls their fetch (for the purposes of this article, we just setup Friends as its own view and data). If detailsLoaded is true (as it is set to true after loadDetails succeeds), then we simply render the views for Friends, the Gettin button, and then some housekeeping (get rid of the animated gif for the loader and reveal the actual data that was loaded).</p>
+
+<p>When we render our Friends <code>Line: 25</code>, we create a view that is instantiated with the collection of friends (that was just retrieved from the server using loadDetails).  Inside the FriendsView is basic Backbone stuff, but since its a view containing a collection, in its render method we execute an individual FriendView render per item in the collection:</p>
+
+<p>[sourcecode lang=&#8221;javascript&#8221;]</p>
+
+<p>render: function () {</p>
+
+<p>this.$el.html(&#8221;);</p>
+
+<p>var that = this;</p>
+
+<p>_.each(this.collection.models, function (item) {</p>
+
+<p>that.renderFriend(item);</p>
+
+<p>}, this);</p>
+
+<p>return this;</p>
+
+<p>},</p>
+
+<p>renderFriend: function (item) {</p>
+
+<p>var view = new FriendView({ model: item });</p>
+
+<p>this.$el.append(view.render().el);</p>
+
+<p>}</p>
+
+<p>[/sourcecode]</p>
+
+<p>The individual Friend view is pretty basic:</p>
+
+<p>[sourcecode lang=&#8221;javascript&#8221;]</p>
+
+<p>define([&#8216;backbone&#8217;], function (Backbone) {</p>
+
+<p>var View = Backbone.View.extend({</p>
+
+<p>tagName: &#8216;img&#8217;,</p>
+
+<p>className: &#8216;boxfriend&#8217;,</p>
+
+<p>initialize: function () {</p>
+
+<p>this.listenTo(this.model, &ldquo;change&rdquo;, this.render);</p>
+
+<p>},</p>
+
+<p>events: {</p>
+
+<p>&#8216;click&#8217;: &#8216;showDetails&#8217;</p>
+
+<p>},</p>
+
+<p>render: function () {</p>
+
+<p>this.$el.attr({ &#8216;src&#8217;: this.model.get(&#8216;avatar&#8217;) });</p>
+
+<p>this.$el.html(this.el);</p>
+
+<p>return this;</p>
+
+<p>},</p>
+
+<p>showDetails: function () {</p>
+
+<p>console.log(&ldquo;you clicked on friend: &ldquo; + this.model.get(&#8216;username&#8217;));</p>
+
+<p>}</p>
+
+<p>});</p>
+
+<p>return View;</p>
+
+<p>});</p>
+
+<p>[/sourcecode]</p>
+
+<p>Again, everything happening here is pretty standard, with the exception of the initialize function. When we initialize our view (for a Friend), we add a listener to detect whenever the model changes, and when it does, execute the view&#8217;s render function <code>Line: 6</code>.  This section is important because this is where you can have your views actually bound to your models, so whenever your models change (or updated data is retrieved from the server, for example) the view will immediately react and/or re-render and display the updated information.</p>
+
+<p>The Gettin button view is going to work in a similar way to the Friends list.  It is its own view, and is being rendered after the additional details for the game are loaded. <code>Line: 29</code> The Gettin button view does something a little differently though:</p>
+
+<p>[sourcecode lang=&#8221;javascript&#8221;]</p>
+
+<p>define([&#8216;backbone&#8217;, &#8216;models/m_console&#8217;], function (Backbone, ConsoleModel) {</p>
+
+<p>var View = Backbone.View.extend({</p>
+
+<p>tagName: &#8216;div&#8217;,</p>
+
+<p>className: &#8216;gettin-button-container&#8217;,</p>
+
+<p>initialize: function () {</p>
+
+<p>this.collection = new ConsoleModel.Collection(this.model.get(&#8216;consoles&#8217;));</p>
+
+<p>},</p>
+
+<p>events: {</p>
+
+<p>&#8216;click a.gettin-button&#8217;: &#8216;showConsoleList&#8217;</p>
+
+<p>},</p>
+
+<p>render: function () {</p>
+
+<p>var that = this;</p>
+
+<p>var consoles = &#8221;;</p>
+
+<p>this.$el.html(&#8216;<a href="#" class="gettin-button"><span style="float: right;">&#9660;</span>Gettin&#8230;</a><div class="consoles-list hidden"></div>&#8217;);</p>
+
+<p>_.each(this.collection.models, function &copy; {</p>
+
+<p>that.renderConsoleItem&copy;;</p>
+
+<p>});</p>
+
+<p>return this;</p>
+
+<p>},</p>
+
+<p>renderConsoleItem: function &copy; {</p>
+
+<p>var view = new consoleView({ model: c, gameid: this.model.get(&#8216;gameId&#8217;) });</p>
+
+<p>this.$el.find(&#8216;div.consoles-list&#8217;).append(view.render().el);</p>
+
+<p>},</p>
+
+<p>showConsoleList: function (e) {</p>
+
+<p>e.preventDefault();</p>
+
+<p>$(&#8216;div.consoles-list&#8217;).toggle();</p>
+
+<p>}</p>
+
+<p>});</p>
+
+<p>var consoleView = Backbone.View.extend({</p>
+
+<p>className: &#8216;console-item&#8217;,</p>
+
+<p>events: { &#8216;click&#8217;:&#8217;clickedConsole&#8217; },</p>
+
+<p>render: function () { this.$el.addClass(&#8216;c&#8217; + this.model.get(&#8216;consoleId&#8217;)).html(this.model.get(&#8216;title&#8217;)); return this; },</p>
+
+<p>clickedConsole: function () {</p>
+
+<p>console.log(&#8216;Youre gettin it for: &#8216; + this.model.get(&#8216;title&#8217;));</p>
+
+<p>var that = this;</p>
+
+<p>$.ajax({</p>
+
+<p>url: &#8216;/api/gettin&#8217;,</p>
+
+<p>data: &#8216;{ gameid: &#8216; + that.options.gameid + &#8216;, consoleid: &#8216; + that.model.get(&#8216;consoleId&#8217;) + &#8216; }&#8217;,</p>
+
+<p>type: &#8216;POST&#8217;,</p>
+
+<p>contentType: &#8216;application/json; charset=utf-8&#8217;,</p>
+
+<p>success: function (d) {</p>
+
+<p>console.log(&ldquo;Result of gettin button ajax call: &ldquo; + d.status);</p>
+
+<p>}</p>
+
+<p>});</p>
+
+<p>$(&#8216;div.consoles-list&#8217;).hide();</p>
+
+<p>}</p>
+
+<p>});</p>
+
+<p>return View;</p>
+
+<p>});</p>
+
+<p>[/sourcecode]</p>
+
+<p>At first glance, this is yet another basic Backbone view. Although, you can see a few minor things happening that are different.</p>
+
+<p>First, in our initialization <code>Line: 6</code>, we create a new collection of ConsoleModel that we initalize with the consoles property of our model. Every game &#8220;record&#8221; that we retrieve from the backend contains the basic information for a game, as well as an array of &#8220;Consoles&#8221; that the game is available on (Xbox 360, PlayStation 3, PC, etc). The way the Gettin button will work, is that its basically going to behave like a regular dropdown list &#8211; clicking the button will dropdown a list of consoles that the game is available on and then the user clicks the console that they are intending on purchasing the game on.</p>
+
+<p>The Gettin button will render as a regular div, but inside the render function we manually set some HTML on the fly: first we create a simple A tag, give it a class, some style, the text that should appear, as well as another div that will contain the actual list of consoles. <code>Line: 16</code></p>
+
+<p>Then we do a standard iteration through the collection of consoles, rendering each individually and appending to the HTML of the div that we just manually inserted after the A tag. However, the item render creates a new &#8220;consoleView&#8221;. Well, since we aren&#8217;t ever going to use the consoleView anywhere but inside this Gettin button, we declared that right below (instead of its own file).<code>Line: 34</code> Consider it an ad-hoc view (temporary and disposable). That ad-hoc view really only concerns itself with 1 thing, registering a click event and handling that event. <code>Lines: 36, 38</code></p>
+
+<p>[alert style=&#8221;alert-info&#8221;] <strong>Important Note:</strong> You can see in <code>Line: 25</code> when we created our new view, in addition to the model we also included some additional information; gameid. To access this information in our actual view, we need to refer to this.options. <code>Line: 43</code>[/alert]</p>
+
+<p>Inside the click event for our consoleView, we make a quick (and dirty) ajax call back to our server, passing the gameId and consoleId. The server handles actually persisting this information (under our user account). Then we just hide the list! Typically, we would also reveal some kind of indicator onscreen (a success notice, checkmark icon, fade the gettin button green &#8211; something!).</p>
+
+<p>That&#8217;s it for the Gettin button!</p>
+
+<p>OK, lets recap what just happened with the game details:</p>
+
+<ul>
+<li>When a Game is clicked its GameDetails view is generated, and the div of its details is displayed via a standard jQuery modal window.</li>
+<li>Inside the GameDetails, a number of different views (areas) are rendered including Friends and a Gettin button.</li>
+<li>The Friends list is actually retrieved via a fetch() and each Friend can be clicked that will trigger an event.</li>
+<li>The Gettin button is just a dropdown list of consoles the game is available on, each clickable that sends some basic data back to the server for persistence (via a standard jQuery ajax post).</li>
+</ul>
+
+<h3 id="summary">Summary</h3>
+
+<p>In this series of articles, I deconstructed and dissected a pretty typical website application that was created using Backbone.js and Require.js.  The application, although basic, featured a lot of standard UI type stuff that we all deal with on a daily basis.  Even though it looks like a lot of code and at times really seems like overkill, I can say first hand that I now definitely prefer coding a site like this using Backbone and especially with the inclusion of Require.js.</p>
+
+<p>Many of you, myself included, will initially try to fight a concept like this and argue that you can accomplish it all using your typical jQuery event binding and DOM manipulation.  Having originally written this application in basically 1 gigantic core.js file I can tell you first hand that it just starts to get way to unwieldy. You just have functions on top of functions and things get out of hand way to fast. Debugging becomes a nightmare, and you have to think way to hard to ensure that you accounted for all of your events and every conceivable scenario.</p>
+
+<p>I really hope you learned something reading through these articles! If you have any questions or comments please feel free to post. I hope I can learn a lot from you as well in the discussion! Thanks for reading!</p>
+
+<div class="alert_box">
+  A few requests for the full source code for this project have been made. Please feel free to download the full project files via this repo:<br /> <a href="https://github.com/jkat98/imgettinit_netmvc">https://github.com/jkat98/imgettinit_netmvc</a>
+</div>
+
+      </article>
+
+      <ul class="pager blog-pager">
+        
+          <li class="previous">
+            <a href="http://kroltech.com/2013/03/21/barbell-club-comes-to-an-end/" data-toggle="tooltip" data-placement="top" title="Barbell club session comes to an end">&larr; Previous Post</a>
+          </li>
+        
+        
+          <li class="next">
+            <a href="http://kroltech.com/2013/03/21/building-a-web-app-using-backbone-js-and-require-js-part-1/" data-toggle="tooltip" data-placement="top" title="Building a web app using Backbone.js and require.js – Part 1">Next Post &rarr;</a>
+          </li>
+        
+      </ul>
+
+      
+        
+          <div class="disqus-comments">
+            <div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_shortname = 'jasonkrol';
+    var disqus_identifier = 'http:\/\/kroltech.com\/2013\/03\/21\/building-a-web-app-using-backbone-js-and-require-js-part-2\/';
+    var disqus_title = 'Building a web app using Backbone.js and require.js – Part 2';
+    var disqus_url = 'http:\/\/kroltech.com\/2013\/03\/21\/building-a-web-app-using-backbone-js-and-require-js-part-2\/';
+
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+          </div>
+        
+      
+
+    </div>
+  </div>
+</div>
+
+    <footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <ul class="list-inline text-center footer-links">
+          
+              <li>
+                <a href="mailto:jkat98@gmail.com" title="Email me">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-envelope fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="https://www.plus.google.com/&#43;JasonKrol" title="Google&#43;">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-google-plus fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="https://github.com/shorttompkins" title="GitHub">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="https://twitter.com/shorttompkins" title="Twitter">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="https://reddit.com/u/shorttompkins" title="Reddit">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-reddit-alien fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="https://linkedin.com/in/jasonkrol" title="LinkedIn">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-linkedin fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="https://stackoverflow.com/users/1623304/jkat98" title="StackOverflow">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-stack-overflow fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="https://www.youtube.com/user/jkat98" title="Youtube">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-youtube fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+          
+          <li>
+            <a href="http://kroltech.com/index.xml" title="RSS">
+              <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fa fa-rss fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          
+        </ul>
+        <p class="credits copyright text-muted">
+          Jason Krol
+          &nbsp;&bull;&nbsp;
+          2016
+
+          
+            &nbsp;&bull;&nbsp;
+            <a href="http://kroltech.com/">KrolTech</a>
+          
+        </p>
+        
+        <p class="credits theme-by text-muted">
+          <a href="http://gohugo.io">Hugo v0.20.7</a> powered &nbsp;&bull;&nbsp; Theme by <a href="http://deanattali.com/beautiful-jekyll/">Beautiful Jekyll</a> adapted to <a href="https://github.com/halogenica/beautifulhugo">Beautiful Hugo</a>
+          
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/katex.min.js" integrity="sha384-/y1Nn9+QQAipbNQWU65krzJralCnuOasHncUFXGkdwntGeSvQicrYkiUBwsgUqc1" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/contrib/auto-render.min.js" integrity="sha384-dq1/gEHSxPZQ7DdrM82ID4YVol9BYyU7GbWlIwnwyPzotpoc57wDw/guX8EaYGPx" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<script src="http://kroltech.com/js/main.js"></script>
+<script src="http://kroltech.com/js/highlight.min.js"></script>
+<script> hljs.initHighlightingOnLoad(); </script>
+<script> renderMathInElement(document.body); </script>
+
+
+
+
+
+  </body>
+</html>
+

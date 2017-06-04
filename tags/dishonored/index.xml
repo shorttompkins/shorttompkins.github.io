@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Dishonored on KrolTech</title>
+    <link>http://kroltech.com/tags/dishonored/</link>
+    <description>Recent content in Dishonored on KrolTech</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <managingEditor>jkat98@gmail.com (Jason Krol)</managingEditor>
+    <webMaster>jkat98@gmail.com (Jason Krol)</webMaster>
+    <lastBuildDate>Fri, 12 Oct 2012 22:28:37 +0000</lastBuildDate>
+    
+	<atom:link href="http://kroltech.com/tags/dishonored/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Naming a startup, Dishonored and X-Com, PTM</title>
+      <link>http://kroltech.com/2012/10/12/40/</link>
+      <pubDate>Fri, 12 Oct 2012 22:28:37 +0000</pubDate>
+      <author>jkat98@gmail.com (Jason Krol)</author>
+      <guid>http://kroltech.com/2012/10/12/40/</guid>
+      <description>Spent the weekend spec’ing the “Secret” website, outlining each page, functionality and features. Spent a little time working on the actual domain name, but need to work really hard on figuring that key component out. Found a great article on mashable that will help. Hoping to start coding before the end of the month, so I can focus a big part of November on getting the groundwork done.
+Dishonored and X-Com: Enemy Unknown both came out this week.</description>
+    </item>
+    
+  </channel>
+</rss>

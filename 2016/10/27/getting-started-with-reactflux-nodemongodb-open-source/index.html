@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+  <title>Getting started with React/Flux Node/MongoDB – Open Source</title>
+  <meta property="og:title" content="Getting started with React/Flux Node/MongoDB – Open Source" />
+  <meta name="twitter:title" content="Getting started with React/Flux Node/MongoDB – Open Source" />
+  <meta name="description" content="Almost a year ago I started an ambitious project to create a website from scratch using React and Flux (Redux) as well as Node.js and MongoDB.  I was also writing a companion book parallel to writing the actual code for the project and made some really good progress.  Since I basically stopped completely and just let the book sit and linger, I decided that I should at least open source the book so you can check it out and hopefully learn from it.
+
+">
+  <meta property="og:description" content="Almost a year ago I started an ambitious project to create a website from scratch using React and Flux (Redux) as well as Node.js and MongoDB.  I was also writing a companion book parallel to writing the actual code for the project and made some really good progress.  Since I basically stopped completely and just let the book sit and linger, I decided that I should at least open source the book so you can check it out and hopefully learn from it.
+
+">
+  <meta name="twitter:description" content="Almost a year ago I started an ambitious project to create a website from scratch using React and Flux (Redux) as well as Node.js and MongoDB.  I was also writing a companion book parallel to writing …">
+  <meta name="author" content="Jason Krol"/>
+  <link href='http://kroltech.com/img/favicon.ico' rel='icon' type='image/x-icon'/>
+  <meta property="og:image" content="http://kroltech.com/img/avatar-icon.png" />
+  <meta name="twitter:image" content="http://kroltech.com/img/avatar-icon.png" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:site" content="@shorttompkins" />
+  <meta name="twitter:creator" content="@shorttompkins" />
+  <meta property="og:url" content="http://kroltech.com/2016/10/27/getting-started-with-reactflux-nodemongodb-open-source/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="KrolTech" />
+
+  <meta name="generator" content="Hugo 0.20.7" />
+  <link rel="canonical" href="http://kroltech.com/2016/10/27/getting-started-with-reactflux-nodemongodb-open-source/" />
+  <link rel="alternate" href="http://kroltech.com/index.xml" type="application/rss+xml" title="KrolTech">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/katex.min.css" integrity="sha384-wITovz90syo1dJWVh32uuETPVEtGigN07tkttEqPv+uR2SE/mbQcG7ATL28aI9H0" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <link rel="stylesheet" href="http://kroltech.com/css/main.css" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" />
+  <link rel="stylesheet" href="http://kroltech.com/css/pygment_highlights.css" />
+  <link rel="stylesheet" href="http://kroltech.com/css/highlight.min.css" />
+
+<script>
+window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+ga('create', 'UA-29480326-4', 'auto');
+ga('send', 'pageview');
+</script>
+<script async src='//www.google-analytics.com/analytics.js'></script>
+
+</head>
+
+  <body>
+    <nav class="navbar navbar-default navbar-fixed-top navbar-custom">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="http://kroltech.com/">KrolTech</a>
+    </div>
+
+    <div class="collapse navbar-collapse" id="main-navbar">
+      <ul class="nav navbar-nav navbar-right">
+        
+          
+            <li>
+              <a title="Blog" href="/">Blog</a>
+            </li>
+          
+        
+          
+            <li>
+              <a title="About" href="/page/about/">About</a>
+            </li>
+          
+        
+
+        
+
+        
+      </ul>
+    </div>
+
+    <div class="avatar-container">
+      <div class="avatar-img-border">
+        
+          <a title="KrolTech" href="http://kroltech.com/">
+            <img class="avatar-img" src="http://kroltech.com/img/avatar-icon.png" alt="KrolTech" />
+          </a>
+        
+      </div>
+    </div>
+
+  </div>
+</nav>
+
+
+
+
+    
+  
+  
+  
+
+
+
+
+  
+
+  <header class="header-section ">
+    
+    <div class="intro-header no-img">
+      
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+            <div class="post-heading">
+              <h1>Getting started with React/Flux Node/MongoDB – Open Source</h1>
+                
+                
+                  <span class="post-meta">
+  Posted on October 27, 2016
+  
+</span>
+
+
+                
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+
+    
+<div class="container">
+  <div class="row">
+    <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+      <article role="main" class="blog-post">
+        <p>Almost a year ago I <a href="https://kroltech.com/2015/10/15/getting-started-with-react-and-flux/">started an ambitious project</a> to create a website from scratch using React and Flux (Redux) as well as Node.js and MongoDB.  I was also writing a companion book parallel to writing the actual code for the project and made some really good progress.  Since I basically stopped completely and just let the book sit and linger, I decided that I should at least open source the book so you can check it out and hopefully learn from it.</p>
+
+<p></p>
+
+<p>There are, so far, 10 complete(ish) chapters out of the 20 that I planned.  I really hope that I can get motivated again to jump back in and finish the book, but for now this should be more than enough to get anyone going.</p>
+
+<p>The book contents can be found here:</p>
+
+<p><strong><a href="https://github.com/shorttompkins/writing/tree/master/building-react-fullstack">https://github.com/shorttompkins/writing/tree/master/building-react-fullstack</a></strong></p>
+
+<p>And the accompanying source code for the website that gets built:</p>
+
+<p><strong><a href="https://github.com/shorttompkins/mrw.lol">https://github.com/shorttompkins/mrw.lol</a></strong></p>
+
+<p>Here is the TOC that is complete so far:</p>
+
+<ul>
+<li><strong>Introduction/Demo</strong> &#8211; Welcome to the project, tech stack overview, and what to expect.</li>
+<li><strong>Up and Running</strong> &#8211; Get the tools and dependencies you need to get the app up and running on your local development workstation.</li>
+<li><strong>Tour of the App and Codebase</strong> &#8211; Take a quick tour of the app and its primary features as well as browse through the structure of the project codebase.</li>
+<li><strong>Introduction to ES2015</strong> &#8211; Brief introduction to the new features introduced with the latest version of JavaScript; ES2015 (a.k.a ES6)</li>
+<li><strong>Getting Started with Webpack</strong> &#8211; Webpack is the tool that will build our React.js app.</li>
+<li><strong>ExpressJS Server 101</strong> &#8211; Bootstrapping a basic ExpressJS web server and understanding configuration, middleware, controllers and view rendering.</li>
+<li><strong>MongoDB and Mongoose Models</strong> &#8211; Establish a database connection via our web server and build out data models using Mongoose.js.</li>
+<li><strong>Writing Your First React Components</strong> &#8211; Write a core App container component as well as layout and header components.</li>
+<li><strong>URLs with React Router</strong> &#8211; Support custom URLs and navigation with React Router.</li>
+<li><strong>Using Flux with React</strong> &#8211; Introduction and understanding of the Flux architecture pattern, its core features, and using it in the project.</li>
+</ul>
+
+<p><span style="color:#ff0000;"><strong>Its very important to note that some of the technical specifics might be slightly out of date, however the concepts discussed should still be very relevant. (Also note that it is/was a work in progress so theres a good possibility that I&#8217;m wrong about stuff.)</strong></span></p>
+
+<p>The remaining chapters that I haven&#8217;t written yet (but could get back into if theres enough demand):</p>
+
+<ul>
+<li><strong>Image Upload Component</strong> &#8211; Build the React component that will allow users to upload an image to the site.</li>
+<li><strong>Image Upload API Endpoint</strong> &#8211; The associated API endpoint that the image upload component communicates with.</li>
+<li><strong>Image Search Component</strong> &#8211; Build the React component that allows users to type into a search input field and perform a filter of images by tag.</li>
+<li><strong>Image Search API Endpoints</strong> &#8211; The associated API endpoints that the search component requires.</li>
+<li><strong>User Authentication Component</strong> &#8211; Build the React component that will handle user login via Social Networking sites.</li>
+<li><strong>User Authentication w/ Passport.js</strong> &#8211; Use Passport.js to enable Social Networking user registration and login.</li>
+<li><strong>Unit Testing React.js Components</strong> &#8211; Use shallow rendering to test React components.</li>
+<li><strong>Unit Testing Node.js Modules</strong> &#8211; Writing unit tests for your Node.js controllers.</li>
+<li><strong>Deploying using Docker and Digital Ocean</strong> &#8211; Introduction and understanding of Docker and how it&#8217;s being used to manage our infrastructure as well as deployment to Digital Ocean.</li>
+<li><strong>React DevTools</strong> &#8211; Brief tour of the awesome Chrome React DevTools plugin.</li>
+</ul>
+
+<p>Again Im providing all of this pretty much as-is with the hopes that you can take something from it, learn something maybe, or just snag a piece of the source code or even just have that simple &#8220;ah ha!&#8221; moment when something finally clicks!</p>
+
+<p>As always I&#8217;m open to any/all feedback and want to hear what you think.</p>
+      </article>
+
+      <ul class="pager blog-pager">
+        
+          <li class="previous">
+            <a href="http://kroltech.com/2015/12/23/kangaroo-pro-standing-desk-review/" data-toggle="tooltip" data-placement="top" title="Kangaroo Pro Standing Desk Review">&larr; Previous Post</a>
+          </li>
+        
+        
+          <li class="next">
+            <a href="http://kroltech.com/2016/12/08/how-im-learning-elixir-phoenix/" data-toggle="tooltip" data-placement="top" title="How I’m Learning: Elixir &amp; Phoenix">Next Post &rarr;</a>
+          </li>
+        
+      </ul>
+
+      
+        
+          <div class="disqus-comments">
+            <div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_shortname = 'jasonkrol';
+    var disqus_identifier = 'http:\/\/kroltech.com\/2016\/10\/27\/getting-started-with-reactflux-nodemongodb-open-source\/';
+    var disqus_title = 'Getting started with React\/Flux Node\/MongoDB – Open Source';
+    var disqus_url = 'http:\/\/kroltech.com\/2016\/10\/27\/getting-started-with-reactflux-nodemongodb-open-source\/';
+
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+          </div>
+        
+      
+
+    </div>
+  </div>
+</div>
+
+    <footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <ul class="list-inline text-center footer-links">
+          
+              <li>
+                <a href="mailto:jkat98@gmail.com" title="Email me">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-envelope fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="https://www.plus.google.com/&#43;JasonKrol" title="Google&#43;">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-google-plus fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="https://github.com/shorttompkins" title="GitHub">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="https://twitter.com/shorttompkins" title="Twitter">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="https://reddit.com/u/shorttompkins" title="Reddit">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-reddit-alien fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="https://linkedin.com/in/jasonkrol" title="LinkedIn">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-linkedin fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="https://stackoverflow.com/users/1623304/jkat98" title="StackOverflow">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-stack-overflow fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="https://www.youtube.com/user/jkat98" title="Youtube">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-youtube fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+          
+          <li>
+            <a href="http://kroltech.com/index.xml" title="RSS">
+              <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fa fa-rss fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          
+        </ul>
+        <p class="credits copyright text-muted">
+          Jason Krol
+          &nbsp;&bull;&nbsp;
+          2016
+
+          
+            &nbsp;&bull;&nbsp;
+            <a href="http://kroltech.com/">KrolTech</a>
+          
+        </p>
+        
+        <p class="credits theme-by text-muted">
+          <a href="http://gohugo.io">Hugo v0.20.7</a> powered &nbsp;&bull;&nbsp; Theme by <a href="http://deanattali.com/beautiful-jekyll/">Beautiful Jekyll</a> adapted to <a href="https://github.com/halogenica/beautifulhugo">Beautiful Hugo</a>
+          
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/katex.min.js" integrity="sha384-/y1Nn9+QQAipbNQWU65krzJralCnuOasHncUFXGkdwntGeSvQicrYkiUBwsgUqc1" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/contrib/auto-render.min.js" integrity="sha384-dq1/gEHSxPZQ7DdrM82ID4YVol9BYyU7GbWlIwnwyPzotpoc57wDw/guX8EaYGPx" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<script src="http://kroltech.com/js/main.js"></script>
+<script src="http://kroltech.com/js/highlight.min.js"></script>
+<script> hljs.initHighlightingOnLoad(); </script>
+<script> renderMathInElement(document.body); </script>
+
+
+
+
+
+  </body>
+</html>
+

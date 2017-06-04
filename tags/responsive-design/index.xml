@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Responsive Design on KrolTech</title>
+    <link>http://kroltech.com/tags/responsive-design/</link>
+    <description>Recent content in Responsive Design on KrolTech</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <managingEditor>jkat98@gmail.com (Jason Krol)</managingEditor>
+    <webMaster>jkat98@gmail.com (Jason Krol)</webMaster>
+    <lastBuildDate>Fri, 03 Aug 2012 22:13:38 +0000</lastBuildDate>
+    
+	<atom:link href="http://kroltech.com/tags/responsive-design/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Angular.js, OOP js, Responsive Design, Twitter Bootstrap</title>
+      <link>http://kroltech.com/2012/08/03/angular-js-oop-js-responsive-design-twitter-bootstrap/</link>
+      <pubDate>Fri, 03 Aug 2012 22:13:38 +0000</pubDate>
+      <author>jkat98@gmail.com (Jason Krol)</author>
+      <guid>http://kroltech.com/2012/08/03/angular-js-oop-js-responsive-design-twitter-bootstrap/</guid>
+      <description>Fresh on the heels of my failure with Knockout, I continued my OOP and data-bound JavaScript development. I also discovered Angular.js this week (by Google). This looks like it&amp;#8217;s a much cleaner and easier (read: less clunky) way of doing what Knockout.js does. It also looks like this might be pretty easy for me to implement into my existing project. Also, from a staying power perspective, it&amp;#8217;s probably safe to assume since Google is officially backing (and created) that it will be around for a while.</description>
+    </item>
+    
+  </channel>
+</rss>

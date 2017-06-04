@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Zen Coding on KrolTech</title>
+    <link>http://kroltech.com/tags/zen-coding/</link>
+    <description>Recent content in Zen Coding on KrolTech</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <managingEditor>jkat98@gmail.com (Jason Krol)</managingEditor>
+    <webMaster>jkat98@gmail.com (Jason Krol)</webMaster>
+    <lastBuildDate>Sat, 26 Jan 2013 02:49:39 +0000</lastBuildDate>
+    
+	<atom:link href="http://kroltech.com/tags/zen-coding/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Wodify, Zen Coding, Backbone.js book, SimCity beta!</title>
+      <link>http://kroltech.com/2013/01/26/wodify-zen-coding-backbone-js-book-simcity-beta/</link>
+      <pubDate>Sat, 26 Jan 2013 02:49:39 +0000</pubDate>
+      <author>jkat98@gmail.com (Jason Krol)</author>
+      <guid>http://kroltech.com/2013/01/26/wodify-zen-coding-backbone-js-book-simcity-beta/</guid>
+      <description>Created a super basic/handy lift calculator &amp;#8211; I’ll use this initially during my first bunch of sessions until I get comfortable doing the math on the fly. Its just painful trying to do percentage calculations while lifting, and then breaking down those results into how many different weights you need to add to each side of the bar! This tool will compute all of that in one shot!
+My Crossfit box started using Wodify.</description>
+    </item>
+    
+    <item>
+      <title>Web Essentials 1.7, Backbone.js, Google Nexus 4, Video game museum gets sold on ebay</title>
+      <link>http://kroltech.com/2012/11/16/web-essentials-1-7-backbone-js-google-nexus-4-video-game-museum-gets-sold-on-ebay/</link>
+      <pubDate>Fri, 16 Nov 2012 22:37:03 +0000</pubDate>
+      <author>jkat98@gmail.com (Jason Krol)</author>
+      <guid>http://kroltech.com/2012/11/16/web-essentials-1-7-backbone-js-google-nexus-4-video-game-museum-gets-sold-on-ebay/</guid>
+      <description>Installed Web Essentials 1.7 for VS2012 at home and tried out Zen Coding. This is definitely something really awesome and something I wish was integrated a long time ago. As it stands, I don&amp;#8217;t know how much “raw html” I will be coding in the near future to warrant using it all that much &amp;#8211; but I guess any html coding is worth doing via Zen Coding!
+Finally spent some time and started doing the Pluralsight course on Backbone.</description>
+    </item>
+    
+    <item>
+      <title>Crossfit, Obama!!, Zen Coding</title>
+      <link>http://kroltech.com/2012/11/09/crossfit-obama-zen-coding/</link>
+      <pubDate>Fri, 09 Nov 2012 22:35:45 +0000</pubDate>
+      <author>jkat98@gmail.com (Jason Krol)</author>
+      <guid>http://kroltech.com/2012/11/09/crossfit-obama-zen-coding/</guid>
+      <description>Busted my ass in a major workout last night at Crossfit. The regular class is NO JOKE!
+Oh yeah, and Obama won (again)!!!
+Decided to try another stab at Angular.js this week. Going to try to lab something up at work using it, something real-world like article comments or something.
+Continued working on the new Nextgen.com framework. Got the shell set up pretty nicely and did a lot of organization of all Javascript and CSS and how it will be integrated globally and sitewide.</description>
+    </item>
+    
+  </channel>
+</rss>

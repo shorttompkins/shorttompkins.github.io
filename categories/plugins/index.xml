@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Plugins on KrolTech</title>
+    <link>http://kroltech.com/categories/plugins/</link>
+    <description>Recent content in Plugins on KrolTech</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <managingEditor>jkat98@gmail.com (Jason Krol)</managingEditor>
+    <webMaster>jkat98@gmail.com (Jason Krol)</webMaster>
+    <lastBuildDate>Fri, 08 Feb 2013 18:39:04 +0000</lastBuildDate>
+    
+	<atom:link href="http://kroltech.com/categories/plugins/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>JavaScript books, recent projects, Line rider!, Rock climbing</title>
+      <link>http://kroltech.com/2013/02/08/javascript-books-recent-projects-line-rider-rock-climbing/</link>
+      <pubDate>Fri, 08 Feb 2013 18:39:04 +0000</pubDate>
+      <author>jkat98@gmail.com (Jason Krol)</author>
+      <guid>http://kroltech.com/2013/02/08/javascript-books-recent-projects-line-rider-rock-climbing/</guid>
+      <description>I went on a bit of a shopping spree on Amazon. Besides a few Kindle books (sci-fi, etc) I grabbed a few new JavaScript books as well:
+JavaScript Patterns &amp;#8211; Stoyan Stefanov
+Secrets of the JavaScript Ninja &amp;#8211; John Resig, Bear Bibeault
+If you are looking to utterly destroy an entire afternoon (or more), definitely check out the HTML5 version of an oldie but goodie, Free Rider HD!! (also know as Canvas Rider)</description>
+    </item>
+    
+    <item>
+      <title>Week in Review 2/1/13</title>
+      <link>http://kroltech.com/2013/02/01/what-i-learned-from-the-single-page-apps-spa-course-so-far/</link>
+      <pubDate>Fri, 01 Feb 2013 20:55:54 +0000</pubDate>
+      <author>jkat98@gmail.com (Jason Krol)</author>
+      <guid>http://kroltech.com/2013/02/01/what-i-learned-from-the-single-page-apps-spa-course-so-far/</guid>
+      <description>Was playing with animating some stuff on a page and started trying to work with animating box-shadow. I realized it wasn&amp;#8217;t working and after some research figured out that it just doesn&amp;#8217;t work. A super handy and easy plugin solves that problem though.
+The latest episode of the Suburban Strength Coach podcast is up!
+Started watching the Single Page Apps with HTML5, Web API, Knockout and jQuery on Pluralsight with my team at work.</description>
+    </item>
+    
+    <item>
+      <title>ImGettin.it launch! DMC!!! JavaScript/Node.js/Backbone.js</title>
+      <link>http://kroltech.com/2013/01/18/imgettin-it-launch-dmc-javascriptnode-jsbackbone-js/</link>
+      <pubDate>Fri, 18 Jan 2013 03:18:17 +0000</pubDate>
+      <author>jkat98@gmail.com (Jason Krol)</author>
+      <guid>http://kroltech.com/2013/01/18/imgettin-it-launch-dmc-javascriptnode-jsbackbone-js/</guid>
+      <description>Soft launched ImGettin.it over the weekend! By soft launch, I mean, bought and setup the domain, and got a test version of the site live. Login works, and the site “works” for the most part, but is very much not ready for prime time yet. I still need to get a lot of things working and most importantly I need a basic admin for the games database. The data that&amp;#8217;s up right now is just test seed data &amp;#8211; while pretty solid is far from complete or even valid.</description>
+    </item>
+    
+  </channel>
+</rss>

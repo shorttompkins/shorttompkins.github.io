@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Amazon.Com on KrolTech</title>
+    <link>http://kroltech.com/tags/amazon.com/</link>
+    <description>Recent content in Amazon.Com on KrolTech</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <managingEditor>jkat98@gmail.com (Jason Krol)</managingEditor>
+    <webMaster>jkat98@gmail.com (Jason Krol)</webMaster>
+    <lastBuildDate>Tue, 17 Jun 2014 20:02:19 +0000</lastBuildDate>
+    
+	<atom:link href="http://kroltech.com/tags/amazon.com/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Automating Amazon.com login with Node.js and PhantomJS</title>
+      <link>http://kroltech.com/2014/06/17/automating-amazon-com-login-with-node-js-and-phantomjs/</link>
+      <pubDate>Tue, 17 Jun 2014 20:02:19 +0000</pubDate>
+      <author>jkat98@gmail.com (Jason Krol)</author>
+      <guid>http://kroltech.com/2014/06/17/automating-amazon-com-login-with-node-js-and-phantomjs/</guid>
+      <description>&lt;p&gt;My quest to make a better Kindle Direct Publishing report using their &amp;#8220;nonpublic&amp;#8221; API data.&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

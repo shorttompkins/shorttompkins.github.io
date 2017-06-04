@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+  <title>Front End</title>
+  <meta property="og:title" content="Front End" />
+  <meta name="twitter:title" content="Front End" />
+  <meta name="author" content="Jason Krol"/>
+  <link href='http://kroltech.com/img/favicon.ico' rel='icon' type='image/x-icon'/>
+  <meta property="og:image" content="http://kroltech.com/img/avatar-icon.png" />
+  <meta name="twitter:image" content="http://kroltech.com/img/avatar-icon.png" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:site" content="@shorttompkins" />
+  <meta name="twitter:creator" content="@shorttompkins" />
+  <meta property="og:url" content="http://kroltech.com/categories/front-end/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="KrolTech" />
+
+  <meta name="generator" content="Hugo 0.20.7" />
+  <link rel="canonical" href="http://kroltech.com/categories/front-end/" />
+  <link rel="alternate" href="http://kroltech.com/index.xml" type="application/rss+xml" title="KrolTech">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/katex.min.css" integrity="sha384-wITovz90syo1dJWVh32uuETPVEtGigN07tkttEqPv+uR2SE/mbQcG7ATL28aI9H0" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <link rel="stylesheet" href="http://kroltech.com/css/main.css" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" />
+  <link rel="stylesheet" href="http://kroltech.com/css/pygment_highlights.css" />
+  <link rel="stylesheet" href="http://kroltech.com/css/highlight.min.css" />
+
+<script>
+window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+ga('create', 'UA-29480326-4', 'auto');
+ga('send', 'pageview');
+</script>
+<script async src='//www.google-analytics.com/analytics.js'></script>
+
+</head>
+
+  <body>
+    <nav class="navbar navbar-default navbar-fixed-top navbar-custom">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="http://kroltech.com/">KrolTech</a>
+    </div>
+
+    <div class="collapse navbar-collapse" id="main-navbar">
+      <ul class="nav navbar-nav navbar-right">
+        
+          
+            <li>
+              <a title="Blog" href="/">Blog</a>
+            </li>
+          
+        
+          
+            <li>
+              <a title="About" href="/page/about/">About</a>
+            </li>
+          
+        
+
+        
+
+        
+      </ul>
+    </div>
+
+    <div class="avatar-container">
+      <div class="avatar-img-border">
+        
+          <a title="KrolTech" href="http://kroltech.com/">
+            <img class="avatar-img" src="http://kroltech.com/img/avatar-icon.png" alt="KrolTech" />
+          </a>
+        
+      </div>
+    </div>
+
+  </div>
+</nav>
+
+
+
+
+    
+  <header class="header-section ">
+    <div class="intro-header no-img">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+            <div class="page-heading">
+              <h1>#Front End</h1>
+              <hr class="small">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+    
+  <div class="container" role="main">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        
+        <div class="posts-list">
+          
+            <article class="post-preview">
+              <a href="http://kroltech.com/2012/12/12/quick-tip-wrap-your-custom-javascript-code-in-closure-functions/">
+                <h2 class="post-title">Wrap your custom JavaScript code in Closure functions</h2>
+    
+                
+              </a>
+    
+              <p class="post-meta">
+                Posted on December 12, 2012
+              </p>
+              <div class="post-entry">
+                
+                  I finally figured out how to use closures properly in JavaScript. This came as a result of my needing to make sure globals I was defining in different script files weren&#8217;t conflicting with same named globals in other files. My solution was rather simple, just wrap existing chunks of code in their own function wrapper:
+Original Code:
+Note that the variables globalVar and anotherGlobal are truly GLOBAL and any other javascript file(s) with the same variables declared will cause major issues for our code (or vise versa).
+                  <a href="http://kroltech.com/2012/12/12/quick-tip-wrap-your-custom-javascript-code-in-closure-functions/" class="post-read-more">[Read More]</a>
+                
+              </div>
+    
+              
+                <span class="post-meta">
+                  
+                    #<a href="/tags/closures">closures</a>&nbsp;
+                  
+                    #<a href="/tags/javascript">javascript</a>&nbsp;
+                  
+                    #<a href="/tags/jquery">jquery</a>&nbsp;
+                  
+                </span>
+              
+    
+            </article>
+          
+            <article class="post-preview">
+              <a href="http://kroltech.com/2012/12/11/document-ready-versus-window-load/">
+                <h2 class="post-title">$(document).ready() versus $(window).load()</h2>
+    
+                
+              </a>
+    
+              <p class="post-meta">
+                Posted on December 11, 2012
+              </p>
+              <div class="post-entry">
+                
+                  As a force of habit, I&#8217;ve always just wrapped my JavaScript code in a $(document).ready() and assumed/hoped for the best. I know that this is specifically for when the DOM is ready, and doesn&#8217;t have anything to do with images. However, 99% of the time I&#8217;ve never really been concerned about the status of loaded images.
+Today, I came across an issue where during the $(document).ready() I needed to get the TOP position property of an  element.
+                  <a href="http://kroltech.com/2012/12/11/document-ready-versus-window-load/" class="post-read-more">[Read More]</a>
+                
+              </div>
+    
+              
+                <span class="post-meta">
+                  
+                    #<a href="/tags/jquery">jquery</a>&nbsp;
+                  
+                </span>
+              
+    
+            </article>
+          
+            <article class="post-preview">
+              <a href="http://kroltech.com/2012/12/08/protein-jquery-animation-and-easing-programming-android-holiday-party/">
+                <h2 class="post-title">Protein!, jQuery animation and easing, programming Android, Holiday party!!</h2>
+    
+                
+              </a>
+    
+              <p class="post-meta">
+                Posted on December 8, 2012
+              </p>
+              <div class="post-entry">
+                
+                  My continued use of My Fitness Pal (nutrition tracking app) has veered dangerously close to obsession! Literally, it&#8217;s become something of a game. I’m constantly looking at the details on every food and considering how it will effect my “stats” (seriously, as if I’m an MMO character or something)! Ultimately, that&#8217;s a good thing I guess. This past weekend alone I&#8217;ve been doing REALLY really well with my eating. I have a great schedule of meals lined up for the week too, with high protein days stacked for Tuesday and Thursday (Crossfit days).
+                  <a href="http://kroltech.com/2012/12/08/protein-jquery-animation-and-easing-programming-android-holiday-party/" class="post-read-more">[Read More]</a>
+                
+              </div>
+    
+              
+                <span class="post-meta">
+                  
+                    #<a href="/tags/animation">animation</a>&nbsp;
+                  
+                    #<a href="/tags/easing">easing</a>&nbsp;
+                  
+                    #<a href="/tags/jquery">jquery</a>&nbsp;
+                  
+                    #<a href="/tags/nutrition">nutrition</a>&nbsp;
+                  
+                    #<a href="/tags/protein">protein</a>&nbsp;
+                  
+                </span>
+              
+    
+            </article>
+          
+            <article class="post-preview">
+              <a href="http://kroltech.com/2012/11/16/web-essentials-1-7-backbone-js-google-nexus-4-video-game-museum-gets-sold-on-ebay/">
+                <h2 class="post-title">Web Essentials 1.7, Backbone.js, Google Nexus 4, Video game museum gets sold on ebay</h2>
+    
+                
+              </a>
+    
+              <p class="post-meta">
+                Posted on November 16, 2012
+              </p>
+              <div class="post-entry">
+                
+                  Installed Web Essentials 1.7 for VS2012 at home and tried out Zen Coding. This is definitely something really awesome and something I wish was integrated a long time ago. As it stands, I don&#8217;t know how much “raw html” I will be coding in the near future to warrant using it all that much &#8211; but I guess any html coding is worth doing via Zen Coding!
+Finally spent some time and started doing the Pluralsight course on Backbone.
+                  <a href="http://kroltech.com/2012/11/16/web-essentials-1-7-backbone-js-google-nexus-4-video-game-museum-gets-sold-on-ebay/" class="post-read-more">[Read More]</a>
+                
+              </div>
+    
+              
+                <span class="post-meta">
+                  
+                    #<a href="/tags/backbone.js">backbone.js</a>&nbsp;
+                  
+                    #<a href="/tags/nexus-4">nexus 4</a>&nbsp;
+                  
+                    #<a href="/tags/visual-studio-2012">visual studio 2012</a>&nbsp;
+                  
+                    #<a href="/tags/zen-coding">zen coding</a>&nbsp;
+                  
+                </span>
+              
+    
+            </article>
+          
+            <article class="post-preview">
+              <a href="http://kroltech.com/2012/11/09/crossfit-obama-zen-coding/">
+                <h2 class="post-title">Crossfit, Obama!!, Zen Coding</h2>
+    
+                
+              </a>
+    
+              <p class="post-meta">
+                Posted on November 9, 2012
+              </p>
+              <div class="post-entry">
+                
+                  Busted my ass in a major workout last night at Crossfit. The regular class is NO JOKE!
+Oh yeah, and Obama won (again)!!!
+Decided to try another stab at Angular.js this week. Going to try to lab something up at work using it, something real-world like article comments or something.
+Continued working on the new Nextgen.com framework. Got the shell set up pretty nicely and did a lot of organization of all Javascript and CSS and how it will be integrated globally and sitewide.
+                  <a href="http://kroltech.com/2012/11/09/crossfit-obama-zen-coding/" class="post-read-more">[Read More]</a>
+                
+              </div>
+    
+              
+                <span class="post-meta">
+                  
+                    #<a href="/tags/angular.js">angular.js</a>&nbsp;
+                  
+                    #<a href="/tags/jquery">jquery</a>&nbsp;
+                  
+                    #<a href="/tags/obama">obama</a>&nbsp;
+                  
+                    #<a href="/tags/zen-coding">zen coding</a>&nbsp;
+                  
+                </span>
+              
+    
+            </article>
+          
+            <article class="post-preview">
+              <a href="http://kroltech.com/2012/10/19/started-coding-secret-website-azure-hosting-pains/">
+                <h2 class="post-title">Started coding “Secret” website, Azure / hosting pains</h2>
+    
+                
+              </a>
+    
+              <p class="post-meta">
+                Posted on October 19, 2012
+              </p>
+              <div class="post-entry">
+                
+                  Started coding &#8220;Secret&#8221; website (still not happy with the name)!! Going with a basic 3 tier structure for now &#8211; Domain, Services, and UX. Made good progress so far on the Domain model, and the underlying foundation for the Services layer.
+Found and worked with a great tiny little jQuery plugin for working with cookies. Was super easy to use and implemented, and even worked with jQuery 1.3 in a legacy system I needed it in!
+                  <a href="http://kroltech.com/2012/10/19/started-coding-secret-website-azure-hosting-pains/" class="post-read-more">[Read More]</a>
+                
+              </div>
+    
+              
+                <span class="post-meta">
+                  
+                    #<a href="/tags/azure">azure</a>&nbsp;
+                  
+                    #<a href="/tags/fill-the-part">fill the part</a>&nbsp;
+                  
+                    #<a href="/tags/jquery">jquery</a>&nbsp;
+                  
+                </span>
+              
+    
+            </article>
+          
+            <article class="post-preview">
+              <a href="http://kroltech.com/2012/09/28/nightmare-work-days-post-launch-struggles-fill-the-part/">
+                <h2 class="post-title">Nightmare work days, Post launch struggles (Fill the Part)</h2>
+    
+                
+              </a>
+    
+              <p class="post-meta">
+                Posted on September 28, 2012
+              </p>
+              <div class="post-entry">
+                
+                  Absolute total nightmare at the end of the week as we pushed a new build to production and were impacted with a ton of problems. Mainly the issue resides in the fact that the current setup of the applications is a configuration/deployment nightmare &#8211; with way too many steps and settings involved leading to way too many opened ended possibilities for user error.
+Learned about the [attr] selector in jQuery &#8211; basically to detect the presense of an actual attribute in an html element.
+                  <a href="http://kroltech.com/2012/09/28/nightmare-work-days-post-launch-struggles-fill-the-part/" class="post-read-more">[Read More]</a>
+                
+              </div>
+    
+              
+                <span class="post-meta">
+                  
+                    #<a href="/tags/bad-days">bad days</a>&nbsp;
+                  
+                    #<a href="/tags/fill-the-part">fill the part</a>&nbsp;
+                  
+                    #<a href="/tags/visual-studio-2012">visual studio 2012</a>&nbsp;
+                  
+                </span>
+              
+    
+            </article>
+          
+            <article class="post-preview">
+              <a href="http://kroltech.com/2012/09/14/first-philly-tech-meetup-autocomplete/">
+                <h2 class="post-title">First Philly Tech Meetup, Autocomplete</h2>
+    
+                
+              </a>
+    
+              <p class="post-meta">
+                Posted on September 14, 2012
+              </p>
+              <div class="post-entry">
+                
+                  Attended a Philly Tech Meetup in Center City (Market Street &#8211; Science Center). Was very informative, and definitely will not be the last!
+Learned about autocomplete=”off” as an HTML attribute. Was having an issue with validation where the browser was prepopulating the New Password field in the form with what was saved for the users login credentials. This was throwing the error because New Password (auto completed) didnt match the corresponding Confirm Password (which was naturally blank).
+                  <a href="http://kroltech.com/2012/09/14/first-philly-tech-meetup-autocomplete/" class="post-read-more">[Read More]</a>
+                
+              </div>
+    
+              
+                <span class="post-meta">
+                  
+                    #<a href="/tags/html">html</a>&nbsp;
+                  
+                    #<a href="/tags/philly-tech-meetup-ptm">philly tech meetup (ptm)</a>&nbsp;
+                  
+                </span>
+              
+    
+            </article>
+          
+            <article class="post-preview">
+              <a href="http://kroltech.com/2012/09/07/mvc-postback-bug-underscore-js-asana-launched-fillthepart-come-visual-studio-2012/">
+                <h2 class="post-title">MVC postback bug, Underscore.js, ===, Asana, Launched FillThePart.com!!, Visual Studio 2012</h2>
+    
+                
+              </a>
+    
+              <p class="post-meta">
+                Posted on September 7, 2012
+              </p>
+              <div class="post-entry">
+                
+                  After being stumped for a while with a particularly interesting issue in MVC &#8211; I found the solution on Rick Strahl’s blog. Specifically I was trying to change the values of a view model from a controller action, after PostBack &#8211; yet my changes seemed to be ignored or simply refuse to stick. Turns out the HtmlHelpers refer to the actual POST data on page load after postback (seemingly ignoring the “model” even though you explicitly refer to the model when using HtmlHelpers).
+                  <a href="http://kroltech.com/2012/09/07/mvc-postback-bug-underscore-js-asana-launched-fillthepart-come-visual-studio-2012/" class="post-read-more">[Read More]</a>
+                
+              </div>
+    
+              
+                <span class="post-meta">
+                  
+                    #<a href="/tags/fill-the-part">fill the part</a>&nbsp;
+                  
+                    #<a href="/tags/javascript">javascript</a>&nbsp;
+                  
+                    #<a href="/tags/mvc">mvc</a>&nbsp;
+                  
+                    #<a href="/tags/underscore.js">underscore.js</a>&nbsp;
+                  
+                    #<a href="/tags/visual-studio-2012">visual studio 2012</a>&nbsp;
+                  
+                </span>
+              
+    
+            </article>
+          
+            <article class="post-preview">
+              <a href="http://kroltech.com/2012/08/31/visual-event-rems-vs-ems-clover-jsrender/">
+                <h2 class="post-title">Visual Event, REMs vs EMs, Clover, jsRender</h2>
+    
+                
+              </a>
+    
+              <p class="post-meta">
+                Posted on August 31, 2012
+              </p>
+              <div class="post-entry">
+                
+                  An oldie but a goodie made a comeback and was proved useful &#8211; Visual Event, a bookmarklet that lets you view javascript events on a page with a nice visual overlay.
+Great article on using REMs instead of EMs when font sizing. Specifcally, the article goes into detail on ditching pixel specification altogether (except for sprites and very specific instances) and using %, em, and rem universally.
+Clover 2 is a nice small app that wraps Explorer and adds Chrome-like tabs to the interface.
+                  <a href="http://kroltech.com/2012/08/31/visual-event-rems-vs-ems-clover-jsrender/" class="post-read-more">[Read More]</a>
+                
+              </div>
+    
+              
+                <span class="post-meta">
+                  
+                    #<a href="/tags/clover">clover</a>&nbsp;
+                  
+                    #<a href="/tags/jsrender">jsrender</a>&nbsp;
+                  
+                </span>
+              
+    
+            </article>
+          
+        </div>
+        
+          <ul class="pager main-pager">
+            
+              <li class="previous">
+                <a href="/categories/front-end/page/5">&larr; Newer Posts</a>
+              </li>
+            
+            
+              <li class="next">
+                <a href="/categories/front-end/page/7">Older Posts &rarr;</a>
+              </li>
+            
+          </ul>
+        
+      </div>
+    </div>
+  </div>
+
+    <footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <ul class="list-inline text-center footer-links">
+          
+              <li>
+                <a href="mailto:jkat98@gmail.com" title="Email me">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-envelope fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="https://www.plus.google.com/&#43;JasonKrol" title="Google&#43;">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-google-plus fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="https://github.com/shorttompkins" title="GitHub">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="https://twitter.com/shorttompkins" title="Twitter">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="https://reddit.com/u/shorttompkins" title="Reddit">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-reddit-alien fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="https://linkedin.com/in/jasonkrol" title="LinkedIn">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-linkedin fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="https://stackoverflow.com/users/1623304/jkat98" title="StackOverflow">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-stack-overflow fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="https://www.youtube.com/user/jkat98" title="Youtube">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-youtube fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+          
+          <li>
+            <a href="http://kroltech.com/index.xml" title="RSS">
+              <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fa fa-rss fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          
+        </ul>
+        <p class="credits copyright text-muted">
+          Jason Krol
+          &nbsp;&bull;&nbsp;
+          2016
+
+          
+            &nbsp;&bull;&nbsp;
+            <a href="http://kroltech.com/">KrolTech</a>
+          
+        </p>
+        
+        <p class="credits theme-by text-muted">
+          <a href="http://gohugo.io">Hugo v0.20.7</a> powered &nbsp;&bull;&nbsp; Theme by <a href="http://deanattali.com/beautiful-jekyll/">Beautiful Jekyll</a> adapted to <a href="https://github.com/halogenica/beautifulhugo">Beautiful Hugo</a>
+          
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/katex.min.js" integrity="sha384-/y1Nn9+QQAipbNQWU65krzJralCnuOasHncUFXGkdwntGeSvQicrYkiUBwsgUqc1" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/contrib/auto-render.min.js" integrity="sha384-dq1/gEHSxPZQ7DdrM82ID4YVol9BYyU7GbWlIwnwyPzotpoc57wDw/guX8EaYGPx" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<script src="http://kroltech.com/js/main.js"></script>
+<script src="http://kroltech.com/js/highlight.min.js"></script>
+<script> hljs.initHighlightingOnLoad(); </script>
+<script> renderMathInElement(document.body); </script>
+
+
+
+
+
+  </body>
+</html>
+

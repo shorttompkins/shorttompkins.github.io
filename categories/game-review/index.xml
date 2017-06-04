@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Game Review on KrolTech</title>
+    <link>http://kroltech.com/categories/game-review/</link>
+    <description>Recent content in Game Review on KrolTech</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <managingEditor>jkat98@gmail.com (Jason Krol)</managingEditor>
+    <webMaster>jkat98@gmail.com (Jason Krol)</webMaster>
+    <lastBuildDate>Wed, 13 Mar 2013 13:30:57 +0000</lastBuildDate>
+    
+	<atom:link href="http://kroltech.com/categories/game-review/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Video Game Review: Tomb Raider</title>
+      <link>http://kroltech.com/2013/03/13/video-game-review-tomb-raider/</link>
+      <pubDate>Wed, 13 Mar 2013 13:30:57 +0000</pubDate>
+      <author>jkat98@gmail.com (Jason Krol)</author>
+      <guid>http://kroltech.com/2013/03/13/video-game-review-tomb-raider/</guid>
+      <description>I had been anticipating the new reboot of Tomb Raider for quite some time, pretty much since they originally revealed it. I thought it looked extremely impressive, and being touted as an Uncharted clone was perfectly fine with me! As always, I had my doubts because hype is getting worse and worse in the gaming industry, and honestly the last year has felt like nothing but letdown after letdown. Once I popped the game in and experienced the first hour all of my concerns were gone.</description>
+    </item>
+    
+  </channel>
+</rss>

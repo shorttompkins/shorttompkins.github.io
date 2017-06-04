@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Quick Tip on KrolTech</title>
+    <link>http://kroltech.com/categories/quick-tip/</link>
+    <description>Recent content in Quick Tip on KrolTech</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <managingEditor>jkat98@gmail.com (Jason Krol)</managingEditor>
+    <webMaster>jkat98@gmail.com (Jason Krol)</webMaster>
+    <lastBuildDate>Sun, 14 Sep 2014 23:37:15 +0000</lastBuildDate>
+    
+	<atom:link href="http://kroltech.com/categories/quick-tip/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Quick Tip: Increase upload size in AWS Elastic Beanstalk (node.js env)</title>
+      <link>http://kroltech.com/2014/09/14/quick-tip-increase-upload-size-in-aws-elastic-beanstalk-node-js-env/</link>
+      <pubDate>Sun, 14 Sep 2014 23:37:15 +0000</pubDate>
+      <author>jkat98@gmail.com (Jason Krol)</author>
+      <guid>http://kroltech.com/2014/09/14/quick-tip-increase-upload-size-in-aws-elastic-beanstalk-node-js-env/</guid>
+      <description>&lt;p&gt;If you want to support larger file uploads and you&amp;#8217;re hosting a node.js app via AWS which uses nginx, heres a trick that will make it pretty easy to change the default cap.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Quick Tip: Customize your Asana Theme Background image</title>
+      <link>http://kroltech.com/2014/05/15/quick-tip-customize-your-asana-theme-background-image/</link>
+      <pubDate>Thu, 15 May 2014 01:57:09 +0000</pubDate>
+      <author>jkat98@gmail.com (Jason Krol)</author>
+      <guid>http://kroltech.com/2014/05/15/quick-tip-customize-your-asana-theme-background-image/</guid>
+      <description>&lt;p&gt;I started using Asana again for a personal project, and while I love the themes option I really wanted to be able to provide my own image. Stylebot Chrome extension to the rescue!&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Highlight specific lines in a Github repo file</title>
+      <link>http://kroltech.com/2014/02/28/highlight-specific-lines-in-a-github-repo-file/</link>
+      <pubDate>Fri, 28 Feb 2014 14:57:04 +0000</pubDate>
+      <author>jkat98@gmail.com (Jason Krol)</author>
+      <guid>http://kroltech.com/2014/02/28/highlight-specific-lines-in-a-github-repo-file/</guid>
+      <description>&lt;p&gt;Heres a quick and easy tip to highlight selected lines in a GitHub repo file when you link to it.&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>How to fork your own repo in Github</title>
+      <link>http://kroltech.com/2014/01/01/quick-tip-how-to-fork-your-own-repo-in-github/</link>
+      <pubDate>Wed, 01 Jan 2014 01:46:44 +0000</pubDate>
+      <author>jkat98@gmail.com (Jason Krol)</author>
+      <guid>http://kroltech.com/2014/01/01/quick-tip-how-to-fork-your-own-repo-in-github/</guid>
+      <description>&lt;p&gt;While forking your own repo sounds like it should be fairly obvious, its definitely not.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Mimic Mac Copy/Paste in Windows</title>
+      <link>http://kroltech.com/2013/12/18/quick-tip-mimic-mac-copypaste-in-windows/</link>
+      <pubDate>Wed, 18 Dec 2013 23:48:05 +0000</pubDate>
+      <author>jkat98@gmail.com (Jason Krol)</author>
+      <guid>http://kroltech.com/2013/12/18/quick-tip-mimic-mac-copypaste-in-windows/</guid>
+      <description>&lt;p&gt;With this quick tip, you can mimic one of the most commonly used keystrokes that&amp;#8217;s completely different between Windows and Mac &amp;#8211; Copy/Paste!&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Remove URL from auto complete in Chrome</title>
+      <link>http://kroltech.com/2013/07/15/quick-tip-remove-url-from-auto-complete-in-chrome/</link>
+      <pubDate>Mon, 15 Jul 2013 13:38:35 +0000</pubDate>
+      <author>jkat98@gmail.com (Jason Krol)</author>
+      <guid>http://kroltech.com/2013/07/15/quick-tip-remove-url-from-auto-complete-in-chrome/</guid>
+      <description>&lt;p&gt;Every get frustrated when Chrome autocompletes a URL you frequent but it always suggests the wrong URL?! Here is a quick super simple way to remove those old URLs (or incorrectly preferred URLs) from the address bar.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Passing parameters to click event using trigger</title>
+      <link>http://kroltech.com/2013/06/17/quick-tip-passing-parameters-to-click-event-using-trigger/</link>
+      <pubDate>Mon, 17 Jun 2013 13:44:40 +0000</pubDate>
+      <author>jkat98@gmail.com (Jason Krol)</author>
+      <guid>http://kroltech.com/2013/06/17/quick-tip-passing-parameters-to-click-event-using-trigger/</guid>
+      <description>I have a simple jQuery onClick event bound to a link. On the load of the page, I fetch existing data from a cookie and then call the onClick manually to setup the page (for returning visitors). There is some animation associated with the click &amp;#8211; but when the page loads and all of the clicks are registered, the animations look odd and out of sync (and just logically dont make sense in that situation).</description>
+    </item>
+    
+    <item>
+      <title>RegEx to convert urls in text to links (JavaScript)</title>
+      <link>http://kroltech.com/2013/05/13/quick-tip-regex-to-convert-urls-in-text-to-links-javascript/</link>
+      <pubDate>Mon, 13 May 2013 15:48:13 +0000</pubDate>
+      <author>jkat98@gmail.com (Jason Krol)</author>
+      <guid>http://kroltech.com/2013/05/13/quick-tip-regex-to-convert-urls-in-text-to-links-javascript/</guid>
+      <description>Here&amp;#8217;s a quick tip. If you have text that contains urls (i.e. tweets) and want the urls in the text to appear as actual links via HTML, use the following RegEx:
+[sourcecode lang=&amp;#8221;javascript&amp;#8221;]
+var message = &amp;ldquo;Here is some tweet text. Check out: http://www.google.com&amp;quot;;
+var exp = /(b(https?|ftp|file)://[-A-Z0-9+&amp;amp;@#/%?=~_|!:,.;]*[-A-Z0-9+&amp;amp;@#/%=~_|])/ig;
+message = message.replace(exp, &amp;ldquo;$1&amp;rdquo;);
+[/sourcecode]
+Source: http://stackoverflow.com/questions/37684/how-to-replace-plain-urls-with-links</description>
+    </item>
+    
+    <item>
+      <title>Condense your Bookmark bar</title>
+      <link>http://kroltech.com/2013/04/17/quick-tip-condense-your-bookmark-bar/</link>
+      <pubDate>Wed, 17 Apr 2013 20:28:37 +0000</pubDate>
+      <author>jkat98@gmail.com (Jason Krol)</author>
+      <guid>http://kroltech.com/2013/04/17/quick-tip-condense-your-bookmark-bar/</guid>
+      <description>If you&amp;#8217;re like me, you have a fair amount of sites that you visit on a daily basis. Personally, I love the Bookmark bar (on Chrome, Firefox, etc). However, you cant really fit a whole lot of sites before you hit the end (width) of the browser and typically get the double arrow &amp;#8220;more&amp;#8221; dropdown.
+Well a quick tip is to simply remove the text for all of the bookmarks that have a favicon set (which is probably 90% of them).</description>
+    </item>
+    
+    <item>
+      <title>Fade in element on event using CSS3  &amp; opacity</title>
+      <link>http://kroltech.com/2013/04/15/quick-tip-fade-in-element-on-event-using-css3-opacity/</link>
+      <pubDate>Mon, 15 Apr 2013 17:55:31 +0000</pubDate>
+      <author>jkat98@gmail.com (Jason Krol)</author>
+      <guid>http://kroltech.com/2013/04/15/quick-tip-fade-in-element-on-event-using-css3-opacity/</guid>
+      <description>I&amp;#8217;m working on a project, that requires a number of different animations based on user events. I recently switched all of the animations to CSS3 transforms and transitions versus jQuery animations. The improvement has been staggering, to say the least.
+However, I came across a weird issue today. When attempting to fade an element in after a click event, the element just kept popping into place. It wouldn&amp;#8217;t fade. After some investigation I realized that my jQuery was setting the opacity to 1.</description>
+    </item>
+    
+    <item>
+      <title>Maintaining minified .js files in Visual Studio 2012</title>
+      <link>http://kroltech.com/2013/03/19/quick-tip-maintaining-minified-js-files-in-visual-studio-2012/</link>
+      <pubDate>Tue, 19 Mar 2013 16:39:52 +0000</pubDate>
+      <author>jkat98@gmail.com (Jason Krol)</author>
+      <guid>http://kroltech.com/2013/03/19/quick-tip-maintaining-minified-js-files-in-visual-studio-2012/</guid>
+      <description>Perhaps this is common knowledge, but I just figured it out (accidentally) and its pretty damn awesome! If you maintain a regular .js file, and then create a copy of it .min.js with a compressed copy of your code, Visual Studio will maintain that minified version automatically whenever you make changes to your original! It will create a .map file that it uses to keep track of the differences between your source and minified versions (variable names, etc).</description>
+    </item>
+    
+    <item>
+      <title>Pre-cache your for loops</title>
+      <link>http://kroltech.com/2013/02/08/quick-tip-pre-cache-your-for-loops/</link>
+      <pubDate>Fri, 08 Feb 2013 18:59:22 +0000</pubDate>
+      <author>jkat98@gmail.com (Jason Krol)</author>
+      <guid>http://kroltech.com/2013/02/08/quick-tip-pre-cache-your-for-loops/</guid>
+      <description>While reading through the JavaScript Patterns book, I saw an item that totally stuck out as a crystal clear &amp;#8220;duuhhh!!&amp;#8221; moment. Why have I never seen/heard of that before and certainly why wasn&amp;#8217;t I doing it regularly (and why hadn&amp;#8217;t I thought of it to be honest).
+Instead of doing this:
+[sourcecode lang=&amp;#8221;javascript&amp;#8221;]
+for(var i=0; i &amp;lt; $(&amp;#8216;someselector li&amp;#8217;).length; i++){
+//loop through each LI in a UL, or any collection</description>
+    </item>
+    
+    <item>
+      <title>Use “debugger;” in your JavaScript to trigger the browsers debug mode.</title>
+      <link>http://kroltech.com/2013/02/01/quick-tip-use-debugger-in-your-javascript-to-trigger-the-browsers-debug-mode/</link>
+      <pubDate>Fri, 01 Feb 2013 19:56:27 +0000</pubDate>
+      <author>jkat98@gmail.com (Jason Krol)</author>
+      <guid>http://kroltech.com/2013/02/01/quick-tip-use-debugger-in-your-javascript-to-trigger-the-browsers-debug-mode/</guid>
+      <description>While watching the excellent course on Single Page Apps with HTML5, Web API, Knockout and jQuery by John Papa over at PluralSight, he dropped a nice little nugget of information that I was totally unaware of.
+You can add debugger; as a line by itself in your JavaScript and when your code gets executed by the browser, the browsers built in debugger will stop on that line. Think of it as a way to throw breakpoints right into your code.</description>
+    </item>
+    
+    <item>
+      <title>Up / Down HTML arrow characters (for sorting, etc)</title>
+      <link>http://kroltech.com/2013/01/13/quick-tip-up-down-html-arrow-characters-for-sorting-etc/</link>
+      <pubDate>Sun, 13 Jan 2013 02:57:05 +0000</pubDate>
+      <author>jkat98@gmail.com (Jason Krol)</author>
+      <guid>http://kroltech.com/2013/01/13/quick-tip-up-down-html-arrow-characters-for-sorting-etc/</guid>
+      <description>I was searching for the opposite of the caret, or circumflex, character (^) and couldn&amp;#8217;t really find one. Typically, in a pinch when I&amp;#8217;m mocking, I would just use the caret ^ and a lowercase v &amp;#8211; but they don&amp;#8217;t look the same.
+There doesn&amp;#8217;t seem to be a good opposite for the caret character &amp;#8211; but I found 2 extremely useful HTML character codes to use instead:
+∧ (&amp;and;) and ∨ (&amp;or;)</description>
+    </item>
+    
+    <item>
+      <title>Remove vertical spacing around inline-block LI (list items)</title>
+      <link>http://kroltech.com/2012/12/31/quick-tip-remove-vertical-spacing-around-inline-block-li-list-items/</link>
+      <pubDate>Mon, 31 Dec 2012 15:40:52 +0000</pubDate>
+      <author>jkat98@gmail.com (Jason Krol)</author>
+      <guid>http://kroltech.com/2012/12/31/quick-tip-remove-vertical-spacing-around-inline-block-li-list-items/</guid>
+      <description>I struggled with a minor issue in HTML for a few hours off an on during a project that was just really bothering me. Basically, I had a few LIs that I was displaying as inline-block (horizontally stacked side by side):
+[sourcecode lang=&amp;#8221;html&amp;#8221;]
+ Item 1 Item 1 Item 1  [/sourcecode]
+When the rows would naturally wrap, there was a tiny gap between rows (as if there was a top margin or padding).</description>
+    </item>
+    
+    <item>
+      <title>Access your browsers saved password for your favorite sites</title>
+      <link>http://kroltech.com/2012/12/13/quick-tip-access-your-browsers-saved-password-for-your-favorite-sites/</link>
+      <pubDate>Thu, 13 Dec 2012 16:15:15 +0000</pubDate>
+      <author>jkat98@gmail.com (Jason Krol)</author>
+      <guid>http://kroltech.com/2012/12/13/quick-tip-access-your-browsers-saved-password-for-your-favorite-sites/</guid>
+      <description>I’m sure you&amp;#8217;ve encountered this problem: you visit one of your favorite sites, and your password is saved in the password box automatically by your browser, but you completely forget what that password actually is! Good thing your browser is synced and you don&amp;#8217;t really need to worry about it. Well, here&amp;#8217;s a quick tip that will allow you to access that password very easily.
+Using any current browser that has Developer tools, access those (F12 usually) and find the Inspector.</description>
+    </item>
+    
+    <item>
+      <title>Wrap your custom JavaScript code in Closure functions</title>
+      <link>http://kroltech.com/2012/12/12/quick-tip-wrap-your-custom-javascript-code-in-closure-functions/</link>
+      <pubDate>Wed, 12 Dec 2012 02:02:17 +0000</pubDate>
+      <author>jkat98@gmail.com (Jason Krol)</author>
+      <guid>http://kroltech.com/2012/12/12/quick-tip-wrap-your-custom-javascript-code-in-closure-functions/</guid>
+      <description>I finally figured out how to use closures properly in JavaScript. This came as a result of my needing to make sure globals I was defining in different script files weren&amp;#8217;t conflicting with same named globals in other files. My solution was rather simple, just wrap existing chunks of code in their own function wrapper:
+Original Code:
+Note that the variables globalVar and anotherGlobal are truly GLOBAL and any other javascript file(s) with the same variables declared will cause major issues for our code (or vise versa).</description>
+    </item>
+    
+    <item>
+      <title>Chrome pinned tabs – why to actually use them</title>
+      <link>http://kroltech.com/2012/11/29/quick-tip-chrome-pinned-tabs-why-to-actually-use-them/</link>
+      <pubDate>Thu, 29 Nov 2012 02:30:47 +0000</pubDate>
+      <author>jkat98@gmail.com (Jason Krol)</author>
+      <guid>http://kroltech.com/2012/11/29/quick-tip-chrome-pinned-tabs-why-to-actually-use-them/</guid>
+      <description>Not many people realize the importance of Pinning tabs in Google Chrome. Sure, it makes the tab smaller and a little more out of the way, but is that it?
+Actually, the point of pinned tabs is to treat them like any other &amp;#8220;app&amp;#8221; you have open or running in your system. The important thing to note about pinned tabs is that they will open automatically with your browser the next time you launch it.</description>
+    </item>
+    
+    <item>
+      <title>jQuery; use ON instead of LIVE</title>
+      <link>http://kroltech.com/2012/10/26/quick-tip-jquery-use-on-instead-of-live/</link>
+      <pubDate>Fri, 26 Oct 2012 02:42:12 +0000</pubDate>
+      <author>jkat98@gmail.com (Jason Krol)</author>
+      <guid>http://kroltech.com/2012/10/26/quick-tip-jquery-use-on-instead-of-live/</guid>
+      <description>Just learned that jQuery’s .live() should now be replaced with: $(document).on(event,selector, function (e) {});</description>
+    </item>
+    
+    <item>
+      <title>JavaScript == is != to ===</title>
+      <link>http://kroltech.com/2012/09/07/quick-tip-javascript-is-to/</link>
+      <pubDate>Fri, 07 Sep 2012 23:44:26 +0000</pubDate>
+      <author>jkat98@gmail.com (Jason Krol)</author>
+      <guid>http://kroltech.com/2012/09/07/quick-tip-javascript-is-to/</guid>
+      <description>Watching JavaScript fundamentals (Pluralsight) as a refresh and had my world rocked – apparently we should be using === and !== all this time and not == and != that’s just nutty!!
+Basically “” == 0 (true), “” === 0 (false), 1 == “1” (true) 1 === “1” (false).</description>
+    </item>
+    
+    <item>
+      <title>Use ?? to set value if something is NOT null</title>
+      <link>http://kroltech.com/2012/08/24/quick-tip-use-to-set-value-if-something-is-not-null/</link>
+      <pubDate>Fri, 24 Aug 2012 02:47:09 +0000</pubDate>
+      <author>jkat98@gmail.com (Jason Krol)</author>
+      <guid>http://kroltech.com/2012/08/24/quick-tip-use-to-set-value-if-something-is-not-null/</guid>
+      <description>Learned to use the ?? operator when checking for null. Use when you want something to = something else only when something else is not null:
+var myvar = something_else ?? “default_value”;
+myvar will be set to something_else only if something_else is not null, otherwise it will be &amp;#8220;default_value&amp;#8221; instead.</description>
+    </item>
+    
+  </channel>
+</rss>

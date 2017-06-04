@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Aws on KrolTech</title>
+    <link>http://kroltech.com/tags/aws/</link>
+    <description>Recent content in Aws on KrolTech</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <managingEditor>jkat98@gmail.com (Jason Krol)</managingEditor>
+    <webMaster>jkat98@gmail.com (Jason Krol)</webMaster>
+    <lastBuildDate>Sun, 14 Sep 2014 23:37:15 +0000</lastBuildDate>
+    
+	<atom:link href="http://kroltech.com/tags/aws/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Quick Tip: Increase upload size in AWS Elastic Beanstalk (node.js env)</title>
+      <link>http://kroltech.com/2014/09/14/quick-tip-increase-upload-size-in-aws-elastic-beanstalk-node-js-env/</link>
+      <pubDate>Sun, 14 Sep 2014 23:37:15 +0000</pubDate>
+      <author>jkat98@gmail.com (Jason Krol)</author>
+      <guid>http://kroltech.com/2014/09/14/quick-tip-increase-upload-size-in-aws-elastic-beanstalk-node-js-env/</guid>
+      <description>&lt;p&gt;If you want to support larger file uploads and you&amp;#8217;re hosting a node.js app via AWS which uses nginx, heres a trick that will make it pretty easy to change the default cap.&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

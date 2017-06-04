@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>React on KrolTech</title>
+    <link>http://kroltech.com/tags/react/</link>
+    <description>Recent content in React on KrolTech</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <managingEditor>jkat98@gmail.com (Jason Krol)</managingEditor>
+    <webMaster>jkat98@gmail.com (Jason Krol)</webMaster>
+    <lastBuildDate>Fri, 16 Oct 2015 14:19:48 +0000</lastBuildDate>
+    
+	<atom:link href="http://kroltech.com/tags/react/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Stateless Functional Components new in React 0.14</title>
+      <link>http://kroltech.com/2015/10/16/stateless-functional-components-new-in-react-0-14/</link>
+      <pubDate>Fri, 16 Oct 2015 14:19:48 +0000</pubDate>
+      <author>jkat98@gmail.com (Jason Krol)</author>
+      <guid>http://kroltech.com/2015/10/16/stateless-functional-components-new-in-react-0-14/</guid>
+      <description>&lt;p&gt;React version 0.14 was recently released and introduced some breaking changes as well as a few new features worth pointing out.&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

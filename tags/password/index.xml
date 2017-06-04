@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Password on KrolTech</title>
+    <link>http://kroltech.com/tags/password/</link>
+    <description>Recent content in Password on KrolTech</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <managingEditor>jkat98@gmail.com (Jason Krol)</managingEditor>
+    <webMaster>jkat98@gmail.com (Jason Krol)</webMaster>
+    <lastBuildDate>Thu, 13 Dec 2012 16:15:15 +0000</lastBuildDate>
+    
+	<atom:link href="http://kroltech.com/tags/password/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Access your browsers saved password for your favorite sites</title>
+      <link>http://kroltech.com/2012/12/13/quick-tip-access-your-browsers-saved-password-for-your-favorite-sites/</link>
+      <pubDate>Thu, 13 Dec 2012 16:15:15 +0000</pubDate>
+      <author>jkat98@gmail.com (Jason Krol)</author>
+      <guid>http://kroltech.com/2012/12/13/quick-tip-access-your-browsers-saved-password-for-your-favorite-sites/</guid>
+      <description>I’m sure you&amp;#8217;ve encountered this problem: you visit one of your favorite sites, and your password is saved in the password box automatically by your browser, but you completely forget what that password actually is! Good thing your browser is synced and you don&amp;#8217;t really need to worry about it. Well, here&amp;#8217;s a quick tip that will allow you to access that password very easily.
+Using any current browser that has Developer tools, access those (F12 usually) and find the Inspector.</description>
+    </item>
+    
+  </channel>
+</rss>

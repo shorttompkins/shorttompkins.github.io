@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+  <title>Sublime Text – My New Favorite Editor!</title>
+  <meta property="og:title" content="Sublime Text – My New Favorite Editor!" />
+  <meta name="twitter:title" content="Sublime Text – My New Favorite Editor!" />
+  <meta name="author" content="Jason Krol"/>
+  <link href='http://kroltech.com/img/favicon.ico' rel='icon' type='image/x-icon'/>
+  <meta property="og:image" content="http://kroltech.com/img/avatar-icon.png" />
+  <meta name="twitter:image" content="http://kroltech.com/img/avatar-icon.png" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:site" content="@shorttompkins" />
+  <meta name="twitter:creator" content="@shorttompkins" />
+  <meta property="og:url" content="http://kroltech.com/2013/10/17/sublime-text-my-new-favorite-editor/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="KrolTech" />
+
+  <meta name="generator" content="Hugo 0.20.7" />
+  <link rel="canonical" href="http://kroltech.com/2013/10/17/sublime-text-my-new-favorite-editor/" />
+  <link rel="alternate" href="http://kroltech.com/index.xml" type="application/rss+xml" title="KrolTech">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/katex.min.css" integrity="sha384-wITovz90syo1dJWVh32uuETPVEtGigN07tkttEqPv+uR2SE/mbQcG7ATL28aI9H0" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <link rel="stylesheet" href="http://kroltech.com/css/main.css" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" />
+  <link rel="stylesheet" href="http://kroltech.com/css/pygment_highlights.css" />
+  <link rel="stylesheet" href="http://kroltech.com/css/highlight.min.css" />
+
+<script>
+window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+ga('create', 'UA-29480326-4', 'auto');
+ga('send', 'pageview');
+</script>
+<script async src='//www.google-analytics.com/analytics.js'></script>
+
+</head>
+
+  <body>
+    <nav class="navbar navbar-default navbar-fixed-top navbar-custom">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="http://kroltech.com/">KrolTech</a>
+    </div>
+
+    <div class="collapse navbar-collapse" id="main-navbar">
+      <ul class="nav navbar-nav navbar-right">
+        
+          
+            <li>
+              <a title="Blog" href="/">Blog</a>
+            </li>
+          
+        
+          
+            <li>
+              <a title="About" href="/page/about/">About</a>
+            </li>
+          
+        
+
+        
+
+        
+      </ul>
+    </div>
+
+    <div class="avatar-container">
+      <div class="avatar-img-border">
+        
+          <a title="KrolTech" href="http://kroltech.com/">
+            <img class="avatar-img" src="http://kroltech.com/img/avatar-icon.png" alt="KrolTech" />
+          </a>
+        
+      </div>
+    </div>
+
+  </div>
+</nav>
+
+
+
+
+    
+  
+  
+  
+
+
+
+
+  
+
+  <header class="header-section ">
+    
+    <div class="intro-header no-img">
+      
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+            <div class="post-heading">
+              <h1>Sublime Text – My New Favorite Editor!</h1>
+                
+                
+                  <span class="post-meta">
+  Posted on October 17, 2013
+  
+</span>
+
+
+                
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+
+    
+<div class="container">
+  <div class="row">
+    <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+      <article role="main" class="blog-post">
+        <p>I’ve been using Sublime Text 2 exclusively for about 2 months now and I absolutely love it. More and more every day! Even though it could be considered a pretty basic editor, don’t let that fool you. There are so many plugins and customizations available it’s incredible. So I wanted to run down my basic setup with Sublime along with some tips, tricks, and notable plugins.</p>
+
+<h3 id="sublime-package-control">Sublime Package Control</h3>
+
+<p>Before you do anything, you need to have Sublime Package Control installed. Think of npm or nuget or any other package manager. It’s an absolute must and makes finding and installing plugins a breeze!</p>
+
+<p><a href="https://sublime.wbond.net/installation" target="_blank"><a href="https://sublime.wbond.net/installation">https://sublime.wbond.net/installation</a></a></p>
+
+<p>Once installed (and restarted) simply press ⌘ &#8211; Shift &#8211; P / Control &#8211; Alt &#8211; P to open the Goto Anything dialog. Type Install and press Enter. Search to your heart’s content! Most, if not all, of the plugins listed in the rest of this article can be installed via Package Control.</p>
+
+<h3 id="automated-jshint-ing-on-save">Automated jsHint(ing) on Save</h3>
+
+<p>For Javascript developers using Sublime, here are some steps to have a nice jsHint automated build process:</p>
+
+<ul>
+<li>Install jsHint plugin: <a href="https://github.com/uipoet/sublime-jshint" target="_blank"><a href="https://github.com/uipoet/sublime-jshint">https://github.com/uipoet/sublime-jshint</a></a></li>
+<li>Install SublimeOnBuild plugin: <a href="https://github.com/alexnj/SublimeOnSaveBuild" target="_blank"><a href="https://github.com/alexnj/SublimeOnSaveBuild">https://github.com/alexnj/SublimeOnSaveBuild</a></a></li>
+<li>Install jsFormat plugin: <a href="https://github.com/jdc0589/JsFormat" target="_blank"><a href="https://github.com/jdc0589/JsFormat">https://github.com/jdc0589/JsFormat</a></a></li>
+<li>Install Trailing Spaces plugin: <a href="https://github.com/SublimeText/TrailingSpaces" target="_blank"><a href="https://github.com/SublimeText/TrailingSpaces">https://github.com/SublimeText/TrailingSpaces</a></a></li>
+</ul>
+
+<p>Set some user settings for Trailing Spaces:</p>
+
+<p>[sourcecode lang=&#8221;javascript&#8221;]</p>
+
+<p>{</p>
+
+<p>&ldquo;trailing_spaces_highlight_color&rdquo;: &ldquo;invalid&rdquo;,</p>
+
+<p>&ldquo;trailing_spaces_include_current_line&rdquo;: false</p>
+
+<p>}</p>
+
+<p>[/sourcecode]</p>
+
+<p>Some Sublime optional settings (Preferences -&gt; Settings &#8211; User):</p>
+
+<p>[sourcecode lang=&#8221;javascript&#8221;]</p>
+
+<p>{</p>
+
+<p>&ldquo;rulers&rdquo;:</p>
+
+<p>[</p>
+
+<p>80, 120</p>
+
+<p>],</p>
+
+<p>&ldquo;tab_size&rdquo;: 4,</p>
+
+<p>&ldquo;translate_tabs_to_spaces&rdquo;: true,</p>
+
+<p>&ldquo;trim_trailing_white_space_on_save&rdquo;: true,</p>
+
+<p>&ldquo;use_tab_stops&rdquo;: true,</p>
+
+<p>&ldquo;ensure_newline_at_eof_on_save&rdquo;: true,</p>
+
+<p>}</p>
+
+<p>[/sourcecode]</p>
+
+<p>You should probably restart Sublime again after all of that.</p>
+
+<p>Now when you edit any .js files:</p>
+
+<ol>
+<li>Execute jsFormat (depends on how you configured keyboard shortcuts) which will fix most tabbing and spacing alignment issues. (If you have no code highlighted the entire file will auto format, if you highlight code the formatting will apply only to that selection.)</li>
+<li>Save and you will get the jsHint report popup in a console window. (Not only that, but the trailing spaces everywhere will be automatically trimmed.)</li>
+</ol>
+
+<h3 id="execute-sublime-from-the-command-line-mac">Execute Sublime from the command line (mac):</h3>
+
+<p>In order to be able to launch sublime from the command line, you need to setup a symlink. The easiest way to do this is with the following command:</p>
+
+<p>[sourcecode]</p>
+
+<p>ln -s /Applications/Sublime Text 2.app/Contents/SharedSupport/bin/subl /usr/local/bin/sublime</p>
+
+<p>[/sourcecode]</p>
+
+<h3 id="git-integration">Git integration:</h3>
+
+<p>There are 2 excellent plugins that work really well if you find yourself working on git repos a lot:</p>
+
+<ul>
+<li>Git plugin: <a href="https://github.com/kemayo/sublime-text-git/wiki" target="_blank"><a href="https://github.com/kemayo/sublime-text-git/wiki">https://github.com/kemayo/sublime-text-git/wiki</a></a> (lets you run git commands from within Sublime as well as the incredibly useful branch information in the status bar)</li>
+<li>GitGutter: <a href="https://github.com/jisaacks/GitGutter" target="_blank"><a href="https://github.com/jisaacks/GitGutter">https://github.com/jisaacks/GitGutter</a></a> (shows git diff marks in the gutter as green pluses, yellow dots, or red x&#8217;s)</li>
+</ul>
+
+<p>If you&#8217;d prefer to use Sublime as your default Git related editor (i.e. to edit commit messages and manage rebasing) then execute the following command (assuming you created the symlink for Sublime above so that you can execute it from the command line):</p>
+
+<p>[sourcecode]</p>
+
+<p>git config &#8211;global core.editor &ldquo;sublime -w&rdquo;</p>
+
+<p>[/sourcecode]</p>
+
+<h3 id="other-miscellaneous-plugins">Other miscellaneous plugins:</h3>
+
+<ul>
+<li>Emmet: <a href="https://github.com/sergeche/emmet-sublime" target="_blank"><a href="https://github.com/sergeche/emmet-sublime">https://github.com/sergeche/emmet-sublime</a></a> (zen coding)</li>
+<li>BracketHighlighter: <a href="https://github.com/facelessuser/BracketHighlighter" target="_blank"><a href="https://github.com/facelessuser/BracketHighlighter">https://github.com/facelessuser/BracketHighlighter</a></a></li>
+<li>Search Stack Overflow: <a href="https://github.com/ericmartel/Sublime-Text-2-Stackoverflow-Plugin" target="_blank"><a href="https://github.com/ericmartel/Sublime-Text-2-Stackoverflow-Plugin">https://github.com/ericmartel/Sublime-Text-2-Stackoverflow-Plugin</a></a></li>
+<li>SimpleClone: <a href="https://github.com/mikefowler/simple-clone" target="_blank"><a href="https://github.com/mikefowler/simple-clone">https://github.com/mikefowler/simple-clone</a></a> (clone current doc to another pane)</li>
+<li>Theme &#8211; Soda: <a href="http://buymeasoda.github.io/soda-theme/" target="_blank"><a href="http://buymeasoda.github.io/soda-theme/">http://buymeasoda.github.io/soda-theme/</a></a> (just a really nice theme!)</li>
+</ul>
+
+<p>Some other helpful random settings (that should be self explanatory):</p>
+
+<p>[sourcecode lang=&#8221;javascript&#8221;]</p>
+
+<p>&ldquo;bold_folder_labels&rdquo;: true,</p>
+
+<p>&ldquo;draw_indent_guides&rdquo;: true,</p>
+
+<p>&ldquo;highlight_line&rdquo;: true,</p>
+
+<p>&ldquo;highlight_modified_tabs&rdquo;: true,</p>
+
+<p>&ldquo;match_brackets&rdquo;: true,</p>
+
+<p>&ldquo;match_brackets_angle&rdquo;: true,</p>
+
+<p>&ldquo;match_brackets_braces&rdquo;: true,</p>
+
+<p>&ldquo;match_brackets_content&rdquo;: true,</p>
+
+<p>&ldquo;match_brackets_square&rdquo;: true,</p>
+
+<p>&ldquo;remember_open_files&rdquo;: true,</p>
+
+<p>&ldquo;remember_open_folders&rdquo;: true,</p>
+
+<p>&ldquo;scroll_past_end&rdquo;: true,</p>
+
+<p>&ldquo;scroll_speed&rdquo;: 2,</p>
+
+<p>[/sourcecode]</p>
+
+<h3 id="snippets">Snippets:</h3>
+
+<p>Sublime includes a lot of predefined code snippets by default. To use snippets, just start typing and a dropdown will instantly appear. Type something like “for” (no quotes) and then TAB and you will see JavaScript for loop code output instantly. You can also open the Goto Anything dialog and type Snippet to get a list of all the Snippets. To create a new Snippet, simply goto Tools-&gt;New Snippet… (read more about Snippets) As a bonus, you can install snippets for popular libraries and frameworks via the Package Installer (hint, install the jQuery Snippet package!).</p>
+
+<h3 id="keyboard-commands-and-shortcuts">Keyboard Commands and Shortcuts:</h3>
+
+<p>There are a ton of keyboard shortcuts for Sublime, as well as the awesome ability to very quickly and easily create your own. Take a look at the default key bindings to get an idea of how to create your own or overwrite an existing key bind. Then edit your own:</p>
+
+<p>Preferences-&gt;Key Bindings &#8211; User:</p>
+
+<p>[sourcecode lang=&#8221;javascript&#8221;]</p>
+
+<p>[</p>
+
+<p>// git specific shortcuts:</p>
+
+<p>{ &ldquo;keys&rdquo;: [&ldquo;ctrl+shift+d&rdquo;], &ldquo;command&rdquo;: &ldquo;git_diff&rdquo; }</p>
+
+<p>]</p>
+
+<p>[/sourcecode]</p>
+
+<p>*Note: If you plan to add more than one custom shortcut, be sure to place a comma and the end of every line but the last. In the example above, there is only 1 line so there is no trailing comma.</p>
+
+<p>Some of the most important keyboard shortcuts:</p>
+
+<ul>
+<li>⌘ &#8211; P (Ctrl &#8211; P) = Goto anything</li>
+<li>⌘ &#8211; T (Ctrl &#8211; T) = Goto file</li>
+<li>⌘ &#8211; R (Ctrl &#8211; R) = Goto function (inside file)</li>
+<li>Control &#8211; G = Goto line number</li>
+</ul>
+
+<p>Hopefully you find these tips, tricks, shortcuts, and plugins useful! The best tip I can give is to always Google “sublime ____” no matter what it is you are trying to do, think you should be able to do, or wish you could do. I can almost guarantee someone created a plugin for it!</p>
+      </article>
+
+      <ul class="pager blog-pager">
+        
+          <li class="previous">
+            <a href="http://kroltech.com/2013/10/13/getting-started-using-git-with-windows/" data-toggle="tooltip" data-placement="top" title="Getting started using Git with Windows">&larr; Previous Post</a>
+          </li>
+        
+        
+          <li class="next">
+            <a href="http://kroltech.com/2013/11/10/notes-agile-development-training/" data-toggle="tooltip" data-placement="top" title="Notes: Agile Development Training">Next Post &rarr;</a>
+          </li>
+        
+      </ul>
+
+      
+        
+          <div class="disqus-comments">
+            <div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_shortname = 'jasonkrol';
+    var disqus_identifier = 'http:\/\/kroltech.com\/2013\/10\/17\/sublime-text-my-new-favorite-editor\/';
+    var disqus_title = 'Sublime Text – My New Favorite Editor!';
+    var disqus_url = 'http:\/\/kroltech.com\/2013\/10\/17\/sublime-text-my-new-favorite-editor\/';
+
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+          </div>
+        
+      
+
+    </div>
+  </div>
+</div>
+
+    <footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <ul class="list-inline text-center footer-links">
+          
+              <li>
+                <a href="mailto:jkat98@gmail.com" title="Email me">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-envelope fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="https://www.plus.google.com/&#43;JasonKrol" title="Google&#43;">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-google-plus fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="https://github.com/shorttompkins" title="GitHub">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="https://twitter.com/shorttompkins" title="Twitter">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="https://reddit.com/u/shorttompkins" title="Reddit">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-reddit-alien fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="https://linkedin.com/in/jasonkrol" title="LinkedIn">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-linkedin fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="https://stackoverflow.com/users/1623304/jkat98" title="StackOverflow">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-stack-overflow fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="https://www.youtube.com/user/jkat98" title="Youtube">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-youtube fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+          
+          <li>
+            <a href="http://kroltech.com/index.xml" title="RSS">
+              <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fa fa-rss fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          
+        </ul>
+        <p class="credits copyright text-muted">
+          Jason Krol
+          &nbsp;&bull;&nbsp;
+          2016
+
+          
+            &nbsp;&bull;&nbsp;
+            <a href="http://kroltech.com/">KrolTech</a>
+          
+        </p>
+        
+        <p class="credits theme-by text-muted">
+          <a href="http://gohugo.io">Hugo v0.20.7</a> powered &nbsp;&bull;&nbsp; Theme by <a href="http://deanattali.com/beautiful-jekyll/">Beautiful Jekyll</a> adapted to <a href="https://github.com/halogenica/beautifulhugo">Beautiful Hugo</a>
+          
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/katex.min.js" integrity="sha384-/y1Nn9+QQAipbNQWU65krzJralCnuOasHncUFXGkdwntGeSvQicrYkiUBwsgUqc1" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/contrib/auto-render.min.js" integrity="sha384-dq1/gEHSxPZQ7DdrM82ID4YVol9BYyU7GbWlIwnwyPzotpoc57wDw/guX8EaYGPx" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<script src="http://kroltech.com/js/main.js"></script>
+<script src="http://kroltech.com/js/highlight.min.js"></script>
+<script> hljs.initHighlightingOnLoad(); </script>
+<script> renderMathInElement(document.body); </script>
+
+
+
+
+
+  </body>
+</html>
+

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Git on KrolTech</title>
+    <link>http://kroltech.com/tags/git/</link>
+    <description>Recent content in Git on KrolTech</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <managingEditor>jkat98@gmail.com (Jason Krol)</managingEditor>
+    <webMaster>jkat98@gmail.com (Jason Krol)</webMaster>
+    <lastBuildDate>Tue, 08 Apr 2014 12:37:45 +0000</lastBuildDate>
+    
+	<atom:link href="http://kroltech.com/tags/git/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Use Grunt to push a Git tag</title>
+      <link>http://kroltech.com/2014/04/08/use-grunt-to-push-a-git-tag/</link>
+      <pubDate>Tue, 08 Apr 2014 12:37:45 +0000</pubDate>
+      <author>jkat98@gmail.com (Jason Krol)</author>
+      <guid>http://kroltech.com/2014/04/08/use-grunt-to-push-a-git-tag/</guid>
+      <description>&lt;p&gt;I use tags in git to version my code and push changes to production. Tagging is fairly simple using the git cli, but I’ve made it even easier using a simple Grunt task.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>How to fork your own repo in Github</title>
+      <link>http://kroltech.com/2014/01/01/quick-tip-how-to-fork-your-own-repo-in-github/</link>
+      <pubDate>Wed, 01 Jan 2014 01:46:44 +0000</pubDate>
+      <author>jkat98@gmail.com (Jason Krol)</author>
+      <guid>http://kroltech.com/2014/01/01/quick-tip-how-to-fork-your-own-repo-in-github/</guid>
+      <description>&lt;p&gt;While forking your own repo sounds like it should be fairly obvious, its definitely not.&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

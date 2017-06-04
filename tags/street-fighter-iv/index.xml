@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Street Fighter Iv on KrolTech</title>
+    <link>http://kroltech.com/tags/street-fighter-iv/</link>
+    <description>Recent content in Street Fighter Iv on KrolTech</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <managingEditor>jkat98@gmail.com (Jason Krol)</managingEditor>
+    <webMaster>jkat98@gmail.com (Jason Krol)</webMaster>
+    <lastBuildDate>Sat, 16 Feb 2013 01:48:28 +0000</lastBuildDate>
+    
+	<atom:link href="http://kroltech.com/tags/street-fighter-iv/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>First Backbone.js app, layoffs, Bleeding edge .net, SFIV</title>
+      <link>http://kroltech.com/2013/02/16/first-backbone-js-app-layoffs-bleeding-edge-net-sfiv/</link>
+      <pubDate>Sat, 16 Feb 2013 01:48:28 +0000</pubDate>
+      <author>jkat98@gmail.com (Jason Krol)</author>
+      <guid>http://kroltech.com/2013/02/16/first-backbone-js-app-layoffs-bleeding-edge-net-sfiv/</guid>
+      <description>I&amp;#8217;ve been working on a Backbone.js application for a few days now, and I really feel like I’m finally getting the hang of it. I&amp;#8217;ve run into a few snags here and there but for the most part I&amp;#8217;ve been pushing ahead and my application is coming together nicely. I hope to do a post with the entire source code and a heavy breakdown of each area of the code and functionality.</description>
+    </item>
+    
+  </channel>
+</rss>

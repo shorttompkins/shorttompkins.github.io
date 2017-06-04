@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Underscore.Js on KrolTech</title>
+    <link>http://kroltech.com/tags/underscore.js/</link>
+    <description>Recent content in Underscore.Js on KrolTech</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <managingEditor>jkat98@gmail.com (Jason Krol)</managingEditor>
+    <webMaster>jkat98@gmail.com (Jason Krol)</webMaster>
+    <lastBuildDate>Fri, 07 Sep 2012 22:20:50 +0000</lastBuildDate>
+    
+	<atom:link href="http://kroltech.com/tags/underscore.js/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>MVC postback bug, Underscore.js, ===, Asana, Launched FillThePart.com!!, Visual Studio 2012</title>
+      <link>http://kroltech.com/2012/09/07/mvc-postback-bug-underscore-js-asana-launched-fillthepart-come-visual-studio-2012/</link>
+      <pubDate>Fri, 07 Sep 2012 22:20:50 +0000</pubDate>
+      <author>jkat98@gmail.com (Jason Krol)</author>
+      <guid>http://kroltech.com/2012/09/07/mvc-postback-bug-underscore-js-asana-launched-fillthepart-come-visual-studio-2012/</guid>
+      <description>After being stumped for a while with a particularly interesting issue in MVC &amp;#8211; I found the solution on Rick Strahl’s blog. Specifically I was trying to change the values of a view model from a controller action, after PostBack &amp;#8211; yet my changes seemed to be ignored or simply refuse to stick. Turns out the HtmlHelpers refer to the actual POST data on page load after postback (seemingly ignoring the “model” even though you explicitly refer to the model when using HtmlHelpers).</description>
+    </item>
+    
+  </channel>
+</rss>

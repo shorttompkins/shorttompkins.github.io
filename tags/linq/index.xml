@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Linq on KrolTech</title>
+    <link>http://kroltech.com/tags/linq/</link>
+    <description>Recent content in Linq on KrolTech</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <managingEditor>jkat98@gmail.com (Jason Krol)</managingEditor>
+    <webMaster>jkat98@gmail.com (Jason Krol)</webMaster>
+    <lastBuildDate>Mon, 20 Aug 2012 22:16:05 +0000</lastBuildDate>
+    
+	<atom:link href="http://kroltech.com/tags/linq/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Launched TumblingInferno.com!</title>
+      <link>http://kroltech.com/2012/08/20/launched-tumblinginferno-com/</link>
+      <pubDate>Mon, 20 Aug 2012 22:16:05 +0000</pubDate>
+      <author>jkat98@gmail.com (Jason Krol)</author>
+      <guid>http://kroltech.com/2012/08/20/launched-tumblinginferno-com/</guid>
+      <description>Created and launched TumblingInferno.com. Was an awesome rapid prototype going from start to launch in 2 days. Implemented a lot of LINQ which was great experience as well as reacquainting myself with Entity Framework. Super excited that I was finally able to finish and launch something!
+Attempted to play with Angular.js, and was somewhat successful. Although didnt really work for the project the way I was hoping &amp;#8211; and help online is scarce currently.</description>
+    </item>
+    
+  </channel>
+</rss>

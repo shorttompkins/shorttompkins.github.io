@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+  <title>Linux on my Chromebook, Cloud based IDEs</title>
+  <meta property="og:title" content="Linux on my Chromebook, Cloud based IDEs" />
+  <meta name="twitter:title" content="Linux on my Chromebook, Cloud based IDEs" />
+  <meta name="description" content="Shortly after getting my Chromebook, I quickly realized that it was a bit lacking. Sure, I wrote earlier that its a great little device and perfect for surfing &#8211; but I also sort of wanted something a tiny bit more. So a little bit of searching lead me toan article explaining how you can very easily install Ubuntu Linux (well a port specifically for Chromebooks) on the device! The process itself was super painless and very easy.">
+  <meta property="og:description" content="Shortly after getting my Chromebook, I quickly realized that it was a bit lacking. Sure, I wrote earlier that its a great little device and perfect for surfing &#8211; but I also sort of wanted something a tiny bit more. So a little bit of searching lead me toan article explaining how you can very easily install Ubuntu Linux (well a port specifically for Chromebooks) on the device! The process itself was super painless and very easy.">
+  <meta name="twitter:description" content="Shortly after getting my Chromebook, I quickly realized that it was a bit lacking. Sure, I wrote earlier that its a great little device and perfect for surfing &#8211; but I also sort of wanted …">
+  <meta name="author" content="Jason Krol"/>
+  <link href='http://kroltech.com/img/favicon.ico' rel='icon' type='image/x-icon'/>
+  <meta property="og:image" content="http://kroltech.com/img/avatar-icon.png" />
+  <meta name="twitter:image" content="http://kroltech.com/img/avatar-icon.png" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:site" content="@shorttompkins" />
+  <meta name="twitter:creator" content="@shorttompkins" />
+  <meta property="og:url" content="http://kroltech.com/2013/05/10/linux-on-my-chromebook-cloud-based-ides/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="KrolTech" />
+
+  <meta name="generator" content="Hugo 0.20.7" />
+  <link rel="canonical" href="http://kroltech.com/2013/05/10/linux-on-my-chromebook-cloud-based-ides/" />
+  <link rel="alternate" href="http://kroltech.com/index.xml" type="application/rss+xml" title="KrolTech">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/katex.min.css" integrity="sha384-wITovz90syo1dJWVh32uuETPVEtGigN07tkttEqPv+uR2SE/mbQcG7ATL28aI9H0" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <link rel="stylesheet" href="http://kroltech.com/css/main.css" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" />
+  <link rel="stylesheet" href="http://kroltech.com/css/pygment_highlights.css" />
+  <link rel="stylesheet" href="http://kroltech.com/css/highlight.min.css" />
+
+<script>
+window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+ga('create', 'UA-29480326-4', 'auto');
+ga('send', 'pageview');
+</script>
+<script async src='//www.google-analytics.com/analytics.js'></script>
+
+</head>
+
+  <body>
+    <nav class="navbar navbar-default navbar-fixed-top navbar-custom">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="http://kroltech.com/">KrolTech</a>
+    </div>
+
+    <div class="collapse navbar-collapse" id="main-navbar">
+      <ul class="nav navbar-nav navbar-right">
+        
+          
+            <li>
+              <a title="Blog" href="/">Blog</a>
+            </li>
+          
+        
+          
+            <li>
+              <a title="About" href="/page/about/">About</a>
+            </li>
+          
+        
+
+        
+
+        
+      </ul>
+    </div>
+
+    <div class="avatar-container">
+      <div class="avatar-img-border">
+        
+          <a title="KrolTech" href="http://kroltech.com/">
+            <img class="avatar-img" src="http://kroltech.com/img/avatar-icon.png" alt="KrolTech" />
+          </a>
+        
+      </div>
+    </div>
+
+  </div>
+</nav>
+
+
+
+
+    
+  
+  
+  
+
+
+
+
+  
+
+  <header class="header-section ">
+    
+    <div class="intro-header no-img">
+      
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+            <div class="post-heading">
+              <h1>Linux on my Chromebook, Cloud based IDEs</h1>
+                
+                
+                  <span class="post-meta">
+  Posted on May 10, 2013
+  
+</span>
+
+
+                
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+
+    
+<div class="container">
+  <div class="row">
+    <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+      <article role="main" class="blog-post">
+        
+
+<p dir="ltr">
+  Shortly after getting my Chromebook, I quickly realized that it was a bit lacking.  Sure, I wrote earlier that its a great little device and perfect for surfing &#8211; but I also sort of wanted something a tiny bit more.  So a little bit of searching lead me to<a href="http://arstechnica.com/gadgets/2012/12/how-to-install-ubuntu-on-acers-199-c7-chromebook/" target="_blank"> an article explaining how you can very easily install Ubuntu Linux</a> (well a port specifically for Chromebooks) on the device!  The process itself was super painless and very easy.  The only tip I can give is make sure you make a recovery bootable USB stick for your specific Chromebook (instructions link available in the original article).
+</p>
+
+<p dir="ltr">
+  I spent a few hours playing with Ubuntu on the Chromebook and I was almost instantly in love!  It ran great, felt great, felt perfect for the Chromebook (in that it was lean and very little clutter), and allowed me to install real apps!  I also loved the idea of having a terminal that I could poke around with and run command line stuff like git, npm, node, etc.  I was able to install WebStorm as well as SublimeText and everything was great!
+</p>
+
+<p dir="ltr">
+  Then it locked up.  Hard!  Like, nothing I could do except remove the battery kind of locked up.  Rebooting fixed it and I was back up and running.  Ok no biggie just one of those Gremlins.  Then it happened again a little later, randomly.  Then my sound stopped working randomly.  Then my 2 finger scrolling just stopped working.  WTF?!  Everything started out great, then just kind of kept going downhill.
+</p>
+
+<p dir="ltr">
+  Well, the instability and unsureness of running Ubuntu lead me to ditch the project and just revert back to the regular ChromeOS (using that handy recovery USB stick).  It was a fun experiment, and showed some great potential for the device, just maybe the build of Ubuntu I was using wasn’t ready for primetime yet or I’m simply not ready to work regularly in a somewhat unstable environment.
+</p>
+
+<h3 id="cloud-based-ides">Cloud based IDEs</h3>
+
+<p dir="ltr">
+  That little experiment did lead me to the conclusion that the Chromebook can be a great little development machine.  You just need access to the right tools.  So I started looking into some cloud based development environments.
+</p>
+
+<p dir="ltr">
+  <a href="http://koding.com" target="_blank"><strong>Koding</strong><br /> </a>I was accepted into the beta for Koding.  Its not only a cloud based development environment, but its also a full blown social network complete with a “wall” of topics and people you follow.  It also has a lot of code snippet support (like gists) that you can post and get answers/feedback from other users.  Overall its turning out to be a great service.  It supports php, perl, python, ruby, and you can get node up and running using the terminal service and your own personal VM included!
+</p>
+
+<p dir="ltr">
+  <strong><a href="https://codenvy.com/" target="_blank">Codenvy</a></strong><br /> I haven&#8217;t played too much with this, but it seems to be a really solid and well build IDE.  This service seems to be more about the development environment, and less social.
+</p>
+
+<p><a href="http://c9.io" target="_blank"><strong>Cloud9</strong><br /> </a>This one is my favorite by far!  The design is very very well done, the tool feels really solid and well built.  It has a ton of themes and tons of settings.  Its also a great way to work with a team on a project as you can all work on the same project at the same time and the auto/instant merging of code is very well done.  Its not quite as real-time as Google Docs (you can&#8217;t see someone typing) but whenever they save their changes are instantly pushed into your view.  They also seem to be really hardcore supports of node.js in general &#8211; going so far as to ensure the future development of the language/technology (as well as they service they provide).</p>
+
+<p>All of the cloud based IDEs seem to offer some sort of free plan in one way or another.  Most of them don&#8217;t seem to be too restricted either &#8211; making them a great method of working on your next project!</p>
+
+      </article>
+
+      <ul class="pager blog-pager">
+        
+          <li class="previous">
+            <a href="http://kroltech.com/2013/04/29/thoughts-on-asus-chromebook/" data-toggle="tooltip" data-placement="top" title="Thoughts on Asus Chromebook">&larr; Previous Post</a>
+          </li>
+        
+        
+          <li class="next">
+            <a href="http://kroltech.com/2013/05/13/quick-tip-regex-to-convert-urls-in-text-to-links-javascript/" data-toggle="tooltip" data-placement="top" title="RegEx to convert urls in text to links (JavaScript)">Next Post &rarr;</a>
+          </li>
+        
+      </ul>
+
+      
+        
+          <div class="disqus-comments">
+            <div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_shortname = 'jasonkrol';
+    var disqus_identifier = 'http:\/\/kroltech.com\/2013\/05\/10\/linux-on-my-chromebook-cloud-based-ides\/';
+    var disqus_title = 'Linux on my Chromebook, Cloud based IDEs';
+    var disqus_url = 'http:\/\/kroltech.com\/2013\/05\/10\/linux-on-my-chromebook-cloud-based-ides\/';
+
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+          </div>
+        
+      
+
+    </div>
+  </div>
+</div>
+
+    <footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <ul class="list-inline text-center footer-links">
+          
+              <li>
+                <a href="mailto:jkat98@gmail.com" title="Email me">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-envelope fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="https://www.plus.google.com/&#43;JasonKrol" title="Google&#43;">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-google-plus fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="https://github.com/shorttompkins" title="GitHub">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="https://twitter.com/shorttompkins" title="Twitter">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="https://reddit.com/u/shorttompkins" title="Reddit">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-reddit-alien fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="https://linkedin.com/in/jasonkrol" title="LinkedIn">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-linkedin fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="https://stackoverflow.com/users/1623304/jkat98" title="StackOverflow">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-stack-overflow fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="https://www.youtube.com/user/jkat98" title="Youtube">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-youtube fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+          
+          <li>
+            <a href="http://kroltech.com/index.xml" title="RSS">
+              <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fa fa-rss fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          
+        </ul>
+        <p class="credits copyright text-muted">
+          Jason Krol
+          &nbsp;&bull;&nbsp;
+          2016
+
+          
+            &nbsp;&bull;&nbsp;
+            <a href="http://kroltech.com/">KrolTech</a>
+          
+        </p>
+        
+        <p class="credits theme-by text-muted">
+          <a href="http://gohugo.io">Hugo v0.20.7</a> powered &nbsp;&bull;&nbsp; Theme by <a href="http://deanattali.com/beautiful-jekyll/">Beautiful Jekyll</a> adapted to <a href="https://github.com/halogenica/beautifulhugo">Beautiful Hugo</a>
+          
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/katex.min.js" integrity="sha384-/y1Nn9+QQAipbNQWU65krzJralCnuOasHncUFXGkdwntGeSvQicrYkiUBwsgUqc1" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/contrib/auto-render.min.js" integrity="sha384-dq1/gEHSxPZQ7DdrM82ID4YVol9BYyU7GbWlIwnwyPzotpoc57wDw/guX8EaYGPx" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<script src="http://kroltech.com/js/main.js"></script>
+<script src="http://kroltech.com/js/highlight.min.js"></script>
+<script> hljs.initHighlightingOnLoad(); </script>
+<script> renderMathInElement(document.body); </script>
+
+
+
+
+
+  </body>
+</html>
+

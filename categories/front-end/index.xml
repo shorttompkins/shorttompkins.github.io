@@ -1,0 +1,688 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Front End on KrolTech</title>
+    <link>http://kroltech.com/categories/front-end/</link>
+    <description>Recent content in Front End on KrolTech</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <managingEditor>jkat98@gmail.com (Jason Krol)</managingEditor>
+    <webMaster>jkat98@gmail.com (Jason Krol)</webMaster>
+    <lastBuildDate>Thu, 08 Dec 2016 16:20:19 +0000</lastBuildDate>
+    
+	<atom:link href="http://kroltech.com/categories/front-end/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>How I’m Learning: Elixir &amp; Phoenix</title>
+      <link>http://kroltech.com/2016/12/08/how-im-learning-elixir-phoenix/</link>
+      <pubDate>Thu, 08 Dec 2016 16:20:19 +0000</pubDate>
+      <author>jkat98@gmail.com (Jason Krol)</author>
+      <guid>http://kroltech.com/2016/12/08/how-im-learning-elixir-phoenix/</guid>
+      <description>&lt;p&gt;Recently I&amp;#8217;ve been spending a lot of my free time absorbing as much as I can about an exciting Functional Programming language called Elixir.  For those of you that don&amp;#8217;t know, Elixir is somewhat of a spiritual successor to Ruby, and therefore Phoenix (the web framework for Elixir) could be considered it&amp;#8217;s Rails.  Let&amp;#8217;s take a look at my learning path and what you can do if you&amp;#8217;re interested in becoming a proficient Elixir &amp;amp; Phoenix developer!&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Getting started with React/Flux Node/MongoDB – Open Source</title>
+      <link>http://kroltech.com/2016/10/27/getting-started-with-reactflux-nodemongodb-open-source/</link>
+      <pubDate>Thu, 27 Oct 2016 01:06:24 +0000</pubDate>
+      <author>jkat98@gmail.com (Jason Krol)</author>
+      <guid>http://kroltech.com/2016/10/27/getting-started-with-reactflux-nodemongodb-open-source/</guid>
+      <description>&lt;p&gt;Almost a year ago I &lt;a href=&#34;https://kroltech.com/2015/10/15/getting-started-with-react-and-flux/&#34;&gt;started an ambitious project&lt;/a&gt; to create a website from scratch using React and Flux (Redux) as well as Node.js and MongoDB.  I was also writing a companion book parallel to writing the actual code for the project and made some really good progress.  Since I basically stopped completely and just let the book sit and linger, I decided that I should at least open source the book so you can check it out and hopefully learn from it.&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Free React.js/Flux course on Udemy.com!</title>
+      <link>http://kroltech.com/2015/11/19/free-react-jsflux-course-on-udemy-com/</link>
+      <pubDate>Thu, 19 Nov 2015 14:43:19 +0000</pubDate>
+      <author>jkat98@gmail.com (Jason Krol)</author>
+      <guid>http://kroltech.com/2015/11/19/free-react-jsflux-course-on-udemy-com/</guid>
+      <description>&lt;p&gt;The fine folks at Udemy.com have provided me with a coupon code for a free React.js/Flux course!&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>2nd Ed. of Web Development with MongoDB and NodeJS</title>
+      <link>http://kroltech.com/2015/11/18/2nd-ed-of-web-development-with-mongodb-and-nodejs/</link>
+      <pubDate>Wed, 18 Nov 2015 15:08:56 +0000</pubDate>
+      <author>jkat98@gmail.com (Jason Krol)</author>
+      <guid>http://kroltech.com/2015/11/18/2nd-ed-of-web-development-with-mongodb-and-nodejs/</guid>
+      <description>&lt;p&gt;Excited that the 2nd edition of my book has just been released!&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Stateless Functional Components new in React 0.14</title>
+      <link>http://kroltech.com/2015/10/16/stateless-functional-components-new-in-react-0-14/</link>
+      <pubDate>Fri, 16 Oct 2015 14:19:48 +0000</pubDate>
+      <author>jkat98@gmail.com (Jason Krol)</author>
+      <guid>http://kroltech.com/2015/10/16/stateless-functional-components-new-in-react-0-14/</guid>
+      <description>&lt;p&gt;React version 0.14 was recently released and introduced some breaking changes as well as a few new features worth pointing out.&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Getting Started with React and Flux</title>
+      <link>http://kroltech.com/2015/10/15/getting-started-with-react-and-flux/</link>
+      <pubDate>Thu, 15 Oct 2015 02:54:23 +0000</pubDate>
+      <author>jkat98@gmail.com (Jason Krol)</author>
+      <guid>http://kroltech.com/2015/10/15/getting-started-with-react-and-flux/</guid>
+      <description>&lt;p&gt;Big surprise, I&amp;#8217;m jumping on the React/Flux bandwagon!&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>AngularJS Directive: Two ways to skin a cat</title>
+      <link>http://kroltech.com/2015/06/04/angularjs-directive-two-ways-to-skin-a-cat/</link>
+      <pubDate>Thu, 04 Jun 2015 13:19:58 +0000</pubDate>
+      <author>jkat98@gmail.com (Jason Krol)</author>
+      <guid>http://kroltech.com/2015/06/04/angularjs-directive-two-ways-to-skin-a-cat/</guid>
+      <description>&lt;p&gt;Let&amp;#8217;s take a look at a recent directive I needed to create, and dissect the two completely different approaches I took to accomplish what I needed.&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Testing Angular directives using events</title>
+      <link>http://kroltech.com/2015/05/15/testing-angular-directives-using-events/</link>
+      <pubDate>Fri, 15 May 2015 12:40:00 +0000</pubDate>
+      <author>jkat98@gmail.com (Jason Krol)</author>
+      <guid>http://kroltech.com/2015/05/15/testing-angular-directives-using-events/</guid>
+      <description>&lt;p&gt;Testing directives can be somewhat painful at times. I specifically struggled with testing a keyDown event and passing specific keycodes.&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Webcast: Rapid Prototyping Web Applications Using Node.js and MongoDB 1/7/15</title>
+      <link>http://kroltech.com/2015/01/02/webcast-rapid-prototyping-web-applications-using-node-js-and-mongodb-1715/</link>
+      <pubDate>Fri, 02 Jan 2015 23:05:32 +0000</pubDate>
+      <author>jkat98@gmail.com (Jason Krol)</author>
+      <guid>http://kroltech.com/2015/01/02/webcast-rapid-prototyping-web-applications-using-node-js-and-mongodb-1715/</guid>
+      <description>&lt;p&gt;Thanks to the awesome folks at O&amp;#8217;Reilly I will be giving a live webcast about prototyping web applications using node.js and MongoDB.&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Sanitizing XSS and HTML with Express middleware</title>
+      <link>http://kroltech.com/2014/05/30/sanitizing-xss-and-html-with-express-middleware/</link>
+      <pubDate>Fri, 30 May 2014 17:00:56 +0000</pubDate>
+      <author>jkat98@gmail.com (Jason Krol)</author>
+      <guid>http://kroltech.com/2014/05/30/sanitizing-xss-and-html-with-express-middleware/</guid>
+      <description>&lt;p&gt;Lets take a look at a few different options for handling sanitizing user input fields in both node.js as well as the browser.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Review: Backbone.js Patterns and Best Practices</title>
+      <link>http://kroltech.com/2014/03/18/review-backbone-js-patterns-and-best-practices/</link>
+      <pubDate>Tue, 18 Mar 2014 13:01:47 +0000</pubDate>
+      <author>jkat98@gmail.com (Jason Krol)</author>
+      <guid>http://kroltech.com/2014/03/18/review-backbone-js-patterns-and-best-practices/</guid>
+      <description>&lt;p&gt;I was fortunate enough to receive a review copy of Backbone.js Patterns and Best Practices directly from the author. It’s a decent book, and a great ‘next step’ for anyone thats a budding Backbone developer that has got the basics down and wants to take their skills to the next level.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Boilerplate web app using Backbone.js, ExpressJS, node.js, MongoDB</title>
+      <link>http://kroltech.com/2013/12/29/boilerplate-web-app-using-backbone-js-expressjs-node-js-mongodb/</link>
+      <pubDate>Sun, 29 Dec 2013 03:53:56 +0000</pubDate>
+      <author>jkat98@gmail.com (Jason Krol)</author>
+      <guid>http://kroltech.com/2013/12/29/boilerplate-web-app-using-backbone-js-expressjs-node-js-mongodb/</guid>
+      <description>&lt;p&gt;A boilerplate project for a complete web application written using Backbone.js &amp;amp; Marionette, node.js &amp;amp; ExpressJS, MongoDB &amp;amp; Mongoose, Handlebars, Grunt.js, Bower, and Browserify!&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>JavaScript TDD with Jasmine and Karma</title>
+      <link>http://kroltech.com/2013/11/20/javascript-tdd-with-jasmine-and-karma/</link>
+      <pubDate>Wed, 20 Nov 2013 18:17:43 +0000</pubDate>
+      <author>jkat98@gmail.com (Jason Krol)</author>
+      <guid>http://kroltech.com/2013/11/20/javascript-tdd-with-jasmine-and-karma/</guid>
+      <description>&lt;p&gt;We do rapid releases at AWeber so we’re constantly pushing code changes to our users. To be sure that we aren’t in a constant state of “fix 1 bug, introduce 2 more” we embrace TDD across our entire stack. This includes making sure our front-end JavaScript code has thorough test coverage.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Status update!</title>
+      <link>http://kroltech.com/2013/09/24/status-update/</link>
+      <pubDate>Tue, 24 Sep 2013 00:56:34 +0000</pubDate>
+      <author>jkat98@gmail.com (Jason Krol)</author>
+      <guid>http://kroltech.com/2013/09/24/status-update/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>PhotoFlipper.js – 3D flip your photo/gallery</title>
+      <link>http://kroltech.com/2013/06/17/js-library-photoflipper-js-3d-flip-your-photogallery/</link>
+      <pubDate>Mon, 17 Jun 2013 14:09:12 +0000</pubDate>
+      <author>jkat98@gmail.com (Jason Krol)</author>
+      <guid>http://kroltech.com/2013/06/17/js-library-photoflipper-js-3d-flip-your-photogallery/</guid>
+      <description>&lt;p&gt;I added another item to my github, a 3D css image rotator/randomizer.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>ScrollToggle – detect scroll location and trigger events</title>
+      <link>http://kroltech.com/2013/06/17/js-library-scrolltoggle-detect-scroll-location-and-trigger-events/</link>
+      <pubDate>Mon, 17 Jun 2013 13:53:58 +0000</pubDate>
+      <author>jkat98@gmail.com (Jason Krol)</author>
+      <guid>http://kroltech.com/2013/06/17/js-library-scrolltoggle-detect-scroll-location-and-trigger-events/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Passing parameters to click event using trigger</title>
+      <link>http://kroltech.com/2013/06/17/quick-tip-passing-parameters-to-click-event-using-trigger/</link>
+      <pubDate>Mon, 17 Jun 2013 13:44:40 +0000</pubDate>
+      <author>jkat98@gmail.com (Jason Krol)</author>
+      <guid>http://kroltech.com/2013/06/17/quick-tip-passing-parameters-to-click-event-using-trigger/</guid>
+      <description>I have a simple jQuery onClick event bound to a link. On the load of the page, I fetch existing data from a cookie and then call the onClick manually to setup the page (for returning visitors). There is some animation associated with the click &amp;#8211; but when the page loads and all of the clicks are registered, the animations look odd and out of sync (and just logically dont make sense in that situation).</description>
+    </item>
+    
+    <item>
+      <title>Week in Review – 5/24/13</title>
+      <link>http://kroltech.com/2013/05/25/week-in-review-52413/</link>
+      <pubDate>Sat, 25 May 2013 02:03:39 +0000</pubDate>
+      <author>jkat98@gmail.com (Jason Krol)</author>
+      <guid>http://kroltech.com/2013/05/25/week-in-review-52413/</guid>
+      <description>While I continue to work on the mobile application I’m creating for work, I rewrote the entire framework so that its much better organized. I also decided to integrate Marionette.js which was absolutely worth while. It took a little bit to figure it out, but the savings in time after the fact are huge! Writing simple views and collections now is a no brainer (almost to the point that I feel bad because it feels like cheating!</description>
+    </item>
+    
+    <item>
+      <title>Discovering my love of “front-end” development / Being more pragmatic</title>
+      <link>http://kroltech.com/2013/05/17/discovering-my-love-of-front-end-development-being-more-pragmatic/</link>
+      <pubDate>Fri, 17 May 2013 14:30:56 +0000</pubDate>
+      <author>jkat98@gmail.com (Jason Krol)</author>
+      <guid>http://kroltech.com/2013/05/17/discovering-my-love-of-front-end-development-being-more-pragmatic/</guid>
+      <description>Lately I&amp;#8217;ve been noticing a trend with my skill set &amp;#8211; its been increasing which is always great, but also starting to veer in directions that are alternate to that of a typical “.net developer”. I say this because, for all intents and purposes, I am a typical “.net developer”. Every recruiter I get a call from always has a “great .net opportunity that you would be perfect for!”. I&amp;#8217;ve always prided myself on this notion, always considered myself a .</description>
+    </item>
+    
+    <item>
+      <title>RegEx to convert urls in text to links (JavaScript)</title>
+      <link>http://kroltech.com/2013/05/13/quick-tip-regex-to-convert-urls-in-text-to-links-javascript/</link>
+      <pubDate>Mon, 13 May 2013 15:48:13 +0000</pubDate>
+      <author>jkat98@gmail.com (Jason Krol)</author>
+      <guid>http://kroltech.com/2013/05/13/quick-tip-regex-to-convert-urls-in-text-to-links-javascript/</guid>
+      <description>Here&amp;#8217;s a quick tip. If you have text that contains urls (i.e. tweets) and want the urls in the text to appear as actual links via HTML, use the following RegEx:
+[sourcecode lang=&amp;#8221;javascript&amp;#8221;]
+var message = &amp;ldquo;Here is some tweet text. Check out: http://www.google.com&amp;quot;;
+var exp = /(b(https?|ftp|file)://[-A-Z0-9+&amp;amp;@#/%?=~_|!:,.;]*[-A-Z0-9+&amp;amp;@#/%=~_|])/ig;
+message = message.replace(exp, &amp;ldquo;$1&amp;rdquo;);
+[/sourcecode]
+Source: http://stackoverflow.com/questions/37684/how-to-replace-plain-urls-with-links</description>
+    </item>
+    
+    <item>
+      <title>Mobile web “App” versus “app”, AngularJS, CSS Transforms, Electric Plum</title>
+      <link>http://kroltech.com/2013/04/19/mobile-web-app-versus-app-angularjs-css-transforms-electric-plum/</link>
+      <pubDate>Fri, 19 Apr 2013 13:45:16 +0000</pubDate>
+      <author>jkat98@gmail.com (Jason Krol)</author>
+      <guid>http://kroltech.com/2013/04/19/mobile-web-app-versus-app-angularjs-css-transforms-electric-plum/</guid>
+      <description>Great article on why there aren&amp;#8217;t more great “web apps” and the difference between an “App” and an “app”. Dan Whalin provides us an excellent introduction to AngularJS. The video is about 60 minutes, but covers a lot of ground and is a great introduction. After I&amp;#8217;ve been spending some time with Backbone, I&amp;#8217;ve been thinking more and more about maybe making the move onto Angular or Ember &amp;#8211; a lot of the Microsoft evangelists seem to be pushing Angular lately &amp;#8211; Pluralsight courses are coming very soon!</description>
+    </item>
+    
+    <item>
+      <title>Fade in element on event using CSS3  &amp; opacity</title>
+      <link>http://kroltech.com/2013/04/15/quick-tip-fade-in-element-on-event-using-css3-opacity/</link>
+      <pubDate>Mon, 15 Apr 2013 17:55:31 +0000</pubDate>
+      <author>jkat98@gmail.com (Jason Krol)</author>
+      <guid>http://kroltech.com/2013/04/15/quick-tip-fade-in-element-on-event-using-css3-opacity/</guid>
+      <description>I&amp;#8217;m working on a project, that requires a number of different animations based on user events. I recently switched all of the animations to CSS3 transforms and transitions versus jQuery animations. The improvement has been staggering, to say the least.
+However, I came across a weird issue today. When attempting to fade an element in after a click event, the element just kept popping into place. It wouldn&amp;#8217;t fade. After some investigation I realized that my jQuery was setting the opacity to 1.</description>
+    </item>
+    
+    <item>
+      <title>Mobile app prototype development</title>
+      <link>http://kroltech.com/2013/04/10/mobile-app-prototype-development/</link>
+      <pubDate>Wed, 10 Apr 2013 15:08:12 +0000</pubDate>
+      <author>jkat98@gmail.com (Jason Krol)</author>
+      <guid>http://kroltech.com/2013/04/10/mobile-app-prototype-development/</guid>
+      <description>I&amp;#8217;ve been working hard on preparing a mobile app prototype for a demonstration/proposal next week. The goal is to create a native app using HTML5 and PhoneGap. I&amp;#8217;ve been building the app using Backbone primarily, and using Adobe’s PhoneGap Build. PhoneGap Build is a cloud based compilation tool that makes things VERY easy to get your app up and running natively. The build tool supports iOS, Android, Windows, Blackberry, HP, and a few others.</description>
+    </item>
+    
+    <item>
+      <title>Mobile app development, Google Dev tools Code School, TekPub</title>
+      <link>http://kroltech.com/2013/03/29/mobile-app-development-google-dev-tools-code-school-tekpub/</link>
+      <pubDate>Fri, 29 Mar 2013 19:03:10 +0000</pubDate>
+      <author>jkat98@gmail.com (Jason Krol)</author>
+      <guid>http://kroltech.com/2013/03/29/mobile-app-development-google-dev-tools-code-school-tekpub/</guid>
+      <description>I completed the Code School course on using Google Chrome Dev Tools. I highly recommend you complete this course &amp;#8211; its super quick (probably no longer than 1 hour) and very easy. Yet, I learned a lot. Specifically with the more advanced topics of the dev tools like Profiling, Memory Leaks, Framerates, etc.
+Started writing my hybrid mobile app for work &amp;#8211; learned quite a bit along the way. Working with jQuery Mobile, but its overhead and conventions/takeover is making it less than desirable &amp;#8211; perhaps I’ll rewrite the transition animations manually and implement 3rd party Touch/Tap library.</description>
+    </item>
+    
+    <item>
+      <title>Building a web app using Backbone.js and require.js – Part 1</title>
+      <link>http://kroltech.com/2013/03/21/building-a-web-app-using-backbone-js-and-require-js-part-1/</link>
+      <pubDate>Thu, 21 Mar 2013 21:15:19 +0000</pubDate>
+      <author>jkat98@gmail.com (Jason Krol)</author>
+      <guid>http://kroltech.com/2013/03/21/building-a-web-app-using-backbone-js-and-require-js-part-1/</guid>
+      <description>A few requests for the full source code for this project have been made. Please feel free to download the full project files via this repo:
+https://github.com/jkat98/imgettinit_netmvc  At the end of last year I set some goals for myself, one of which was to start using and become proficient in Backbone.js. I&amp;#8217;ll be honest in saying that I struggled for a bit to really wrap my head around everything that was going on.</description>
+    </item>
+    
+    <item>
+      <title>Building a web app using Backbone.js and require.js – Part 2</title>
+      <link>http://kroltech.com/2013/03/21/building-a-web-app-using-backbone-js-and-require-js-part-2/</link>
+      <pubDate>Thu, 21 Mar 2013 21:14:41 +0000</pubDate>
+      <author>jkat98@gmail.com (Jason Krol)</author>
+      <guid>http://kroltech.com/2013/03/21/building-a-web-app-using-backbone-js-and-require-js-part-2/</guid>
+      <description>This post is the conclusion to the article Building a web app using Backbone.js and require.js &amp;#8211; Part 1. Please be sure to read that article first before proceeding.  In my previous post, we discussed the original idea for the project, outlined what its supposed to do, and started dissecting the project&amp;#8217;s main.js and app.js files. Both of those files frequently referred to the &amp;#8220;Games&amp;#8221; Backbone view and collection, but never really explained them.</description>
+    </item>
+    
+    <item>
+      <title>Media queries with js, jStorage, native feeling web apps, Google Keep, and more!</title>
+      <link>http://kroltech.com/2013/03/21/media-queries-with-js-jstorage-native-feeling-web-apps-google-keep-and-more/</link>
+      <pubDate>Thu, 21 Mar 2013 15:18:58 +0000</pubDate>
+      <author>jkat98@gmail.com (Jason Krol)</author>
+      <guid>http://kroltech.com/2013/03/21/media-queries-with-js-jstorage-native-feeling-web-apps-google-keep-and-more/</guid>
+      <description>Found a neat little JavaScript tool (that&amp;#8217;s right, Vanilla!) called Enquire.js for detecting Media Query triggers in CSS. This could be cool for triggering events (like animation) when you have certain components of your page depending on different media queries. Even though those triggers typically only occur on resize/resolution change &amp;#8211; it could also be used to detect orientation change (i.e. iPad rotate from portrait to landscape).
+While researching some stuff for an upcoming mobile web app I need to create I found this handy JavaScript tool for storing to Local Storage called jStorage.</description>
+    </item>
+    
+    <item>
+      <title>Maintaining minified .js files in Visual Studio 2012</title>
+      <link>http://kroltech.com/2013/03/19/quick-tip-maintaining-minified-js-files-in-visual-studio-2012/</link>
+      <pubDate>Tue, 19 Mar 2013 16:39:52 +0000</pubDate>
+      <author>jkat98@gmail.com (Jason Krol)</author>
+      <guid>http://kroltech.com/2013/03/19/quick-tip-maintaining-minified-js-files-in-visual-studio-2012/</guid>
+      <description>Perhaps this is common knowledge, but I just figured it out (accidentally) and its pretty damn awesome! If you maintain a regular .js file, and then create a copy of it .min.js with a compressed copy of your code, Visual Studio will maintain that minified version automatically whenever you make changes to your original! It will create a .map file that it uses to keep track of the differences between your source and minified versions (variable names, etc).</description>
+    </item>
+    
+    <item>
+      <title>Week in Review 3/15/13</title>
+      <link>http://kroltech.com/2013/03/15/week-in-review-31513/</link>
+      <pubDate>Fri, 15 Mar 2013 19:53:09 +0000</pubDate>
+      <author>jkat98@gmail.com (Jason Krol)</author>
+      <guid>http://kroltech.com/2013/03/15/week-in-review-31513/</guid>
+      <description>Some teammates were surfing around looking for some inspiration and found an agency website that does some truly incredible work: http://nclud.com Notably are their BeerCamp websites they create: http://2012.beercamp.com, http://2013.beercamp.com &amp;#8211; the 2013 website is actually a full on multiplayer game (similar to the original Mario Bros. game on Atari). Very inspirational!!
+While poking around the source code for the 2013 Beercamp website game I discovered Raphael.js, a simple JavaScript library that makes working with vector in HTML a breeze!</description>
+    </item>
+    
+    <item>
+      <title>Raging Backbone.js coding and blog relaunch!</title>
+      <link>http://kroltech.com/2013/03/08/raging-backbone-js-coding-and-blog-relaunch/</link>
+      <pubDate>Fri, 08 Mar 2013 16:25:08 +0000</pubDate>
+      <author>jkat98@gmail.com (Jason Krol)</author>
+      <guid>http://kroltech.com/2013/03/08/raging-backbone-js-coding-and-blog-relaunch/</guid>
+      <description>I continue to plug away at my Backbone.js project (rewriting imgettin.it from scratch basically). I&amp;#8217;ve hit a shitload of road blocks, but most of them were related to my having to completely rethink how to handle a certain area or aspect to make it more efficient &amp;#8211; and then wrap my head around how to accomplish this new concept using Backbone.js. I would say its taken me probably a solid 4-6 nights of coding to get to the point that I don’t feel utterly lost and coding is coming more fluent now (versus stutters as with most new languages/concepts).</description>
+    </item>
+    
+    <item>
+      <title>Single Page Application (SPA) Project Template</title>
+      <link>http://kroltech.com/2013/03/03/single-page-application-spa-project-template/</link>
+      <pubDate>Sun, 03 Mar 2013 04:21:15 +0000</pubDate>
+      <author>jkat98@gmail.com (Jason Krol)</author>
+      <guid>http://kroltech.com/2013/03/03/single-page-application-spa-project-template/</guid>
+      <description>I started going through the process of deconstructing John Papa’s amazing CodeCamper Single Page Application project and trying to break it down to a basic stripped down project template. I love a lot of what was accomplished in that project (great DI, awesome Repositories and patterns, etc.)! While breaking down the project, I&amp;#8217;ve learned quite a bit. I&amp;#8217;ve posted the full source of the template to my github, but its still a work in progress.</description>
+    </item>
+    
+    <item>
+      <title>Require.js, Knockback.js, A developer’s reaction (animated gif gallery)</title>
+      <link>http://kroltech.com/2013/03/01/require-js-knockback-js-a-developers-reaction-animated-gif-gallery/</link>
+      <pubDate>Fri, 01 Mar 2013 21:52:25 +0000</pubDate>
+      <author>jkat98@gmail.com (Jason Krol)</author>
+      <guid>http://kroltech.com/2013/03/01/require-js-knockback-js-a-developers-reaction-animated-gif-gallery/</guid>
+      <description>While playing with the SPA project template (post forthcoming) I finally took some time to play around with Require.js. While its fairly easy to get started, it blew my mind how it almost instantly changed my mindset and habits with regard to organization of my code. At its most basic level, it allows you to break all of your code down into nice bite-sized chunks in individual files &amp;#8211; but its so much more.</description>
+    </item>
+    
+    <item>
+      <title>.Net Framework 2012.2, SPA templates, MGR: Revengeance, PS4, Working from home</title>
+      <link>http://kroltech.com/2013/02/24/net-framework-2012-2-spa-templates-mgr-revengeance-ps4-working-from-home/</link>
+      <pubDate>Sun, 24 Feb 2013 02:38:42 +0000</pubDate>
+      <author>jkat98@gmail.com (Jason Krol)</author>
+      <guid>http://kroltech.com/2013/02/24/net-framework-2012-2-spa-templates-mgr-revengeance-ps4-working-from-home/</guid>
+      <description>The .Net framework 2012.2 update has been released. Most of this update has to do with a few minor tweaks and enhancements (color coding popular client-side templates, LESS support, etc) as well as some new templates. A great post on John Papa’s blog outlines the templates.
+Played Metal Gear Rising: Revengeance and have to say I&amp;#8217;m a little disappointed. Its definitely not Bayonetta, and I doubt Platinum will ever achieve the stunning awesomeness that was that game, but heres holding out hope (not much since last I heard Bayonetta 2 was WiiU exclusive).</description>
+    </item>
+    
+    <item>
+      <title>First Backbone.js app, layoffs, Bleeding edge .net, SFIV</title>
+      <link>http://kroltech.com/2013/02/16/first-backbone-js-app-layoffs-bleeding-edge-net-sfiv/</link>
+      <pubDate>Sat, 16 Feb 2013 01:48:28 +0000</pubDate>
+      <author>jkat98@gmail.com (Jason Krol)</author>
+      <guid>http://kroltech.com/2013/02/16/first-backbone-js-app-layoffs-bleeding-edge-net-sfiv/</guid>
+      <description>I&amp;#8217;ve been working on a Backbone.js application for a few days now, and I really feel like I’m finally getting the hang of it. I&amp;#8217;ve run into a few snags here and there but for the most part I&amp;#8217;ve been pushing ahead and my application is coming together nicely. I hope to do a post with the entire source code and a heavy breakdown of each area of the code and functionality.</description>
+    </item>
+    
+    <item>
+      <title>Pre-cache your for loops</title>
+      <link>http://kroltech.com/2013/02/08/quick-tip-pre-cache-your-for-loops/</link>
+      <pubDate>Fri, 08 Feb 2013 18:59:22 +0000</pubDate>
+      <author>jkat98@gmail.com (Jason Krol)</author>
+      <guid>http://kroltech.com/2013/02/08/quick-tip-pre-cache-your-for-loops/</guid>
+      <description>While reading through the JavaScript Patterns book, I saw an item that totally stuck out as a crystal clear &amp;#8220;duuhhh!!&amp;#8221; moment. Why have I never seen/heard of that before and certainly why wasn&amp;#8217;t I doing it regularly (and why hadn&amp;#8217;t I thought of it to be honest).
+Instead of doing this:
+[sourcecode lang=&amp;#8221;javascript&amp;#8221;]
+for(var i=0; i &amp;lt; $(&amp;#8216;someselector li&amp;#8217;).length; i++){
+//loop through each LI in a UL, or any collection</description>
+    </item>
+    
+    <item>
+      <title>JavaScript books, recent projects, Line rider!, Rock climbing</title>
+      <link>http://kroltech.com/2013/02/08/javascript-books-recent-projects-line-rider-rock-climbing/</link>
+      <pubDate>Fri, 08 Feb 2013 18:39:04 +0000</pubDate>
+      <author>jkat98@gmail.com (Jason Krol)</author>
+      <guid>http://kroltech.com/2013/02/08/javascript-books-recent-projects-line-rider-rock-climbing/</guid>
+      <description>I went on a bit of a shopping spree on Amazon. Besides a few Kindle books (sci-fi, etc) I grabbed a few new JavaScript books as well:
+JavaScript Patterns &amp;#8211; Stoyan Stefanov
+Secrets of the JavaScript Ninja &amp;#8211; John Resig, Bear Bibeault
+If you are looking to utterly destroy an entire afternoon (or more), definitely check out the HTML5 version of an oldie but goodie, Free Rider HD!! (also know as Canvas Rider)</description>
+    </item>
+    
+    <item>
+      <title>Week in Review 2/1/13</title>
+      <link>http://kroltech.com/2013/02/01/what-i-learned-from-the-single-page-apps-spa-course-so-far/</link>
+      <pubDate>Fri, 01 Feb 2013 20:55:54 +0000</pubDate>
+      <author>jkat98@gmail.com (Jason Krol)</author>
+      <guid>http://kroltech.com/2013/02/01/what-i-learned-from-the-single-page-apps-spa-course-so-far/</guid>
+      <description>Was playing with animating some stuff on a page and started trying to work with animating box-shadow. I realized it wasn&amp;#8217;t working and after some research figured out that it just doesn&amp;#8217;t work. A super handy and easy plugin solves that problem though.
+The latest episode of the Suburban Strength Coach podcast is up!
+Started watching the Single Page Apps with HTML5, Web API, Knockout and jQuery on Pluralsight with my team at work.</description>
+    </item>
+    
+    <item>
+      <title>Use “debugger;” in your JavaScript to trigger the browsers debug mode.</title>
+      <link>http://kroltech.com/2013/02/01/quick-tip-use-debugger-in-your-javascript-to-trigger-the-browsers-debug-mode/</link>
+      <pubDate>Fri, 01 Feb 2013 19:56:27 +0000</pubDate>
+      <author>jkat98@gmail.com (Jason Krol)</author>
+      <guid>http://kroltech.com/2013/02/01/quick-tip-use-debugger-in-your-javascript-to-trigger-the-browsers-debug-mode/</guid>
+      <description>While watching the excellent course on Single Page Apps with HTML5, Web API, Knockout and jQuery by John Papa over at PluralSight, he dropped a nice little nugget of information that I was totally unaware of.
+You can add debugger; as a line by itself in your JavaScript and when your code gets executed by the browser, the browsers built in debugger will stop on that line. Think of it as a way to throw breakpoints right into your code.</description>
+    </item>
+    
+    <item>
+      <title>Wodify, Zen Coding, Backbone.js book, SimCity beta!</title>
+      <link>http://kroltech.com/2013/01/26/wodify-zen-coding-backbone-js-book-simcity-beta/</link>
+      <pubDate>Sat, 26 Jan 2013 02:49:39 +0000</pubDate>
+      <author>jkat98@gmail.com (Jason Krol)</author>
+      <guid>http://kroltech.com/2013/01/26/wodify-zen-coding-backbone-js-book-simcity-beta/</guid>
+      <description>Created a super basic/handy lift calculator &amp;#8211; I’ll use this initially during my first bunch of sessions until I get comfortable doing the math on the fly. Its just painful trying to do percentage calculations while lifting, and then breaking down those results into how many different weights you need to add to each side of the bar! This tool will compute all of that in one shot!
+My Crossfit box started using Wodify.</description>
+    </item>
+    
+    <item>
+      <title>ImGettin.it launch! DMC!!! JavaScript/Node.js/Backbone.js</title>
+      <link>http://kroltech.com/2013/01/18/imgettin-it-launch-dmc-javascriptnode-jsbackbone-js/</link>
+      <pubDate>Fri, 18 Jan 2013 03:18:17 +0000</pubDate>
+      <author>jkat98@gmail.com (Jason Krol)</author>
+      <guid>http://kroltech.com/2013/01/18/imgettin-it-launch-dmc-javascriptnode-jsbackbone-js/</guid>
+      <description>Soft launched ImGettin.it over the weekend! By soft launch, I mean, bought and setup the domain, and got a test version of the site live. Login works, and the site “works” for the most part, but is very much not ready for prime time yet. I still need to get a lot of things working and most importantly I need a basic admin for the games database. The data that&amp;#8217;s up right now is just test seed data &amp;#8211; while pretty solid is far from complete or even valid.</description>
+    </item>
+    
+    <item>
+      <title>Up / Down HTML arrow characters (for sorting, etc)</title>
+      <link>http://kroltech.com/2013/01/13/quick-tip-up-down-html-arrow-characters-for-sorting-etc/</link>
+      <pubDate>Sun, 13 Jan 2013 02:57:05 +0000</pubDate>
+      <author>jkat98@gmail.com (Jason Krol)</author>
+      <guid>http://kroltech.com/2013/01/13/quick-tip-up-down-html-arrow-characters-for-sorting-etc/</guid>
+      <description>I was searching for the opposite of the caret, or circumflex, character (^) and couldn&amp;#8217;t really find one. Typically, in a pinch when I&amp;#8217;m mocking, I would just use the caret ^ and a lowercase v &amp;#8211; but they don&amp;#8217;t look the same.
+There doesn&amp;#8217;t seem to be a good opposite for the caret character &amp;#8211; but I found 2 extremely useful HTML character codes to use instead:
+∧ (&amp;and;) and ∨ (&amp;or;)</description>
+    </item>
+    
+    <item>
+      <title>Crazy nested for loops (i.e. a Beautiful Mind)</title>
+      <link>http://kroltech.com/2013/01/11/crazy-nested-for-loops-i-e-a-beautiful-mind/</link>
+      <pubDate>Fri, 11 Jan 2013 18:57:51 +0000</pubDate>
+      <author>jkat98@gmail.com (Jason Krol)</author>
+      <guid>http://kroltech.com/2013/01/11/crazy-nested-for-loops-i-e-a-beautiful-mind/</guid>
+      <description>I was working on a project today, that dealt with a large amount of JSON data. The project needed to allow the user to filter the data by a bunch of different filters and options within those filters.
+Initially I started using Underscore.js thinking this would help, but in the interest of time (had to get it done today!!!!) I decided to just do it quick and dirty. Well, I succeeded in the dirty department:</description>
+    </item>
+    
+    <item>
+      <title>Barbell Club, Beard Contests, Tough Mudder!!</title>
+      <link>http://kroltech.com/2013/01/10/barbell-club-beard-contests-tough-mudder/</link>
+      <pubDate>Thu, 10 Jan 2013 15:10:09 +0000</pubDate>
+      <author>jkat98@gmail.com (Jason Krol)</author>
+      <guid>http://kroltech.com/2013/01/10/barbell-club-beard-contests-tough-mudder/</guid>
+      <description>5am wake up call!! Had to get up at 5 on Monday morning to make sure I was first to register online for the CFG Generation Barbell Club!! Its an 8 week program that focuses on weight training/lifting with an emphasis on technique and improved individual performance. Luckily I got up because by 9:30 all slots were full!
+I&amp;#8217;ve been participating in a “Beard Contest” at work, and I can honestly say that I hate it.</description>
+    </item>
+    
+    <item>
+      <title>Back to work! 1 day Hackathon! Design for developers.</title>
+      <link>http://kroltech.com/2013/01/04/back-to-work-hackathon/</link>
+      <pubDate>Fri, 04 Jan 2013 21:33:10 +0000</pubDate>
+      <author>jkat98@gmail.com (Jason Krol)</author>
+      <guid>http://kroltech.com/2013/01/04/back-to-work-hackathon/</guid>
+      <description>Had a great Christmas/New Years break (well went back to work for 2 days in between there)!! Enjoyed the time off and just spending time with the little one and generally doing nothing productive!
+I did find time during the break to spend an entire day working with @Answer7 doing a little mini hackathon! This was something that we have been toying with for a while &amp;#8211; the basic premise is that you and a few friends lock yourself in a room for an entire day and try to create something from scratch!</description>
+    </item>
+    
+    <item>
+      <title>Remove vertical spacing around inline-block LI (list items)</title>
+      <link>http://kroltech.com/2012/12/31/quick-tip-remove-vertical-spacing-around-inline-block-li-list-items/</link>
+      <pubDate>Mon, 31 Dec 2012 15:40:52 +0000</pubDate>
+      <author>jkat98@gmail.com (Jason Krol)</author>
+      <guid>http://kroltech.com/2012/12/31/quick-tip-remove-vertical-spacing-around-inline-block-li-list-items/</guid>
+      <description>I struggled with a minor issue in HTML for a few hours off an on during a project that was just really bothering me. Basically, I had a few LIs that I was displaying as inline-block (horizontally stacked side by side):
+[sourcecode lang=&amp;#8221;html&amp;#8221;]
+ Item 1 Item 1 Item 1  [/sourcecode]
+When the rows would naturally wrap, there was a tiny gap between rows (as if there was a top margin or padding).</description>
+    </item>
+    
+    <item>
+      <title>Ember.js vs Backbone.js, Responsive Grid Systems, Kinect for Windows, Barbell Club!!</title>
+      <link>http://kroltech.com/2012/12/21/ember-js-vs-backbone-js-responsive-grid-systems-kinect-for-windows-barbell-club/</link>
+      <pubDate>Fri, 21 Dec 2012 15:43:56 +0000</pubDate>
+      <author>jkat98@gmail.com (Jason Krol)</author>
+      <guid>http://kroltech.com/2012/12/21/ember-js-vs-backbone-js-responsive-grid-systems-kinect-for-windows-barbell-club/</guid>
+      <description>So I spent most of 2 days working through trying to figure out Ember.js. (I know previously I said I was going to focus on Backbone, but I wanted to stick with Ember one more day and try to see it through.) Granted, I’m totally new to this whole MV* side of JavaScript. I had decided that Ember was just the way to go. Sadly, after 2 full days of playing around I&amp;#8217;ve given up (for now) and decided to start focusing on Backbone.</description>
+    </item>
+    
+    <item>
+      <title>JavaScript MV* Frameworks!!?, Far Cry 3 coop, Kinect development starting!</title>
+      <link>http://kroltech.com/2012/12/18/javascript-mv-frameworks-fry-cry-3-coop-kinect-development-starting/</link>
+      <pubDate>Tue, 18 Dec 2012 02:48:17 +0000</pubDate>
+      <author>jkat98@gmail.com (Jason Krol)</author>
+      <guid>http://kroltech.com/2012/12/18/javascript-mv-frameworks-fry-cry-3-coop-kinect-development-starting/</guid>
+      <description>Played through all of the co-op missions in Far Cry 3 with @AnswerSeven and that was a lot of fun. It was an honor being a part of his completing 1000&amp;frasl;1000 in that game! Well done!!
+Looks like we might have a real project at work to use the Kinect with: our users group meeting we host every year, with over 5000 in attendance. I came up with an idea that I think might be pretty interesting, all really for the purposes of allowing me an opportunity to work with the Kinect.</description>
+    </item>
+    
+    <item>
+      <title>Far Cry 3, NZBMatrix, jqEasing, Functions as parameters?!</title>
+      <link>http://kroltech.com/2012/12/15/far-cry-3-nzbmatrix-jqeasing-functions-as-parameters/</link>
+      <pubDate>Sat, 15 Dec 2012 01:26:02 +0000</pubDate>
+      <author>jkat98@gmail.com (Jason Krol)</author>
+      <guid>http://kroltech.com/2012/12/15/far-cry-3-nzbmatrix-jqeasing-functions-as-parameters/</guid>
+      <description>Forgot to mention I picked up Far Cry 3 last week and I&amp;#8217;ve been playing it a lot. Its really a fun game. Very open ended, very sandbox. It seems like they finally nailed the balance with the island, the open ended gameplay, gun play, and fun action (I wanted so much to love Far Cry 2 but it just never happened). There are definitely moments where I’m reminded of Skyrim, which is a good thing!</description>
+    </item>
+    
+    <item>
+      <title>ShiftPanes.js – Shiftable content panes</title>
+      <link>http://kroltech.com/2012/12/12/js-library-shiftpanes-js/</link>
+      <pubDate>Wed, 12 Dec 2012 20:39:54 +0000</pubDate>
+      <author>jkat98@gmail.com (Jason Krol)</author>
+      <guid>http://kroltech.com/2012/12/12/js-library-shiftpanes-js/</guid>
+      <description>My second JavaScript library in as many days! This new one is called ShiftPanes (like my original names huh?!). Basically, it allows you to declare a container that will hold &amp;#8220;pageable&amp;#8221; blocks of content within it. It is, again, pretty basic and no frills.
+Just declare a container with any class you want, and inside declare multiple containers each with the same (different from the container) class that will act as “panes” (or pages).</description>
+    </item>
+    
+    <item>
+      <title>SlideIns.js – Animate content into a page</title>
+      <link>http://kroltech.com/2012/12/12/jslibrary-slideins-js/</link>
+      <pubDate>Wed, 12 Dec 2012 02:59:16 +0000</pubDate>
+      <author>jkat98@gmail.com (Jason Krol)</author>
+      <guid>http://kroltech.com/2012/12/12/jslibrary-slideins-js/</guid>
+      <description>This is my first ever public JavaScript “library” and also my first GitHub!
+SlideIns.js is just simple jQuery code that allows you to have content on a page “slide in” from left, right, or middle (middle just fades in basically). This concept was taken from Apple.com pages, where they recently started having little subtle animations featured on their pages &amp;#8211; for example as you scroll down an iPad or iPhone might slide in from the right of the screen.</description>
+    </item>
+    
+    <item>
+      <title>Wrap your custom JavaScript code in Closure functions</title>
+      <link>http://kroltech.com/2012/12/12/quick-tip-wrap-your-custom-javascript-code-in-closure-functions/</link>
+      <pubDate>Wed, 12 Dec 2012 02:02:17 +0000</pubDate>
+      <author>jkat98@gmail.com (Jason Krol)</author>
+      <guid>http://kroltech.com/2012/12/12/quick-tip-wrap-your-custom-javascript-code-in-closure-functions/</guid>
+      <description>I finally figured out how to use closures properly in JavaScript. This came as a result of my needing to make sure globals I was defining in different script files weren&amp;#8217;t conflicting with same named globals in other files. My solution was rather simple, just wrap existing chunks of code in their own function wrapper:
+Original Code:
+Note that the variables globalVar and anotherGlobal are truly GLOBAL and any other javascript file(s) with the same variables declared will cause major issues for our code (or vise versa).</description>
+    </item>
+    
+    <item>
+      <title>$(document).ready() versus $(window).load()</title>
+      <link>http://kroltech.com/2012/12/11/document-ready-versus-window-load/</link>
+      <pubDate>Tue, 11 Dec 2012 15:28:00 +0000</pubDate>
+      <author>jkat98@gmail.com (Jason Krol)</author>
+      <guid>http://kroltech.com/2012/12/11/document-ready-versus-window-load/</guid>
+      <description>As a force of habit, I&amp;#8217;ve always just wrapped my JavaScript code in a $(document).ready() and assumed/hoped for the best. I know that this is specifically for when the DOM is ready, and doesn&amp;#8217;t have anything to do with images. However, 99% of the time I&amp;#8217;ve never really been concerned about the status of loaded images.
+Today, I came across an issue where during the $(document).ready() I needed to get the TOP position property of an  element.</description>
+    </item>
+    
+    <item>
+      <title>Protein!, jQuery animation and easing, programming Android, Holiday party!!</title>
+      <link>http://kroltech.com/2012/12/08/protein-jquery-animation-and-easing-programming-android-holiday-party/</link>
+      <pubDate>Sat, 08 Dec 2012 14:53:22 +0000</pubDate>
+      <author>jkat98@gmail.com (Jason Krol)</author>
+      <guid>http://kroltech.com/2012/12/08/protein-jquery-animation-and-easing-programming-android-holiday-party/</guid>
+      <description>My continued use of My Fitness Pal (nutrition tracking app) has veered dangerously close to obsession! Literally, it&amp;#8217;s become something of a game. I’m constantly looking at the details on every food and considering how it will effect my “stats” (seriously, as if I’m an MMO character or something)! Ultimately, that&amp;#8217;s a good thing I guess. This past weekend alone I&amp;#8217;ve been doing REALLY really well with my eating. I have a great schedule of meals lined up for the week too, with high protein days stacked for Tuesday and Thursday (Crossfit days).</description>
+    </item>
+    
+    <item>
+      <title>Web Essentials 1.7, Backbone.js, Google Nexus 4, Video game museum gets sold on ebay</title>
+      <link>http://kroltech.com/2012/11/16/web-essentials-1-7-backbone-js-google-nexus-4-video-game-museum-gets-sold-on-ebay/</link>
+      <pubDate>Fri, 16 Nov 2012 22:37:03 +0000</pubDate>
+      <author>jkat98@gmail.com (Jason Krol)</author>
+      <guid>http://kroltech.com/2012/11/16/web-essentials-1-7-backbone-js-google-nexus-4-video-game-museum-gets-sold-on-ebay/</guid>
+      <description>Installed Web Essentials 1.7 for VS2012 at home and tried out Zen Coding. This is definitely something really awesome and something I wish was integrated a long time ago. As it stands, I don&amp;#8217;t know how much “raw html” I will be coding in the near future to warrant using it all that much &amp;#8211; but I guess any html coding is worth doing via Zen Coding!
+Finally spent some time and started doing the Pluralsight course on Backbone.</description>
+    </item>
+    
+    <item>
+      <title>Crossfit, Obama!!, Zen Coding</title>
+      <link>http://kroltech.com/2012/11/09/crossfit-obama-zen-coding/</link>
+      <pubDate>Fri, 09 Nov 2012 22:35:45 +0000</pubDate>
+      <author>jkat98@gmail.com (Jason Krol)</author>
+      <guid>http://kroltech.com/2012/11/09/crossfit-obama-zen-coding/</guid>
+      <description>Busted my ass in a major workout last night at Crossfit. The regular class is NO JOKE!
+Oh yeah, and Obama won (again)!!!
+Decided to try another stab at Angular.js this week. Going to try to lab something up at work using it, something real-world like article comments or something.
+Continued working on the new Nextgen.com framework. Got the shell set up pretty nicely and did a lot of organization of all Javascript and CSS and how it will be integrated globally and sitewide.</description>
+    </item>
+    
+    <item>
+      <title>Started coding “Secret” website, Azure / hosting pains</title>
+      <link>http://kroltech.com/2012/10/19/started-coding-secret-website-azure-hosting-pains/</link>
+      <pubDate>Fri, 19 Oct 2012 22:30:24 +0000</pubDate>
+      <author>jkat98@gmail.com (Jason Krol)</author>
+      <guid>http://kroltech.com/2012/10/19/started-coding-secret-website-azure-hosting-pains/</guid>
+      <description>Started coding &amp;#8220;Secret&amp;#8221; website (still not happy with the name)!! Going with a basic 3 tier structure for now &amp;#8211; Domain, Services, and UX. Made good progress so far on the Domain model, and the underlying foundation for the Services layer.
+Found and worked with a great tiny little jQuery plugin for working with cookies. Was super easy to use and implemented, and even worked with jQuery 1.3 in a legacy system I needed it in!</description>
+    </item>
+    
+    <item>
+      <title>Nightmare work days, Post launch struggles (Fill the Part)</title>
+      <link>http://kroltech.com/2012/09/28/nightmare-work-days-post-launch-struggles-fill-the-part/</link>
+      <pubDate>Fri, 28 Sep 2012 22:25:02 +0000</pubDate>
+      <author>jkat98@gmail.com (Jason Krol)</author>
+      <guid>http://kroltech.com/2012/09/28/nightmare-work-days-post-launch-struggles-fill-the-part/</guid>
+      <description>Absolute total nightmare at the end of the week as we pushed a new build to production and were impacted with a ton of problems. Mainly the issue resides in the fact that the current setup of the applications is a configuration/deployment nightmare &amp;#8211; with way too many steps and settings involved leading to way too many opened ended possibilities for user error.
+Learned about the [attr] selector in jQuery &amp;#8211; basically to detect the presense of an actual attribute in an html element.</description>
+    </item>
+    
+    <item>
+      <title>First Philly Tech Meetup, Autocomplete</title>
+      <link>http://kroltech.com/2012/09/14/first-philly-tech-meetup-autocomplete/</link>
+      <pubDate>Fri, 14 Sep 2012 22:23:21 +0000</pubDate>
+      <author>jkat98@gmail.com (Jason Krol)</author>
+      <guid>http://kroltech.com/2012/09/14/first-philly-tech-meetup-autocomplete/</guid>
+      <description>Attended a Philly Tech Meetup in Center City (Market Street &amp;#8211; Science Center). Was very informative, and definitely will not be the last!
+Learned about autocomplete=”off” as an HTML attribute. Was having an issue with validation where the browser was prepopulating the New Password field in the form with what was saved for the users login credentials. This was throwing the error because New Password (auto completed) didnt match the corresponding Confirm Password (which was naturally blank).</description>
+    </item>
+    
+    <item>
+      <title>MVC postback bug, Underscore.js, ===, Asana, Launched FillThePart.com!!, Visual Studio 2012</title>
+      <link>http://kroltech.com/2012/09/07/mvc-postback-bug-underscore-js-asana-launched-fillthepart-come-visual-studio-2012/</link>
+      <pubDate>Fri, 07 Sep 2012 22:20:50 +0000</pubDate>
+      <author>jkat98@gmail.com (Jason Krol)</author>
+      <guid>http://kroltech.com/2012/09/07/mvc-postback-bug-underscore-js-asana-launched-fillthepart-come-visual-studio-2012/</guid>
+      <description>After being stumped for a while with a particularly interesting issue in MVC &amp;#8211; I found the solution on Rick Strahl’s blog. Specifically I was trying to change the values of a view model from a controller action, after PostBack &amp;#8211; yet my changes seemed to be ignored or simply refuse to stick. Turns out the HtmlHelpers refer to the actual POST data on page load after postback (seemingly ignoring the “model” even though you explicitly refer to the model when using HtmlHelpers).</description>
+    </item>
+    
+    <item>
+      <title>Visual Event, REMs vs EMs, Clover, jsRender</title>
+      <link>http://kroltech.com/2012/08/31/visual-event-rems-vs-ems-clover-jsrender/</link>
+      <pubDate>Fri, 31 Aug 2012 22:19:10 +0000</pubDate>
+      <author>jkat98@gmail.com (Jason Krol)</author>
+      <guid>http://kroltech.com/2012/08/31/visual-event-rems-vs-ems-clover-jsrender/</guid>
+      <description>An oldie but a goodie made a comeback and was proved useful &amp;#8211; Visual Event, a bookmarklet that lets you view javascript events on a page with a nice visual overlay.
+Great article on using REMs instead of EMs when font sizing. Specifcally, the article goes into detail on ditching pixel specification altogether (except for sprites and very specific instances) and using %, em, and rem universally.
+Clover 2 is a nice small app that wraps Explorer and adds Chrome-like tabs to the interface.</description>
+    </item>
+    
+    <item>
+      <title>Angular.js, new “Secret” website, Pluralsight</title>
+      <link>http://kroltech.com/2012/08/24/angular-js-new-secret-website-pluralsight/</link>
+      <pubDate>Fri, 24 Aug 2012 22:17:30 +0000</pubDate>
+      <author>jkat98@gmail.com (Jason Krol)</author>
+      <guid>http://kroltech.com/2012/08/24/angular-js-new-secret-website-pluralsight/</guid>
+      <description>Learned about $http with Angular when calling external resources (like JSON) &amp;#8211; need to test on TI.com implementation.
+Continued developing business plan for “Secret” website (created survey questions, etc.). Researched payment processing for site and discovered Amazon Payments offers better rates than Paypal once you get into the higher sales volume (greater than 10k).
+Completed Pluralsight course on N-Tier Development in C#.</description>
+    </item>
+    
+    <item>
+      <title>Launched TumblingInferno.com!</title>
+      <link>http://kroltech.com/2012/08/20/launched-tumblinginferno-com/</link>
+      <pubDate>Mon, 20 Aug 2012 22:16:05 +0000</pubDate>
+      <author>jkat98@gmail.com (Jason Krol)</author>
+      <guid>http://kroltech.com/2012/08/20/launched-tumblinginferno-com/</guid>
+      <description>Created and launched TumblingInferno.com. Was an awesome rapid prototype going from start to launch in 2 days. Implemented a lot of LINQ which was great experience as well as reacquainting myself with Entity Framework. Super excited that I was finally able to finish and launch something!
+Attempted to play with Angular.js, and was somewhat successful. Although didnt really work for the project the way I was hoping &amp;#8211; and help online is scarce currently.</description>
+    </item>
+    
+    <item>
+      <title>Slow week…</title>
+      <link>http://kroltech.com/2012/08/10/slow-week/</link>
+      <pubDate>Fri, 10 Aug 2012 22:15:26 +0000</pubDate>
+      <author>jkat98@gmail.com (Jason Krol)</author>
+      <guid>http://kroltech.com/2012/08/10/slow-week/</guid>
+      <description>Did a lot of cleanup and additional (new) functionality for Fill the Part.
+Created a really need widget that loads activity stream every 25secs, loading newest at top with a sliding stack animation, while the bottom one slides up (squished).
+Continued to play with jsRender.</description>
+    </item>
+    
+    <item>
+      <title>Angular.js, OOP js, Responsive Design, Twitter Bootstrap</title>
+      <link>http://kroltech.com/2012/08/03/angular-js-oop-js-responsive-design-twitter-bootstrap/</link>
+      <pubDate>Fri, 03 Aug 2012 22:13:38 +0000</pubDate>
+      <author>jkat98@gmail.com (Jason Krol)</author>
+      <guid>http://kroltech.com/2012/08/03/angular-js-oop-js-responsive-design-twitter-bootstrap/</guid>
+      <description>Fresh on the heels of my failure with Knockout, I continued my OOP and data-bound JavaScript development. I also discovered Angular.js this week (by Google). This looks like it&amp;#8217;s a much cleaner and easier (read: less clunky) way of doing what Knockout.js does. It also looks like this might be pretty easy for me to implement into my existing project. Also, from a staying power perspective, it&amp;#8217;s probably safe to assume since Google is officially backing (and created) that it will be around for a while.</description>
+    </item>
+    
+    <item>
+      <title>Knockout.js, jsRender, LESS, SquishIt</title>
+      <link>http://kroltech.com/2012/07/27/knockout-js-jsrender-less-squishit/</link>
+      <pubDate>Fri, 27 Jul 2012 22:11:55 +0000</pubDate>
+      <author>jkat98@gmail.com (Jason Krol)</author>
+      <guid>http://kroltech.com/2012/07/27/knockout-js-jsrender-less-squishit/</guid>
+      <description>This week was all about Knockout.js and my seemingly total lack of understanding of javascript and jquery! After struggling with Knockout (rather, struggling to implement it into an existing project that might be a little too complex for my first attempt with KO) I decided to back burner it for a while. However I did learn a lot more about dealing with data, json, and oop in general with javascript and jquery.</description>
+    </item>
+    
+    <item>
+      <title>XNA 4.0, Kinect, UI Labs</title>
+      <link>http://kroltech.com/2012/07/13/xna-4-0-kinect-ui-labs/</link>
+      <pubDate>Fri, 13 Jul 2012 21:59:26 +0000</pubDate>
+      <author>jkat98@gmail.com (Jason Krol)</author>
+      <guid>http://kroltech.com/2012/07/13/xna-4-0-kinect-ui-labs/</guid>
+      <description>This week and the past have been spent a lot with XNA 4.0 (Xbox Live Indie game development). I did a little bit of work on a project and started looking for good sprite assets for a test game. My idea is to create a DayZ type game but overhead 2D using Zombies Ate My Neighbors! style graphics (in fact the actual sprite sheets from that game itself). Found some great resources for the sprites.</description>
+    </item>
+    
+    <item>
+      <title>Blog launch, Twitter site integration</title>
+      <link>http://kroltech.com/2012/07/06/july-2-6/</link>
+      <pubDate>Fri, 06 Jul 2012 21:53:24 +0000</pubDate>
+      <author>jkat98@gmail.com (Jason Krol)</author>
+      <guid>http://kroltech.com/2012/07/06/july-2-6/</guid>
+      <description>Welcome to my new blog! This blog is just going to be a weekly/daily journal of sorts, logging all of my discoveries and observations on the Internet and related to development in general. Of course, expect some anecdotes on gaming and life as well!
+ Integrated a Twitter feed into the UGM website. Used a tiny bit of jQuery animate to slide the feed bar out from the left side of the screen.</description>
+    </item>
+    
+  </channel>
+</rss>

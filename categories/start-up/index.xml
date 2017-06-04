@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Start Up on KrolTech</title>
+    <link>http://kroltech.com/categories/start-up/</link>
+    <description>Recent content in Start Up on KrolTech</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <managingEditor>jkat98@gmail.com (Jason Krol)</managingEditor>
+    <webMaster>jkat98@gmail.com (Jason Krol)</webMaster>
+    <lastBuildDate>Fri, 04 Jan 2013 21:33:10 +0000</lastBuildDate>
+    
+	<atom:link href="http://kroltech.com/categories/start-up/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Back to work! 1 day Hackathon! Design for developers.</title>
+      <link>http://kroltech.com/2013/01/04/back-to-work-hackathon/</link>
+      <pubDate>Fri, 04 Jan 2013 21:33:10 +0000</pubDate>
+      <author>jkat98@gmail.com (Jason Krol)</author>
+      <guid>http://kroltech.com/2013/01/04/back-to-work-hackathon/</guid>
+      <description>Had a great Christmas/New Years break (well went back to work for 2 days in between there)!! Enjoyed the time off and just spending time with the little one and generally doing nothing productive!
+I did find time during the break to spend an entire day working with @Answer7 doing a little mini hackathon! This was something that we have been toying with for a while &amp;#8211; the basic premise is that you and a few friends lock yourself in a room for an entire day and try to create something from scratch!</description>
+    </item>
+    
+    <item>
+      <title>N-Tier development, iOS development, Doubled internet speeds!</title>
+      <link>http://kroltech.com/2012/10/26/n-tier-development-ios-development-doubled-internet-speeds/</link>
+      <pubDate>Fri, 26 Oct 2012 22:32:31 +0000</pubDate>
+      <author>jkat98@gmail.com (Jason Krol)</author>
+      <guid>http://kroltech.com/2012/10/26/n-tier-development-ios-development-doubled-internet-speeds/</guid>
+      <description>After a discussion about the advantages of N-tier archictecture with a coworker and finally truly understanding it all &amp;#8211; I rewrote the backend for &amp;#8220;Secret&amp;#8221; website to fully utilize a Data, Services, Domain, UI architecture. Now it is coming together quite nicely. I’ve completed the basic groundwork for most of the backend, with the Data layer completed, the Repositories at a good start with most basic CRUD functionality complete, and the Services layer tapping into those repositories.</description>
+    </item>
+    
+    <item>
+      <title>Started coding “Secret” website, Azure / hosting pains</title>
+      <link>http://kroltech.com/2012/10/19/started-coding-secret-website-azure-hosting-pains/</link>
+      <pubDate>Fri, 19 Oct 2012 22:30:24 +0000</pubDate>
+      <author>jkat98@gmail.com (Jason Krol)</author>
+      <guid>http://kroltech.com/2012/10/19/started-coding-secret-website-azure-hosting-pains/</guid>
+      <description>Started coding &amp;#8220;Secret&amp;#8221; website (still not happy with the name)!! Going with a basic 3 tier structure for now &amp;#8211; Domain, Services, and UX. Made good progress so far on the Domain model, and the underlying foundation for the Services layer.
+Found and worked with a great tiny little jQuery plugin for working with cookies. Was super easy to use and implemented, and even worked with jQuery 1.3 in a legacy system I needed it in!</description>
+    </item>
+    
+    <item>
+      <title>Naming a startup, Dishonored and X-Com, PTM</title>
+      <link>http://kroltech.com/2012/10/12/40/</link>
+      <pubDate>Fri, 12 Oct 2012 22:28:37 +0000</pubDate>
+      <author>jkat98@gmail.com (Jason Krol)</author>
+      <guid>http://kroltech.com/2012/10/12/40/</guid>
+      <description>Spent the weekend spec’ing the “Secret” website, outlining each page, functionality and features. Spent a little time working on the actual domain name, but need to work really hard on figuring that key component out. Found a great article on mashable that will help. Hoping to start coding before the end of the month, so I can focus a big part of November on getting the groundwork done.
+Dishonored and X-Com: Enemy Unknown both came out this week.</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Templates on KrolTech</title>
+    <link>http://kroltech.com/tags/templates/</link>
+    <description>Recent content in Templates on KrolTech</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <managingEditor>jkat98@gmail.com (Jason Krol)</managingEditor>
+    <webMaster>jkat98@gmail.com (Jason Krol)</webMaster>
+    <lastBuildDate>Sun, 03 Mar 2013 04:21:15 +0000</lastBuildDate>
+    
+	<atom:link href="http://kroltech.com/tags/templates/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Single Page Application (SPA) Project Template</title>
+      <link>http://kroltech.com/2013/03/03/single-page-application-spa-project-template/</link>
+      <pubDate>Sun, 03 Mar 2013 04:21:15 +0000</pubDate>
+      <author>jkat98@gmail.com (Jason Krol)</author>
+      <guid>http://kroltech.com/2013/03/03/single-page-application-spa-project-template/</guid>
+      <description>I started going through the process of deconstructing John Papa’s amazing CodeCamper Single Page Application project and trying to break it down to a basic stripped down project template. I love a lot of what was accomplished in that project (great DI, awesome Repositories and patterns, etc.)! While breaking down the project, I&amp;#8217;ve learned quite a bit. I&amp;#8217;ve posted the full source of the template to my github, but its still a work in progress.</description>
+    </item>
+    
+  </channel>
+</rss>

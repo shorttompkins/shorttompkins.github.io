@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Code Camp on KrolTech</title>
+    <link>http://kroltech.com/tags/code-camp/</link>
+    <description>Recent content in Code Camp on KrolTech</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <managingEditor>jkat98@gmail.com (Jason Krol)</managingEditor>
+    <webMaster>jkat98@gmail.com (Jason Krol)</webMaster>
+    <lastBuildDate>Fri, 05 Oct 2012 22:26:28 +0000</lastBuildDate>
+    
+	<atom:link href="http://kroltech.com/tags/code-camp/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Crossfit, Kindle Paperwhite, Philly Code Camp</title>
+      <link>http://kroltech.com/2012/10/05/crossfit-kindle-paperwhite-philly-code-camp/</link>
+      <pubDate>Fri, 05 Oct 2012 22:26:28 +0000</pubDate>
+      <author>jkat98@gmail.com (Jason Krol)</author>
+      <guid>http://kroltech.com/2012/10/05/crossfit-kindle-paperwhite-philly-code-camp/</guid>
+      <description>Finally wrapped up the big project at work. Had to have my laptop rebuilt since installing VS2012 broke AD authentication in our app. That made for an interesting debug scenario while we tried to push live and fix bugs!
+Started Crossfit! The first class of the on-ramp program really kicked my ass. I thought for sure I was going to throw up by the end, but I hung in there and honestly I think I did pretty well.</description>
+    </item>
+    
+  </channel>
+</rss>

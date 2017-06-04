@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Spa on KrolTech</title>
+    <link>http://kroltech.com/tags/spa/</link>
+    <description>Recent content in Spa on KrolTech</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <managingEditor>jkat98@gmail.com (Jason Krol)</managingEditor>
+    <webMaster>jkat98@gmail.com (Jason Krol)</webMaster>
+    <lastBuildDate>Thu, 21 Mar 2013 21:15:19 +0000</lastBuildDate>
+    
+	<atom:link href="http://kroltech.com/tags/spa/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Building a web app using Backbone.js and require.js – Part 1</title>
+      <link>http://kroltech.com/2013/03/21/building-a-web-app-using-backbone-js-and-require-js-part-1/</link>
+      <pubDate>Thu, 21 Mar 2013 21:15:19 +0000</pubDate>
+      <author>jkat98@gmail.com (Jason Krol)</author>
+      <guid>http://kroltech.com/2013/03/21/building-a-web-app-using-backbone-js-and-require-js-part-1/</guid>
+      <description>A few requests for the full source code for this project have been made. Please feel free to download the full project files via this repo:
+https://github.com/jkat98/imgettinit_netmvc  At the end of last year I set some goals for myself, one of which was to start using and become proficient in Backbone.js. I&amp;#8217;ll be honest in saying that I struggled for a bit to really wrap my head around everything that was going on.</description>
+    </item>
+    
+    <item>
+      <title>Building a web app using Backbone.js and require.js – Part 2</title>
+      <link>http://kroltech.com/2013/03/21/building-a-web-app-using-backbone-js-and-require-js-part-2/</link>
+      <pubDate>Thu, 21 Mar 2013 21:14:41 +0000</pubDate>
+      <author>jkat98@gmail.com (Jason Krol)</author>
+      <guid>http://kroltech.com/2013/03/21/building-a-web-app-using-backbone-js-and-require-js-part-2/</guid>
+      <description>This post is the conclusion to the article Building a web app using Backbone.js and require.js &amp;#8211; Part 1. Please be sure to read that article first before proceeding.  In my previous post, we discussed the original idea for the project, outlined what its supposed to do, and started dissecting the project&amp;#8217;s main.js and app.js files. Both of those files frequently referred to the &amp;#8220;Games&amp;#8221; Backbone view and collection, but never really explained them.</description>
+    </item>
+    
+    <item>
+      <title>Single Page Application (SPA) Project Template</title>
+      <link>http://kroltech.com/2013/03/03/single-page-application-spa-project-template/</link>
+      <pubDate>Sun, 03 Mar 2013 04:21:15 +0000</pubDate>
+      <author>jkat98@gmail.com (Jason Krol)</author>
+      <guid>http://kroltech.com/2013/03/03/single-page-application-spa-project-template/</guid>
+      <description>I started going through the process of deconstructing John Papa’s amazing CodeCamper Single Page Application project and trying to break it down to a basic stripped down project template. I love a lot of what was accomplished in that project (great DI, awesome Repositories and patterns, etc.)! While breaking down the project, I&amp;#8217;ve learned quite a bit. I&amp;#8217;ve posted the full source of the template to my github, but its still a work in progress.</description>
+    </item>
+    
+    <item>
+      <title>.Net Framework 2012.2, SPA templates, MGR: Revengeance, PS4, Working from home</title>
+      <link>http://kroltech.com/2013/02/24/net-framework-2012-2-spa-templates-mgr-revengeance-ps4-working-from-home/</link>
+      <pubDate>Sun, 24 Feb 2013 02:38:42 +0000</pubDate>
+      <author>jkat98@gmail.com (Jason Krol)</author>
+      <guid>http://kroltech.com/2013/02/24/net-framework-2012-2-spa-templates-mgr-revengeance-ps4-working-from-home/</guid>
+      <description>The .Net framework 2012.2 update has been released. Most of this update has to do with a few minor tweaks and enhancements (color coding popular client-side templates, LESS support, etc) as well as some new templates. A great post on John Papa’s blog outlines the templates.
+Played Metal Gear Rising: Revengeance and have to say I&amp;#8217;m a little disappointed. Its definitely not Bayonetta, and I doubt Platinum will ever achieve the stunning awesomeness that was that game, but heres holding out hope (not much since last I heard Bayonetta 2 was WiiU exclusive).</description>
+    </item>
+    
+    <item>
+      <title>Week in Review 2/1/13</title>
+      <link>http://kroltech.com/2013/02/01/what-i-learned-from-the-single-page-apps-spa-course-so-far/</link>
+      <pubDate>Fri, 01 Feb 2013 20:55:54 +0000</pubDate>
+      <author>jkat98@gmail.com (Jason Krol)</author>
+      <guid>http://kroltech.com/2013/02/01/what-i-learned-from-the-single-page-apps-spa-course-so-far/</guid>
+      <description>Was playing with animating some stuff on a page and started trying to work with animating box-shadow. I realized it wasn&amp;#8217;t working and after some research figured out that it just doesn&amp;#8217;t work. A super handy and easy plugin solves that problem though.
+The latest episode of the Suburban Strength Coach podcast is up!
+Started watching the Single Page Apps with HTML5, Web API, Knockout and jQuery on Pluralsight with my team at work.</description>
+    </item>
+    
+  </channel>
+</rss>

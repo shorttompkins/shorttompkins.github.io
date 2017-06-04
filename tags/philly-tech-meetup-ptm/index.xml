@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Philly Tech Meetup Ptm on KrolTech</title>
+    <link>http://kroltech.com/tags/philly-tech-meetup-ptm/</link>
+    <description>Recent content in Philly Tech Meetup Ptm on KrolTech</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <managingEditor>jkat98@gmail.com (Jason Krol)</managingEditor>
+    <webMaster>jkat98@gmail.com (Jason Krol)</webMaster>
+    <lastBuildDate>Fri, 26 Oct 2012 22:32:31 +0000</lastBuildDate>
+    
+	<atom:link href="http://kroltech.com/tags/philly-tech-meetup-ptm/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>N-Tier development, iOS development, Doubled internet speeds!</title>
+      <link>http://kroltech.com/2012/10/26/n-tier-development-ios-development-doubled-internet-speeds/</link>
+      <pubDate>Fri, 26 Oct 2012 22:32:31 +0000</pubDate>
+      <author>jkat98@gmail.com (Jason Krol)</author>
+      <guid>http://kroltech.com/2012/10/26/n-tier-development-ios-development-doubled-internet-speeds/</guid>
+      <description>After a discussion about the advantages of N-tier archictecture with a coworker and finally truly understanding it all &amp;#8211; I rewrote the backend for &amp;#8220;Secret&amp;#8221; website to fully utilize a Data, Services, Domain, UI architecture. Now it is coming together quite nicely. I’ve completed the basic groundwork for most of the backend, with the Data layer completed, the Repositories at a good start with most basic CRUD functionality complete, and the Services layer tapping into those repositories.</description>
+    </item>
+    
+    <item>
+      <title>Naming a startup, Dishonored and X-Com, PTM</title>
+      <link>http://kroltech.com/2012/10/12/40/</link>
+      <pubDate>Fri, 12 Oct 2012 22:28:37 +0000</pubDate>
+      <author>jkat98@gmail.com (Jason Krol)</author>
+      <guid>http://kroltech.com/2012/10/12/40/</guid>
+      <description>Spent the weekend spec’ing the “Secret” website, outlining each page, functionality and features. Spent a little time working on the actual domain name, but need to work really hard on figuring that key component out. Found a great article on mashable that will help. Hoping to start coding before the end of the month, so I can focus a big part of November on getting the groundwork done.
+Dishonored and X-Com: Enemy Unknown both came out this week.</description>
+    </item>
+    
+    <item>
+      <title>First Philly Tech Meetup, Autocomplete</title>
+      <link>http://kroltech.com/2012/09/14/first-philly-tech-meetup-autocomplete/</link>
+      <pubDate>Fri, 14 Sep 2012 22:23:21 +0000</pubDate>
+      <author>jkat98@gmail.com (Jason Krol)</author>
+      <guid>http://kroltech.com/2012/09/14/first-philly-tech-meetup-autocomplete/</guid>
+      <description>Attended a Philly Tech Meetup in Center City (Market Street &amp;#8211; Science Center). Was very informative, and definitely will not be the last!
+Learned about autocomplete=”off” as an HTML attribute. Was having an issue with validation where the browser was prepopulating the New Password field in the form with what was saved for the users login credentials. This was throwing the error because New Password (auto completed) didnt match the corresponding Confirm Password (which was naturally blank).</description>
+    </item>
+    
+  </channel>
+</rss>

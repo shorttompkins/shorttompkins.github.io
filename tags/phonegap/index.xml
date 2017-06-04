@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Phonegap on KrolTech</title>
+    <link>http://kroltech.com/tags/phonegap/</link>
+    <description>Recent content in Phonegap on KrolTech</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <managingEditor>jkat98@gmail.com (Jason Krol)</managingEditor>
+    <webMaster>jkat98@gmail.com (Jason Krol)</webMaster>
+    <lastBuildDate>Wed, 10 Apr 2013 15:08:12 +0000</lastBuildDate>
+    
+	<atom:link href="http://kroltech.com/tags/phonegap/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Mobile app prototype development</title>
+      <link>http://kroltech.com/2013/04/10/mobile-app-prototype-development/</link>
+      <pubDate>Wed, 10 Apr 2013 15:08:12 +0000</pubDate>
+      <author>jkat98@gmail.com (Jason Krol)</author>
+      <guid>http://kroltech.com/2013/04/10/mobile-app-prototype-development/</guid>
+      <description>I&amp;#8217;ve been working hard on preparing a mobile app prototype for a demonstration/proposal next week. The goal is to create a native app using HTML5 and PhoneGap. I&amp;#8217;ve been building the app using Backbone primarily, and using Adobe’s PhoneGap Build. PhoneGap Build is a cloud based compilation tool that makes things VERY easy to get your app up and running natively. The build tool supports iOS, Android, Windows, Blackberry, HP, and a few others.</description>
+    </item>
+    
+    <item>
+      <title>Mobile app development, Google Dev tools Code School, TekPub</title>
+      <link>http://kroltech.com/2013/03/29/mobile-app-development-google-dev-tools-code-school-tekpub/</link>
+      <pubDate>Fri, 29 Mar 2013 19:03:10 +0000</pubDate>
+      <author>jkat98@gmail.com (Jason Krol)</author>
+      <guid>http://kroltech.com/2013/03/29/mobile-app-development-google-dev-tools-code-school-tekpub/</guid>
+      <description>I completed the Code School course on using Google Chrome Dev Tools. I highly recommend you complete this course &amp;#8211; its super quick (probably no longer than 1 hour) and very easy. Yet, I learned a lot. Specifically with the more advanced topics of the dev tools like Profiling, Memory Leaks, Framerates, etc.
+Started writing my hybrid mobile app for work &amp;#8211; learned quite a bit along the way. Working with jQuery Mobile, but its overhead and conventions/takeover is making it less than desirable &amp;#8211; perhaps I’ll rewrite the transition animations manually and implement 3rd party Touch/Tap library.</description>
+    </item>
+    
+  </channel>
+</rss>

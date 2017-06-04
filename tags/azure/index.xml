@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Azure on KrolTech</title>
+    <link>http://kroltech.com/tags/azure/</link>
+    <description>Recent content in Azure on KrolTech</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <managingEditor>jkat98@gmail.com (Jason Krol)</managingEditor>
+    <webMaster>jkat98@gmail.com (Jason Krol)</webMaster>
+    <lastBuildDate>Fri, 19 Oct 2012 22:30:24 +0000</lastBuildDate>
+    
+	<atom:link href="http://kroltech.com/tags/azure/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Started coding “Secret” website, Azure / hosting pains</title>
+      <link>http://kroltech.com/2012/10/19/started-coding-secret-website-azure-hosting-pains/</link>
+      <pubDate>Fri, 19 Oct 2012 22:30:24 +0000</pubDate>
+      <author>jkat98@gmail.com (Jason Krol)</author>
+      <guid>http://kroltech.com/2012/10/19/started-coding-secret-website-azure-hosting-pains/</guid>
+      <description>Started coding &amp;#8220;Secret&amp;#8221; website (still not happy with the name)!! Going with a basic 3 tier structure for now &amp;#8211; Domain, Services, and UX. Made good progress so far on the Domain model, and the underlying foundation for the Services layer.
+Found and worked with a great tiny little jQuery plugin for working with cookies. Was super easy to use and implemented, and even worked with jQuery 1.3 in a legacy system I needed it in!</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Revengeance on KrolTech</title>
+    <link>http://kroltech.com/tags/revengeance/</link>
+    <description>Recent content in Revengeance on KrolTech</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <managingEditor>jkat98@gmail.com (Jason Krol)</managingEditor>
+    <webMaster>jkat98@gmail.com (Jason Krol)</webMaster>
+    <lastBuildDate>Sun, 24 Feb 2013 02:38:42 +0000</lastBuildDate>
+    
+	<atom:link href="http://kroltech.com/tags/revengeance/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>.Net Framework 2012.2, SPA templates, MGR: Revengeance, PS4, Working from home</title>
+      <link>http://kroltech.com/2013/02/24/net-framework-2012-2-spa-templates-mgr-revengeance-ps4-working-from-home/</link>
+      <pubDate>Sun, 24 Feb 2013 02:38:42 +0000</pubDate>
+      <author>jkat98@gmail.com (Jason Krol)</author>
+      <guid>http://kroltech.com/2013/02/24/net-framework-2012-2-spa-templates-mgr-revengeance-ps4-working-from-home/</guid>
+      <description>The .Net framework 2012.2 update has been released. Most of this update has to do with a few minor tweaks and enhancements (color coding popular client-side templates, LESS support, etc) as well as some new templates. A great post on John Papa’s blog outlines the templates.
+Played Metal Gear Rising: Revengeance and have to say I&amp;#8217;m a little disappointed. Its definitely not Bayonetta, and I doubt Platinum will ever achieve the stunning awesomeness that was that game, but heres holding out hope (not much since last I heard Bayonetta 2 was WiiU exclusive).</description>
+    </item>
+    
+  </channel>
+</rss>

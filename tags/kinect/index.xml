@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Kinect on KrolTech</title>
+    <link>http://kroltech.com/tags/kinect/</link>
+    <description>Recent content in Kinect on KrolTech</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <managingEditor>jkat98@gmail.com (Jason Krol)</managingEditor>
+    <webMaster>jkat98@gmail.com (Jason Krol)</webMaster>
+    <lastBuildDate>Fri, 21 Dec 2012 15:43:56 +0000</lastBuildDate>
+    
+	<atom:link href="http://kroltech.com/tags/kinect/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Ember.js vs Backbone.js, Responsive Grid Systems, Kinect for Windows, Barbell Club!!</title>
+      <link>http://kroltech.com/2012/12/21/ember-js-vs-backbone-js-responsive-grid-systems-kinect-for-windows-barbell-club/</link>
+      <pubDate>Fri, 21 Dec 2012 15:43:56 +0000</pubDate>
+      <author>jkat98@gmail.com (Jason Krol)</author>
+      <guid>http://kroltech.com/2012/12/21/ember-js-vs-backbone-js-responsive-grid-systems-kinect-for-windows-barbell-club/</guid>
+      <description>So I spent most of 2 days working through trying to figure out Ember.js. (I know previously I said I was going to focus on Backbone, but I wanted to stick with Ember one more day and try to see it through.) Granted, I’m totally new to this whole MV* side of JavaScript. I had decided that Ember was just the way to go. Sadly, after 2 full days of playing around I&amp;#8217;ve given up (for now) and decided to start focusing on Backbone.</description>
+    </item>
+    
+    <item>
+      <title>JavaScript MV* Frameworks!!?, Far Cry 3 coop, Kinect development starting!</title>
+      <link>http://kroltech.com/2012/12/18/javascript-mv-frameworks-fry-cry-3-coop-kinect-development-starting/</link>
+      <pubDate>Tue, 18 Dec 2012 02:48:17 +0000</pubDate>
+      <author>jkat98@gmail.com (Jason Krol)</author>
+      <guid>http://kroltech.com/2012/12/18/javascript-mv-frameworks-fry-cry-3-coop-kinect-development-starting/</guid>
+      <description>Played through all of the co-op missions in Far Cry 3 with @AnswerSeven and that was a lot of fun. It was an honor being a part of his completing 1000&amp;frasl;1000 in that game! Well done!!
+Looks like we might have a real project at work to use the Kinect with: our users group meeting we host every year, with over 5000 in attendance. I came up with an idea that I think might be pretty interesting, all really for the purposes of allowing me an opportunity to work with the Kinect.</description>
+    </item>
+    
+    <item>
+      <title>XNA 4.0, Kinect, UI Labs</title>
+      <link>http://kroltech.com/2012/07/13/xna-4-0-kinect-ui-labs/</link>
+      <pubDate>Fri, 13 Jul 2012 21:59:26 +0000</pubDate>
+      <author>jkat98@gmail.com (Jason Krol)</author>
+      <guid>http://kroltech.com/2012/07/13/xna-4-0-kinect-ui-labs/</guid>
+      <description>This week and the past have been spent a lot with XNA 4.0 (Xbox Live Indie game development). I did a little bit of work on a project and started looking for good sprite assets for a test game. My idea is to create a DayZ type game but overhead 2D using Zombies Ate My Neighbors! style graphics (in fact the actual sprite sheets from that game itself). Found some great resources for the sprites.</description>
+    </item>
+    
+  </channel>
+</rss>

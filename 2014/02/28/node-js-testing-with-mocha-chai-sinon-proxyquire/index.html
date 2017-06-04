@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+  <title>Node.js testing with Mocha, Chai, Sinon &amp; Proxyquire</title>
+  <meta property="og:title" content="Node.js testing with Mocha, Chai, Sinon &amp; Proxyquire" />
+  <meta name="twitter:title" content="Node.js testing with Mocha, Chai, Sinon &amp; Proxyquire" />
+  <meta name="description" content="Lets take a look at testing node.js using a few popular tools and frameworks for running and writing tests.
+
+">
+  <meta property="og:description" content="Lets take a look at testing node.js using a few popular tools and frameworks for running and writing tests.
+
+">
+  <meta name="twitter:description" content="Lets take a look at testing node.js using a few popular tools and frameworks for running and writing tests.
+
+">
+  <meta name="author" content="Jason Krol"/>
+  <link href='http://kroltech.com/img/favicon.ico' rel='icon' type='image/x-icon'/>
+  <meta property="og:image" content="http://kroltech.com/img/avatar-icon.png" />
+  <meta name="twitter:image" content="http://kroltech.com/img/avatar-icon.png" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:site" content="@shorttompkins" />
+  <meta name="twitter:creator" content="@shorttompkins" />
+  <meta property="og:url" content="http://kroltech.com/2014/02/28/node-js-testing-with-mocha-chai-sinon-proxyquire/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="KrolTech" />
+
+  <meta name="generator" content="Hugo 0.20.7" />
+  <link rel="canonical" href="http://kroltech.com/2014/02/28/node-js-testing-with-mocha-chai-sinon-proxyquire/" />
+  <link rel="alternate" href="http://kroltech.com/index.xml" type="application/rss+xml" title="KrolTech">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/katex.min.css" integrity="sha384-wITovz90syo1dJWVh32uuETPVEtGigN07tkttEqPv+uR2SE/mbQcG7ATL28aI9H0" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <link rel="stylesheet" href="http://kroltech.com/css/main.css" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" />
+  <link rel="stylesheet" href="http://kroltech.com/css/pygment_highlights.css" />
+  <link rel="stylesheet" href="http://kroltech.com/css/highlight.min.css" />
+
+<script>
+window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+ga('create', 'UA-29480326-4', 'auto');
+ga('send', 'pageview');
+</script>
+<script async src='//www.google-analytics.com/analytics.js'></script>
+
+</head>
+
+  <body>
+    <nav class="navbar navbar-default navbar-fixed-top navbar-custom">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="http://kroltech.com/">KrolTech</a>
+    </div>
+
+    <div class="collapse navbar-collapse" id="main-navbar">
+      <ul class="nav navbar-nav navbar-right">
+        
+          
+            <li>
+              <a title="Blog" href="/">Blog</a>
+            </li>
+          
+        
+          
+            <li>
+              <a title="About" href="/page/about/">About</a>
+            </li>
+          
+        
+
+        
+
+        
+      </ul>
+    </div>
+
+    <div class="avatar-container">
+      <div class="avatar-img-border">
+        
+          <a title="KrolTech" href="http://kroltech.com/">
+            <img class="avatar-img" src="http://kroltech.com/img/avatar-icon.png" alt="KrolTech" />
+          </a>
+        
+      </div>
+    </div>
+
+  </div>
+</nav>
+
+
+
+
+    
+  
+  
+  
+
+
+
+
+  
+
+  <header class="header-section ">
+    
+    <div class="intro-header no-img">
+      
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+            <div class="post-heading">
+              <h1>Node.js testing with Mocha, Chai, Sinon &amp; Proxyquire</h1>
+                
+                
+                  <span class="post-meta">
+  Posted on February 28, 2014
+  
+</span>
+
+
+                
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+
+    
+<div class="container">
+  <div class="row">
+    <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+      <article role="main" class="blog-post">
+        <p>Lets take a look at testing node.js using a few popular tools and frameworks for running and writing tests.</p>
+
+<p></p>
+
+<p>The topics I covered previously with TDD will translate well to this article. For a refresher on that, I suggest taking another look at my previous post on TDD with Jasmine and Karma.</p>
+
+<p>On a side note, the code referenced in this post is from my Boilerplate web app using Backbone.js, ExpressJS, Node.js, and MongoDB. Be sure to check out that post so you can get the project setup and running so you can follow along with the rest of this post.</p>
+
+<h3 id="getting-started">Getting started</h3>
+
+<p>[sourcecode light=&#8221;true&#8221;]</p>
+
+<p>$ npm install -g grunt-cli</p>
+
+<p>$ git clone <a href="https://github.com/jkat98/benm.git">https://github.com/jkat98/benm.git</a></p>
+
+<p>$ cd benm</p>
+
+<p>$ npm install</p>
+
+<p>$ grunt init:dev build:dev</p>
+
+<p>[/sourcecode]</p>
+
+<p>We are going to use a few different tools on the server side to handle testing of our node code. Primarily we are using Mocha and a Grunt task to execute our tests. The tests themselves are written using Chai as the assertion language, Sinon for spies and stubs, and Proxyquire to do a little magic when it comes to the idea of &#8220;fakes&#8221; in the node world.</p>
+
+<p>To run the tests for the code, execute the following command:</p>
+
+<p>[sourcecode light=&#8221;true&#8221;]</p>
+
+<p>$ grunt test:server</p>
+
+<p>[/sourcecode]</p>
+
+<p>This will execute the mocha runner, and all of the tests we have in the spec folder will be run. You should see the output for each test right in your terminal, hopefully with green checkmarks all the way down the list.</p>
+
+<h3 id="spechelper-js">Spechelper.js</h3>
+
+<p>The tests are organized in a similar fashion to the app itself, with an app and controllers folder. The main file in the spec folder, spechelper.js, is actually a global helper that just predefines some stuff so that we don&#8217;t have to do that in every test file:</p>
+
+<p>[sourcecode lang=&#8221;javascript&#8221;]</p>
+
+<p>var chai = require(&#8216;chai&#8217;),</p>
+
+<p>sinonChai = require(&ldquo;sinon-chai&rdquo;);</p>
+
+<p>global.expect = chai.expect;</p>
+
+<p>global.sinon = require(&#8216;sinon&#8217;);</p>
+
+<p>chai.use(sinonChai);</p>
+
+<p>[/sourcecode]</p>
+
+<p>In this code, we are declaring that we want in every test: chai, sinonChai, and a few globals defined. Finally we inform chai to use the sinonChai plugin so we can easily do assertions against stubs and spies.</p>
+
+<h3 id="grunt-mocha-test-run-task">Grunt mocha test run task</h3>
+
+<p>Here is the task we have defined in our Gruntfile.js:</p>
+
+<p>[sourcecode lang=&#8221;javascript&#8221;]</p>
+
+<p>simplemocha: {</p>
+
+<p>options: {</p>
+
+<p>globals: [&#8216;expect&#8217;, &#8216;sinon&#8217;],</p>
+
+<p>timeout: 3000,</p>
+
+<p>ignoreLeaks: false,</p>
+
+<p>ui: &#8216;bdd&#8217;,</p>
+
+<p>reporter: &#8216;spec&#8217;</p>
+
+<p>},</p>
+
+<p>server: {</p>
+
+<p>src: [&#8216;spec/spechelper.js&#8217;, &#8216;spec/**/*.test.js&#8217;]</p>
+
+<p>}</p>
+
+<p>},</p>
+
+<p>[/sourcecode]</p>
+
+<p>This just configures the grunt-simplemocha task and defines a few options &#8211; specifically the globals we setup earlier in our spechelper.js. Then it loads the spechelper.js file and all of our tests.</p>
+
+<h3 id="writing-some-basic-tests">Writing some basic tests</h3>
+
+<p>The tests that we wrote for the models in the app are pretty basic. This is a good file to start with as we break down the code and see whats going on:</p>
+
+<p>[sourcecode lang=&#8221;javascript&#8221;]</p>
+
+<p>var models = require(&#8216;../../app/models&#8217;);</p>
+
+<p>[/sourcecode]</p>
+
+<p>First we ensure that we actually include the module we want to write tests against. Then we include our standard describe statements.</p>
+
+<p>Next what we really want to test, primarily with our models, is that they are properly defined. We dont want to test any actual functionality because they dont actually have any (short of the built in functionality and you dont ever want to write tests for functionality thats assumed to work &#8211; i.e. that of a 3rd party vendor module etc).</p>
+
+<p>[sourcecode lang=&#8221;javascript&#8221;]</p>
+
+<p>it(&#8216;should have email string field&#8217;, function() {</p>
+
+<p>expect(schema.email).to.exist;</p>
+
+<p>expect(schema.email.instance).to.equal(&#8216;String&#8217;);</p>
+
+<p>});</p>
+
+<p>[/sourcecode]</p>
+
+<p>Pretty simple. We just assert that the schema should have an email field, and that it should be a String. We do this for every field in our model to ensure that the model is always defined, at a minimum, exactly how we expect. Should someone come in later and just delete the email field from the model code, or change it to emailAddress, our tests will fail right away (and thats good!).</p>
+
+<h3 id="using-proxyquire-to-stub-required-modules">Using Proxyquire to stub required modules</h3>
+
+<p>With those simple tests out of the way, lets take a look at something a little more complex. The contacts controller relies on a few outside modules so lets see how we would handle writing tests against code that calls other code. The first thing we see in the contacts.test.js file is that theres a lot more going on at the very top:</p>
+
+<p>[sourcecode lang=&#8221;javascript&#8221;]</p>
+
+<p>var proxyquire = require(&#8216;proxyquire&#8217;),</p>
+
+<p>modelsStub = {},</p>
+
+<p>md5Stub = function(string) { return string; },</p>
+
+<p>contacts = proxyquire(&#8216;../../controllers/contacts&#8217;, {</p>
+
+<p>&#8216;../app/models&#8217; : modelsStub,</p>
+
+<p>&#8216;MD5&#8217;: md5Stub</p>
+
+<p>});</p>
+
+<p>[/sourcecode]</p>
+
+<p>A few interesting things are happening here. First, we are requiring proxyquire, then we create a modelsStub and md5Stub. The modelsStub is just an empty object and the md5Stub is just a super basic function. These stubs is how we are going to use Proxyquire to &#8220;Fake&#8221; out modules that we require in a file that we want to test. Then, instead of just using a regular require for the contacts controller, we use proxyquire instead, using the same syntax for the path to the contacts controller, but then as a 2nd parameter we provide a collection of stubs that will override modules that are required inside the contacts controller.</p>
+
+<p>**Important Note: One thing to be aware of when using Proxyquire is that the path for each stubbed module is not relative to your test file, but matches exactly as its called in the file thats actually being tested. In this case the &#8220;../app/models&#8221; line is exactly how it appears in the contacts.js controller file.</p>
+
+<p>By using Proxyquire and stubbing modules that are required inside the file we are testing, we can force the behavior without the actual functionality of those modules effecting our code. A great example of this would be a module that makes a network call. We obviously don&#8217;t want network conditions to effect our tests (and ideally we want our tests to be able to run and pass without an active connection to any network at all). To get around this, you can fake out any modules that would typically make a network call with a function of your own that has no logic and simply executes a callback or returns forced values. But this isn&#8217;t just for modules that make network calls, its really for modules that do anything (outside of the scope of the file we are testing)!</p>
+
+<p>[sourcecode lang=&#8221;javascript&#8221;]</p>
+
+<p>it(&#8216;should return json on save&#8217;, function() {</p>
+
+<p>modelsStub.Contact = sinon.spy(function() {</p>
+
+<p>modelsStub.Contact.prototype.save = function(callback) {</p>
+
+<p>callback(null, req.body);</p>
+
+<p>};</p>
+
+<p>return;</p>
+
+<p>});</p>
+
+<p>contacts.add(req, res);</p>
+
+<p>expect(res.json).calledWith(req.body);</p>
+
+<p>});</p>
+
+<p>[/sourcecode]</p>
+
+<p>As you can see in the above code, we are executing a test against code that expects the Contact model to be able to save. The Contact model and saving are both dependent on an actual working db server. We don&#8217;t care about that in this particular test though, so we are just going to provide a fake save method that only executes a callback (in essence, the conditions that occur in a perfect execution of the real Contact model save function). Not only that, but the fake implementation we provide is actually a stubbed Sinon spy so that we can know when its executed.</p>
+
+<p>The primary responsibility of the contacts controller add function is to execute .save() on a new model and return that model as JSON. So all we care about is that the res.json() is executed and that the data passed into it matches basically what it received (req.body).</p>
+
+<p>Taking this a step further, another assertion we could add (and probably should) is:</p>
+
+<p>[sourcecode lang=&#8221;javascript&#8221;]</p>
+
+<p>it(&#8216;should call a models save function&#8217;, function() {</p>
+
+<p>modelsStub.Contact = sinon.spy(function() {</p>
+
+<p>modelsStub.Contact.prototype.save = sinon.spy();</p>
+
+<p>return;</p>
+
+<p>});</p>
+
+<p>contacts.add(req, res);</p>
+
+<p>expect(modelsStub.Contact.prototype.save).calledOnce;</p>
+
+<p>});</p>
+
+<p>[/sourcecode]</p>
+
+<p>Which basically says we want to be sure that the models .save() function is called. You may be thinking we should have combined both tests and just issued 2 expect statements. But its cleaner to keep the conditions for each test separate. A test shouldn&#8217;t ever really read &#8220;assert this AND that&#8221;.</p>
+
+<p>Using Proxyquire can get confusing, especially with the nature of callbacks with node.js and having to generate stubs on top of stubs, so just be sure to really take your time and properly map out in your head the path that you code takes and understand the flow and how/when/where stubs will be called.</p>
+      </article>
+
+      <ul class="pager blog-pager">
+        
+          <li class="previous">
+            <a href="http://kroltech.com/2014/02/28/highlight-specific-lines-in-a-github-repo-file/" data-toggle="tooltip" data-placement="top" title="Highlight specific lines in a Github repo file">&larr; Previous Post</a>
+          </li>
+        
+        
+          <li class="next">
+            <a href="http://kroltech.com/2014/03/18/review-backbone-js-patterns-and-best-practices/" data-toggle="tooltip" data-placement="top" title="Review: Backbone.js Patterns and Best Practices">Next Post &rarr;</a>
+          </li>
+        
+      </ul>
+
+      
+        
+          <div class="disqus-comments">
+            <div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_shortname = 'jasonkrol';
+    var disqus_identifier = 'http:\/\/kroltech.com\/2014\/02\/28\/node-js-testing-with-mocha-chai-sinon-proxyquire\/';
+    var disqus_title = 'Node.js testing with Mocha, Chai, Sinon \x26 Proxyquire';
+    var disqus_url = 'http:\/\/kroltech.com\/2014\/02\/28\/node-js-testing-with-mocha-chai-sinon-proxyquire\/';
+
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+          </div>
+        
+      
+
+    </div>
+  </div>
+</div>
+
+    <footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <ul class="list-inline text-center footer-links">
+          
+              <li>
+                <a href="mailto:jkat98@gmail.com" title="Email me">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-envelope fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="https://www.plus.google.com/&#43;JasonKrol" title="Google&#43;">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-google-plus fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="https://github.com/shorttompkins" title="GitHub">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="https://twitter.com/shorttompkins" title="Twitter">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="https://reddit.com/u/shorttompkins" title="Reddit">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-reddit-alien fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="https://linkedin.com/in/jasonkrol" title="LinkedIn">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-linkedin fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="https://stackoverflow.com/users/1623304/jkat98" title="StackOverflow">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-stack-overflow fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="https://www.youtube.com/user/jkat98" title="Youtube">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-youtube fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+          
+          <li>
+            <a href="http://kroltech.com/index.xml" title="RSS">
+              <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fa fa-rss fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          
+        </ul>
+        <p class="credits copyright text-muted">
+          Jason Krol
+          &nbsp;&bull;&nbsp;
+          2016
+
+          
+            &nbsp;&bull;&nbsp;
+            <a href="http://kroltech.com/">KrolTech</a>
+          
+        </p>
+        
+        <p class="credits theme-by text-muted">
+          <a href="http://gohugo.io">Hugo v0.20.7</a> powered &nbsp;&bull;&nbsp; Theme by <a href="http://deanattali.com/beautiful-jekyll/">Beautiful Jekyll</a> adapted to <a href="https://github.com/halogenica/beautifulhugo">Beautiful Hugo</a>
+          
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/katex.min.js" integrity="sha384-/y1Nn9+QQAipbNQWU65krzJralCnuOasHncUFXGkdwntGeSvQicrYkiUBwsgUqc1" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/contrib/auto-render.min.js" integrity="sha384-dq1/gEHSxPZQ7DdrM82ID4YVol9BYyU7GbWlIwnwyPzotpoc57wDw/guX8EaYGPx" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<script src="http://kroltech.com/js/main.js"></script>
+<script src="http://kroltech.com/js/highlight.min.js"></script>
+<script> hljs.initHighlightingOnLoad(); </script>
+<script> renderMathInElement(document.body); </script>
+
+
+
+
+
+  </body>
+</html>
+

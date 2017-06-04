@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Knockout.Js on KrolTech</title>
+    <link>http://kroltech.com/tags/knockout.js/</link>
+    <description>Recent content in Knockout.Js on KrolTech</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <managingEditor>jkat98@gmail.com (Jason Krol)</managingEditor>
+    <webMaster>jkat98@gmail.com (Jason Krol)</webMaster>
+    <lastBuildDate>Fri, 01 Feb 2013 20:55:54 +0000</lastBuildDate>
+    
+	<atom:link href="http://kroltech.com/tags/knockout.js/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Week in Review 2/1/13</title>
+      <link>http://kroltech.com/2013/02/01/what-i-learned-from-the-single-page-apps-spa-course-so-far/</link>
+      <pubDate>Fri, 01 Feb 2013 20:55:54 +0000</pubDate>
+      <author>jkat98@gmail.com (Jason Krol)</author>
+      <guid>http://kroltech.com/2013/02/01/what-i-learned-from-the-single-page-apps-spa-course-so-far/</guid>
+      <description>Was playing with animating some stuff on a page and started trying to work with animating box-shadow. I realized it wasn&amp;#8217;t working and after some research figured out that it just doesn&amp;#8217;t work. A super handy and easy plugin solves that problem though.
+The latest episode of the Suburban Strength Coach podcast is up!
+Started watching the Single Page Apps with HTML5, Web API, Knockout and jQuery on Pluralsight with my team at work.</description>
+    </item>
+    
+    <item>
+      <title>Angular.js, OOP js, Responsive Design, Twitter Bootstrap</title>
+      <link>http://kroltech.com/2012/08/03/angular-js-oop-js-responsive-design-twitter-bootstrap/</link>
+      <pubDate>Fri, 03 Aug 2012 22:13:38 +0000</pubDate>
+      <author>jkat98@gmail.com (Jason Krol)</author>
+      <guid>http://kroltech.com/2012/08/03/angular-js-oop-js-responsive-design-twitter-bootstrap/</guid>
+      <description>Fresh on the heels of my failure with Knockout, I continued my OOP and data-bound JavaScript development. I also discovered Angular.js this week (by Google). This looks like it&amp;#8217;s a much cleaner and easier (read: less clunky) way of doing what Knockout.js does. It also looks like this might be pretty easy for me to implement into my existing project. Also, from a staying power perspective, it&amp;#8217;s probably safe to assume since Google is officially backing (and created) that it will be around for a while.</description>
+    </item>
+    
+    <item>
+      <title>Knockout.js, jsRender, LESS, SquishIt</title>
+      <link>http://kroltech.com/2012/07/27/knockout-js-jsrender-less-squishit/</link>
+      <pubDate>Fri, 27 Jul 2012 22:11:55 +0000</pubDate>
+      <author>jkat98@gmail.com (Jason Krol)</author>
+      <guid>http://kroltech.com/2012/07/27/knockout-js-jsrender-less-squishit/</guid>
+      <description>This week was all about Knockout.js and my seemingly total lack of understanding of javascript and jquery! After struggling with Knockout (rather, struggling to implement it into an existing project that might be a little too complex for my first attempt with KO) I decided to back burner it for a while. However I did learn a lot more about dealing with data, json, and oop in general with javascript and jquery.</description>
+    </item>
+    
+  </channel>
+</rss>

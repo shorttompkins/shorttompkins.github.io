@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Movie Review on KrolTech</title>
+    <link>http://kroltech.com/categories/movie-review/</link>
+    <description>Recent content in Movie Review on KrolTech</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <managingEditor>jkat98@gmail.com (Jason Krol)</managingEditor>
+    <webMaster>jkat98@gmail.com (Jason Krol)</webMaster>
+    <lastBuildDate>Tue, 08 Jan 2013 03:36:26 +0000</lastBuildDate>
+    
+	<atom:link href="http://kroltech.com/categories/movie-review/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Movie Review: Jack Reacher</title>
+      <link>http://kroltech.com/2013/01/08/movie-review-jack-reacher/</link>
+      <pubDate>Tue, 08 Jan 2013 03:36:26 +0000</pubDate>
+      <author>jkat98@gmail.com (Jason Krol)</author>
+      <guid>http://kroltech.com/2013/01/08/movie-review-jack-reacher/</guid>
+      <description>One of the biggest surprises in casting news this year was the reveal of Tom Cruise as Jack Reacher. For some, the choice was obvious. Tom Cruise fills seats! And that&amp;#8217;s pretty much all the movie studios want. For others, people like us that actually know the source material, the choice was a huge and obvious mistake.
+If you aren&amp;#8217;t familiar with Jack Reacher, the character, he can generally be summarized as being a huge, foreboding, tank of a guy.</description>
+    </item>
+    
+  </channel>
+</rss>

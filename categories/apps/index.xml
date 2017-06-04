@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Apps on KrolTech</title>
+    <link>http://kroltech.com/categories/apps/</link>
+    <description>Recent content in Apps on KrolTech</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <managingEditor>jkat98@gmail.com (Jason Krol)</managingEditor>
+    <webMaster>jkat98@gmail.com (Jason Krol)</webMaster>
+    <lastBuildDate>Sat, 25 May 2013 02:03:39 +0000</lastBuildDate>
+    
+	<atom:link href="http://kroltech.com/categories/apps/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Week in Review – 5/24/13</title>
+      <link>http://kroltech.com/2013/05/25/week-in-review-52413/</link>
+      <pubDate>Sat, 25 May 2013 02:03:39 +0000</pubDate>
+      <author>jkat98@gmail.com (Jason Krol)</author>
+      <guid>http://kroltech.com/2013/05/25/week-in-review-52413/</guid>
+      <description>While I continue to work on the mobile application I’m creating for work, I rewrote the entire framework so that its much better organized. I also decided to integrate Marionette.js which was absolutely worth while. It took a little bit to figure it out, but the savings in time after the fact are huge! Writing simple views and collections now is a no brainer (almost to the point that I feel bad because it feels like cheating!</description>
+    </item>
+    
+    <item>
+      <title>Mobile web “App” versus “app”, AngularJS, CSS Transforms, Electric Plum</title>
+      <link>http://kroltech.com/2013/04/19/mobile-web-app-versus-app-angularjs-css-transforms-electric-plum/</link>
+      <pubDate>Fri, 19 Apr 2013 13:45:16 +0000</pubDate>
+      <author>jkat98@gmail.com (Jason Krol)</author>
+      <guid>http://kroltech.com/2013/04/19/mobile-web-app-versus-app-angularjs-css-transforms-electric-plum/</guid>
+      <description>Great article on why there aren&amp;#8217;t more great “web apps” and the difference between an “App” and an “app”. Dan Whalin provides us an excellent introduction to AngularJS. The video is about 60 minutes, but covers a lot of ground and is a great introduction. After I&amp;#8217;ve been spending some time with Backbone, I&amp;#8217;ve been thinking more and more about maybe making the move onto Angular or Ember &amp;#8211; a lot of the Microsoft evangelists seem to be pushing Angular lately &amp;#8211; Pluralsight courses are coming very soon!</description>
+    </item>
+    
+    <item>
+      <title>Mobile app prototype development</title>
+      <link>http://kroltech.com/2013/04/10/mobile-app-prototype-development/</link>
+      <pubDate>Wed, 10 Apr 2013 15:08:12 +0000</pubDate>
+      <author>jkat98@gmail.com (Jason Krol)</author>
+      <guid>http://kroltech.com/2013/04/10/mobile-app-prototype-development/</guid>
+      <description>I&amp;#8217;ve been working hard on preparing a mobile app prototype for a demonstration/proposal next week. The goal is to create a native app using HTML5 and PhoneGap. I&amp;#8217;ve been building the app using Backbone primarily, and using Adobe’s PhoneGap Build. PhoneGap Build is a cloud based compilation tool that makes things VERY easy to get your app up and running natively. The build tool supports iOS, Android, Windows, Blackberry, HP, and a few others.</description>
+    </item>
+    
+    <item>
+      <title>Mobile app development, Google Dev tools Code School, TekPub</title>
+      <link>http://kroltech.com/2013/03/29/mobile-app-development-google-dev-tools-code-school-tekpub/</link>
+      <pubDate>Fri, 29 Mar 2013 19:03:10 +0000</pubDate>
+      <author>jkat98@gmail.com (Jason Krol)</author>
+      <guid>http://kroltech.com/2013/03/29/mobile-app-development-google-dev-tools-code-school-tekpub/</guid>
+      <description>I completed the Code School course on using Google Chrome Dev Tools. I highly recommend you complete this course &amp;#8211; its super quick (probably no longer than 1 hour) and very easy. Yet, I learned a lot. Specifically with the more advanced topics of the dev tools like Profiling, Memory Leaks, Framerates, etc.
+Started writing my hybrid mobile app for work &amp;#8211; learned quite a bit along the way. Working with jQuery Mobile, but its overhead and conventions/takeover is making it less than desirable &amp;#8211; perhaps I’ll rewrite the transition animations manually and implement 3rd party Touch/Tap library.</description>
+    </item>
+    
+    <item>
+      <title>Building a web app using Backbone.js and require.js – Part 1</title>
+      <link>http://kroltech.com/2013/03/21/building-a-web-app-using-backbone-js-and-require-js-part-1/</link>
+      <pubDate>Thu, 21 Mar 2013 21:15:19 +0000</pubDate>
+      <author>jkat98@gmail.com (Jason Krol)</author>
+      <guid>http://kroltech.com/2013/03/21/building-a-web-app-using-backbone-js-and-require-js-part-1/</guid>
+      <description>A few requests for the full source code for this project have been made. Please feel free to download the full project files via this repo:
+https://github.com/jkat98/imgettinit_netmvc  At the end of last year I set some goals for myself, one of which was to start using and become proficient in Backbone.js. I&amp;#8217;ll be honest in saying that I struggled for a bit to really wrap my head around everything that was going on.</description>
+    </item>
+    
+    <item>
+      <title>Building a web app using Backbone.js and require.js – Part 2</title>
+      <link>http://kroltech.com/2013/03/21/building-a-web-app-using-backbone-js-and-require-js-part-2/</link>
+      <pubDate>Thu, 21 Mar 2013 21:14:41 +0000</pubDate>
+      <author>jkat98@gmail.com (Jason Krol)</author>
+      <guid>http://kroltech.com/2013/03/21/building-a-web-app-using-backbone-js-and-require-js-part-2/</guid>
+      <description>This post is the conclusion to the article Building a web app using Backbone.js and require.js &amp;#8211; Part 1. Please be sure to read that article first before proceeding.  In my previous post, we discussed the original idea for the project, outlined what its supposed to do, and started dissecting the project&amp;#8217;s main.js and app.js files. Both of those files frequently referred to the &amp;#8220;Games&amp;#8221; Backbone view and collection, but never really explained them.</description>
+    </item>
+    
+    <item>
+      <title>ImGettin.it launch! DMC!!! JavaScript/Node.js/Backbone.js</title>
+      <link>http://kroltech.com/2013/01/18/imgettin-it-launch-dmc-javascriptnode-jsbackbone-js/</link>
+      <pubDate>Fri, 18 Jan 2013 03:18:17 +0000</pubDate>
+      <author>jkat98@gmail.com (Jason Krol)</author>
+      <guid>http://kroltech.com/2013/01/18/imgettin-it-launch-dmc-javascriptnode-jsbackbone-js/</guid>
+      <description>Soft launched ImGettin.it over the weekend! By soft launch, I mean, bought and setup the domain, and got a test version of the site live. Login works, and the site “works” for the most part, but is very much not ready for prime time yet. I still need to get a lot of things working and most importantly I need a basic admin for the games database. The data that&amp;#8217;s up right now is just test seed data &amp;#8211; while pretty solid is far from complete or even valid.</description>
+    </item>
+    
+  </channel>
+</rss>

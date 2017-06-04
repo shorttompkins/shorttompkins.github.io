@@ -1,0 +1,590 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+  <title>AngularJS Directive: Two ways to skin a cat</title>
+  <meta property="og:title" content="AngularJS Directive: Two ways to skin a cat" />
+  <meta name="twitter:title" content="AngularJS Directive: Two ways to skin a cat" />
+  <meta name="description" content="Let&#8217;s take a look at a recent directive I needed to create, and dissect the two completely different approaches I took to accomplish what I needed.
+
+">
+  <meta property="og:description" content="Let&#8217;s take a look at a recent directive I needed to create, and dissect the two completely different approaches I took to accomplish what I needed.
+
+">
+  <meta name="twitter:description" content="Let&#8217;s take a look at a recent directive I needed to create, and dissect the two completely different approaches I took to accomplish what I needed.
+
+">
+  <meta name="author" content="Jason Krol"/>
+  <link href='http://kroltech.com/img/favicon.ico' rel='icon' type='image/x-icon'/>
+  <meta property="og:image" content="http://kroltech.com/img/avatar-icon.png" />
+  <meta name="twitter:image" content="http://kroltech.com/img/avatar-icon.png" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:site" content="@shorttompkins" />
+  <meta name="twitter:creator" content="@shorttompkins" />
+  <meta property="og:url" content="http://kroltech.com/2015/06/04/angularjs-directive-two-ways-to-skin-a-cat/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="KrolTech" />
+
+  <meta name="generator" content="Hugo 0.20.7" />
+  <link rel="canonical" href="http://kroltech.com/2015/06/04/angularjs-directive-two-ways-to-skin-a-cat/" />
+  <link rel="alternate" href="http://kroltech.com/index.xml" type="application/rss+xml" title="KrolTech">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/katex.min.css" integrity="sha384-wITovz90syo1dJWVh32uuETPVEtGigN07tkttEqPv+uR2SE/mbQcG7ATL28aI9H0" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <link rel="stylesheet" href="http://kroltech.com/css/main.css" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" />
+  <link rel="stylesheet" href="http://kroltech.com/css/pygment_highlights.css" />
+  <link rel="stylesheet" href="http://kroltech.com/css/highlight.min.css" />
+
+<script>
+window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+ga('create', 'UA-29480326-4', 'auto');
+ga('send', 'pageview');
+</script>
+<script async src='//www.google-analytics.com/analytics.js'></script>
+
+</head>
+
+  <body>
+    <nav class="navbar navbar-default navbar-fixed-top navbar-custom">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="http://kroltech.com/">KrolTech</a>
+    </div>
+
+    <div class="collapse navbar-collapse" id="main-navbar">
+      <ul class="nav navbar-nav navbar-right">
+        
+          
+            <li>
+              <a title="Blog" href="/">Blog</a>
+            </li>
+          
+        
+          
+            <li>
+              <a title="About" href="/page/about/">About</a>
+            </li>
+          
+        
+
+        
+
+        
+      </ul>
+    </div>
+
+    <div class="avatar-container">
+      <div class="avatar-img-border">
+        
+          <a title="KrolTech" href="http://kroltech.com/">
+            <img class="avatar-img" src="http://kroltech.com/img/avatar-icon.png" alt="KrolTech" />
+          </a>
+        
+      </div>
+    </div>
+
+  </div>
+</nav>
+
+
+
+
+    
+  
+  
+  
+
+
+
+
+  
+
+  <header class="header-section ">
+    
+    <div class="intro-header no-img">
+      
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+            <div class="post-heading">
+              <h1>AngularJS Directive: Two ways to skin a cat</h1>
+                
+                
+                  <span class="post-meta">
+  Posted on June 4, 2015
+  
+</span>
+
+
+                
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+
+    
+<div class="container">
+  <div class="row">
+    <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+      <article role="main" class="blog-post">
+        <p>Let&#8217;s take a look at a recent directive I needed to create, and dissect the two completely different approaches I took to accomplish what I needed.</p>
+
+<p></p>
+
+<p>First let me preface by saying that the problem I needed to solve was somewhat unique, in that I&#8217;m writing an application for a device that has no mouse. Interfacing with the application is done completely using arrows and &#8220;tabbing&#8221; to focus on elements.</p>
+
+<h2 id="the-problem">The Problem</h2>
+
+<p>I have a horizontal row of elements that the user can tab through. There are only 4 elements visible on the screen but the row itself actually contains many (25+). This is a fairly common use case on the web, but we take scrollbars and mice for granted in this situation. The problem is that when the user would tab to the 4th element, which was partially cut off from the screen, the &#8220;feel&#8221; of the UX at that point was less than desirable. The entire row would shimmy and shift and you would have to keep tabbing and it all felt very disjointed and confusing. Finally, jQuery is not included in the project so we&#8217;re limited to Angular&#8217;s jqLite and Vanilla JavaScript.</p>
+
+<h2 id="the-approach">The Approach</h2>
+
+<p>The solution I wanted to do seemed simple enough, since 3 items are always completely visible, and the 4th is always cut off (half visible &#8211; to indicate that theres more in the list), I want the entire row to shift by a single element every time the 4th item in the row is focused.</p>
+
+<p><a href="https://kroltech.files.wordpress.com/2015/06/shift_row1.png"><img src="https://kroltech.files.wordpress.com/2015/06/shift_row1.png?w=809" alt="shift_row1" width="809" height="263" class="alignnone size-large wp-image-1488" /></a></p>
+
+<p>Before we take a look at the two different approaches I took, a few important items to note: The elements in the row are displayed via an <code>ng-repeat</code>. There are multiple rows, each with its own unique collection of elements. The user can tab right and left in the row so the approach needs to support both directions. Also, every element in the row is the same exact width.</p>
+
+<h2 id="solution-1-manipulate-the-dom-a-k-a-the-8220-jquery-8221-approach">Solution 1: Manipulate the DOM (a.k.a the &#8220;jQuery&#8221; approach)</h2>
+
+<p>The first approach I came up with was to simply shift the row by effecting the <code>left-margin</code> of the first element in the row. Whenever the user focused on the 4th element in the list, I would bump the first elements <code>left-margin</code> by the negative amount of the width of an element. This involved tracking the number of items that have been &#8220;shifted&#8221; (i.e. how many times did the user press right onto the 4th item) so I could shift the first element by that many elements. If the user pressed right 6 times, the first element in the list should have a negative margin of element_width * 4 so that elements 5, 6, 7, and 8 are visible. That is, they pressed right 6 times, but landed on the 4th element only 4 times thus the row shifted by 4 elements.</p>
+
+<p><a href="https://kroltech.files.wordpress.com/2015/06/shift_row2.png"><img src="https://kroltech.files.wordpress.com/2015/06/shift_row2.png?w=809" alt="shift_row2" width="809" height="263" class="alignnone size-large wp-image-1487" /></a></p>
+
+<p>By tracking the count of items that have been skipped, the opposite direction works well too. Once the user presses left and lands on the 2nd element in the list, do the opposite. Decrement the count of skipped elements by 1, and readjust the negative <code>left-margin</code>.</p>
+
+<p>[code lang=javascript]</p>
+
+<p>angular.module(&lsquo;playstation&rsquo;)</p>
+
+<p>.directive(&lsquo;shiftRow&rsquo;, [function(){</p>
+
+<p>&lsquo;use strict&rsquo;;</p>
+
+<p>return function(scope, element, attrs) {</p>
+
+<p>var allItems = element.parent()[0].querySelectorAll(attrs.shiftRowSelector),</p>
+
+<p>firstItem = allItems[0],</p>
+
+<p>rowStart = allItems[0].getBoundingClientRect().left,</p>
+
+<p>rowEnd = element[0].parentNode.getBoundingClientRect().right &#8211; rowStart,</p>
+
+<p>itemWidth = (allItems<a href="https://kroltech.files.wordpress.com/2015/06/shift_row1.png">1</a> ? allItems<a href="https://kroltech.files.wordpress.com/2015/06/shift_row1.png">1</a>.getBoundingClientRect().left : 0) &#8211; rowStart,</p>
+
+<p>itemCount = 0;</p>
+
+<p>// determine row count (items not clipped)</p>
+
+<p>angular.forEach(allItems, function(item) {</p>
+
+<p>itemCount += (item.getBoundingClientRect().right &lt; rowEnd);</p>
+
+<p>});</p>
+
+<p>element.find(&lsquo;a&rsquo;).on(&lsquo;focus&rsquo;, function(event) {</p>
+
+<p>var container = event.target.parentNode;</p>
+
+<p>container.itemIndex = parseInt(event.target.getAttribute(&lsquo;tabindex&rsquo;), 10);</p>
+
+<p>container.bounds = container.getBoundingClientRect();</p>
+
+<p>if (container.bounds.right &gt; rowEnd) {</p>
+
+<p>// if the item is clipped in that its right edge is &ldquo;off screen&rdquo;, shift the row by 1:</p>
+
+<p>firstItem.style.marginLeft = ((itemWidth * (container.itemIndex &#8211; itemCount)) * -1) + &lsquo;px&rsquo;;</p>
+
+<p>} else if (container.itemIndex &gt; 1 &amp;&amp; container.bounds.left &lt;= rowStart) {</p>
+
+<p>// if the item isn&rsquo;t first and its left edge is &ldquo;off screen&rdquo;, shift the row:</p>
+
+<p>firstItem.style.marginLeft = ((itemWidth * (container.itemIndex &#8211; 2)) * -1) + &lsquo;px&rsquo;;</p>
+
+<p>}</p>
+
+<p>});</p>
+
+<p>};</p>
+
+<p>}]);</p>
+
+<p>[/code]</p>
+
+<p>I have a similar list elsewhere in the application that behaves the same way, except it has 6 elements per row and each element&#8217;s width is slightly smaller. Because of this I want the directive to be as flexible and reusable as possible. I do some vanilla JavaScript <code>getBoundingClientRect</code> calls to compute the width of every element (the first really, to use as a template) and store that data within the directive itself. By also comparing the bounding right edge of an item I can tell if its the &#8220;last&#8221; item in the row (i.e. 4th in the original example, or 6th in the other use case).</p>
+
+<p>[code lang=html]</p>
+
+<p>&lt;ng-include</p>
+
+<p>shift-row shift-row-selector=&ldquo;.content-item&rdquo;</p>
+
+<p>ng-repeat=&ldquo;item in collection | limitTo: 25&rdquo;</p>
+
+<p>src=&ldquo;template_path(&lsquo;/views/partials/item.html&rsquo;)&ldquo;&gt;</p>
+
+<p></ng-include></p>
+
+<p>[/code]</p>
+
+<h3 id="potential-pitfalls">Potential Pitfalls</h3>
+
+<p>There are a few pros and cons with this approach. The biggest con is that if my collection of data was exceptionally large, i.e. way more than 25, this approach would be very inefficient. We are rendering the entire row of 25 items, when only 4 are visible at any give time. Reusing the directive is fairly trivial, in that I only need to include <code>shift-row</code> and <code>shift-row-selector</code> and everything else is computed and dynamic.</p>
+
+<p>Let&#8217;s take another look at how we can achieve the same result.</p>
+
+<h2 id="solution-2-manipulate-the-data-a-k-a-the-8220-angular-8221-way">Solution 2: Manipulate the Data (a.k.a the &#8220;Angular&#8221; way)</h2>
+
+<p>So let&#8217;s think about the approach differently. We still have the same problems, but lets pretend that the data in each row is in the hundreds (and not 25). So now we have to ditch the whole DOM approach and start thinking about how we can manipulate the data thats being rendered instead.</p>
+
+<p>What we want to do is just slice 4 items from the collection in the row and only render those to the screen. The same basic principals apply though, when the user tabs right and focuses on the 4th item in the list, we want to shift the row by 1 so that instead of elements 1, 2, 3, and 4 we instead see 2, 3, 4, and 5.</p>
+
+<p><a href="https://kroltech.files.wordpress.com/2015/06/shift_row3.png"><img src="https://kroltech.files.wordpress.com/2015/06/shift_row3.png?w=809" alt="shift_row3" width="809" height="331" class="alignnone size-large wp-image-1489" /></a></p>
+
+<p>The first thing thats easy is to only render 4 items via the <code>ng-repeat</code> by using <code>slice()</code>. In Angular 1.4 you can use <code>limitTo</code> and include both a length and begin. However I&#8217;m still using 1.3 so I&#8217;m going to rely on <code>slice</code> instead (I can still <code>limitTo</code> 4 though).</p>
+
+<p>[code lang=html]</p>
+
+<p>&lt;ng-include</p>
+
+<p>shift-row shift-data=&ldquo;viewable&rdquo;</p>
+
+<p>ng-repeat=&ldquo;item in collection.slice(viewable.start) | limitTo: viewable.count&rdquo;</p>
+
+<p>src=&ldquo;template_path(&lsquo;/views/partials/seriesitem.html&rsquo;)&ldquo;&gt;</p>
+
+<p></ng-include></p>
+
+<p>[/code]</p>
+
+<p>A few things are different with this use. First you can see the <code>slice</code> and <code>limitTo</code> on the ng-repeat. The second is that we include some scope data with our shift-row; <code>viewable</code>. This is because we need to pass that scope data into the directive via its own isolateScope. The directive will manipulate the scope data instead of the DOM so that the ng-repeat will rerender the 4 elements whenever the values in <code>viewable</code> change. Here is what the viewable data object looks like (defined within the views controller):</p>
+
+<p>[code lang=javascript]</p>
+
+<p>$scope.viewable = { start: 0, focus: 1, count: 4 };</p>
+
+<p>[/code]</p>
+
+<p>Now for the directive itself:</p>
+
+<p>[code lang=javascript]</p>
+
+<p>angular.module(&lsquo;playstation&rsquo;)</p>
+
+<p>.directive(&lsquo;shiftRow&rsquo;, [function(){</p>
+
+<p>&lsquo;use strict&rsquo;;</p>
+
+<p>return {</p>
+
+<p>scope: {</p>
+
+<p>data: &lsquo;=shiftData&rsquo;</p>
+
+<p>},</p>
+
+<p>link: function(scope, element) {</p>
+
+<p>element.find(&lsquo;a&rsquo;).on(&lsquo;focus&rsquo;, function(event) {</p>
+
+<p>var container = event.target.parentNode;</p>
+
+<p>container.itemIndex = parseInt(event.target.getAttribute(&lsquo;tabindex&rsquo;), 10);</p>
+
+<p>if (container.itemIndex === scope.data.count) {</p>
+
+<p>// if last item, shift row by 1 (since last is cutt off):</p>
+
+<p>scope.data.start += 1;</p>
+
+<p>scope.data.focus = scope.data.count &#8211; 1;</p>
+
+<p>} else if (container.itemIndex === 1 &amp;&amp; scope.data.start &gt; 0) {</p>
+
+<p>// if first item and row already shift, go back one (since first is totally hidden):</p>
+
+<p>scope.data.start -= 1;</p>
+
+<p>scope.data.focus = 2;</p>
+
+<p>} else {</p>
+
+<p>scope.data.focus = container.itemIndex;</p>
+
+<p>}</p>
+
+<p>scope.$apply();</p>
+
+<p>});</p>
+
+<p>}</p>
+
+<p>};</p>
+
+<p>}]);</p>
+
+<p>[/code]</p>
+
+<p>What we&#8217;re doing with this approach is simply managing state of a controller $scope variable <code>viewable</code>. By passing in the $scope variable via an isolateScope to the directive, we can not only read the data but change it and have that propagate back to the original view rendering the <code>ng-repeat</code>.</p>
+
+<p>The gist of this code is that if the current element in focus has a <code>tabIndex</code> that is === to the total number of elements per row (i.e. 4th in a row of 4 items), bump the start of the row by one. By changing the value of <code>scope.data.start</code>, the <code>ng-repeat</code> in the view will automatically re-render (and compute a new slice based on the new values). Likewise, going the opposite direction, if the first item in the list is focused and the row has been shifted, step back on the start of the slice by one element and re-render. We can safely rely on <code>tabIndex</code> since there are only 4 elements being rendered so tabIndex will never not be 1-4.</p>
+
+<p>(Note: theres an extra line of code referring to <code>scope.data.focus</code> which is a marker to indicate which element in the row should be &#8220;refocused&#8221; after its rendered. This is primarily so that when you tab to the 4th element, and the row re-renders, you don&#8217;t &#8220;lose your place&#8221; so to speak. I&#8217;m using another separate directive that will auto focus an element whenever it is rendered assuming the value passed to the directive matches its own tabIndex.)</p>
+
+<h3 id="potential-pitfalls-1">Potential Pitfalls</h3>
+
+<p>There are also a few pros and cons with this approach as well. First this approach is much more efficient in that we&#8217;re only ever rendering 4 elements to the DOM. If our row&#8217;s collection had many many elements, this would be great for our users. The UX feels identical to that of the first approach above. The implementation is not as easy as the first approach because we need to setup <code>$scope.viewable</code> in our controller as well as pass those to the directive.</p>
+
+<h2 id="conclusion">Conclusion</h2>
+
+<p>In the end I decided to stick with the 2nd approach as I was happier with the notion that the DOM was staying light and the device I&#8217;m developing on will perform better as a result. Having reused the 2nd approach elsewhere in the app I definitely felt the downside of having to worry about creating extra <code>$scope</code> variables. However, this presented me with a unique solution in that I was able to &#8220;save state&#8221; with every row. If the user navigates to the 8th item in row one, hits down to get to the second row, they not only start back on the first element of that row but if they hit up they resume on the 8th item of the previous row. This works for every row and feels a lot less confusing for the user as their state isn&#8217;t being reset as they navigate around the app.</p>
+
+<h2 id="update-3rd-way-to-skin-a-cat">UPDATE: 3rd way to skin a cat!</h2>
+
+<p>After pushing my code through review again, I got some valuable feedback that pointed out something I&#8217;m sure we&#8217;re all guilty of &#8211; over-engineering! I was completely unaware of the <code>ngFocus</code> directive, which completely eliminates my need for a custom directive at all. Here is the end result that I wound up actually implementing and getting into production.</p>
+
+<p>In my <code>app.controller</code> I added a reusable method to <code>$scope</code> that I can then use on <code>ng-focus</code> of my elements within each sliced row:</p>
+
+<p>[code lang=javascript]</p>
+
+<p>$scope.shift_row = function(event, data) {</p>
+
+<p>var itemIndex = parseInt(event.target.getAttribute(&lsquo;tabindex&rsquo;), 10);</p>
+
+<p>if (itemIndex === data.count) {</p>
+
+<p>data.start += 1;</p>
+
+<p>data.focus = data.count &#8211; 1;</p>
+
+<p>} else if (itemIndex === 1 &amp;&amp; data.start &gt; 0) {</p>
+
+<p>data.start -= 1;</p>
+
+<p>data.focus = 2;</p>
+
+<p>} else {</p>
+
+<p>data.focus = itemIndex;</p>
+
+<p>}</p>
+
+<p>};</p>
+
+<p>[/code]</p>
+
+<p>Then, I implement the slice parameters slightly different in my repeater:</p>
+
+<p>[code lang=html]</p>
+
+<p>&lt;ng-include</p>
+
+<p>ng-init=&ldquo;shift_state = shift_state&rdquo;</p>
+
+<p>ng-repeat=&ldquo;item in collection.slice(shift_state.start) | limitTo: shift_state.count&rdquo;</p>
+
+<p>src=&ldquo;template_path(&lsquo;/views/partials/item.html&rsquo;)&ldquo;&gt;</p>
+
+<p></ng-include></p>
+
+<p>[/code]</p>
+
+<p>The only catch here is that we&#8217;re using <code>ng-init</code> which means we&#8217;re passing in a value from the current scope to be available to the items inside the ng-repeat&#8217;s scope. We define <code>shift_state</code> to look something like:</p>
+
+<p>[code lang=javascript]</p>
+
+<p>$scope.shift_state = {</p>
+
+<p>start: 0,</p>
+
+<p>focus: 1,</p>
+
+<p>count: 4</p>
+
+<p>};</p>
+
+<p>[/code]</p>
+
+<p>And finally in the HTML itself, I just use a simple <code>ng-focus</code> built in directive reusing the shared app controllers <code>$scope.shift_state</code> method:</p>
+
+<p>[code lang=html]</p>
+
+<p><a href="" tabindex="{{$index}}" ng-focus="shift\_row($event, shift\_state)"></p>
+
+<p>[/code]</p>
+
+<p>Viola! Clean and simple and neat!</p>
+      </article>
+
+      <ul class="pager blog-pager">
+        
+          <li class="previous">
+            <a href="http://kroltech.com/2015/05/15/improve-your-code-quality/" data-toggle="tooltip" data-placement="top" title="Improve your code quality">&larr; Previous Post</a>
+          </li>
+        
+        
+          <li class="next">
+            <a href="http://kroltech.com/2015/10/15/launched-my-first-playstation-4-video-streaming-app/" data-toggle="tooltip" data-placement="top" title="Launched my first Playstation 4 Video Streaming App!">Next Post &rarr;</a>
+          </li>
+        
+      </ul>
+
+      
+        
+          <div class="disqus-comments">
+            <div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_shortname = 'jasonkrol';
+    var disqus_identifier = 'http:\/\/kroltech.com\/2015\/06\/04\/angularjs-directive-two-ways-to-skin-a-cat\/';
+    var disqus_title = 'AngularJS Directive: Two ways to skin a cat';
+    var disqus_url = 'http:\/\/kroltech.com\/2015\/06\/04\/angularjs-directive-two-ways-to-skin-a-cat\/';
+
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+          </div>
+        
+      
+
+    </div>
+  </div>
+</div>
+
+    <footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <ul class="list-inline text-center footer-links">
+          
+              <li>
+                <a href="mailto:jkat98@gmail.com" title="Email me">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-envelope fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="https://www.plus.google.com/&#43;JasonKrol" title="Google&#43;">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-google-plus fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="https://github.com/shorttompkins" title="GitHub">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="https://twitter.com/shorttompkins" title="Twitter">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="https://reddit.com/u/shorttompkins" title="Reddit">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-reddit-alien fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="https://linkedin.com/in/jasonkrol" title="LinkedIn">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-linkedin fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="https://stackoverflow.com/users/1623304/jkat98" title="StackOverflow">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-stack-overflow fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="https://www.youtube.com/user/jkat98" title="Youtube">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-youtube fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+          
+          <li>
+            <a href="http://kroltech.com/index.xml" title="RSS">
+              <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fa fa-rss fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          
+        </ul>
+        <p class="credits copyright text-muted">
+          Jason Krol
+          &nbsp;&bull;&nbsp;
+          2016
+
+          
+            &nbsp;&bull;&nbsp;
+            <a href="http://kroltech.com/">KrolTech</a>
+          
+        </p>
+        
+        <p class="credits theme-by text-muted">
+          <a href="http://gohugo.io">Hugo v0.20.7</a> powered &nbsp;&bull;&nbsp; Theme by <a href="http://deanattali.com/beautiful-jekyll/">Beautiful Jekyll</a> adapted to <a href="https://github.com/halogenica/beautifulhugo">Beautiful Hugo</a>
+          
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/katex.min.js" integrity="sha384-/y1Nn9+QQAipbNQWU65krzJralCnuOasHncUFXGkdwntGeSvQicrYkiUBwsgUqc1" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/contrib/auto-render.min.js" integrity="sha384-dq1/gEHSxPZQ7DdrM82ID4YVol9BYyU7GbWlIwnwyPzotpoc57wDw/guX8EaYGPx" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<script src="http://kroltech.com/js/main.js"></script>
+<script src="http://kroltech.com/js/highlight.min.js"></script>
+<script> hljs.initHighlightingOnLoad(); </script>
+<script> renderMathInElement(document.body); </script>
+
+
+
+
+
+  </body>
+</html>
+

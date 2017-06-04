@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Mudder on KrolTech</title>
+    <link>http://kroltech.com/tags/mudder/</link>
+    <description>Recent content in Mudder on KrolTech</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <managingEditor>jkat98@gmail.com (Jason Krol)</managingEditor>
+    <webMaster>jkat98@gmail.com (Jason Krol)</webMaster>
+    <lastBuildDate>Fri, 07 Jun 2013 15:11:28 +0000</lastBuildDate>
+    
+	<atom:link href="http://kroltech.com/tags/mudder/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Tough Mudder Philadelphia 2013</title>
+      <link>http://kroltech.com/2013/06/07/tough-mudder-philadelphia-2013/</link>
+      <pubDate>Fri, 07 Jun 2013 15:11:28 +0000</pubDate>
+      <author>jkat98@gmail.com (Jason Krol)</author>
+      <guid>http://kroltech.com/2013/06/07/tough-mudder-philadelphia-2013/</guid>
+      <description>I have successfully finished the Philadelphia Tough Mudder 2013! Not only did I finish, I completed every obstacle! My only problem was the distance / terrain &amp;#8211; it was just way too rough and my knees failed me very early on which lead me to wind up walking more than half the course in incredible pain. But I completed the course!!
+
+I will say, honestly, I don&amp;#8217;t think I ever would want to do it again.</description>
+    </item>
+    
+  </channel>
+</rss>

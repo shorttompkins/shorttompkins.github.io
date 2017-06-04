@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Movies on KrolTech</title>
+    <link>http://kroltech.com/tags/movies/</link>
+    <description>Recent content in Movies on KrolTech</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <managingEditor>jkat98@gmail.com (Jason Krol)</managingEditor>
+    <webMaster>jkat98@gmail.com (Jason Krol)</webMaster>
+    <lastBuildDate>Sun, 09 Dec 2012 01:06:48 +0000</lastBuildDate>
+    
+	<atom:link href="http://kroltech.com/tags/movies/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Most anticipated movies of 2013</title>
+      <link>http://kroltech.com/2012/12/09/most-anticipated-movies-of-2013/</link>
+      <pubDate>Sun, 09 Dec 2012 01:06:48 +0000</pubDate>
+      <author>jkat98@gmail.com (Jason Krol)</author>
+      <guid>http://kroltech.com/2012/12/09/most-anticipated-movies-of-2013/</guid>
+      <description>I wrote this post for Fill the Part, but thought I&amp;#8217;d post it here as well for posterity:
+(These are in release order.)
+Zero Dark Thirty
+I&amp;#8217;m a sucker for anything military related, with Black Hawk Down being one of my top 5 movies I can watch over and over. Plus, while I didn&amp;#8217;t absolutely love Hurt Locker, Point Break is another one of my all time favorites.
+A Good Day to Die Hard</description>
+    </item>
+    
+  </channel>
+</rss>

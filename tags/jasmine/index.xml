@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Jasmine on KrolTech</title>
+    <link>http://kroltech.com/tags/jasmine/</link>
+    <description>Recent content in Jasmine on KrolTech</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <managingEditor>jkat98@gmail.com (Jason Krol)</managingEditor>
+    <webMaster>jkat98@gmail.com (Jason Krol)</webMaster>
+    <lastBuildDate>Wed, 20 Nov 2013 18:17:43 +0000</lastBuildDate>
+    
+	<atom:link href="http://kroltech.com/tags/jasmine/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>JavaScript TDD with Jasmine and Karma</title>
+      <link>http://kroltech.com/2013/11/20/javascript-tdd-with-jasmine-and-karma/</link>
+      <pubDate>Wed, 20 Nov 2013 18:17:43 +0000</pubDate>
+      <author>jkat98@gmail.com (Jason Krol)</author>
+      <guid>http://kroltech.com/2013/11/20/javascript-tdd-with-jasmine-and-karma/</guid>
+      <description>&lt;p&gt;We do rapid releases at AWeber so we’re constantly pushing code changes to our users. To be sure that we aren’t in a constant state of “fix 1 bug, introduce 2 more” we embrace TDD across our entire stack. This includes making sure our front-end JavaScript code has thorough test coverage.&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>N Tier on KrolTech</title>
+    <link>http://kroltech.com/tags/n-tier/</link>
+    <description>Recent content in N Tier on KrolTech</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <managingEditor>jkat98@gmail.com (Jason Krol)</managingEditor>
+    <webMaster>jkat98@gmail.com (Jason Krol)</webMaster>
+    <lastBuildDate>Fri, 26 Oct 2012 22:32:31 +0000</lastBuildDate>
+    
+	<atom:link href="http://kroltech.com/tags/n-tier/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>N-Tier development, iOS development, Doubled internet speeds!</title>
+      <link>http://kroltech.com/2012/10/26/n-tier-development-ios-development-doubled-internet-speeds/</link>
+      <pubDate>Fri, 26 Oct 2012 22:32:31 +0000</pubDate>
+      <author>jkat98@gmail.com (Jason Krol)</author>
+      <guid>http://kroltech.com/2012/10/26/n-tier-development-ios-development-doubled-internet-speeds/</guid>
+      <description>After a discussion about the advantages of N-tier archictecture with a coworker and finally truly understanding it all &amp;#8211; I rewrote the backend for &amp;#8220;Secret&amp;#8221; website to fully utilize a Data, Services, Domain, UI architecture. Now it is coming together quite nicely. I’ve completed the basic groundwork for most of the backend, with the Data layer completed, the Repositories at a good start with most basic CRUD functionality complete, and the Services layer tapping into those repositories.</description>
+    </item>
+    
+  </channel>
+</rss>

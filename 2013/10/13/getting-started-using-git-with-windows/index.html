@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+  <title>Getting started using Git with Windows</title>
+  <meta property="og:title" content="Getting started using Git with Windows" />
+  <meta name="twitter:title" content="Getting started using Git with Windows" />
+  <meta name="author" content="Jason Krol"/>
+  <link href='http://kroltech.com/img/favicon.ico' rel='icon' type='image/x-icon'/>
+  <meta property="og:image" content="http://kroltech.com/img/avatar-icon.png" />
+  <meta name="twitter:image" content="http://kroltech.com/img/avatar-icon.png" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:site" content="@shorttompkins" />
+  <meta name="twitter:creator" content="@shorttompkins" />
+  <meta property="og:url" content="http://kroltech.com/2013/10/13/getting-started-using-git-with-windows/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="KrolTech" />
+
+  <meta name="generator" content="Hugo 0.20.7" />
+  <link rel="canonical" href="http://kroltech.com/2013/10/13/getting-started-using-git-with-windows/" />
+  <link rel="alternate" href="http://kroltech.com/index.xml" type="application/rss+xml" title="KrolTech">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/katex.min.css" integrity="sha384-wITovz90syo1dJWVh32uuETPVEtGigN07tkttEqPv+uR2SE/mbQcG7ATL28aI9H0" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <link rel="stylesheet" href="http://kroltech.com/css/main.css" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" />
+  <link rel="stylesheet" href="http://kroltech.com/css/pygment_highlights.css" />
+  <link rel="stylesheet" href="http://kroltech.com/css/highlight.min.css" />
+
+<script>
+window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+ga('create', 'UA-29480326-4', 'auto');
+ga('send', 'pageview');
+</script>
+<script async src='//www.google-analytics.com/analytics.js'></script>
+
+</head>
+
+  <body>
+    <nav class="navbar navbar-default navbar-fixed-top navbar-custom">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="http://kroltech.com/">KrolTech</a>
+    </div>
+
+    <div class="collapse navbar-collapse" id="main-navbar">
+      <ul class="nav navbar-nav navbar-right">
+        
+          
+            <li>
+              <a title="Blog" href="/">Blog</a>
+            </li>
+          
+        
+          
+            <li>
+              <a title="About" href="/page/about/">About</a>
+            </li>
+          
+        
+
+        
+
+        
+      </ul>
+    </div>
+
+    <div class="avatar-container">
+      <div class="avatar-img-border">
+        
+          <a title="KrolTech" href="http://kroltech.com/">
+            <img class="avatar-img" src="http://kroltech.com/img/avatar-icon.png" alt="KrolTech" />
+          </a>
+        
+      </div>
+    </div>
+
+  </div>
+</nav>
+
+
+
+
+    
+  
+  
+  
+
+
+
+
+  
+
+  <header class="header-section ">
+    
+    <div class="intro-header no-img">
+      
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+            <div class="post-heading">
+              <h1>Getting started using Git with Windows</h1>
+                
+                
+                  <span class="post-meta">
+  Posted on October 13, 2013
+  
+</span>
+
+
+                
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+
+    
+<div class="container">
+  <div class="row">
+    <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+      <article role="main" class="blog-post">
+        <p>Now that I work with Git on a daily basis at my new job, what I’ve learned while using it has made it pretty clear why its currently the runaway favorite in the open source community. Its just great! I know that this realization is a little “late” and I can openly admit that I&#8217;ve been completely in the dark when it comes to Git and GitHub etc. Better late than never though! In an attempt to get a few friends on board, I thought I’d write this post.</p>
+
+<p>The focus of this article is two-fold: to introduce the concepts of Git to people totally unaware and to help them get started using it in a Windows environment.</p>
+
+<h3 id="img-class-alignright-size-medium-wp-image-859-alt-git-logo-src-http-104-236-7-244-wp-content-uploads-2013-10-git-logo1-132x250-png-width-132-height-250-1-git-hosting-providers-8211-github-vs-bitbucket-et-al"><a href="http://104.236.7.244/wp-content/uploads/2013/10/git-logo1.png"><img class="alignright size-medium wp-image-859" alt="git-logo" src="http://104.236.7.244/wp-content/uploads/2013/10/git-logo1-132x250.png" width="132" height="250" /></a>Git Hosting Providers &#8211; GitHub vs BitBucket (et al)</h3>
+
+<p>Finding a good hosting provider for your repos (repositories) might seem pretty obvious right? GitHub duh! Not quite. Yes, GitHub is great for the open source community (because public repos are free) but if you want to host anything private, even a single project, its going to cost you. About 7 bucks a month (as of the time of this writing). BitBucket supports private repos with their free accounts! On top of that, BitBucket is powered by Atlassian &#8211; creators of Confluence and JIRA! I’m really not looking to advocate either to be honest &#8211; just free private repo hosting is pretty darn enticing! (For what its worth, we use GitHub Enterprise at work.)</p>
+
+<p>Either way, whichever you decide, the remainder of this article really isn&#8217;t too specific to either. So go create an account on either site!</p>
+
+<h3 id="software-time-8211-what-you-ll-need">Software Time &#8211; What you’ll need</h3>
+
+<p>So, to get started actually using Git, you’re going to need it installed on your machine. When I first started, the obvious choice was to just install the GUI that GitHub offers. To be honest, it sucks. A lot. It made my first experience with Git in general very unpleasant and just way too confusing. The solution here is to not use a GUI at all (yet), but just install Git raw and directly and use the command line. Yep… I’ll let that sink in for a few to you Windows folks. Good ‘ol DOS prompt!</p>
+
+<p>Here are instructions on installing Git and any tricky steps along the way that you might run into. Don’t worry, its easy:</p>
+
+<p><a href="https://confluence.atlassian.com/display/BITBUCKET/Set+up+Git+and+Mercurial" target="_blank"><a href="https://confluence.atlassian.com/display/BITBUCKET/Set+up+Git+and+Mercurial">https://confluence.atlassian.com/display/BITBUCKET/Set+up+Git+and+Mercurial</a></a></p>
+
+<p>(complete steps 1 &amp; 2 &#8211; don&#8217;t worry about the Mercurial stuff)</p>
+
+<h3 id="some-terminology-to-get-used-to-before-we-start">Some terminology to get used to before we start</h3>
+
+<p>Here are some common terms and concepts that you will deal with when working with Git:</p>
+
+<ul>
+<li>repo/repository &#8211; this is the base for your code. It’s home. Whenever you clone a Git repo, a complete copy of the source code resides on your machine.</li>
+<li>clone &#8211; make a local copy of a Git repo.</li>
+<li>branch &#8211; think of a branch like an alternate timeline that you can make some changes to your code in. These changes are kept completely separate from the “master”. So if you decide you don’t like what you did, or you just totally broke everything experimenting &#8211; you can delete your branch and the master branch (master/original version of your code) remains untouched and safe and sound.</li>
+<li>master &#8211; the “main” branch of your repo. This is where the original source code resides. You typically branch off of master to add features or fix bugs.</li>
+<li>“feature branch” &#8211; usually reserved for whenever you create a new branch because you are adding a new feature or fixing a bug.</li>
+<li>checkout &#8211; the act of changing branches. Once you create a new branch or want to switch between branches &#8211; you checkout the branch name.</li>
+<li>working directory &#8211; this is current state of the files on your local branch in a repo.</li>
+<li>staged/staging &#8211; work that you have done and files that you have changed, that you want to commit, are first added to the staging area. You use the staging area to build your commits.</li>
+<li>stash &#8211; temporary area to hold changes when you aren&#8217;t ready to commit them yet, but need to change branches (you can&#8217;t change branches if you have modified files in your working directory that aren&#8217;t staged or committed)</li>
+<li>commit &#8211; A commit is like a checkpoint in your development. It is when you say “the code I have written looks good, works well, is concise and specific and to the point. I’m going to commit it now and continue working or be done.”</li>
+<li>“origin” &#8211; Origin is reserved for the version of your repo that is on the remote server.</li>
+<li>push &#8211; When you are happy with your code, and you’ve performed a commit &#8211; you then need to push those changes back up to the server. (Technically you can push code up to origin at any time, not just with a commit etc.)</li>
+<li>merge &#8211; Once your code is good to go and you are happy and finished with your branch, it needs to be merged back to master</li>
+<li>pull request &#8211; When you push a branch up to a remote origin, and you want that branch merged with the remote’s master branch &#8211; you submit a Pull Request. A pull request contains all of your commits and a line by line breakdown of all the files and code that you changed. Typically review feedback will occur in a Pull Request. (FYI you can merge without a pull request.)</li>
+<li>fetch/pull &#8211; get the latest version of the code from the remote version of the repo (i.e. other peoples code that have been merged to origin’s master, other peoples branches, etc)</li>
+</ul>
+
+<h3 id="diving-into-the-command-line-and-your-first-repo">Diving into the command line and your first repo!</h3>
+
+<p>First things first &#8211; the command line &#8211; like I said, get used to it! It’s really not that bad and once you get the hang of things you’ll understand why its so important and easier than dealing with a GUI &#8211; but don’t worry too much. I will get into using GUI tools that actually make dealing with commits a little easier (a little later).</p>
+
+<p>The first thing you want to do is launch a bash shell &#8211; this is a little different than a regular DOS command prompt. The bash shell is basically a Unix command line &#8211; and a lot of the standard Unix bash commands will work in the Windows version here. To launch your bash shell simply launch Git Shell (that should have been installed from the step earlier in this article). Once launched you should be prompted with something like:</p>
+
+<blockquote>
+<p>Run ‘git help git’ to display the help index.</p>
+
+<p>Run ‘git help command’ to display help for specific commands.</p>
+
+<p>jkat98@HOME-PC ~</p>
+
+<p><strong>$_</strong></p>
+</blockquote>
+
+<p>****At the prompt, type: ls [Enter] &#8211; you should get a listing of the files in the current directory.</p>
+
+<p>A few simple bash commands:</p>
+
+<ul>
+<li>cd (change directory)</li>
+<li>~ is your home dir so cd ~ will go back there</li>
+<li>cd .. will go back a level</li>
+<li>ls (list)</li>
+<li>mkdir (make a directory)</li>
+<li>rm (remove)</li>
+<li>rmdir (remove directory &#8211; must be empty)</li>
+<li>mv (move), etc.</li>
+</ul>
+
+<h3 id="ok-lets-clone-our-first-repo">OK lets clone our first repo!</h3>
+
+<p>First create a directory to store your repos in &#8211; you can call it whatever you want but for the purposes of this article I’ll call it ‘repos’:</p>
+
+<blockquote>
+<p><strong>$</strong> mkdir repos</p>
+
+<p><strong>$</strong> cd repos</p>
+</blockquote>
+
+<p>Now that you’ve created the repos folder and are in it (as your prompt should show via “~/repos”) lets pull down a copy of a remote GitHub repo by cloning it:</p>
+
+<blockquote>
+<p><strong>$</strong> git clone <a href="https://github.com/jkat98/AnimationFramework.git">https://github.com/jkat98/AnimationFramework.git</a></p>
+</blockquote>
+
+<p>You should see some information about cloning, remote counting objects, unpacking, etc which basically means it just connected to GitHub, downloaded a package of the repo, and extracted it to your local file system:</p>
+
+<blockquote>
+<p><strong>$</strong> ls</p>
+</blockquote>
+
+<p>You should see a new folder for ‘AnimationFramework’. Lets take a look:</p>
+
+<blockquote>
+<p><strong>$</strong> cd AnimationFramework</p>
+
+<p><strong>$</strong> ls</p>
+
+<p>(quick tip, bash supports auto-completion so you can type: cd Ani TAB and it will make an educated guess as to what you probably meant and auto finish if it can. In this case AnimationFramework was the only thing in your repos folder that started with Ani so it was an obvious choice.)</p>
+</blockquote>
+
+<p>Something to note &#8211; your prompt changed a bit. Once you enter a directory for an actual repo &#8211; your prompt will display the current branch for that repo as well as its status (if any files are modified and unstaged &#8211; i.e. work still needs to be committed, or if its a clean working directory, etc)</p>
+
+<p><strong>A note about the master branch:</strong></p>
+
+<p>Yes, you can start editing files right away and work exclusively off of the master branch. But that&#8217;s not a good idea &#8211; it will create all kinds of headaches when you try to undo any of your changes and any remote repos that you work with are going to hate you because you are trying to push changes directly to master (which is a no no). Just get into the habit early and don&#8217;t work off of master.</p>
+
+<p>Before we make any changes to any files, we should create a new branch first. There are 2 ways to do this:</p>
+
+<blockquote>
+<p><strong>$</strong> git branch my-new-branch-name</p>
+
+<p><strong>$</strong> git checkout my-new-branch-name</p>
+
+<p>&#8211; or &#8211;</p>
+
+<p><strong>$</strong> git checkout -b my-new-branch-name</p>
+</blockquote>
+
+<p>The difference is that the first one will simply create the branch but do nothing with it. Typically you want to checkout a branch after you create it so the second command will actually create a new branch (with the -b flag) and check it out immediately after). After you have your new branch created and checked out, you will see that it is reflected in your prompt. I created a branch called ‘bug-fix’ so my prompt says:</p>
+
+<blockquote>
+<p>jkat98@HOME-PC ~/repos/AnimationFramework (bug-fix)</p>
+
+<p><strong>$</strong>_</p>
+</blockquote>
+
+<p>Now if we edit a file or make any changes at all, those changes will be saved as a separate copy from master. So we can rest easy knowing that we can break stuff and experiment to our hearts content and sleep sound knowing that the master source code is safe. Lets try that now. Type the following commands:</p>
+
+<blockquote>
+<p><strong>$</strong> vi README.md</p>
+</blockquote>
+
+<p>This will launch VI, which is like Unix’s version of Notepad, except via the command line, and its on crack and speed. (You can’t tell by looking at it &#8211; but its an extremely powerful editor.) If you want, feel free to skip this part and edit the file however you want, any editor or IDE you like, using Windows Explorer or Visual Studio or whatever. If you want to continue to make a quick edit with VI do the following:</p>
+
+<ul>
+<li>Press the letter i (which enters you into INSERT mode, as the bottom should reflect)</li>
+<li>Hit enter to insert some lines, then arrow up and type some stuff “I edited the file!” or whatver.</li>
+<li>Press ESC key (INSERT mode will go away)</li>
+<li>Type : (colon &#8211; enter COMMAND mode)</li>
+<li>Type wq then Enter (write the changes to the file then quit)</li>
+</ul>
+
+<p><strong>Lets review:</strong></p>
+
+<ul>
+<li>You cloned a copy of a remote repo from GitHub</li>
+<li>You created a new local feature branch in the repo</li>
+<li>You edited a file while you had that new feature branch checked out</li>
+</ul>
+
+<p>Now, lets take a look at our current status in Git (as far as its concerned):</p>
+
+<blockquote>
+<p><strong>$</strong> git status</p>
+</blockquote>
+
+<p>You should see a bunch of stuff about On branch bug-fix, Changes not staged for commit, etc. Then a red line that simply says modified: README.md. This basically means that our working directory now contains a file that has been modified, and its red because the file is not ready to be committed yet. That is, its not staged its just sitting in the working directory, edited, waiting for you to do more work or make a decision on how to handle this file with regards to what happens next. The last line says “no changes added to commit (use “git add” and/or “git commit -a”).</p>
+
+<h3 id="adding-files-to-the-staging-area-before-a-commit">Adding files to the staging area before a commit</h3>
+
+<p>Whenever you make any changes to a file on the file system in a repo &#8211; you are always working towards building a commit that you will eventually push back up to origin/master (or just merge with your local master). The only way to actually do a commit, is by taking files that you’ve modified and adding them to the staging area. Think of the staging area as a temporary holding area before the changes are saved as a commit. So, you’ve edited like 5 different files, but you really only want to commit one. So you just say “hey you, that one file I changed that I want to commit because you have good code. You stand over here and wait a second. The rest of you files stay where you are I’m not ready for you yet.” Then you tell the staged file “Ok you’re good to go. Go, be committed, and enjoy your life with the master branch and the rest of the awesome production ready code!”</p>
+
+<p>As of right now, our README.md file is in a modified state but its not staged or ready to be committed. Lets stage it because we like our change and we want to make a commit:</p>
+
+<blockquote>
+<p><strong>$</strong> git add README.md</p>
+
+<p><strong>$</strong> git status</p>
+
+<p>(note: you’re gonna be typing git status a lot! Also note: in this case we only edited 1 file. But if you had a bunch of files and you wanted to stage them all that would be a huge pain in the butt. To add every modified file to the staging area simply execute ‘git add .’ instead!)</p>
+</blockquote>
+
+<p>Now the modified status of the README.md file is green. Also note the top that says “Changes to be committed”. Let’s try something else that might break your mind a bit. Lets see what happens if we make another edit to the README.md file:</p>
+
+<blockquote>
+<p><strong>$</strong> vi README.md</p>
+
+<p>(press i, then make a change, then esc, :, x)</p>
+
+<p><strong>$</strong> git status</p>
+</blockquote>
+
+<p>What the?! It appears that our file README.md appears as both modified and ready to be committed (green) and not staged for commit (red)?? Remember that Git really just tracks changes, not files. So the changes that we originally made to the file are what were staged and ready to be committed (not the file). So an additional round of changes are waiting to be staged for a commit. At this point you could commit the original changes, or you could add README.md again (and then both changes would be made in the same commit &#8211; effectively appearing as if you made both changes at the same time.) Lets add the file again:</p>
+
+<blockquote>
+<p><strong>$</strong> git add .</p>
+</blockquote>
+
+<p>The README.md file is now staged and ready for a commit! So lets commit it:</p>
+
+<blockquote>
+<p><strong>$</strong> git commit</p>
+</blockquote>
+
+<p>That launched VI again (note don&#8217;t worry, if you hate VI and you probably will, you can change your default commit editor to something like Notepad or whatever you want via your .gitconfig file) with a bunch of commented out lines. The commit will actually happen once you’ve created an actual commit message and saved it. So, press the i key, then type a message “Edit readme with updated text”, then press ESC, then colon (:), then wq and Enter.</p>
+
+<p>You should see a small status update from Git with your branch, some hash value, and your actual commit message. Then below that 1 file changed, 2 insertions(+) (which may vary depending on what you actually did to the file when you edited it.</p>
+
+<blockquote>
+<p><strong>$</strong> git status</p>
+</blockquote>
+
+<p>Yay! Git reports that we are still on our bug-fix branch, but that theres nothing to commit and our working directory is clean! Nice job! You’ve just made your first Git commit! The only thing left to do is push that change back up to the remote version of the repo. To do this we are actually going to push the whole branch up:</p>
+
+<blockquote>
+<p><strong>$</strong> git push origin bug-fix</p>
+
+<p>(Remember origin is the default name for our remote version of our repo, push is the command to, you guessed it, push and bug-fix is the branch that we want to push up.)</p>
+</blockquote>
+
+<p>When you hit Enter, you should be prompted for your GitHub username and password. At this point, it will probably fail because you don’t have access to just push branches up to my repo. To test this functionality, you should create a quick repo of your own via GitHub, add a quick readme file using the GitHub interface. Then clone a copy of your own repo and experiment with all of the steps we just did so far!</p>
+
+<p>If you dig deep, you will notice that when you modified the README.md file earlier and commited the changes &#8211; you really only commited the lines of code that were changed, not the whole file. This is what makes branching so great &#8211; you are never really working with files and copies or anything like that. You are always working with changes!</p>
+
+<h3 id="pulling-down-changes-updates-to-the-remote-repo">Pulling down changes/updates to the remote repo</h3>
+
+<p>Typically when you are working on a team, and you are all working off the same remote repo, people are going to be pushing their own branches and commits up throughout the day. The beauty of Git is that it handles that stuff great!</p>
+
+<blockquote>
+<p><strong>$</strong> git checkout master</p>
+
+<p><strong>$</strong> git pull</p>
+</blockquote>
+
+<p>You should get into the habit of doing git pull’s often so that you are always pulling down peoples changes. More importantly though, you should only be executing git pulls from the master branch (git checkout master) so that you are only downloading “production ready” code and not peoples experimental branches and/or code that could be broken for you.</p>
+
+<h3 id="using-a-gui-to-do-multiple-commits">Using a GUI to do multiple commits</h3>
+
+<p><img class="alignright size-full wp-image-861" alt="logoSourceTree" src="http://104.236.7.244/wp-content/uploads/2013/10/logoSourceTree.png" width="275" height="63" /></p>
+
+<p>Inevitably you are going to be in a situation where you work on a feature branch and do a significant amount of work (more so than just editing a README.md file). In this event, staging and managing your commits (of which you will have many) is going to get pretty cumbersome via the command line. There is a great free tool called SourceTree that will visually show you all of the files in your working directory that are modified but unstaged. In addition, it will show you the diff (difference between the file version in the current branch and master) of each of those files.</p>
+
+<p><a href="http://www.sourcetreeapp.com/" target="_blank">Download and install SourceTree</a></p>
+
+<p>So lets say you created a feature branch, and in this branch you added a new feature to your website. Perhaps you installed a new widget on the homepage, which consists of some HTML, some related JavaScript, and some CSS to make it look nice. In theory, this should pretty much be 3 separate commits. The idea behind commits is that they should be a single thought or change. When you word your commit message, you should be able to do so within 50 characters and without using the word “and”. So if you find that you are preparing a commit message and you are writing something like “Update HTML in header and footer” then you should break it into 2 commits. What if you want to do 2 separate commits on the same file? How can you do that since you always stage the entire file before a commit? Well with Git, you can actually stage “hunks” of a file, a single line or lines, as well as the entire file (or files) itself. This is easiest to demo using SourceTree.</p>
+
+<p>When you first launch SourceTree you’re going to need to add the location of any repos on your file system. To do so, click the icon in the lower left corner for Add Repository. From the popup window, you can actually do a lot of the stuff we just did via the command line. For our purposes, we just want to point to the existing directory so change to the “Add Working Copy” tab and then browse to the path for the AnimationFramework in your home/repos directory. Then click the Add button and you will see your repo in the left column along with any branches that exist underneath. Double click the repo to select it. The window should now basically be divided into 3 columns &#8211; the left that shows your repos and branches, the middle that shows Staged Changes and Working Copy Changes, and the right that will show the diff of any files that you select in either Staged or Working copy.</p>
+
+<p>Right now you probably aren&#8217;t seeing much of anything since we just staged, committed, and pushed our branch up to origin. To get a better feel for how we will work with SourceTree, go ahead and make some edits to the README.md file again. Do a bunch so we can split those changes into multiple commits.</p>
+
+<p>Back in SourceTree, make sure to select the README.md file in the Working Copy Changes section. Once selected, you will see on the right the diff of that file (compared to master). Any lines that you added or modified will appear green and any lines that you changed or removed will appear red. What will wind up getting committed is the combination of both those colored lines (so the red lines will be removed and the green lines will be added). At the very top of the diff of README.md are 2 buttons for Stage File or Discard File. Discard file will reset all of the changes to that file back to their original version. (The version that existed prior to you making changes &#8211; that could be identical to master or the version since your last commit.) Stage file is the exact same thing as “git add README.md”.</p>
+
+<p>We want to break our changes into 2 commits though. To do that, we can either stage a hunk or selected lines. A hunk is just a logical block of code that Git determined probably belongs together (i.e. consecutive lines of changes or changes near enough to each other). If you edited a portion of code at the very beginning of a file and another change at the very end of the file, SourceTree would display those changes as 2 separate hunks. You can click to select a line and then shift click to create a selection of multiple lines. Or you can just simply click a single line. Once you have your selection, you can then click the Stage Hunk or Stage Selected Lines button (depending on what you want). Once you stage a portion of the file, you will see that the file now appears above in the Staged Changes section (as well as remains in the Working Copy Changes section). This is now identical to earlier when we did a “git add README.md” to the file and then edited it again and had the file appear to be in both places at the same time.</p>
+
+<p>Since you have a few lines of changes in the Staged Changes and ready to be committed (leaving the other changes alone for now) you are ready for the first commit. Click the Commit button in the main toolbar and you will get a popup window identical to the VI window that launched when you execute “git commit” from the command line (except its in SourceTree and not VI via the command line). Add your message and you can get a nice summary below that shows you what files and lines/hunks are coming along with this commit. Press the commit button. Now you should notice that the README.md file is no longer in the Staged Changes area. You should also notice that the Working Copy version of README.md has the diff on the right that is missing the changes that you just committed. You are now in the process of chipping away at your changes and building commits change by change. Once you complete your commits, you should ultimately be left with no changes and no files modified in the Working Copy or Staged Changes section.</p>
+
+<p>After your last commit you are done! You can execute “git push origin bug-fix” from the command line.</p>
+
+<p>Note &#8211; you can pretty much accomplish everything we’ve done via the command line in this post with SourceTree alone 😉</p>
+
+<h3 id="now-what">Now what?!</h3>
+
+<p>Well this turned out to be a much longer post than I originally intended. While we covered a lot, really thats just the basics. But its the core basics and more than enough to get you started and working with Git and being fairly productive. You will no doubt run into issues when you experience your first conflict, and managing stashes can start to get hairy when you are jumping back and forth between branches. The most important thing to keep in mind when working with Git is that you really can&#8217;t break anything or cause any kind of irreversible damage unless you A. try really hard and B. know what you are doing.</p>
+
+<p>To really lean the ins and outs of Git and become a true pro &#8211; further reading is obviously necessary.  I strongly recommend <a href="http://www.git-scm.com/book" target="_blank">Pro Git</a> which can be read online in its entirety for free!</p>
+      </article>
+
+      <ul class="pager blog-pager">
+        
+          <li class="previous">
+            <a href="http://kroltech.com/2013/09/28/peer-code-reviews/" data-toggle="tooltip" data-placement="top" title="Peer Code Reviews">&larr; Previous Post</a>
+          </li>
+        
+        
+          <li class="next">
+            <a href="http://kroltech.com/2013/10/17/sublime-text-my-new-favorite-editor/" data-toggle="tooltip" data-placement="top" title="Sublime Text – My New Favorite Editor!">Next Post &rarr;</a>
+          </li>
+        
+      </ul>
+
+      
+        
+          <div class="disqus-comments">
+            <div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_shortname = 'jasonkrol';
+    var disqus_identifier = 'http:\/\/kroltech.com\/2013\/10\/13\/getting-started-using-git-with-windows\/';
+    var disqus_title = 'Getting started using Git with Windows';
+    var disqus_url = 'http:\/\/kroltech.com\/2013\/10\/13\/getting-started-using-git-with-windows\/';
+
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+          </div>
+        
+      
+
+    </div>
+  </div>
+</div>
+
+    <footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <ul class="list-inline text-center footer-links">
+          
+              <li>
+                <a href="mailto:jkat98@gmail.com" title="Email me">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-envelope fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="https://www.plus.google.com/&#43;JasonKrol" title="Google&#43;">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-google-plus fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="https://github.com/shorttompkins" title="GitHub">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="https://twitter.com/shorttompkins" title="Twitter">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="https://reddit.com/u/shorttompkins" title="Reddit">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-reddit-alien fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="https://linkedin.com/in/jasonkrol" title="LinkedIn">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-linkedin fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="https://stackoverflow.com/users/1623304/jkat98" title="StackOverflow">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-stack-overflow fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="https://www.youtube.com/user/jkat98" title="Youtube">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-youtube fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+          
+          <li>
+            <a href="http://kroltech.com/index.xml" title="RSS">
+              <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fa fa-rss fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          
+        </ul>
+        <p class="credits copyright text-muted">
+          Jason Krol
+          &nbsp;&bull;&nbsp;
+          2016
+
+          
+            &nbsp;&bull;&nbsp;
+            <a href="http://kroltech.com/">KrolTech</a>
+          
+        </p>
+        
+        <p class="credits theme-by text-muted">
+          <a href="http://gohugo.io">Hugo v0.20.7</a> powered &nbsp;&bull;&nbsp; Theme by <a href="http://deanattali.com/beautiful-jekyll/">Beautiful Jekyll</a> adapted to <a href="https://github.com/halogenica/beautifulhugo">Beautiful Hugo</a>
+          
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/katex.min.js" integrity="sha384-/y1Nn9+QQAipbNQWU65krzJralCnuOasHncUFXGkdwntGeSvQicrYkiUBwsgUqc1" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/contrib/auto-render.min.js" integrity="sha384-dq1/gEHSxPZQ7DdrM82ID4YVol9BYyU7GbWlIwnwyPzotpoc57wDw/guX8EaYGPx" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<script src="http://kroltech.com/js/main.js"></script>
+<script src="http://kroltech.com/js/highlight.min.js"></script>
+<script> hljs.initHighlightingOnLoad(); </script>
+<script> renderMathInElement(document.body); </script>
+
+
+
+
+
+  </body>
+</html>
+

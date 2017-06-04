@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Lis on KrolTech</title>
+    <link>http://kroltech.com/tags/lis/</link>
+    <description>Recent content in Lis on KrolTech</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <managingEditor>jkat98@gmail.com (Jason Krol)</managingEditor>
+    <webMaster>jkat98@gmail.com (Jason Krol)</webMaster>
+    <lastBuildDate>Mon, 31 Dec 2012 15:40:52 +0000</lastBuildDate>
+    
+	<atom:link href="http://kroltech.com/tags/lis/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Remove vertical spacing around inline-block LI (list items)</title>
+      <link>http://kroltech.com/2012/12/31/quick-tip-remove-vertical-spacing-around-inline-block-li-list-items/</link>
+      <pubDate>Mon, 31 Dec 2012 15:40:52 +0000</pubDate>
+      <author>jkat98@gmail.com (Jason Krol)</author>
+      <guid>http://kroltech.com/2012/12/31/quick-tip-remove-vertical-spacing-around-inline-block-li-list-items/</guid>
+      <description>I struggled with a minor issue in HTML for a few hours off an on during a project that was just really bothering me. Basically, I had a few LIs that I was displaying as inline-block (horizontally stacked side by side):
+[sourcecode lang=&amp;#8221;html&amp;#8221;]
+ Item 1 Item 1 Item 1  [/sourcecode]
+When the rows would naturally wrap, there was a tiny gap between rows (as if there was a top margin or padding).</description>
+    </item>
+    
+  </channel>
+</rss>

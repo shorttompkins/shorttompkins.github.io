@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Bad Days on KrolTech</title>
+    <link>http://kroltech.com/tags/bad-days/</link>
+    <description>Recent content in Bad Days on KrolTech</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <managingEditor>jkat98@gmail.com (Jason Krol)</managingEditor>
+    <webMaster>jkat98@gmail.com (Jason Krol)</webMaster>
+    <lastBuildDate>Fri, 28 Sep 2012 22:25:02 +0000</lastBuildDate>
+    
+	<atom:link href="http://kroltech.com/tags/bad-days/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Nightmare work days, Post launch struggles (Fill the Part)</title>
+      <link>http://kroltech.com/2012/09/28/nightmare-work-days-post-launch-struggles-fill-the-part/</link>
+      <pubDate>Fri, 28 Sep 2012 22:25:02 +0000</pubDate>
+      <author>jkat98@gmail.com (Jason Krol)</author>
+      <guid>http://kroltech.com/2012/09/28/nightmare-work-days-post-launch-struggles-fill-the-part/</guid>
+      <description>Absolute total nightmare at the end of the week as we pushed a new build to production and were impacted with a ton of problems. Mainly the issue resides in the fact that the current setup of the applications is a configuration/deployment nightmare &amp;#8211; with way too many steps and settings involved leading to way too many opened ended possibilities for user error.
+Learned about the [attr] selector in jQuery &amp;#8211; basically to detect the presense of an actual attribute in an html element.</description>
+    </item>
+    
+  </channel>
+</rss>
